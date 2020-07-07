@@ -2,22 +2,49 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+//实例化统一版本管理器
+def app = rootProject.ext.android
+ext.buildProperty = null
+ext.appReleaseDir = ''
+
+def loadProperties() {
+    def proFile = file("gradle-build.properties")
+    Properties p = new Properties()
+    proFile.withInputStream { stream ->
+        p.load(stream)
+    }
+    buildProperty = p
+    appReleaseDir = p.appReleaseDir
+}
+
+loadProperties()//调用方法
+
+
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    signingConfigs {
+        release {
+            storeFile file(buildProperty.storeFile)
+            storePassword buildProperty.storePassword
+            keyAlias buildProperty.keyAlias
+            keyPassword buildProperty.keyPassword
+        }
+    }
+    compileSdkVersion app.compileSdkVersion
+    buildToolsVersion app.buildToolsVersion
 
     defaultConfig {
         applicationId "com.kiwilss.xview"
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -25,13 +52,21 @@ android {
 }
 
 dependencies {
+    def appDependencies = rootProject.ext.dependencies
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation appDependencies.ConstraintLayout
+    implementation appDependencies.BaseRecyclerViewAdapterHelper
+
+    
+
 
 }

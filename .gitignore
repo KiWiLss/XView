@@ -13,5 +13,8 @@
 .externalNativeBuild
 .cxx
 
-app/libs/
-app/src/main/java/com/kiwilss/xview/model/
+#app/libs/
+#app/src/main/java/com/kiwilss/xview/model/
+
+
+
