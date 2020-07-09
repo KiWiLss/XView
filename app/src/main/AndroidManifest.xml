@@ -20,6 +20,7 @@
         <activity android:name=".ui.constraint.ConstraintActivity"
             android:label="约束布局"
             android:screenOrientation="nosensor"/>
+        <activity android:name=".ui.flexbox.FlexBoxBasicActivity"/>
     </application>
 
 </manifest>

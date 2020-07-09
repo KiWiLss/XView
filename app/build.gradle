@@ -65,6 +65,7 @@ dependencies {
 
     implementation appDependencies.ConstraintLayout
     implementation appDependencies.BaseRecyclerViewAdapterHelper
+    implementation appDependencies.FlexBox
 
     
 

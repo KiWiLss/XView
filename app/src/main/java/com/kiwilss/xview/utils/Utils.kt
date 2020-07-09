@@ -31,7 +31,7 @@ object Utils {
             val packageManager: PackageManager = ctx.packageManager
             //注意此处为ApplicationInfo 而不是 ActivityInfo,因为友盟设置的meta-data是在application标签中，而不是某activity标签中，所以用ApplicationInfo
             val applicationInfo = packageManager.getApplicationInfo(
-                ctx.getPackageName(),
+                ctx.packageName,
                 PackageManager.GET_META_DATA
             )
             if (applicationInfo.metaData != null) {

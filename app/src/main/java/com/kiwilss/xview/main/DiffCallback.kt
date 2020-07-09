@@ -38,7 +38,6 @@ class DiffCallback : DiffUtil.ItemCallback<MainBean>() {
     override fun areContentsTheSame(oldItem: MainBean, newItem: MainBean): Boolean {
         val b = (TextUtils.equals(oldItem.title, newItem.title)
                 && (oldItem.activity == newItem.activity))
-
         val classB = oldItem.activity?.equals(newItem.activity)
         Log.e("MMM", ": areContent--$b" )
         Log.e("MMM", ": areContent---class--$classB" )
