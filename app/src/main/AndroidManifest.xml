@@ -21,6 +21,7 @@
             android:label="约束布局"
             android:screenOrientation="nosensor"/>
         <activity android:name=".ui.flexbox.FlexBoxBasicActivity"/>
+        <activity android:name=".ui.viewstub.ViewStubActivity"/>
     </application>
 
 </manifest>

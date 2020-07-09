@@ -10,13 +10,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.kiwilss.xview.R
 import com.kiwilss.xview.model.main.MainBean
+import com.kiwilss.xview.ui.viewstub.ViewStubActivity
 import com.kiwilss.xview.utils.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val mTitles = listOf<String>("约束布局")
-    val mActivitys = listOf(MainActivity::class.java)
+    val mTitles = listOf<String>("约束布局","ViewStub")
+    val mActivitys = listOf(MainActivity::class.java,ViewStubActivity::class.java)
 
     private val mAdapter by lazy { MainAdapter() }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +33,7 @@ class MainActivity : AppCompatActivity() {
         mAdapter.animationEnable = true
         mAdapter.setAnimationWithDefault(BaseQuickAdapter.AnimationType.AlphaIn)
         mAdapter.setOnItemClickListener { adapter, view, position ->
-            //startActivity(Intent(this,mActivitys[position]::class.java))
-
+            startActivity(Intent(this,mActivitys[position]))
         }
         //初始化数据
         val datas = arrayListOf<MainBean>()

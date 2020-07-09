@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_viewstub_outer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+   >
+
+
+    <TextView
+        android:id="@+id/tv_include_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可以改变的内容"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

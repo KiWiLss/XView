@@ -67,6 +67,7 @@ dependencies {
     implementation appDependencies.BaseRecyclerViewAdapterHelper
     implementation appDependencies.FlexBox
 
+
     
 
 
