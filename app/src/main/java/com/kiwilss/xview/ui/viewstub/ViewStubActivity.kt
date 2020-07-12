@@ -11,9 +11,11 @@
 
 package com.kiwilss.xview.ui.viewstub
 
+import android.annotation.SuppressLint
 import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
 import kotlinx.android.synthetic.main.activity_viewstub.*
@@ -27,12 +29,15 @@ import kotlinx.android.synthetic.main.include_layout.*
  * @desc   : {DESCRIPTION}
  */
 class ViewStubActivity: AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_viewstub)
 
         //inflate 只能调用一次
-        vs_viewstub_sv.inflate()
+        val inflate = vs_viewstub_sv.inflate()
+
+        inflate.findViewById<TextView>(R.id.tv_include_bottom).text = "测试是否可以使用inflate获取控件"
 
         tv_include_layout.text = "任意改变的内容"
 
@@ -45,5 +50,6 @@ class ViewStubActivity: AppCompatActivity() {
             //vs_viewstub_sv.visibility = View.GONE
             rl_viewstub_outer.visibility = View.GONE
         }
+
     }
 }

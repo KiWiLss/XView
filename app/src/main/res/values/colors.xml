@@ -12,4 +12,6 @@
     <color name="black_f2f2f2">#f2f2f2</color>
 <!--    white-->
     <color name="white">#ffffff</color>
+<!--    red-->
+    <color name="red">#ff0000</color>
 </resources>
