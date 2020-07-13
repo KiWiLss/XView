@@ -1,11 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--    基本定位-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red_F7E6ED"
+        android:text="在左上角"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red_F7E6ED"
+        android:text="在右上角"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red_F7E6ED"
+        android:text="居中显示"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_FF9B52"
+        android:text="子控件一"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_center" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green_07C0C2"
+        android:text="子控件二"
+        app:layout_constraintEnd_toStartOf="@+id/tv_one"
+        app:layout_constraintTop_toBottomOf="@+id/tv_center" />
+    <!--            相对定位部分-->
+
+    <TextView
+        android:id="@+id/tv_four"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/red_F7E6ED"
+        android:gravity="center"
+        android:text="子控件四"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_five"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/black_999999"
+        android:gravity="center"
+        android:text="左边顶部对齐"
+        app:layout_constraintEnd_toStartOf="@+id/tv_four"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@color/green_07C0C2"
+        android:gravity="center"
+        android:text="底部对齐"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_five"
+        app:layout_constraintEnd_toStartOf="@+id/tv_five" />
+
+    <TextView
+        android:id="@+id/tv_six"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/yellow_FF9B52"
+        android:gravity="center"
+        android:text="右边居中对齐"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_four"
+        app:layout_constraintStart_toEndOf="@+id/tv_four"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    角度定位-->
+
+    <TextView
+        android:id="@+id/tv_nine"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="120dp"
+        android:background="@color/red_F7E6ED"
+        android:gravity="center"
+        android:text="子控件九"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/green_07C0C2"
+        android:gravity="center"
+        android:text="在子控件九120度方向 180dp 的距离"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_nine"
+        app:layout_constraintCircle="@id/tv_nine"
+        app:layout_constraintCircleAngle="110"
+        app:layout_constraintCircleRadius="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/tv_ten"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="280dp"
+        android:background="@color/red_F7E6ED"
+        android:gravity="center"
+        android:text="子控件十"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_ten2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="280dp"
+        android:background="@color/blue_74D3FF"
+        android:gravity="center"
+        android:text="子控件十右侧"
+        app:layout_constraintStart_toEndOf="@id/tv_ten"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_eleven"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_74D3FF"
+        android:gravity="center"
+        android:text="子控件十一"
+        app:layout_constraintTop_toBottomOf="@id/tv_ten2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_twelve"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_74D3FF"
+        android:gravity="center"
+        android:text="子控件十二"
+        app:layout_constraintTop_toBottomOf="@id/tv_eleven"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_thirteen"/>
+    <TextView
+        android:id="@+id/tv_thirteen"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/green_07C0C2"
+        android:gravity="center"
+        android:text="子控件十三"
+        app:layout_constraintTop_toBottomOf="@id/tv_eleven"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_fourteen"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintDimensionRatio="1:2"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@color/green_07C0C2"-->
+<!--        android:gravity="center"-->
+<!--        android:text="子控件十四,宽高比 1:2"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_twelve"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/tv_fourteen2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintDimensionRatio="W,1:2"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@color/red_FF6D84"-->
+<!--        android:gravity="center"-->
+<!--        android:text="子控件十四,宽高比 W,1:2"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_twelve"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tv_fourteen"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/tv_fourteen3"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintDimensionRatio="H,1:2"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@color/yellow_FF9B52"-->
+<!--        android:gravity="center"-->
+<!--        android:text="子控件十四,高宽比H, 1:2"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_twelve"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tv_fourteen2"/>-->
+
+<!--    权重-->
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="控件左"
+        app:layout_constraintTop_toBottomOf="@+id/tv_thirteen"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:background="@color/red_FF8EB7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <TextView
+        android:id="@+id/tv_middle"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="控件中"
+        app:layout_constraintTop_toBottomOf="@+id/tv_thirteen"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:background="@color/yellow_FF9B52"
+        app:layout_constraintStart_toEndOf="@+id/tv_left"
+        app:layout_constraintEnd_toStartOf="@+id/tv_right"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="控件右"
+        app:layout_constraintTop_toBottomOf="@+id/tv_thirteen"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:background="@color/green_07C0C2"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintVertical_chainStyle="packed"/>
 
 
 
+<!--按比例控制位置-->
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="右下角"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="左下角"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintVertical_bias="0.98"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

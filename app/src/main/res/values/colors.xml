@@ -14,4 +14,17 @@
     <color name="white">#ffffff</color>
 <!--    red-->
     <color name="red">#ff0000</color>
+    <color name="red_F7E6ED">#F7E6ED</color>
+    <color name="red_FF8EB7">#FF8EB7</color>
+    <color name="red_FF6D84">#FF6D84</color>
+    <!--    blue-->
+    <color name="blue_74D3FF">#74D3FF</color>
+    <!--    green-->
+    <color name="green_07C0C2">#07C0C2</color>
+    <!--    yellow-->
+    <color name="yellow_FF9B52">#FF9B52</color>
+
+
+
+
 </resources>

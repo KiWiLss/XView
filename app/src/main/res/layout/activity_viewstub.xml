@@ -31,6 +31,16 @@
         android:text="隐藏"
         app:layout_constraintTop_toBottomOf="@+id/tv_viewstub_title"
         app:layout_constraintLeft_toRightOf="@+id/btn_viewstub_show"/>
+
+    <Button
+        android:id="@+id/btn_viewstub_midify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改内容"
+        app:layout_constraintTop_toBottomOf="@+id/tv_viewstub_title"
+        app:layout_constraintLeft_toRightOf="@+id/btn_viewstub_hide"/>
+
+
     <ViewStub
         android:id="@+id/vs_viewstub_sv"
         android:layout_width="match_parent"

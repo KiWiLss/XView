@@ -11,16 +11,17 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.kiwilss.xview.R
 import com.kiwilss.xview.model.main.MainBean
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
+import com.kiwilss.xview.ui.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.viewstub.ViewStubActivity
 import com.kiwilss.xview.utils.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val mTitles = listOf<String>("约束布局","ViewStub",
-        "Glide java")
-    val mActivitys = listOf(MainActivity::class.java,
-        ViewStubActivity::class.java,GlideJActivity::class.java)
+    private val mTitles = listOf<String>("约束布局","ViewStub","Glide java")
+    private val mActivitys = listOf(ConstraintActivity::class.java,ViewStubActivity::class.java,
+        GlideJActivity::class.java)
+
 
     private val mAdapter by lazy { MainAdapter() }
     override fun onCreate(savedInstanceState: Bundle?) {
