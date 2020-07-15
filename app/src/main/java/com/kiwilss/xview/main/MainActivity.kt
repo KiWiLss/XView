@@ -1,10 +1,8 @@
 package com.kiwilss.xview.main
 
-import android.app.Activity
+
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.AdapterViewAnimator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -13,16 +11,15 @@ import com.kiwilss.xview.model.main.MainBean
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.viewstub.ViewStubActivity
-import com.kiwilss.xview.utils.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val mTitles = listOf<String>("约束布局","ViewStub","Glide java")
+    private val mTitles = listOf("约束布局","ViewStub","Glide java")
     private val mActivitys = listOf(ConstraintActivity::class.java,ViewStubActivity::class.java,
         GlideJActivity::class.java)
 
-    //
+    //test
 
     private val mAdapter by lazy { MainAdapter() }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         mAdapter.setDiffCallback(DiffCallback())
         mAdapter.animationEnable = true
         mAdapter.setAnimationWithDefault(BaseQuickAdapter.AnimationType.AlphaIn)
-        mAdapter.setOnItemClickListener { adapter, view, position ->
+        mAdapter.setOnItemClickListener { _, _, position ->
             startActivity(Intent(this,mActivitys[position]))
         }
         //初始化数据
@@ -47,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             mainBean = MainBean(mTitles[index],mActivitys[index])
             datas.add(mainBean)
         }
-        Log.e("MMM", ": ${datas.size}");
+        //Log.e("MMM", ": ${datas.size}");
 //        mAdapter.setNewInstance(datas)
         mAdapter.setDiffNewData(datas)
 
