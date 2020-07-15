@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private val mActivitys = listOf(ConstraintActivity::class.java,ViewStubActivity::class.java,
         GlideJActivity::class.java)
 
+    //
 
     private val mAdapter by lazy { MainAdapter() }
     override fun onCreate(savedInstanceState: Bundle?) {
