@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="m9">8.64dp</dimen>
+    <dimen name="m10">9.60dp</dimen>
+    <dimen name="m11">10.56dp</dimen>
+    <dimen name="m12">11.52dp</dimen>
+
+</resources>

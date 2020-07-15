@@ -24,10 +24,11 @@ class App : Application(){
     override fun onCreate() {
         super.onCreate()
         mContext = this
+        app = this
 
     }
     companion object{
         var mContext: Context? = null
-
+        var app: App? = null
     }
 }
