@@ -9,10 +9,9 @@
  * 作者姓名           修改时间           版本号              描述
  */
 
-package com.kiwilss.xview.ui.viewstub
+package com.kiwilss.xview.ui.optimization.viewstub
 
 import android.annotation.SuppressLint
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity

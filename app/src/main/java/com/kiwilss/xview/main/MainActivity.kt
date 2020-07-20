@@ -9,8 +9,9 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.kiwilss.xview.R
 import com.kiwilss.xview.model.main.MainBean
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
-import com.kiwilss.xview.ui.constraint.ConstraintActivity
-import com.kiwilss.xview.ui.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
+import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.view.textview.TextViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,13 @@ class MainActivity : AppCompatActivity() {
     private val mTitles = listOf("约束布局","ViewStub","Glide java")
     private val mActivitys = listOf(ConstraintActivity::class.java,ViewStubActivity::class.java,
         GlideJActivity::class.java)
+
+    private val mData = arrayListOf<MainBean>(
+        MainBean("约束布局",ConstraintActivity::class.java),
+        MainBean("ViewStub",ViewStubActivity::class.java),
+        MainBean("Glide java",GlideJActivity::class.java),
+        MainBean("TextView",TextViewActivity::class.java)
+    )
 
     //test
 
@@ -35,36 +43,37 @@ class MainActivity : AppCompatActivity() {
         mAdapter.animationEnable = true
         mAdapter.setAnimationWithDefault(BaseQuickAdapter.AnimationType.AlphaIn)
         mAdapter.setOnItemClickListener { _, _, position ->
-            startActivity(Intent(this,mActivitys[position]))
+            val mainBean = mData[position]
+            startActivity(Intent(this,mainBean.activity))
         }
         //初始化数据
-        val datas = arrayListOf<MainBean>()
-        var mainBean: MainBean
-        for (index in mTitles.indices){
-            mainBean = MainBean(mTitles[index],mActivitys[index])
-            datas.add(mainBean)
-        }
+//        val datas = arrayListOf<MainBean>()
+//        var mainBean: MainBean
+//        for (index in mTitles.indices){
+//            mainBean = MainBean(mTitles[index],mActivitys[index])
+//            datas.add(mainBean)
+//        }
         //Log.e("MMM", ": ${datas.size}");
 //        mAdapter.setNewInstance(datas)
-        mAdapter.setDiffNewData(datas)
+        mAdapter.setDiffNewData(mData)
 
 
         btn_main_new.setOnClickListener {
-            setNewData()
+            //setNewData()
         }
     }
 
-    private fun setNewData() {
-        val datas = arrayListOf<MainBean>()
-        var mainBean: MainBean
-        for (index in mTitles.indices){
-            mainBean = MainBean(mTitles[index],mActivitys[index])
-            datas.add(mainBean)
-            datas.add(mainBean)
-        }
-        //mAdapter.addData(datas)
-        mAdapter.setDiffNewData(datas)
-//        mAdapter.setNewInstance(datas)
-    }
+//    private fun setNewData() {
+//        val datas = arrayListOf<MainBean>()
+//        var mainBean: MainBean
+//        for (index in mTitles.indices){
+//            mainBean = MainBean(mTitles[index],mActivitys[index])
+//            datas.add(mainBean)
+//            datas.add(mainBean)
+//        }
+//        //mAdapter.addData(datas)
+//        mAdapter.setDiffNewData(datas)
+////        mAdapter.setNewInstance(datas)
+//    }
 
 }

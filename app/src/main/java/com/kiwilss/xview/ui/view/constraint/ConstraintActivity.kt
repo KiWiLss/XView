@@ -1,29 +1,30 @@
 /**
  * Copyright (C), 2017-2020, XXX有限公司
- * FileName: RecyclerViewActivity
- * Author:   Administrator
- * Date:     2020/7/17 21:48
+ * FileName: ConstraintActivity
+ * Author:   kiwilss
+ * Date:     2020/7/8 23:57
  * Description: {DESCRIPTION}
  * History:
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.kiwilss.xview.ui.recyclerview
+
+package com.kiwilss.xview.ui.view.constraint
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.kiwilss.xview.R
 
 /**
- *@FileName: RecyclerViewActivity
- *@author : Lss Administrator
+ *@FileName: ConstraintActivity
+ *@author : Lss kiwilss
  * @e-mail : kiwilss@163.com
- * @time   : 2020/7/17
+ * @time   : 2020/7/8
  * @desc   : {DESCRIPTION}
  */
-class RecyclerViewActivity : AppCompatActivity(){
+class ConstraintActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
+        setContentView(R.layout.activity_constraint)
     }
 }

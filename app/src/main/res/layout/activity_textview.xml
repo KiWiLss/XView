@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="TextView 工具类"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/yellow_FF9B52"/>
+
+
+        <TextView
+            android:id="@+id/tv_textview_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"/>
+
+        <TextView
+            android:id="@+id/tv_textview_blod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字,加粗"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_textview_blodItalic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字,加粗"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_textview_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_textview_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"/>
+        <TextView
+            android:id="@+id/tv_textview_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"/>
+        <TextView
+            android:id="@+id/tv_textview_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_textview_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_textview_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通样式的文字"
+            android:textColor="@color/yellow_FF9B52"
+            android:layout_marginTop="5dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -13,6 +13,7 @@ package com.kiwilss.xview.utils
 
 import android.content.Context
 import android.content.pm.PackageManager
+import com.kiwilss.App
 
 /**
  *@FileName: Utils
@@ -44,6 +45,21 @@ object Utils {
     }
 
     fun getList(){
+
+    }
+
+    /**
+     * 获取ApplicationContext
+     *
+     * @return ApplicationContext
+     */
+    fun getContext(): Context {
+        val context = App.mContext
+        if (context != null){
+            return context
+        }else{
+            throw NullPointerException("app.mContext should init")
+        }
 
     }
 
