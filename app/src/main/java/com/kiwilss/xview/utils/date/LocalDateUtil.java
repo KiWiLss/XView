@@ -274,9 +274,7 @@ public class LocalDateUtil {
         return dateTime.getDayOfWeek().getValue();
     }
 
-    public static void get(){
 
-    }
 
 }
 
