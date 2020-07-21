@@ -27,11 +27,11 @@ public class LocalDateUtil {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static void main(String[] args) {
         System.out.println("------------------LocalDateTime--------------");
-        System.out.println(date2String(getNowDateYMD()));
-        System.out.println(date2String(getNowDateYMD(), "yyyy年MM月dd日"));
-
-        System.out.println(string2LocalDate("2020-07-11"));
-        System.out.println(string2LocalDate("2020/07/11", "yyyy/MM/dd"));
+        System.out.println(localDateTime2Date(getNowDateYMDHMS()));
+        System.out.println(date2LocalDateTime(new Date()));
+        System.out.println("------------------------------------------------");
+        System.out.println(getPlusYear(getNowDateYMDHMS(),2));
+        //System.out.println(plus(getNowDateYMDHMS(),2, ChronoUnit.DAYS));
 
     }
 
@@ -337,7 +337,7 @@ public class LocalDateUtil {
      * date  --->  localdatetime
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDateTime localDate2LocalDateTime(Date date) {
+    public static LocalDateTime date2LocalDateTime(Date date) {
         return LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
     }
 
@@ -345,7 +345,7 @@ public class LocalDateUtil {
      * localdatetime  ------>     date
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static Date localDate2Date(LocalDateTime date) {
+    public static Date localDateTime2Date(LocalDateTime date) {
         return Date.from(date.atZone(ZoneId.systemDefault()).toInstant());
     }
 
@@ -365,10 +365,48 @@ public class LocalDateUtil {
         return time.atZone(ZoneId.systemDefault()).toInstant().getEpochSecond();
     }
 
+    /**
+     LocalDateTime  ---->  LocalDate
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDateTime plus(LocalDateTime time, long number, TemporalUnit field) {
+    public static LocalDate localDateTime2LocalDate(LocalDateTime localDateTime){
+        return localDateTime.toLocalDate();
+    }
+    /**
+     LocalDateTime  ---->  LocalTime
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static LocalTime localDateTime2LocalTime(LocalDateTime localDateTime){
+        return localDateTime.toLocalTime();
+    }
+    /**
+     LocalDate  + LocalTime ----->   LocalDateTime
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static LocalDateTime localDate2LocalDateTime(LocalDate localDate,LocalTime localTime){
+        return localDate.atTime(localTime);
+    }
+
+
+    /**
+     * 获取增加后的日期,可以是年,月,日
+     * 例如,传入当前日期,获取2天后的日期(getNowDateYMDHMS(),2, ChronoUnit.DAYS)
+     * 返回2020-07-23T09:22:26.816
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static LocalDateTime getPlus(LocalDateTime time, long number, TemporalUnit field) {
         return time.plus(number, field);
     }
+
+    /**
+     * 获取增加 number年后的日期
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static LocalDateTime getPlusYear(LocalDateTime localDateTime, long number){
+        return localDateTime.plusYears(number);
+    }
+
+    
 
     //日期减去一个数,根据field不同减不同值,field参数为ChronoUnit.*
     @RequiresApi(api = Build.VERSION_CODES.O)
