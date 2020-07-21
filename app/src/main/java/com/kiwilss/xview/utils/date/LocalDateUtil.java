@@ -8,8 +8,10 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.Period;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
 import java.util.Date;
 
@@ -31,8 +33,12 @@ public class LocalDateUtil {
         System.out.println(date2LocalDateTime(new Date()));
         System.out.println("------------------------------------------------");
         System.out.println(getPlusYear(getNowDateYMDHMS(),2));
-        //System.out.println(plus(getNowDateYMDHMS(),2, ChronoUnit.DAYS));
+        System.out.println(getMinu(getNowDateYMDHMS(),2, ChronoUnit.DAYS));
+        System.out.println(betweenTwoTime(getNowDateYMDHMS(),
+                getPlus(getNowDateYMDHMS(),2,ChronoUnit.DAYS),ChronoUnit.DAYS));
 
+        System.out.println(betweenTwoTime(getNowDateYMDHMS(),
+                getPlus(getNowDateYMDHMS(),2,ChronoUnit.YEARS),ChronoUnit.DAYS));
     }
 
     /**
@@ -406,12 +412,30 @@ public class LocalDateUtil {
         return localDateTime.plusYears(number);
     }
 
-    
-
+    /**
+     * 获取减少后的日期,可以是年,月,日
+     * 例如,传入当前日期,获取2天前的日期(getNowDateYMDHMS(),2, ChronoUnit.DAYS)
+     * 返回2020-07-19T18:01:48.033
+     */
     //日期减去一个数,根据field不同减不同值,field参数为ChronoUnit.*
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDateTime minu(LocalDateTime time, long number, TemporalUnit field) {
+    public static LocalDateTime getMinu(LocalDateTime time, long number, TemporalUnit field) {
         return time.minus(number, field);
+    }
+
+    /**
+     * 获取两个日期的差  field参数为ChronoUnit.*
+     * @param startTime
+     * @param endTime
+     * @param field  单位(年月日时分秒)
+     * @return
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static long betweenTwoTime(LocalDateTime startTime, LocalDateTime endTime, ChronoUnit field) {
+        Period period = Period.between(LocalDate.from(startTime), LocalDate.from(endTime));
+        if (field == ChronoUnit.YEARS) return period.getYears();
+        if (field == ChronoUnit.MONTHS) return period.getYears() * 12 + period.getMonths();
+        return field.between(startTime, endTime);
     }
 
 
