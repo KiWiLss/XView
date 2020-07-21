@@ -5,11 +5,14 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import java.time.DayOfWeek;
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
@@ -25,6 +28,7 @@ import java.util.Date;
 public class LocalDateUtil {
 
     public static String PATTEN_YMD = "yyyy-MM-dd";
+    public static String PATTEN_YMDHMS = "yyyy-MM-dd HH:mm:ss";
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static void main(String[] args) {
@@ -32,13 +36,21 @@ public class LocalDateUtil {
         System.out.println(localDateTime2Date(getNowDateYMDHMS()));
         System.out.println(date2LocalDateTime(new Date()));
         System.out.println("------------------------------------------------");
-        System.out.println(getPlusYear(getNowDateYMDHMS(),2));
-        System.out.println(getMinu(getNowDateYMDHMS(),2, ChronoUnit.DAYS));
+        System.out.println(getPlusYear(getNowDateYMDHMS(), 2));
+        System.out.println(getMinu(getNowDateYMDHMS(), 2, ChronoUnit.DAYS));
         System.out.println(betweenTwoTime(getNowDateYMDHMS(),
-                getPlus(getNowDateYMDHMS(),2,ChronoUnit.DAYS),ChronoUnit.DAYS));
+                getPlus(getNowDateYMDHMS(), 2, ChronoUnit.DAYS), ChronoUnit.DAYS));
 
         System.out.println(betweenTwoTime(getNowDateYMDHMS(),
-                getPlus(getNowDateYMDHMS(),2,ChronoUnit.YEARS),ChronoUnit.DAYS));
+                getPlus(getNowDateYMDHMS(), 2, ChronoUnit.YEARS), ChronoUnit.DAYS));
+        System.out.println("------------------");
+        System.out.println(date2Second(getNowDateYMDHMS()));
+        System.out.println(date2Milli(getNowDateYMDHMS()));
+
+        System.out.println(second2LocalDateTime(1595341319));
+        System.out.println(milli2LocalDateTime(1595341319255L));
+
+        System.out.println(isToday(getAppointDateYMDHMS(2020,7,21,3,4,5)));
     }
 
     /**
@@ -274,7 +286,7 @@ public class LocalDateUtil {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static String date2String(LocalDateTime localDateTime) {
-        return localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        return localDateTime.format(DateTimeFormatter.ofPattern(PATTEN_YMDHMS));
     }
 
     /**
@@ -291,7 +303,7 @@ public class LocalDateUtil {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static String date2String(LocalDate localDate) {
-        return localDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        return localDate.format(DateTimeFormatter.ofPattern(PATTEN_YMD));
     }
 
     /**
@@ -309,7 +321,7 @@ public class LocalDateUtil {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static LocalDate string2LocalDate(String date) {
-        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter pattern = DateTimeFormatter.ofPattern(PATTEN_YMD);
         return LocalDate.parse(date, pattern);
     }
 
@@ -329,7 +341,7 @@ public class LocalDateUtil {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static LocalDateTime string2Date(String date) {
-        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter pattern = DateTimeFormatter.ofPattern(PATTEN_YMDHMS);
         return LocalDateTime.parse(date, pattern);
     }
 
@@ -364,6 +376,29 @@ public class LocalDateUtil {
     }
 
     /**
+     * 时间戳秒--->LocalDateTime
+     *返回示例 2020-07-21T22:21:59
+     * @param
+     * @return
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static LocalDateTime second2LocalDateTime(long second) {
+        return LocalDateTime.ofEpochSecond(second, 0, ZoneOffset.ofHours(8));
+    }
+
+    /**
+     * 时间戳毫秒--->LocalDateTime
+     *返回示例 2020-07-21T22:21:59.255
+     * @param milliseconds
+     * @return
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static LocalDateTime milli2LocalDateTime(Long milliseconds) {
+        return Instant.ofEpochMilli(milliseconds).atZone(ZoneOffset.ofHours(8)).toLocalDateTime();
+    }
+
+
+    /**
      * date    ----->    second   日期转秒
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -372,24 +407,26 @@ public class LocalDateUtil {
     }
 
     /**
-     LocalDateTime  ---->  LocalDate
+     * LocalDateTime  ---->  LocalDate
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDate localDateTime2LocalDate(LocalDateTime localDateTime){
+    public static LocalDate localDateTime2LocalDate(LocalDateTime localDateTime) {
         return localDateTime.toLocalDate();
     }
+
     /**
-     LocalDateTime  ---->  LocalTime
+     * LocalDateTime  ---->  LocalTime
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalTime localDateTime2LocalTime(LocalDateTime localDateTime){
+    public static LocalTime localDateTime2LocalTime(LocalDateTime localDateTime) {
         return localDateTime.toLocalTime();
     }
+
     /**
-     LocalDate  + LocalTime ----->   LocalDateTime
+     * LocalDate  + LocalTime ----->   LocalDateTime
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDateTime localDate2LocalDateTime(LocalDate localDate,LocalTime localTime){
+    public static LocalDateTime localDate2LocalDateTime(LocalDate localDate, LocalTime localTime) {
         return localDate.atTime(localTime);
     }
 
@@ -408,7 +445,7 @@ public class LocalDateUtil {
      * 获取增加 number年后的日期
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDateTime getPlusYear(LocalDateTime localDateTime, long number){
+    public static LocalDateTime getPlusYear(LocalDateTime localDateTime, long number) {
         return localDateTime.plusYears(number);
     }
 
@@ -425,10 +462,11 @@ public class LocalDateUtil {
 
     /**
      * 获取两个日期的差  field参数为ChronoUnit.*
+     *
      * @param startTime
      * @param endTime
-     * @param field  单位(年月日时分秒)
-     * @return
+     * @param field     单位(年月日时分秒)
+     * @return 可以获取日期差的年月日时分秒
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static long betweenTwoTime(LocalDateTime startTime, LocalDateTime endTime, ChronoUnit field) {
@@ -437,6 +475,49 @@ public class LocalDateUtil {
         if (field == ChronoUnit.MONTHS) return period.getYears() * 12 + period.getMonths();
         return field.between(startTime, endTime);
     }
+
+    /**
+     * 返回两个日期的时间差,返回 Duration,可以通过它获取时间差的天,小时,分钟,秒等
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static Duration betweenTwoTime(LocalDateTime startTime, LocalDateTime endTime) {
+        return Duration.between(startTime, endTime);
+    }
+
+    /**
+     * 比较两个时间是否相同
+     */
+    public static boolean isSameDate(LocalDateTime startTime, LocalDateTime endTime) {
+        return startTime.equals(endTime);
+    }
+
+    /**
+     * startTime 是否在 endTime 之前
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static boolean isBefore(LocalDateTime startTime, LocalDateTime endTime) {
+        return startTime.isBefore(endTime);
+    }
+
+    /**
+     * startTime 是否在 endTime 之后
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static boolean isAfter(LocalDateTime startTime, LocalDateTime endTime) {
+        return startTime.isAfter(endTime);
+    }
+
+    /**判断是否是今天
+     * @param localDateTime
+     * @return
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static boolean isToday(LocalDateTime localDateTime){
+        long days = betweenTwoTime(localDateTime, getNowDateYMDHMS(), ChronoUnit.DAYS);
+        return days == 0;
+    }
+
+
 
 
 }

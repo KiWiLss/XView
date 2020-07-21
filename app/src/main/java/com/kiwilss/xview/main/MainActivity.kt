@@ -2,7 +2,9 @@ package com.kiwilss.xview.main
 
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.text.format.DateUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -12,6 +14,7 @@ import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
+import com.kiwilss.xview.utils.date.TimeUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -61,6 +64,8 @@ class MainActivity : AppCompatActivity() {
         btn_main_new.setOnClickListener {
             //setNewData()
         }
+
+
     }
 
 //    private fun setNewData() {
