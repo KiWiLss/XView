@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发嘿嘿覅诶诶发嘿嘿覅额恩和凤凰if黑化肥分解诶飞"
+            android:background="@color/red"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:background="@color/yellow_FF9B52"
+            android:layout_alignRight="@id/tv_title"
+
+            android:layout_marginTop="@dimen/m10"/>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

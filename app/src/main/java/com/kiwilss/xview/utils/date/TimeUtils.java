@@ -27,6 +27,7 @@ public class TimeUtils {
         System.out.println(getNowLocalTime());
         System.out.println(getNowString());
         System.out.println(getNowDayOfYear());
+
     }
 
     /**
@@ -246,8 +247,8 @@ public class TimeUtils {
      */
     public static int getYear(String time, String pattern){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time,pattern);
-            return LocalDateUtil.getAppointYear(localDateTime);
+            LocalDate localDate = LocalDateUtil.string2Date(time, pattern);
+            return localDate.getYear();
         } else {
             return DateUtil.getYear(time,pattern);
         }
@@ -280,15 +281,15 @@ public class TimeUtils {
         }
     }
 
-    /**获取任意时间的月份,自定义时间格式
+    /**获取任意时间的月份
      * @param time
-     * @param pattern
+     * @param pattern yyyy-MM-dd
      * @return
      */
     public static int getMonth(String time, String pattern){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time,pattern);
-            return LocalDateUtil.getAppointMonth(localDateTime);
+            LocalDate localDate = LocalDateUtil.string2Date(time, pattern);
+            return localDate.getMonthValue();
         } else {
             return DateUtil.getMonth(time,pattern);
         }
@@ -307,6 +308,88 @@ public class TimeUtils {
         }
     }
 
+    /**获取任意时间的天数,默认时间格式
+     * @param time
+     * @return
+     */
+    public static int getDay(String time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
+            return LocalDateUtil.getAppointDay(localDateTime);
+        } else {
+            return DateUtil.getDay(time);
+        }
+    }
 
+    /**获取任意时间的天数,
+     * @param time
+     * @param pattern yyyy-MM-dd
+     * @return
+     */
+    public static int getDay(String time,String pattern){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDate localDate = LocalDateUtil.string2Date(time, pattern);
+            return localDate.getDayOfMonth();
+        } else {
+            return DateUtil.getDay(time,pattern);
+        }
+    }
+
+    /**获取任意时间的天数,毫秒
+     * @param time
+     * @return
+     */
+    public static int getDay(long time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.milli2LocalDateTime(time);
+            return LocalDateUtil.getAppointDay(localDateTime);
+        } else {
+            return DateUtil.getDay(time);
+        }
+    }
+
+    /**获取日期的小时,默认24小时制
+     * @param time
+     * @return
+     */
+    public static int getHours(String time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
+            return localDateTime.getHour();
+        } else {
+            return DateUtil.getHour(time);
+        }
+    }
+
+    /**获取日期的小时,默认24小时制
+     * @param time
+     * @return
+     */
+    public static int getHours(long time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.milli2LocalDateTime(time);
+            return localDateTime.getHour();
+        } else {
+            return DateUtil.getHour(time, true);
+        }
+    }
+
+    public static int getMinute(String time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
+            return localDateTime.getMinute();
+        } else {
+            return DateUtil.getMinute(time);
+        }
+    }
+
+    public static int getMinute(long time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.milli2LocalDateTime(time);
+            return localDateTime.getMinute();
+        } else {
+            return DateUtil.getMinute(time);
+        }
+    }
 
 }

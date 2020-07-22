@@ -331,10 +331,16 @@ public class LocalDateUtil {
      * 返回示例2020-07-11
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDate string2LocalDate(String date, String pattern) {
+    public static LocalDate string2Date(String date, String pattern) {
         DateTimeFormatter patterns = DateTimeFormatter.ofPattern(pattern);
         return LocalDate.parse(date, patterns);
     }
+
+//    @RequiresApi(api = Build.VERSION_CODES.O)
+//    public static LocalDate string2LocalDate(String date, String pattern) {
+//        DateTimeFormatter patterns = DateTimeFormatter.ofPattern(pattern);
+//        return LocalDate.parse(date, patterns);
+//    }
 
     /**
      * string 类型时间 --> localdatetime  , 传入的值要和 pattern 匹配
@@ -345,11 +351,6 @@ public class LocalDateUtil {
         return LocalDateTime.parse(date, pattern);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public static LocalDateTime string2Date(String date, String pattern) {
-        DateTimeFormatter patterns = DateTimeFormatter.ofPattern(pattern);
-        return LocalDateTime.parse(date, patterns);
-    }
 
     /**
      * date  --->  localdatetime
@@ -516,6 +517,8 @@ public class LocalDateUtil {
         long days = betweenTwoTime(localDateTime, getNowDateYMDHMS(), ChronoUnit.DAYS);
         return days == 0;
     }
+
+
 
 
 
