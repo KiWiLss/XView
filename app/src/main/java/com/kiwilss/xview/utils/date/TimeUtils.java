@@ -193,12 +193,22 @@ public class TimeUtils {
     /**获取今天是今年的第几天
      * @return
      */
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public static int getNowDayOfYear(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             return LocalDateUtil.getNowDayOfYear();
         } else {
             return DateUtil.getNowDayOfYear();
+        }
+    }
+
+    /**获取今天是本月的第几天
+     * @return
+     */
+    public static int getNowDayOfMonth(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            return LocalDateUtil.getNowDateYMDHMS().getDayOfMonth();
+        } else {
+            return DateUtil.getDaysOfMonth(DateUtil.getNowY2(),DateUtil.getNowMonth());
         }
     }
 
@@ -374,6 +384,10 @@ public class TimeUtils {
         }
     }
 
+    /**获取时间的分钟
+     * @param time
+     * @return
+     */
     public static int getMinute(String time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
@@ -391,5 +405,31 @@ public class TimeUtils {
             return DateUtil.getMinute(time);
         }
     }
+
+    /**获取时间的秒
+     * @param time
+     * @return
+     */
+    public static int getSecond(String time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
+            return localDateTime.getSecond();
+        } else {
+            return DateUtil.getSecond(time);
+        }
+    }
+    public static int getSecond(long time){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDateTime localDateTime = LocalDateUtil.milli2LocalDateTime(time);
+            return localDateTime.getSecond();
+        } else {
+            return DateUtil.getSecond(time);
+        }
+    }
+
+
+
+
+
 
 }

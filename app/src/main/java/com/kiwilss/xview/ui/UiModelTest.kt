@@ -18,5 +18,6 @@ package com.kiwilss.xview.ui
  * @time   : 2020/7/5
  * @desc   : {DESCRIPTION}
  */
-class UiModelTest {
+public class UiModelTest {
+
 }

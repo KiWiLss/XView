@@ -1,6 +1,10 @@
 package com.kiwilss.xview.utils;
 
+import android.annotation.SuppressLint;
 import android.util.Log;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author : Lss Administrator
@@ -10,6 +14,30 @@ import android.util.Log;
  * @desc : {DESCRIPTION}
  */
 public class LogUtils {
+
+    public static void main(String[] args) {
+        System.out.println(getStringDate());
+    }
+
+    public static String getStringDate() {
+        String currentTimeString = "2020-07-06 15:36:45";
+        long time = string2Millis(currentTimeString, "yyyy-MM-dd HH:mm:ss");
+        Date currentTime = new Date();
+        currentTime.setTime(time);
+        @SuppressLint("SimpleDateFormat")
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+        String dateString = formatter.format(currentTime);
+        return dateString;
+    }
+    public static Long string2Millis(String dateStr, String formatStr) {
+        try {
+            @SuppressLint("SimpleDateFormat")
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(formatStr);
+            return simpleDateFormat.parse(dateStr).getTime();
+        } catch (Exception e) {
+            return 0L;
+        }
+    }
 
     public static final String TAG = "MMM";
     public static boolean isLog = true;
