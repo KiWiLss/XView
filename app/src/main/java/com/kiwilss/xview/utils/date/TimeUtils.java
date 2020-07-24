@@ -80,7 +80,7 @@ public class TimeUtils {
     public static String getNowString() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             LocalDateTime nowDateYMDHMS = LocalDateUtil.getNowDateYMDHMS();
-            return LocalDateUtil.date2String(nowDateYMDHMS);
+            return LocalDateUtil.localDateTime2String(nowDateYMDHMS);
         } else {
             return DateUtil.getNowString();
         }
@@ -226,7 +226,7 @@ public class TimeUtils {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static int getYear(LocalDateTime localDateTime){
-        return LocalDateUtil.getAppointYear(localDateTime);
+        return LocalDateUtil.getAnyYear(localDateTime);
     }
 
     /**获取任意时间的年
@@ -243,8 +243,8 @@ public class TimeUtils {
      */
     public static int getYear(String time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
-           return LocalDateUtil.getAppointYear(localDateTime);
+            LocalDateTime localDateTime = LocalDateUtil.string2LocalDateTime(time);
+           return LocalDateUtil.getAnyYear(localDateTime);
         } else {
             return DateUtil.getYear(time);
         }
@@ -257,7 +257,7 @@ public class TimeUtils {
      */
     public static int getYear(String time, String pattern){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDate localDate = LocalDateUtil.string2Date(time, pattern);
+            LocalDate localDate = LocalDateUtil.string2LocalDate(time, pattern);
             return localDate.getYear();
         } else {
             return DateUtil.getYear(time,pattern);
@@ -272,7 +272,7 @@ public class TimeUtils {
     public static int getYear(long time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             LocalDateTime localDateTime = LocalDateUtil.milli2LocalDateTime(time);
-            return LocalDateUtil.getAppointYear(localDateTime);
+            return LocalDateUtil.getAnyYear(localDateTime);
         } else {
             return DateUtil.getYear(time);
         }
@@ -284,8 +284,8 @@ public class TimeUtils {
      */
     public static int getMonth(String time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
-            return LocalDateUtil.getAppointMonth(localDateTime);
+            LocalDateTime localDateTime = LocalDateUtil.string2LocalDateTime(time);
+            return LocalDateUtil.getAnyMonth(localDateTime);
         } else {
             return DateUtil.getMonth(time);
         }
@@ -298,7 +298,7 @@ public class TimeUtils {
      */
     public static int getMonth(String time, String pattern){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDate localDate = LocalDateUtil.string2Date(time, pattern);
+            LocalDate localDate = LocalDateUtil.string2LocalDate(time, pattern);
             return localDate.getMonthValue();
         } else {
             return DateUtil.getMonth(time,pattern);
@@ -312,7 +312,7 @@ public class TimeUtils {
     public static int getMonth(long time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             LocalDateTime localDateTime = LocalDateUtil.milli2LocalDateTime(time);
-            return LocalDateUtil.getAppointMonth(localDateTime);
+            return LocalDateUtil.getAnyMonth(localDateTime);
         } else {
             return DateUtil.getMonth(time);
         }
@@ -324,8 +324,8 @@ public class TimeUtils {
      */
     public static int getDay(String time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
-            return LocalDateUtil.getAppointDay(localDateTime);
+            LocalDateTime localDateTime = LocalDateUtil.string2LocalDateTime(time);
+            return LocalDateUtil.getAnyDay(localDateTime);
         } else {
             return DateUtil.getDay(time);
         }
@@ -338,7 +338,7 @@ public class TimeUtils {
      */
     public static int getDay(String time,String pattern){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDate localDate = LocalDateUtil.string2Date(time, pattern);
+            LocalDate localDate = LocalDateUtil.string2LocalDate(time, pattern);
             return localDate.getDayOfMonth();
         } else {
             return DateUtil.getDay(time,pattern);
@@ -352,7 +352,7 @@ public class TimeUtils {
     public static int getDay(long time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             LocalDateTime localDateTime = LocalDateUtil.milli2LocalDateTime(time);
-            return LocalDateUtil.getAppointDay(localDateTime);
+            return LocalDateUtil.getAnyDay(localDateTime);
         } else {
             return DateUtil.getDay(time);
         }
@@ -364,7 +364,7 @@ public class TimeUtils {
      */
     public static int getHours(String time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
+            LocalDateTime localDateTime = LocalDateUtil.string2LocalDateTime(time);
             return localDateTime.getHour();
         } else {
             return DateUtil.getHour(time);
@@ -390,7 +390,7 @@ public class TimeUtils {
      */
     public static int getMinute(String time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
+            LocalDateTime localDateTime = LocalDateUtil.string2LocalDateTime(time);
             return localDateTime.getMinute();
         } else {
             return DateUtil.getMinute(time);
@@ -412,7 +412,7 @@ public class TimeUtils {
      */
     public static int getSecond(String time){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDateTime localDateTime = LocalDateUtil.string2Date(time);
+            LocalDateTime localDateTime = LocalDateUtil.string2LocalDateTime(time);
             return localDateTime.getSecond();
         } else {
             return DateUtil.getSecond(time);
@@ -427,6 +427,24 @@ public class TimeUtils {
         }
     }
 
+    /**是否是今天,
+     * @param time
+     * @return
+     */
+    public static boolean isToday(String time, boolean isComplete, String pattern){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if (isComplete){//完整时间格式
+                LocalDateTime localDateTime = LocalDateUtil.string2LocalDateTime(time);
+                return LocalDateUtil.isToday(localDateTime);
+            }else {//其他格式,例如2020-07-23
+                LocalDate localDate = LocalDateUtil.string2LocalDate(time, pattern);
+
+            }
+        } else {
+
+        }
+        return false;
+    }
 
 
 
