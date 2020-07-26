@@ -14,7 +14,7 @@ import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
-import com.kiwilss.xview.utils.date.TimeUtils
+
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
