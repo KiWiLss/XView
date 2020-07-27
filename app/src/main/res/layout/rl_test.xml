@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="发嘿嘿覅诶诶发嘿嘿覅额恩和凤凰if黑化肥分解诶飞"
-            android:background="@color/red"/>
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="20dp"
-            android:background="@color/yellow_FF9B52"
-            android:layout_alignRight="@id/tv_title"
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:text="不确定宽度,不确定字数不确定宽度,不确定字数不确定宽度,不确定字数"
+         android:singleLine="true"
+         />
 
-            android:layout_marginTop="@dimen/m10"/>
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="跟随标签"
+         android:background="@color/yellow_FF9B52"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="跟随标签2"
+         android:background="@color/blue_74D3FF"/>
+ </LinearLayout>
 
 
 
-    </RelativeLayout>
 
-
-</RelativeLayout>
+</LinearLayout>

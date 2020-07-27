@@ -28,7 +28,7 @@
         <activity android:name=".ui.glide.glidej.GlideJActivity"/>
 
         <activity android:name=".ui.view.textview.TextViewActivity"/>
-
+        <activity android:name=".ui.copy.MTActivity"/>
 
     </application>
 

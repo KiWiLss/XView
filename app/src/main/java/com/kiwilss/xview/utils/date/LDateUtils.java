@@ -24,7 +24,9 @@ public class LDateUtils {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static void main(String[] args) {
         System.out.println("------------------");
-
+        System.out.println(getNowWeek());
+        System.out.println(getNowWeekOfMonth());
+        System.out.println(LocalDateTimeUtil.getNowWeekOfMonth());
 
     }
 
@@ -202,6 +204,26 @@ public class LDateUtils {
         return DateUtil.getNowWeek();
     }
 
+    /**获取当前日期是当月的第几周,7月27号,返回 5
+     * @return
+     */
+    public static int getNowWeekOfMonth(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            return LocalDateTimeUtil.getNowWeekOfMonth();
+        } else {
+            return DateUtil.getNowWeekOfMonth();
+        }
+    }
+    /**获取当前日期是当年的第几周
+     * @return
+     */
+    public static int getNowWeekOfYear(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            return LocalDateTimeUtil.getNowWeekOfYear();
+        } else {
+            return DateUtil.getNowWeekOfYear();
+        }
+    }
     /**获取今天是今年的第几天
      * @return
      */
@@ -224,6 +246,9 @@ public class LDateUtils {
         }
     }
 
+    /**
+     * ----------------------任意时间相关----------------------------------
+     */
     /**获取任意指定的时间
      * @return
      */
