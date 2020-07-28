@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
@@ -25,19 +25,75 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:background="@color/black_666666"/>
+                android:text="简单使用"
+                />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:flexDirection="row"
+                app:justifyContent="space_around"
+                app:showDivider="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                  android:paddingHorizontal="15dp"
+                    app:layout_alignSelf="flex_start"
+                    android:text="程序员"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                   android:background="@color/yellow_FF9B52"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="15dp"
+                    app:layout_alignSelf="flex_start"
+                    android:text="工程师"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@color/yellow_FF9B52"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="15dp"
+                    app:layout_alignSelf="flex_start"
+                    android:text="美食"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@color/yellow_FF9B52"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="15dp"
+                    app:layout_alignSelf="flex_start"
+                    android:text="IOS 开发工程师"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@color/yellow_FF9B52"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingHorizontal="15dp"
+                    app:layout_alignSelf="flex_start"
+                    android:text="娱乐杂志"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@color/yellow_FF9B52"
+                    android:layout_margin="5dp"/>
 
 
-<!--            <-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                tools:ignore="MissingClass">-->
+            </com.google.android.flexbox.FlexboxLayout>
 
-
-
-
-<!--            </>-->
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

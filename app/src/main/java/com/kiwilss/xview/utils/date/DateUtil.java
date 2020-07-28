@@ -94,7 +94,10 @@ public class DateUtil {
 
     public static void main(String[] args) {
         System.out.println("------------------------");
-        System.out.println(getNowMonth());
+        System.out.println(checkDateFromTo2("2020-07-27 12:23:34","2020-07-27 12:23:34"));
+        System.out.println(checkDateFromTo("2020-07-27 12:23:34","2020-07-28 12:23:34"));
+        System.out.println(checkDateFromTo("2020-07-27 12:23:34","2020-07-25 12:23:34"));
+
 
 //        System.out.println(date2String(setMonths(getNowDate(),5)));
 //        System.out.println(addMonth("2019-05-22",PATTEN_YMD,5));
@@ -538,7 +541,7 @@ public class DateUtil {
     }
 
     /**
-     * 日期比较， 后面日期比前面的日期大
+     * 日期比较， 后面日期比前面的日期大或者相等返回 true, 否则返回 false
      *
      * @param dateFrom
      *            开始日期
@@ -554,6 +557,18 @@ public class DateUtil {
         }
     }
 
+    /**日期比较， 后面日期比前面的日期大返回 true, 否则返回 false
+     * @param dateFrom
+     * @param dateEnd
+     * @return
+     */
+    public static boolean checkDateFromTo2(String dateFrom, String dateEnd) {
+        if (checkDateCompare(dateFrom, dateEnd, COMPARE_TYPE_GT)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     /**
      * 判断前后日期对比。 如果后面的日期大于前面的日期， 返回true。 否则返回false。
      *
@@ -564,9 +579,10 @@ public class DateUtil {
      * @return boolean 比较结果
      */
     private static boolean checkDateCompare(String dateFromStr, String dateEndStr, String compareType) {
-        if (!checkIsActiveDate(dateFromStr) || !checkIsActiveDate(dateEndStr)) {
-            return false;
-        } else {
+//        if (!checkIsActiveDate(dateFromStr) || !checkIsActiveDate(dateEndStr)) {
+//            System.out.println("------wuxiao---");
+//            return false;
+//        } else {
             Date dateFrom = string2Date(dateFromStr, PATTEN_YMD);
             Date dateEnd = string2Date(dateEndStr, PATTEN_YMD);
 
@@ -586,7 +602,7 @@ public class DateUtil {
                     return true;
                 }
             }
-        }
+
         return false;
     }
 
@@ -616,12 +632,15 @@ public class DateUtil {
     public static boolean checkIsActiveDate(String date) {
         // 先验证基本格式是否正确
         if (!matches(date, DATE_REG_SIMPLE)) {
+            System.out.println("---基本格式不通过----");
             return false;
         }
         // 验证复杂格式是否正确
         if (isNotEmpty(date) && date.contains(DEFAULT_SEPERATOR)) {
             String dateNoSeprator = date.replaceAll(DEFAULT_SEPERATOR, "");
-            return matches(dateNoSeprator, DATE_REG);
+            boolean matches = matches(dateNoSeprator, DATE_REG);
+            System.out.println("---复杂格式----" + matches);
+            return matches;
         }
         return false;
     }
@@ -1108,6 +1127,28 @@ public class DateUtil {
     public static boolean isTomorrow(long time){
         return isTomorrow(millis2Date(time));
     }
+
+    /**是否是昨天
+     * @param date
+     * @return
+     */
+    public static boolean isYesterDay(Date date) {
+        Calendar calendar1 = getCalendar();
+        calendar1.setTime(date);
+
+        Calendar calendar2 = getCalendar();
+        calendar2.add(Calendar.DAY_OF_MONTH, -1);
+        return isSameDay(calendar1, calendar2);
+    }
+
+    public static boolean isYesterDay(String date){
+        return isYesterDay(string2Date(date));
+    }
+
+    public static boolean isYesterDay(String date,String patten){
+        return isYesterDay(string2Date(date,patten));
+    }
+
 
     /**获取 Calendar
      * @return
@@ -2119,6 +2160,10 @@ public class DateUtil {
      */
     public static boolean isToday(String time) {
         return isToday(string2Millis(time, DEFAULT_FORMAT));
+    }
+
+    public static boolean isToday(String time,String patten) {
+        return isToday(string2Millis(time, patten));
     }
 
     public static boolean isToday(final long millis) {

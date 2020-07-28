@@ -38,7 +38,7 @@ public class LocalDateTimeUtil {
         LocalDateTime oneTime = getAnyLocalDateTime(2020, 6, 30, 2, 2, 2);
         LocalDateTime twoTime = getAnyLocalDateTime(2020, 7, 2, 2, 2, 2);
 
-
+        System.out.println(getPlusYear(getNowLocalDateTime(),-1));
     }
 
     /**
@@ -740,7 +740,7 @@ public class LocalDateTimeUtil {
      * @param second
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private static Boolean isSameWeek(LocalDateTime first, LocalDateTime second) {
+    public static Boolean isSameWeek(LocalDateTime first, LocalDateTime second) {
 //        两个时间差不超过7天,
         Period period = Period.between(first.toLocalDate(), second.toLocalDate());
         int years = period.getYears();
@@ -782,7 +782,49 @@ public class LocalDateTimeUtil {
             return false;
         }
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static Boolean isSameWeek(LocalDate first, LocalDate second) {
+//        两个时间差不超过7天,
+        Period period = Period.between(first, second);
+        int years = period.getYears();
+        if (years > 0) {
+            return false;
+        }
+        int months = period.getMonths();
+        if (months > 0) {
+            return false;
+        }
+        int days = period.getDays();
+        if (days == 0) {
+//          表明是同一天
+            return true;
+        }
+        if (days > 7 || days < -7) {
+//            两个时间差 超出了7天
+            return false;
+        }
+        int firstDayOfWeek = first.getDayOfWeek().getValue();
+        int secondDayOfWeek = second.getDayOfWeek().getValue();
+        if (secondDayOfWeek == 1) {
+            if (oneDay(firstDayOfWeek, secondDayOfWeek, days)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (secondDayOfWeek == 7) {
+            if (sevenDay(firstDayOfWeek, secondDayOfWeek, days)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (otherDay(firstDayOfWeek, secondDayOfWeek, days)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     /**
      * secondDayOfWeek 是所在星期的第一天
      * 星期的第一天 数据处理
