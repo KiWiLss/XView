@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.kiwilss.xview.R
 import com.kiwilss.xview.model.main.MainBean
+import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
@@ -27,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         MainBean("约束布局",ConstraintActivity::class.java),
         MainBean("ViewStub",ViewStubActivity::class.java),
         MainBean("Glide java",GlideJActivity::class.java),
-        MainBean("TextView",TextViewActivity::class.java)
+        MainBean("TextView",TextViewActivity::class.java),
+        MainBean("MeiTuan",MTActivity::class.java)
     )
 
     //test

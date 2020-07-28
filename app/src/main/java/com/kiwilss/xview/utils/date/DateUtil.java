@@ -2433,6 +2433,19 @@ public class DateUtil {
         return Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
     }
 
+    /**获取当前日期是当月的第几周,7月27号,返回 5
+     * @return
+     */
+    public static int getNowWeekOfMonth(){
+        return Calendar.getInstance().get(Calendar.WEEK_OF_MONTH);
+    }
+
+    /**获取当前日期是当年的第几周
+     * @return
+     */
+    public static int getNowWeekOfYear(){
+        return Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
+    }
 
     /**
      * 获取当前时间 Date 类型

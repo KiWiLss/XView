@@ -44,9 +44,6 @@ object Utils {
         return channelName
     }
 
-    fun getList(){
-
-    }
 
     /**
      * 获取ApplicationContext
@@ -60,7 +57,6 @@ object Utils {
         }else{
             throw NullPointerException("app.mContext should init")
         }
-
     }
 
 }
