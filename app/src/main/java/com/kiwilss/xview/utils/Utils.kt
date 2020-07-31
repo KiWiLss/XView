@@ -14,6 +14,7 @@ package com.kiwilss.xview.utils
 import android.content.Context
 import android.content.pm.PackageManager
 import com.kiwilss.App
+import com.kiwilss.xview.model.banner.BannerBean
 
 /**
  *@FileName: Utils
@@ -59,8 +60,28 @@ object Utils {
         }
     }
 
-    fun test(){
-
+    var imageUrls = listOf(
+        "https://video.dakale.net/image/cover/61CFD4772F0D4B5199002F2739DA2D25-6-2.png",
+        "https://video.dakale.net/image/cover/50D7058C125B4894BD19EB3A7B7A686D-6-2.png",
+        "https://video.dakale.net/image/cover/BC3B229822254442B1A96BF6B16649DB-6-2.png",
+        "https://video.dakale.net/image/cover/23265659207A4E479500C344D4895F10-6-2.png",
+        "https://video.dakale.net/image/cover/F86AE51D775D4E90A126E1B0B495E26E-6-2.png",
+        "https://video.dakale.net/image/cover/820BA482154E4930B362D93970AA2278-6-2.png"
+    )
+    fun getBannerList1(): List<BannerBean>{
+        val list = arrayListOf<BannerBean>()
+        for (index in imageUrls.indices){
+            val bannerBean = BannerBean(null,null, imageUrls[index],false)
+            list.add(bannerBean)
+        }
+        return list
     }
-
+    fun getBannerList2(): List<BannerBean>{
+        val list = arrayListOf<BannerBean>()
+        for (index in imageUrls.indices){
+            val bannerBean = BannerBean("测试看标题$index",null, imageUrls[index],true)
+            list.add(bannerBean)
+        }
+        return list
+    }
 }

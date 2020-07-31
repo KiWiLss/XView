@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.kiwilss.xview.R
 import com.kiwilss.xview.model.main.MainBean
+import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
@@ -29,12 +30,13 @@ class MainActivity : AppCompatActivity() {
         MainBean("ViewStub",ViewStubActivity::class.java),
         MainBean("Glide java",GlideJActivity::class.java),
         MainBean("TextView",TextViewActivity::class.java),
-        MainBean("MeiTuan",MTActivity::class.java)
+        MainBean("MeiTuan",MTActivity::class.java),
+        MainBean("Banner",BannerActivity::class.java)
     )
 
     //test
-
     private val mAdapter by lazy { MainAdapter() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
