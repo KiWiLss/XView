@@ -38,6 +38,10 @@
         <activity android:name=".ui.view.recyclerview.RecyclerItemFixedActivity"/>
         <activity android:name=".ui.view.recyclerview.RecyclerViewWrapActivity"/>
         <activity android:name=".ui.view.recyclerview.RecyclerWrapActivity"/>
+        <activity android:name=".ui.view.recyclerview.RecyclerDecorationLinearActivity"/>
+        <activity android:name=".ui.view.recyclerview.RecyclerIntervalActivity"/>
+
+
 
     </application>
 

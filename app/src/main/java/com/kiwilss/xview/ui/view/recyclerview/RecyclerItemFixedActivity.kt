@@ -24,7 +24,7 @@ import kotlinx.android.synthetic.main.activity_recycler_item_fixed.*
  *@author : Lss kiwilss
  * @e-mail : kiwilss@163.com
  * @time   : 2020/7/31
- * @desc   : {DESCRIPTION}
+ * @desc   : {item高度固定,设置显示的item个数}
  */
 class RecyclerItemFixedActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -29,7 +29,7 @@ import kotlinx.android.synthetic.main.activity_recyclerview_wrap.*
  *@author : Lss Administrator
  * @e-mail : kiwilss@163.com
  * @time   : 2020/8/1
- * @desc   : {DESCRIPTION}
+ * @desc   : {横向滚动,设置显示item个数}
  */
 class RecyclerViewWrapActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

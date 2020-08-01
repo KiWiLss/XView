@@ -39,5 +39,12 @@ class RecyclerViewActivity : AppCompatActivity(){
             startActivity(Intent(this,RecyclerViewWrapActivity::class.java))
         }
 
+        btn_recycler_decoration.setOnClickListener {
+            startActivity(Intent(this,RecyclerDecorationLinearActivity::class.java))
+        }
+
+        btn_recycler_interval.setOnClickListener {
+            startActivity(Intent(this,RecyclerIntervalActivity::class.java))
+        }
     }
 }

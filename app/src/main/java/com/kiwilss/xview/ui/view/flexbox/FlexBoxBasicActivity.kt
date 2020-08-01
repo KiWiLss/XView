@@ -13,6 +13,7 @@ package com.kiwilss.xview.ui.view.flexbox
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.kiwilss.xview.R
 
 /**
  *@FileName: FlexBoxBasicActivity
@@ -24,6 +25,6 @@ import androidx.appcompat.app.AppCompatActivity
 class FlexBoxBasicActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setContentView(R.layout.activity_flexbox_basic)
     }
 }

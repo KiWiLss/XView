@@ -26,6 +26,19 @@
             android:text="横向滑动设置显示固定 item 数目"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_recycler_decoration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置分割线"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_recycler_interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置分割线作为Item的上下左右间隔"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
