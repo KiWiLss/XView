@@ -71,6 +71,9 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
     //banner
     implementation 'com.youth.banner:banner:2.1.0'
+   //viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
 
 
 }

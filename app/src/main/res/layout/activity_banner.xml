@@ -36,5 +36,111 @@
             app:banner_indicator_radius="6dp"
             app:banner_indicator_selected_color="@color/green_07C0C2" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认图片 + 矩形圆角指示器" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_rect"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            app:banner_indicator_normal_color="@color/white"
+            app:banner_indicator_radius="6dp"
+            app:banner_indicator_selected_color="@color/green_07C0C2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认图片 + 矩形无圆角指示器" />
+
+<!--          app:banner_indicator_radius="0dp"
+设置无效,代码设置生效-->
+        <com.youth.banner.Banner
+            android:id="@+id/banner_rectNo"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            app:banner_indicator_normal_color="@color/white"
+            app:banner_indicator_selected_color="@color/green_07C0C2"
+            app:banner_indicator_normal_width="10dp"
+            app:banner_indicator_selected_width="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认图片 + 矩形圆角切换指示器" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_rectCircle"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            app:banner_indicator_normal_color="@color/white"
+            app:banner_indicator_selected_color="@color/green_07C0C2"
+            app:banner_indicator_radius="4dp"
+            app:banner_indicator_normal_width="8dp"
+            app:banner_indicator_height="8dp"
+            app:banner_indicator_selected_width="20dp"
+            app:banner_radius="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认图片 + 圆形切换指示器 + 画廊模式" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            app:banner_indicator_normal_color="@color/white"
+            app:banner_indicator_selected_color="@color/green_07C0C2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认图片 + 圆形切换指示器 + 各类切换效果" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_page"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            app:banner_indicator_normal_color="@color/white"
+            app:banner_indicator_selected_color="@color/green_07C0C2"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_rotateY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RotateY"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_depth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depth"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_zoomOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZoomOut"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_ScaleIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ScaleIn"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -32,24 +32,6 @@ import com.youth.banner.util.BannerUtils
  * @time   : 2020/7/31
  * @desc   : {DESCRIPTION}
  */
-class ImageBannerAdapter(resId: Int = R.layout.banner_image_title):
-    BaseQuickAdapter<BannerBean,BaseViewHolder>(resId) {
-
-    override fun convert(holder: BaseViewHolder, bannerBean: BannerBean) {
-
-        val ivImageView = holder.getView<ImageView>(R.id.image)
-        val tvTitle = holder.getView<TextView>(R.id.bannerTitle)
-        if (bannerBean.isShowTitle){
-            tvTitle.visibility =  View.VISIBLE
-            tvTitle.text = bannerBean.title ?: "标题"
-        }else{
-            tvTitle.visibility =  View.GONE
-        }
-        val dimens = context.resources.getDimensionPixelOffset(R.dimen.dp_10)
-        GlideUtil.loadImgRound(context,bannerBean.imgUrl,ivImageView,dimens)
-    }
-}
-
 class ImageTitleAdapter(data: List<BannerBean>, private val round: Int): BannerAdapter<BannerBean,ImageTitleAdapter.ImageTitleHolder>(data){
 
     class ImageTitleHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
