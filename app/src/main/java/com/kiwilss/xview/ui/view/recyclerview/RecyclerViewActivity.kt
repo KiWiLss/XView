@@ -10,9 +10,11 @@
  */
 package com.kiwilss.xview.ui.view.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import kotlinx.android.synthetic.main.activity_recyclerview.*
 
 /**
  *@FileName: RecyclerViewActivity
@@ -26,6 +28,13 @@ class RecyclerViewActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recyclerview)
 
+        btn_recycler_itemFixed.setOnClickListener {
+            startActivity(Intent(this,RecyclerItemFixedActivity::class.java))
+        }
+
+        btn_recycler_itemWrap.setOnClickListener {
+            startActivity(Intent(this,RecyclerViewWrapActivity::class.java))
+        }
 
     }
 }

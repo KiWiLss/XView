@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.format.DateUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.kiwilss.xview.R
 import com.kiwilss.xview.model.main.MainBean
@@ -15,6 +16,7 @@ import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         MainBean("Glide java",GlideJActivity::class.java),
         MainBean("TextView",TextViewActivity::class.java),
         MainBean("MeiTuan",MTActivity::class.java),
-        MainBean("Banner",BannerActivity::class.java)
+        MainBean("Banner",BannerActivity::class.java),
+        MainBean("RecyclerView",RecyclerViewActivity::class.java)
     )
 
     //test

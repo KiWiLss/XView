@@ -88,6 +88,15 @@ class BannerActivity: AppCompatActivity() {
             it.addPageTransformer(AlphaPageTransformer())
             it.adapter = circleAdapter
         }
+        //圆形指示器 + 圆形指示器外置
+        banner_outer?.let {
+            it.setIndicator(indicator,false)
+            it.addBannerLifecycleObserver(this)
+            //it.setIndicatorGravity(IndicatorConfig.Direction.RIGHT)
+            //添加透明效果(画廊配合透明效果更棒)
+            it.addPageTransformer(AlphaPageTransformer())
+            it.adapter = circleAdapter
+        }
 
         //圆形指示器 + 切换效果
         banner_page?.let {

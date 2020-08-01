@@ -13,7 +13,12 @@
          android:layout_height="wrap_content"
          android:text="固定 item 高度,设置显示固定 item 数目"
          android:textAllCaps="false"/>
-
+        <Button
+            android:id="@+id/btn_recycler_itemWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="非固定 item 高度,设置显示固定 item 数目"
+            android:textAllCaps="false"/>
 
 
     </LinearLayout>

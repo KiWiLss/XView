@@ -55,8 +55,6 @@
             android:layout_height="wrap_content"
             android:text="默认图片 + 矩形无圆角指示器" />
 
-<!--          app:banner_indicator_radius="0dp"
-设置无效,代码设置生效-->
         <com.youth.banner.Banner
             android:id="@+id/banner_rectNo"
             android:layout_width="match_parent"
@@ -65,7 +63,9 @@
             app:banner_indicator_normal_color="@color/white"
             app:banner_indicator_selected_color="@color/green_07C0C2"
             app:banner_indicator_normal_width="10dp"
-            app:banner_indicator_selected_width="5dp"/>
+            app:banner_indicator_selected_width="5dp"
+            app:banner_indicator_radius="0dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -96,6 +96,27 @@
             android:layout_margin="10dp"
             app:banner_indicator_normal_color="@color/white"
             app:banner_indicator_selected_color="@color/green_07C0C2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认图片 + 圆形切换指示器 + 外置indicator" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_outer"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            app:banner_indicator_normal_color="@color/white"
+            app:banner_indicator_selected_color="@color/green_07C0C2"
+            />
+
+        <com.youth.banner.indicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/red_F7E6ED"
+            android:layout_gravity="center"
             />
 
         <TextView
