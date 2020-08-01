@@ -37,6 +37,7 @@
         <activity android:name=".ui.view.recyclerview.RecyclerViewActivity"/>
         <activity android:name=".ui.view.recyclerview.RecyclerItemFixedActivity"/>
         <activity android:name=".ui.view.recyclerview.RecyclerViewWrapActivity"/>
+        <activity android:name=".ui.view.recyclerview.RecyclerWrapActivity"/>
 
     </application>
 

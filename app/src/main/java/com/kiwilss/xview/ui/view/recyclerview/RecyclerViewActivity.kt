@@ -32,6 +32,9 @@ class RecyclerViewActivity : AppCompatActivity(){
             startActivity(Intent(this,RecyclerItemFixedActivity::class.java))
         }
 
+        btn_recycler_itemWrap1.setOnClickListener {
+            startActivity(Intent(this,RecyclerWrapActivity::class.java))
+        }
         btn_recycler_itemWrap.setOnClickListener {
             startActivity(Intent(this,RecyclerViewWrapActivity::class.java))
         }

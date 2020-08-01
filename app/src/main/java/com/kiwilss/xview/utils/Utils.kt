@@ -84,4 +84,19 @@ object Utils {
         }
         return list
     }
+
+    /**
+     * 根据手机分辨率从dp转成px
+     *
+     * @param context
+     * @param dpValue
+     * @return
+     */
+    fun dip2px(context: Context, dpValue: Int): Int {
+        val scale = context.resources.displayMetrics.density
+        return (dpValue * scale + 0.5f).toInt()
+    }
+
+
+
 }
