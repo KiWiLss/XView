@@ -33,6 +33,7 @@
         <activity android:name=".ui.copy.MTActivity"/>
 
         <activity android:name=".ui.banner.BannerActivity"/>
+
     </application>
 
 </manifest>
