@@ -44,9 +44,5 @@ class RecyclerViewWrapActivity: AppCompatActivity() {
             it.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL))
         }
         adapter.setList(list)
-
-
-
-
     }
 }
