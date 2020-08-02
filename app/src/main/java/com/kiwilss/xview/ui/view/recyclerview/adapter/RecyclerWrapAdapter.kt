@@ -27,12 +27,9 @@ import com.kiwilss.xview.utils.LogUtils
  * @time   : 2020/8/1
  * @desc   : {DESCRIPTION}
  */
-class RecyclerWrapAdapter(resId: Int = R.layout.item_recycelr_wrap2)
-    : BaseQuickAdapter<String,BaseViewHolder>(resId){
+class RecyclerWrapAdapter(resId: Int = R.layout.item_recycelr_wrap2) :
+    BaseQuickAdapter<String, BaseViewHolder>(resId) {
     override fun convert(holder: BaseViewHolder, item: String) {
-        holder.setText(R.id.tv_item_recycler_wrap2_title,item)
-
+        holder.setText(R.id.tv_item_recycler_wrap2_title, item)
     }
-
-
 }

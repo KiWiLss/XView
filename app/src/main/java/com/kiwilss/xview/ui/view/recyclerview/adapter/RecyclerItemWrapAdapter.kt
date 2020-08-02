@@ -45,5 +45,4 @@ class RecyclerItemWrapAdapter(resId: Int = R.layout.item_recycelr_wrap)
 
     }
 
-
 }
