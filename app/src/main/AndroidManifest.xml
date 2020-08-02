@@ -40,7 +40,7 @@
         <activity android:name=".ui.view.recyclerview.RecyclerWrapActivity"/>
         <activity android:name=".ui.view.recyclerview.RecyclerDecorationLinearActivity"/>
         <activity android:name=".ui.view.recyclerview.RecyclerIntervalActivity"/>
-
+        <activity android:name=".ui.view.recyclerview.RecyclerGideActivity"/>
 
 
     </application>

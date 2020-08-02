@@ -30,8 +30,16 @@
             android:id="@+id/btn_recycler_decoration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="设置分割线"
+            android:text="设置分割线,线性布局"
             android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_recycler_decorationGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置分割线,网格布局"
+            android:textAllCaps="false"/>
+
 
         <Button
             android:id="@+id/btn_recycler_interval"

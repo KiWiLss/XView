@@ -7,10 +7,11 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_recycler_wrap_list"
+        android:id="@+id/rv_recycler_grid_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/m10"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

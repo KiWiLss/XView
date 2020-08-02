@@ -28,7 +28,7 @@ class MainAdapter(resId : Int = R.layout.item_main):
     BaseQuickAdapter<MainBean,BaseViewHolder>(resId) {
 
     override fun convert(holder: BaseViewHolder, item: MainBean) {
-        Log.e("MMM", ": conver----${item.title}" );
+        //Log.e("MMM", ": conver----${item.title}" );
         holder.setText(R.id.tv_item_main_content,item.title)
     }
 }

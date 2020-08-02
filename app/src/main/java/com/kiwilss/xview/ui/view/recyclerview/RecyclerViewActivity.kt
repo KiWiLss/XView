@@ -42,7 +42,9 @@ class RecyclerViewActivity : AppCompatActivity(){
         btn_recycler_decoration.setOnClickListener {
             startActivity(Intent(this,RecyclerDecorationLinearActivity::class.java))
         }
-
+        btn_recycler_decorationGrid.setOnClickListener {
+            startActivity(Intent(this,RecyclerGideActivity::class.java))
+        }
         btn_recycler_interval.setOnClickListener {
             startActivity(Intent(this,RecyclerIntervalActivity::class.java))
         }
