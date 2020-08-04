@@ -16,6 +16,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.nulltest.enumtest.Coupon
+import com.kiwilss.xview.nulltest.enumtest.MyCoupon
+import com.kiwilss.xview.nulltest.enumtest.UserCouponDetail
+import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_viewstub.*
 import kotlinx.android.synthetic.main.include_layout.*
 
@@ -56,5 +60,13 @@ class ViewStubActivity: AppCompatActivity() {
                 tv_include_layout.text = "修改过后的内容"
             }
         }
+
+
+        val coupon = Coupon(9,"hello")
+        LogUtils.e(coupon.isBeanShort)
+
+        val myCoupon = MyCoupon(UserCouponDetail("my","hello"))
+        LogUtils.e(myCoupon.userCouponDetail.isMy())
+        LogUtils.e(myCoupon.userCouponDetail.isMy2)
     }
 }

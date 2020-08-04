@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.kiwilss.xview.R;
+import com.kiwilss.xview.nulltest.enumtest.Coupon;
+import com.kiwilss.xview.utils.LogUtils;
 
 /**
  * @author : Lss Administrator
@@ -36,6 +38,10 @@ public class MTActivity extends AppCompatActivity {
                  startActivityForResult(intent, 2);
              }
          });
+
+        Coupon coupon = new Coupon(9,"hello");
+        LogUtils.e(coupon.isBeanShort());
+
     }
 }
 
