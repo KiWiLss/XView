@@ -35,13 +35,15 @@
         <activity android:name=".ui.banner.BannerActivity"/>
 
         <activity android:name=".ui.view.recyclerview.RecyclerViewActivity"/>
-        <activity android:name=".ui.view.recyclerview.RecyclerItemFixedActivity"/>
-        <activity android:name=".ui.view.recyclerview.RecyclerViewWrapActivity"/>
-        <activity android:name=".ui.view.recyclerview.RecyclerWrapActivity"/>
-        <activity android:name=".ui.view.recyclerview.RecyclerDecorationLinearActivity"/>
-        <activity android:name=".ui.view.recyclerview.RecyclerIntervalActivity"/>
-        <activity android:name=".ui.view.recyclerview.RecyclerGideActivity"/>
+        <activity android:name=".ui.view.recyclerview.fixed.RecyclerItemFixedActivity"/>
+        <activity android:name=".ui.view.recyclerview.fixed.RecyclerViewWrapActivity"/>
+        <activity android:name=".ui.view.recyclerview.fixed.RecyclerWrapActivity"/>
+        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerDecorationLinearActivity"/>
+        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerIntervalActivity"/>
+        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerGideActivity"/>
 
+        <activity android:name=".ui.view.mddialog.MdDialogActivity"/>
+        <activity android:name=".ui.view.popup.PopupActivity"/>
         <activity android:name=".ui.view.viewpager.ViewPageActivity"/>
 
     </application>

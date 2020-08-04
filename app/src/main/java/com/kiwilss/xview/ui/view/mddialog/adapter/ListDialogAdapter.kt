@@ -1,33 +1,30 @@
 /**
  * Copyright (C), 2017-2020, XXX有限公司
- * FileName: MainAdapter
+ * FileName: ListDialogAdapter
  * Author:   kiwilss
- * Date:     2020/7/8 00:07
+ * Date:     2020/8/3 21:16
  * Description: {DESCRIPTION}
  * History:
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
 
-package com.kiwilss.xview.main
+package com.kiwilss.xview.ui.view.mddialog.adapter
 
-import android.util.Log
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.kiwilss.xview.R
-import com.kiwilss.xview.model.main.MainBean
 
 /**
- *@FileName: MainAdapter
+ *@FileName: ListDialogAdapter
  *@author : Lss kiwilss
  * @e-mail : kiwilss@163.com
- * @time   : 2020/7/8
+ * @time   : 2020/8/3
  * @desc   : {DESCRIPTION}
  */
-class MainAdapter(resId : Int = R.layout.item_main):
-    BaseQuickAdapter<MainBean,BaseViewHolder>(resId) {
-
-    override fun convert(holder: BaseViewHolder, item: MainBean) {
-        holder.setText(R.id.tv_item_main_content,item.title)
+class ListDialogAdapter(resId: Int = R.layout.item_list_dialog)
+    : BaseQuickAdapter<String,BaseViewHolder>(resId){
+    override fun convert(holder: BaseViewHolder, item: String) {
+        holder.setText(R.id.tv_item_list_dialog_title,item)
     }
 }

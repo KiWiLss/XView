@@ -14,6 +14,12 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.ui.view.recyclerview.decoration_activity.RecyclerDecorationLinearActivity
+import com.kiwilss.xview.ui.view.recyclerview.decoration_activity.RecyclerGideActivity
+import com.kiwilss.xview.ui.view.recyclerview.decoration_activity.RecyclerIntervalActivity
+import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerItemFixedActivity
+import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerViewWrapActivity
+import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerWrapActivity
 import kotlinx.android.synthetic.main.activity_recyclerview.*
 
 /**
@@ -29,24 +35,30 @@ class RecyclerViewActivity : AppCompatActivity(){
         setContentView(R.layout.activity_recyclerview)
 
         btn_recycler_itemFixed.setOnClickListener {
-            startActivity(Intent(this,RecyclerItemFixedActivity::class.java))
+            startActivity(Intent(this,
+                RecyclerItemFixedActivity::class.java))
         }
 
         btn_recycler_itemWrap1.setOnClickListener {
-            startActivity(Intent(this,RecyclerWrapActivity::class.java))
+            startActivity(Intent(this,
+                RecyclerWrapActivity::class.java))
         }
         btn_recycler_itemWrap.setOnClickListener {
-            startActivity(Intent(this,RecyclerViewWrapActivity::class.java))
+            startActivity(Intent(this,
+                RecyclerViewWrapActivity::class.java))
         }
 
         btn_recycler_decoration.setOnClickListener {
-            startActivity(Intent(this,RecyclerDecorationLinearActivity::class.java))
+            startActivity(Intent(this,
+                RecyclerDecorationLinearActivity::class.java))
         }
         btn_recycler_decorationGrid.setOnClickListener {
-            startActivity(Intent(this,RecyclerGideActivity::class.java))
+            startActivity(Intent(this,
+                RecyclerGideActivity::class.java))
         }
         btn_recycler_interval.setOnClickListener {
-            startActivity(Intent(this,RecyclerIntervalActivity::class.java))
+            startActivity(Intent(this,
+                RecyclerIntervalActivity::class.java))
         }
     }
 }

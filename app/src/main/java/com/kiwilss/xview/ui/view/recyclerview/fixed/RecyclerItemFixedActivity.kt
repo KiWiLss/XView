@@ -9,7 +9,7 @@
  * 作者姓名           修改时间           版本号              描述
  */
 
-package com.kiwilss.xview.ui.view.recyclerview
+package com.kiwilss.xview.ui.view.recyclerview.fixed
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

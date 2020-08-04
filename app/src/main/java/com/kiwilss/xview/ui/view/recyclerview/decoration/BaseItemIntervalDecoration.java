@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * created on : 2020/6/9 11:43
  * description ：
  */
-public class BaseItemDecoration extends RecyclerView.ItemDecoration {
+public class BaseItemIntervalDecoration extends RecyclerView.ItemDecoration {
 
     private int divider;//上下item之间 相距的距离
     private int dividerHorizontal;//左右item之间 相距的距离
@@ -19,7 +19,7 @@ public class BaseItemDecoration extends RecyclerView.ItemDecoration {
     private int lineCount;//一行多少个
     private int marginHorizontal;//距离两边的距离
 
-    public BaseItemDecoration(int divider, int lineCount) {
+    public BaseItemIntervalDecoration(int divider, int lineCount) {
         this.divider = divider;
         this.lineCount = lineCount;
         this.dividerHorizontal = divider;//默认不设置和上下的一致

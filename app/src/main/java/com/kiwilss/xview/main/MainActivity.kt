@@ -16,6 +16,7 @@ import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
 import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
 import com.kiwilss.xview.ui.view.viewpager.ViewPageActivity
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         MainBean("MeiTuan",MTActivity::class.java),
         MainBean("Banner",BannerActivity::class.java),
         MainBean("RecyclerView",RecyclerViewActivity::class.java),
+        MainBean("Dialog",MdDialogActivity::class.java),
         MainBean("ViewPager2",ViewPageActivity::class.java)
     )
 
