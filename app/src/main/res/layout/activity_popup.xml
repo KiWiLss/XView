@@ -8,6 +8,33 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_popup_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中间对话框"/>
+
+            <Button
+                android:id="@+id/btn_popup_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="底部对话框"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btn_popup_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="菜单形式"
+                android:layout_gravity="end"/>
+        </LinearLayout>
+
 
 
     </LinearLayout>

@@ -11,10 +11,13 @@
 
 package com.kiwilss.xview.utils
 
+import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
+import android.view.WindowManager
 import com.kiwilss.App
 import com.kiwilss.xview.model.banner.BannerBean
+
 
 /**
  *@FileName: Utils
@@ -97,6 +100,14 @@ object Utils {
         return (dpValue * scale + 0.5f).toInt()
     }
 
-
+    /**
+     * 设置添加屏幕的背景透明度
+     * @param bgAlpha
+     */
+    fun backgroundAlpha(context: Activity,bgAlpha: Float) {
+        val lp: WindowManager.LayoutParams = context.getWindow().getAttributes()
+        lp.alpha = bgAlpha //0.0-1.0
+        context.getWindow().setAttributes(lp)
+    }
 
 }
