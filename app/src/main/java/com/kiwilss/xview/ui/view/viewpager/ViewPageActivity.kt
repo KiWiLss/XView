@@ -68,7 +68,7 @@ class ViewPageActivity: AppCompatActivity() {
         vp_viewpager_fg.adapter = adapter
         vp_viewpager_fg.offscreenPageLimit = 3
 
-        //tablyout + viewpager
+        //tablyout + viewpager test
 
 
     }
