@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简单布局切换"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_viewpager_icon"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_vp_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="横向"/>
+            <Button
+                android:id="@+id/btn_vp_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="竖向"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复制fragment布局切换"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_viewpager_fg"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"/>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

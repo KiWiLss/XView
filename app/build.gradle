@@ -77,7 +77,8 @@ dependencies {
     implementation 'com.youth.banner:banner:2.1.0'
    //viewpager2
     implementation "androidx.viewpager2:viewpager2:1.0.0"
-
+    //json
+    implementation 'com.squareup.moshi:moshi:1.8.0'
 
 
 }

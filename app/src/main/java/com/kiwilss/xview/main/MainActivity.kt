@@ -18,6 +18,7 @@ import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
 import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
+import com.kiwilss.xview.ui.view.viewpager.ViewPageActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         MainBean("TextView",TextViewActivity::class.java),
         MainBean("MeiTuan",MTActivity::class.java),
         MainBean("Banner",BannerActivity::class.java),
-        MainBean("RecyclerView",RecyclerViewActivity::class.java)
+        MainBean("RecyclerView",RecyclerViewActivity::class.java),
+        MainBean("ViewPager2",ViewPageActivity::class.java)
     )
 
     //test
