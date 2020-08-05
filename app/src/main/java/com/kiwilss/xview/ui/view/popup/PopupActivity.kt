@@ -17,8 +17,11 @@ import android.view.ViewGroup
 import android.widget.PopupWindow
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.ui.view.popup.popup.PopupClickListener
+import com.kiwilss.xview.ui.view.popup.popup.SimplePopup
 import com.kiwilss.xview.utils.Utils
 import kotlinx.android.synthetic.main.activity_popup.*
+import kotlinx.android.synthetic.main.pw_center.view.*
 
 /**
  *@FileName: PopupActivity
@@ -40,6 +43,22 @@ class PopupActivity : AppCompatActivity() {
         btn_popup_menu.setOnClickListener {
             showMenuPw()
         }
+        btn_popup_center2.setOnClickListener {
+           val simple = SimplePopup(this,object : PopupClickListener{
+               override fun cancel(simplePopup: SimplePopup) {
+                   simplePopup.dismiss()
+               }
+
+               override fun sure(simplePopup: SimplePopup) {
+                   simplePopup.dismiss()
+               }
+
+
+           })
+            simple.showCenter(this)
+
+        }
+
     }
 
     private fun showMenuPw() {
@@ -61,7 +80,7 @@ class PopupActivity : AppCompatActivity() {
             ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
         //对整个 popupwindow 设置背景
         //popup.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this,R.color.red)))
-
+        contentView.tv_pw_onetitle_title.text = "居中显示提示"
         popup.showAtLocation(window.decorView,gravity,0,0)
 
         popup.setOnDismissListener {
