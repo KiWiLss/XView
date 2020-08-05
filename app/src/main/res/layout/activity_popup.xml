@@ -40,6 +40,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
+                android:id="@+id/btn_popup_menu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="菜单形式2"
+                android:layout_gravity="end"/>
+            <Button
                 android:id="@+id/btn_popup_center2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,6 +53,22 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_popup_menu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="菜单形式3"
+                android:layout_gravity="end"/>
+            <Button
+                android:id="@+id/btn_popup_center3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中间对话框3"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

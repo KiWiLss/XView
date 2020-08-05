@@ -78,6 +78,18 @@
             app:hl_dy="4dp"
             android:layout_marginHorizontal="6dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简单的阴影+ shape"
+                android:layout_marginTop="@dimen/m10"
+                android:layout_marginStart="@dimen/m10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简单的阴影+ shape"
+                android:layout_gravity="center"/>
 
         </com.lihang.ShadowLayout>
 

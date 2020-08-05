@@ -27,22 +27,25 @@ import kotlinx.android.synthetic.main.pw_center.view.*
  * @time   : 2020/8/5
  * @desc   : {DESCRIPTION}
  */
-class SimplePopup (context: Activity, private val popupClickListener: PopupClickListener)
-    : BottomPushPopupWindow<PopupClickListener>(context,popupClickListener){
-    override fun generateCustomView(t: PopupClickListener?): View {
+class SimplePopup2 (context: Activity, private val listener: PopupListener)
+    : BottomPushPopupWindow<PopupListener>(context,listener){
+
+
+    override fun generateCustomView(t: PopupListener?): View {
         val contentView = View.inflate(activity, R.layout.pw_center, null)
         contentView.tv_pw_onetitle_title.text = "简单提示"
         contentView.tv_pw_onetitle_cancel.setOnClickListener {
-            popupClickListener.cancel(this)
+            listener.cancel(this)
         }
         contentView.tv_pw_onetitle_sure.setOnClickListener {
-            popupClickListener.sure(this)
+            listener.sure(this)
         }
         return contentView
     }
 }
 
-interface PopupClickListener{
-    fun cancel(simplePopup: SimplePopup)
-    fun sure(simplePopup: SimplePopup)
+abstract class PopupListener{
+    abstract fun cancel(simplePopup2: SimplePopup2?)
+    open fun sure(simplePopup2: SimplePopup2?) {
+     }
 }
