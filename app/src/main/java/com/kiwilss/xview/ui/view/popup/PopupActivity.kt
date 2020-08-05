@@ -43,6 +43,7 @@ class PopupActivity : AppCompatActivity() {
         btn_popup_menu.setOnClickListener {
             showMenuPw()
         }
+        //
         btn_popup_center2.setOnClickListener {
            val simple = SimplePopup(this,object : PopupClickListener{
                override fun cancel(simplePopup: SimplePopup) {
