@@ -19,6 +19,7 @@ import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
 import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
 import com.kiwilss.xview.ui.view.popup.PopupActivity
 import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
+import com.kiwilss.xview.ui.view.shaw.ShawActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
 import com.kiwilss.xview.ui.view.viewpager.ViewPageActivity
 
@@ -40,7 +41,8 @@ class MainActivity : AppCompatActivity() {
         MainBean("RecyclerView",RecyclerViewActivity::class.java),
         MainBean("Dialog",MdDialogActivity::class.java),
         MainBean("ViewPager2",ViewPageActivity::class.java),
-        MainBean("PopupWindow",PopupActivity::class.java)
+        MainBean("PopupWindow",PopupActivity::class.java),
+        MainBean("ShawLayout",ShawActivity::class.java)
     )
 
     //test

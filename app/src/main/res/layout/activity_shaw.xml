@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_f2f2f2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/yellow_FF9B52"
+            android:layout_marginHorizontal="@dimen/m10"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="7dp"
+            android:background="@drawable/shadow_fillet_12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=".9图"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:elevation="2dp"
+                android:background="@drawable/bg_white_shaw" />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/m10"
+                android:background="@drawable/bg_white_shaw" />
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m10"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/m10"
+            android:layout_marginHorizontal="@dimen/m10"
+            >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+           >
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/m10"
+            app:hl_shadowBackColor="@color/white"
+            app:hl_shadowColor="@color/black_999999"
+            app:hl_cornerRadius="@dimen/m10"
+            app:hl_shadowLimit="4dp"
+            app:hl_isShowShadow="true"
+            app:hl_dx="0dp"
+            app:hl_dy="4dp"
+            android:layout_marginHorizontal="6dp">
+
+
+        </com.lihang.ShadowLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="@dimen/m10"
+            android:layout_marginTop="@dimen/m10"
+            android:background="@color/white">
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
