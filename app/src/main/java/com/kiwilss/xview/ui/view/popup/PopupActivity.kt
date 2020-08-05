@@ -43,7 +43,7 @@ class PopupActivity : AppCompatActivity() {
         btn_popup_menu.setOnClickListener {
             showMenuPw()
         }
-        //
+        //22
         btn_popup_center2.setOnClickListener {
            // testSimplePopup()
           testSimplePopup2()
