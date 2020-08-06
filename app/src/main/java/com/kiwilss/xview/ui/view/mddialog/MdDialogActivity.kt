@@ -48,6 +48,7 @@ class MdDialogActivity: AppCompatActivity() {
             //设置背景透明,以便显示圆角背景
             dialog.window!!.findViewById<View>(R.id.design_bottom_sheet)
                 .setBackgroundColor(Color.TRANSPARENT)
+
             dialog.show()
         }
 
@@ -101,9 +102,11 @@ class MdDialogActivity: AppCompatActivity() {
 
     private fun showBottomDialog() {//可以滑动,向下滑动关闭
         val dialog = BottomSheetDialog(this)
-        dialog.setCanceledOnTouchOutside(true)//设置点击空白处是否消失
-        val view = layoutInflater.inflate(R.layout.dialog_bottom_simple, null, false)
+        //dialog.setCanceledOnTouchOutside(true)//设置点击空白处是否消失
+        val view = layoutInflater.inflate(R.layout.dialog_bottom_simple, null)
         dialog.setContentView(view)
+        dialog.setCancelable(false)//设置是否可以滑动关闭
+        dialog.setCanceledOnTouchOutside(true)//设置点击空白处是否消失
         view.findViewById<TextView>(R.id.tv_dialog_bottom_simple_title)
             .text = "第一条标签"
         dialog.show()

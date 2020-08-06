@@ -2,8 +2,12 @@ package com.kiwilss.xview.ui.view.popup;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.ColorDrawable;
+import android.os.IBinder;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -26,14 +30,14 @@ public abstract class BottomPushPopupWindow<T> extends PopupWindow {
 
     protected Activity activity;
     private boolean isMask = true;//背景是否有阴影
-//    private WindowManager wm;
-//    private View maskView;
+    private WindowManager wm;
+    private View maskView;
 
     //@SuppressWarnings("deprecation")
     public BottomPushPopupWindow(Activity activity, T t) {
         super(activity);
         this.activity = activity;
-        //wm  =  (WindowManager)  context.getSystemService(Context.WINDOW_SERVICE);
+        wm  =  (WindowManager)  activity.getSystemService(Context.WINDOW_SERVICE);
         initType();
         setContentView(generateCustomView(t));
         setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
@@ -125,7 +129,7 @@ public abstract class BottomPushPopupWindow<T> extends PopupWindow {
     @Override
     public void showAtLocation(View parent, int gravity, int x, int y) {
         if (isMask) {
-            setScreenMaskView(0.5f);
+            addMaskView(parent.getWindowToken());
         }
         super.showAtLocation(parent, gravity, x, y);
     }
@@ -134,7 +138,7 @@ public abstract class BottomPushPopupWindow<T> extends PopupWindow {
     public void showAsDropDown(View anchor, int xoff, int yoff) {
         setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         if (isMask) {
-            setScreenMaskView(0.5f);
+            addMaskView(anchor.getWindowToken());
         }
         super.showAsDropDown(anchor, xoff, yoff);
     }
@@ -146,7 +150,7 @@ public abstract class BottomPushPopupWindow<T> extends PopupWindow {
     @Override
     public void dismiss() {
         if (isMask) {
-            setScreenMaskView(1f);
+            removeMaskView();
         }
         super.dismiss();
     }
@@ -161,37 +165,37 @@ public abstract class BottomPushPopupWindow<T> extends PopupWindow {
     }
 
 
-//    private  void  addMaskView(IBinder token)  {
-//        WindowManager.LayoutParams  p  =  new  WindowManager.LayoutParams();
-//        p.width  =  WindowManager.LayoutParams.MATCH_PARENT;
-//        p.height  =  WindowManager.LayoutParams.MATCH_PARENT;
-//        p.format  =  PixelFormat.TRANSLUCENT;
-//        p.type  =  WindowManager.LayoutParams.TYPE_APPLICATION_PANEL;
-//        p.token  =  token;
-//        p.windowAnimations = android.R.style.Animation_Toast;
-//        maskView = new View(context);
-//        maskView.setBackgroundColor(0x7f000000);
-//        //  maskView.setFitsSystemWindows(false);
-//        // 华为手机在home建进入后台后，在进入应用，蒙层出现在popupWindow上层，导致界面卡死，
-//        // 这里新增加按bug返回。
-//        // initType方法已经解决该问题，但是还是留着这个按back返回功能，防止其他手机出现华为手机类似问题。
-//        maskView.setOnKeyListener(new View.OnKeyListener() {
-//            @Override
-//            public boolean onKey(View v, int keyCode, KeyEvent event) {
-//                if (keyCode == KeyEvent.KEYCODE_BACK) {
-//                    removeMaskView();
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
-//        wm.addView(maskView, p);
-//    }
+    private  void  addMaskView(IBinder token)  {
+        WindowManager.LayoutParams  p  =  new  WindowManager.LayoutParams();
+        p.width  =  WindowManager.LayoutParams.MATCH_PARENT;
+        p.height  =  WindowManager.LayoutParams.MATCH_PARENT;
+        p.format  =  PixelFormat.TRANSLUCENT;
+        p.type  =  WindowManager.LayoutParams.TYPE_APPLICATION_PANEL;
+        p.token  =  token;
+        p.windowAnimations = android.R.style.Animation_Toast;
+        maskView = new View(activity);
+        maskView.setBackgroundColor(0x7f000000);
+        //  maskView.setFitsSystemWindows(false);
+        // 华为手机在home建进入后台后，在进入应用，蒙层出现在popupWindow上层，导致界面卡死，
+        // 这里新增加按bug返回。
+        // initType方法已经解决该问题，但是还是留着这个按back返回功能，防止其他手机出现华为手机类似问题。
+        maskView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    removeMaskView();
+                    return true;
+                }
+                return false;
+            }
+        });
+        wm.addView(maskView, p);
+    }
 
-//    private void removeMaskView() {
-//        if (maskView != null) {
-//            wm.removeViewImmediate(maskView);
-//            maskView = null;
-//        }
-//    }
+    private void removeMaskView() {
+        if (maskView != null) {
+            wm.removeViewImmediate(maskView);
+            maskView = null;
+        }
+    }
 }

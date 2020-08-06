@@ -47,6 +47,8 @@
         <activity android:name=".ui.view.viewpager.ViewPageActivity"/>
 
         <activity android:name=".ui.view.shaw.ShawActivity"/>
+        <activity android:name=".ui.view.shawshape.ShawShapeActivity"/>
+
 
     </application>
 
