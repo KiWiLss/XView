@@ -34,7 +34,7 @@ class ListDialog(context: Context): BottomSheetDialog(context) {
     }
     val list = arrayListOf<String>("测试数据一","测试数据二","测试数据三","测试数据四"
     ,"测试数据一","测试数据二","测试数据三","测试数据四")
-    val mAdapter by lazy { ListDialogAdapter() }
+    private val mAdapter by lazy { ListDialogAdapter() }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
