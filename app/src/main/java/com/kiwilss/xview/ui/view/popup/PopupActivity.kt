@@ -18,7 +18,13 @@ import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.ui.view.popup.easy.TestEasy
+import com.kiwilss.xview.ui.view.popup.easy.TestMenu
 import com.kiwilss.xview.ui.view.popup.popup.*
+import com.kiwilss.xview.ui.view.popup.smart.HorizontalPosition
+import com.kiwilss.xview.ui.view.popup.smart.SmartPopupWindow
+import com.kiwilss.xview.ui.view.popup.smart.VerticalPosition
+import com.kiwilss.xview.utils.LogUtils
 import com.kiwilss.xview.utils.Utils
 import kotlinx.android.synthetic.main.activity_popup.*
 import kotlinx.android.synthetic.main.pw_center.view.*
@@ -51,6 +57,47 @@ class PopupActivity : AppCompatActivity() {
         btn_popup_menu2.setOnClickListener {
             showMenuPw2()
         }
+        btn_popup_menu3.setOnClickListener {
+//             EasyPopup.create()
+//                .setContentView(this, R.layout.pw_menu)
+//                 .setBackgroundDimEnable(true)
+//               // .setAnimationStyle(R.style.RightPopAnim)
+//                //是否允许点击PopupWindow之外的地方消失
+//                .setFocusAndOutsideEnable(true)
+//                .apply()
+//                 .showAtAnchorView(btn_popup_menu3, YGravity.BELOW, XGravity.CENTER)
+
+//            val pp = LSimplePw(this)
+//            //pp.setPopupWidth(ViewGroup.LayoutParams.WRAP_CONTENT)
+//            pp.showAtAnchorView(btn_popup_menu3, YGravity.BELOW, XGravity.CENTER)
+            val contentView = layoutInflater.inflate(R.layout.pw_menu,null)
+            val popup = SmartPopupWindow.Builder.build(this,contentView)
+                .setOutsideTouchDismiss(false)
+                .createPopupWindow()
+            popup.showAtAnchorView(btn_popup_menu3, VerticalPosition.ABOVE, HorizontalPosition.CENTER)
+
+        }
+        btn_popup_center4.setOnClickListener {
+//            EasyPopup.create().setWidth(ViewGroup.LayoutParams.MATCH_PARENT)
+//                .setContentView(this,R.layout.pw_center)
+//                .setBackgroundDimEnable(true)
+//                .apply().showAtLocation(window.decorView,Gravity.CENTER,0,0)
+            val contentView = layoutInflater.inflate(R.layout.pw_center,null)
+            val popup = SmartPopupWindow.Builder.build(this,contentView)
+                //.setOutsideTouchDismiss(false)
+                .setSize(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
+                .setAlpha(0.4f)
+                .createPopupWindow()
+            popup.showAtLocation(btn_popup_menu3,Gravity.CENTER,0,0)
+        }
+        btn_popup_center5.setOnClickListener {
+            val contentView = layoutInflater.inflate(R.layout.pw_center,null)
+            val popup = SmartPopupWindow(this)
+            popup.contentView = contentView
+            popup.width = ViewGroup.LayoutParams.MATCH_PARENT
+            popup.height = ViewGroup.LayoutParams.WRAP_CONTENT
+            popup.showAtLocation(btn_popup_center5,Gravity.CENTER,0,0)
+        }
 
         btn_popup_center3.setOnClickListener {
             val pp = SimpleBasePopup(activity = this,simpleBasePopup = object :SimpleBasePopupListener(){
@@ -62,7 +109,24 @@ class PopupActivity : AppCompatActivity() {
                     super.cancel(simpleBasePopup)
                 }
             })
+            //pp.setIsClickDismiss(false)
             pp.showCenter()
+        }
+        btn_popup_center6.setOnClickListener {
+            val pp = TestEasy(this)
+            pp.showCenter()
+        }
+        btn_popup_center7.setOnClickListener {
+            val menu = TestMenu(this)
+            menu.showAtAnchorView(btn_popup_center7,VerticalPosition.ABOVE,HorizontalPosition.CENTER)
+        }
+        btn_popup_centerRight.setOnClickListener {
+            val menu = TestMenu(this)
+            menu.showAtAnchorView(btn_popup_centerRight,VerticalPosition.CENTER,HorizontalPosition.RIGHT)
+        }
+        btn_popup_center8.setOnClickListener {
+            val menu = TestMenu(this)
+            menu.showMenu(btn_popup_center8)
         }
     }
 
@@ -72,7 +136,8 @@ class PopupActivity : AppCompatActivity() {
                 Toast.makeText(this@PopupActivity, "hello", Toast.LENGTH_SHORT).show()
             }
         })
-        menu.showAsDropDown(btn_popup_menu2)
+//        menu.showAsDropDown(btn_popup_menu2)
+        menu.showMenu(btn_popup_menu2)
     }
 
     private fun testSimplePopup2() {
@@ -86,7 +151,7 @@ class PopupActivity : AppCompatActivity() {
                 simplePopup2?.dismiss()
             }
         })
-        simplePopup2.setIsMask(false)
+        simplePopup2.setIsMask(true)
         simplePopup2.setIsClickDismiss(false)
         simplePopup2.showCenter(this)
     }
@@ -118,12 +183,12 @@ class PopupActivity : AppCompatActivity() {
         Utils.backgroundAlpha(this,0.5f)
         //没有背景色,点击外部可以消失
         val contentView = layoutInflater.inflate(R.layout.pw_center, null)
-        val popup = PopupWindow()
-        popup.contentView = contentView
-        popup.width = ViewGroup.LayoutParams.MATCH_PARENT
-        popup.height = ViewGroup.LayoutParams.WRAP_CONTENT
-//        val popup = PopupWindow(contentView,
-//            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
+//        val popup = PopupWindow()
+//        popup.contentView = contentView
+//        popup.width = ViewGroup.LayoutParams.MATCH_PARENT
+//        popup.height = ViewGroup.LayoutParams.WRAP_CONTENT
+        val popup = PopupWindow(contentView,
+            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
         //对整个 popupwindow 设置背景
         //popup.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this,R.color.red)))
         contentView.tv_pw_onetitle_title.text = "居中显示提示"

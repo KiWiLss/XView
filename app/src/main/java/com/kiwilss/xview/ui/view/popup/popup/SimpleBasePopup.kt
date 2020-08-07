@@ -24,7 +24,7 @@ import kotlinx.android.synthetic.main.pw_center.view.*
  * @desc   : {DESCRIPTION}
  */
 class SimpleBasePopup(activity: Activity, layout: Int = R.layout.pw_center, private val simpleBasePopup: SimpleBasePopupListener? = null)
-    : BasePopup(activity,layout) {
+    : BasePopupL(activity,layout) {
 
 
     override fun setContent(contentView: View) {

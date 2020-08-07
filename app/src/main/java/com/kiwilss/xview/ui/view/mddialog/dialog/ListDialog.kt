@@ -29,8 +29,8 @@ import kotlinx.android.synthetic.main.dialog_bottom.*
 class ListDialog(context: Context): BottomSheetDialog(context) {
     init {
         setContentView(R.layout.dialog_bottom)
-        setCancelable(false)
-        setCanceledOnTouchOutside(true)
+        setCancelable(false)//是否可以滑动关闭
+        setCanceledOnTouchOutside(true)//是否可以点击外部关闭
     }
     val list = arrayListOf<String>("测试数据一","测试数据二","测试数据三","测试数据四"
     ,"测试数据一","测试数据二","测试数据三","测试数据四")

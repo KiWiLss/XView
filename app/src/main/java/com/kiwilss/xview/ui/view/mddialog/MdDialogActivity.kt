@@ -22,6 +22,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kiwilss.xview.R
 import com.kiwilss.xview.ui.view.mddialog.adapter.ListDialogAdapter
+import com.kiwilss.xview.ui.view.mddialog.dialog.FullListDialog
 import com.kiwilss.xview.ui.view.mddialog.dialog.ListDialog
 import com.kiwilss.xview.ui.view.mddialog.dialog.SimpleDialog
 import kotlinx.android.synthetic.main.activity_mddialog.*
@@ -56,6 +57,10 @@ class MdDialogActivity: AppCompatActivity() {
             val dialog = ListDialog(this)
             dialog.show()
         }
+        btn_mddialog_listFull.setOnClickListener {
+            val dialog = FullListDialog(this)
+            dialog.show()
+        }
 
         //把这个底部菜单和一个BottomSheetBehavior关联起来
         val behavior = BottomSheetBehavior.from(ll_mddialog_bottom)
@@ -77,15 +82,6 @@ class MdDialogActivity: AppCompatActivity() {
         }
         //初始化底部对话框列表
         initBottomList()
-//        tv_mddialog_bottomDialog.setOnClickListener {
-//            if(behavior.state == BottomSheetBehavior.STATE_EXPANDED) {//展开就隐藏
-//                behavior.setState(BottomSheetBehavior.STATE_HIDDEN)
-//            }else {//隐藏就展开
-//                behavior.setState(BottomSheetBehavior.STATE_EXPANDED)
-//            }
-//        }
-
-
 
     }
 

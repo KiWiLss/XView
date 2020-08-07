@@ -13,12 +13,17 @@ package com.kiwilss.xview.ui.view.popup.popup
 
 import android.annotation.TargetApi
 import android.app.Activity
+import android.content.Context
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.view.WindowManager
 import android.widget.PopupWindow
+import androidx.core.widget.PopupWindowCompat
+
 
 /**
  *@FileName: BasePopup
@@ -27,18 +32,27 @@ import android.widget.PopupWindow
  * @time   : 2020/8/5
  * @desc   : {DESCRIPTION}
  */
-abstract class BasePopup(val activity: Activity, layout: Int) : PopupWindow(activity) {
+abstract class BasePopupL(val activity: Activity, layout: Int) : PopupWindow(activity) {
+
+    //宽高
+    private var mWidth = ViewGroup.LayoutParams.MATCH_PARENT
+    private var mHeight = ViewGroup.LayoutParams.WRAP_CONTENT
+
 
     private var isMask = true //背景是否有阴影
+    private var wm: WindowManager? = null
+
 
     init {
         initType()
         activity.run {
             contentView = layoutInflater.inflate(layout,null)
-            //设置内容
-            setContent(contentView)
+            wm = activity.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            //设置相对固定位置宽高
             width = ViewGroup.LayoutParams.MATCH_PARENT
             height = ViewGroup.LayoutParams.WRAP_CONTENT
+            //设置内容
+            setContent(contentView)
             //默认设置点击外部区域消失
             setIsClickDismiss(true)
         }
@@ -51,10 +65,12 @@ abstract class BasePopup(val activity: Activity, layout: Int) : PopupWindow(acti
     }
 
     fun setPopupWidth(width: Int) {
+        mWidth = width
         setWidth(width)
     }
 
     fun setPopupHeight(height: Int) {
+        mHeight = height
         setHeight(height)
     }
     /**
@@ -87,16 +103,6 @@ abstract class BasePopup(val activity: Activity, layout: Int) : PopupWindow(acti
         )
     }
 
-    fun showBottom(activity: Activity?) {
-        if (activity != null) {
-            showAtLocation(
-                activity.window.decorView,
-                Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL,
-                0,
-                0
-            )
-        }
-    }
 
     fun showCenter() {
         showAtLocation(
@@ -107,16 +113,6 @@ abstract class BasePopup(val activity: Activity, layout: Int) : PopupWindow(acti
         )
     }
 
-    fun showCenter(activity: Activity?) {
-        if (activity != null) {
-            showAtLocation(
-                activity.window.decorView,
-                Gravity.CENTER or Gravity.CENTER_HORIZONTAL,
-                0,
-                0
-            )
-        }
-    }
 
     fun showTop() {
         showAtLocation(
@@ -127,16 +123,6 @@ abstract class BasePopup(val activity: Activity, layout: Int) : PopupWindow(acti
         )
     }
 
-    fun showTop(activity: Activity?) {
-        if (activity != null) {
-            showAtLocation(
-                activity.window.decorView,
-                Gravity.TOP or Gravity.CENTER_HORIZONTAL,
-                0,
-                0
-            )
-        }
-    }
 
     override fun showAtLocation(
         parent: View,
@@ -144,41 +130,79 @@ abstract class BasePopup(val activity: Activity, layout: Int) : PopupWindow(acti
         x: Int,
         y: Int
     ) {
-        if (isMask) {
-            setScreenMaskView(0.5f)
-        }
         super.showAtLocation(parent, gravity, x, y)
+        if (isMask) {
+            updateDimAmount(0.5f)
+        }
     }
 
+    /**
+     * 灵活菜单位置设置
+     */
+    fun showMenu(anchor: View){
+        showAsDropDown(anchor,0,0,Gravity.NO_GRAVITY)
+    }
+    fun showMenu(anchor: View, xoff: Int, yoff: Int){
+        showAsDropDown(anchor,xoff,yoff,Gravity.NO_GRAVITY)
+    }
+    fun showMenu(anchor: View, xoff: Int, yoff: Int,gravity: Int){
+        showAsDropDown(anchor,xoff,yoff,gravity)
+    }
     override fun showAsDropDown(
         anchor: View,
         xoff: Int,
-        yoff: Int
+        yoff: Int,
+        gravity: Int
     ) {
         width = ViewGroup.LayoutParams.WRAP_CONTENT
+        mWidth = width
+        super.showAsDropDown(anchor, xoff, yoff,gravity)
         if (isMask) {
-            setScreenMaskView(0.5f)
+            updateDimAmount(0.5f)
         }
-        super.showAsDropDown(anchor, xoff, yoff)
     }
 
-    override fun showAsDropDown(anchor: View) {
-        showAsDropDown(anchor, 0, 0)
-    }
 
     override fun dismiss() {
-        if (isMask) {
-            setScreenMaskView(1f)
-        }
         super.dismiss()
     }
 
-    private fun setScreenMaskView(alpha: Float) {
-        if (activity != null) {
-            val attributes = activity!!.window.attributes
-            attributes.alpha = alpha
-            activity!!.window.attributes = attributes
+    private fun updateDimAmount(dimAmount: Float) {
+        val decorView: View? = getDecorView()
+        decorView?.let {
+            val p = decorView.layoutParams as WindowManager.LayoutParams
+            p.flags = p.flags or WindowManager.LayoutParams.FLAG_DIM_BEHIND
+            p.dimAmount = dimAmount
+            //modifyWindowLayoutParams(p)
+            wm?.updateViewLayout(decorView, p)
         }
+    }
+
+     private fun getDecorView(): View? {
+        var decorView: View? = null
+        try {
+            decorView = if (background == null) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    contentView.parent as View
+                } else {
+                    contentView
+                }
+            } else {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    contentView.parent.parent as View
+                } else {
+                    contentView.parent as View
+                }
+            }
+        } catch (ignore: Exception) {
+        }
+        return decorView
+    }
+
+    private fun setScreenMaskView(alpha: Float) {
+        val attributes = activity.window.attributes
+        attributes.alpha = alpha
+        activity.window.attributes = attributes
     }
 
     @TargetApi(23)

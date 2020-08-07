@@ -107,9 +107,9 @@ object Utils {
      * @param bgAlpha
      */
     fun backgroundAlpha(context: Activity,bgAlpha: Float) {
-        val lp: WindowManager.LayoutParams = context.getWindow().getAttributes()
+        val lp: WindowManager.LayoutParams = context.window.attributes
         lp.alpha = bgAlpha //0.0-1.0
-        context.getWindow().setAttributes(lp)
+        context.window.attributes = lp
     }
 
     /**
@@ -118,9 +118,6 @@ object Utils {
      * @param closeables closeables
      */
     fun closeIOQuietly(vararg closeables: Closeable?) {
-        if (closeables == null) {
-            return
-        }
         for (closeable in closeables) {
             if (closeable != null) {
                 try {

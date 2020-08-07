@@ -49,19 +49,14 @@
                 android:id="@+id/btn_popup_center2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="中间对话框"/>
+                android:text="中间对话框2"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/btn_popup_menu3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="菜单形式3"
-                android:layout_gravity="end"/>
+
             <Button
                 android:id="@+id/btn_popup_center3"
                 android:layout_width="wrap_content"
@@ -69,6 +64,67 @@
                 android:text="中间对话框3"/>
 
         </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_popup_menu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜单形式3"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_popup_center4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中间对话框4"/>
+
+            <Button
+                android:id="@+id/btn_popup_center5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中间对话框5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_popup_center6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中间对话框6"/>
+
+            <Button
+                android:id="@+id/btn_popup_center7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上方"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_popup_centerRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右侧"
+           />
+
+        <Button
+            android:id="@+id/btn_popup_center8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜单样式7"
+            android:layout_gravity="end"/>
 
     </LinearLayout>
 

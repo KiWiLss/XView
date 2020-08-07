@@ -135,18 +135,26 @@ public abstract class BottomPushPopupWindow<T> extends PopupWindow {
     }
 
     @Override
-    public void showAsDropDown(View anchor, int xoff, int yoff) {
+    public void showAsDropDown(View anchor, int xoff, int yoff,int gravity) {
         setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         if (isMask) {
             addMaskView(anchor.getWindowToken());
         }
-        super.showAsDropDown(anchor, xoff, yoff);
+        super.showAsDropDown(anchor, xoff, yoff,gravity);
     }
 
     public void showAsDropDown(View anchor) {
         showAsDropDown(anchor, 0, 0);
     }
-
+    public void showMenu(View anchor, int xoff, int yoff){
+        showAsDropDown(anchor,xoff,yoff);
+    }
+    public void showMenu(View anchor, int gravity){
+        showAsDropDown(anchor,0,0,gravity);
+    }
+    public void showMenu(View anchor){
+        showAsDropDown(anchor);
+    }
     @Override
     public void dismiss() {
         if (isMask) {

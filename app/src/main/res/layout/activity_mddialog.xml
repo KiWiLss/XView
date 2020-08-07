@@ -42,6 +42,14 @@
                     android:layout_height="wrap_content"
                     android:text="bottomSheetDialog-list"
                     android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/btn_mddialog_listFull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bottomSheetDialog-list全屏"
+                    android:textAllCaps="false"/>
+
             </LinearLayout>
 
             <LinearLayout
