@@ -223,6 +223,13 @@ abstract class EasyPopup(val activity: Activity, layout: Int) : PopupWindow(acti
         mAnchorView = parent
         mOffsetX = x
         mOffsetY = y
+        showBeforeSet()
+        super.showAtLocation(parent, gravity, x, y)
+    }
+
+    /**展示之前的设置
+    */
+    private fun showBeforeSet() {
         setInterface()
         if (isMask) {
             showBackgroundAnimator()
@@ -230,7 +237,6 @@ abstract class EasyPopup(val activity: Activity, layout: Int) : PopupWindow(acti
         if (isAddGlable) {
             addGlobalLayoutListener(contentView)
         }
-        super.showAtLocation(parent, gravity, x, y)
     }
 
     /**
@@ -252,13 +258,7 @@ abstract class EasyPopup(val activity: Activity, layout: Int) : PopupWindow(acti
         gravity: Int
     ) {
         width = ViewGroup.LayoutParams.WRAP_CONTENT
-         setInterface()
-         if (isMask) {
-             showBackgroundAnimator()
-         }
-         if (isAddGlable) {
-             addGlobalLayoutListener(contentView)
-         }
+         showBeforeSet()
         super.showAsDropDown(anchor, xoff, yoff,gravity)
     }
 
@@ -328,10 +328,7 @@ abstract class EasyPopup(val activity: Activity, layout: Int) : PopupWindow(acti
         }
         y = calculateY(anchorView, verticalPos, measuredH, y)
         x = calculateX(anchorView, horizontalPos, measuredW, x)
-        setInterface()
-        if (isMask) {
-            showBackgroundAnimator()
-        }
+        showBeforeSet()
         addGlobalLayoutListener(contentView)
         if (fitInScreen) {
             PopupWindowCompat.showAsDropDown(this, anchorView, x, y, Gravity.NO_GRAVITY)
