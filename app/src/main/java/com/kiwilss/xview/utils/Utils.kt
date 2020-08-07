@@ -17,6 +17,8 @@ import android.content.pm.PackageManager
 import android.view.WindowManager
 import com.kiwilss.App
 import com.kiwilss.xview.model.banner.BannerBean
+import java.io.Closeable
+import java.io.IOException
 
 
 /**
@@ -110,4 +112,22 @@ object Utils {
         context.getWindow().setAttributes(lp)
     }
 
+    /**
+     * 安静关闭 IO
+     *
+     * @param closeables closeables
+     */
+    fun closeIOQuietly(vararg closeables: Closeable?) {
+        if (closeables == null) {
+            return
+        }
+        for (closeable in closeables) {
+            if (closeable != null) {
+                try {
+                    closeable.close()
+                } catch (ignored: IOException) {
+                }
+            }
+        }
+    }
 }
