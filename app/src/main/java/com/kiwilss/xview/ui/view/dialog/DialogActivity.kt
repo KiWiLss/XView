@@ -15,6 +15,7 @@ import android.app.Dialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.ui.view.dialog.custom.FgDialog
 import com.kiwilss.xview.ui.view.dialog.custom.PersonThree
 import kotlinx.android.synthetic.main.activity_dialog.*
 
@@ -35,9 +36,12 @@ class DialogActivity : AppCompatActivity() {
             dialog.setContentView(R.layout.pw_center)
             //dialog.setCancelable(false)
             dialog.setCanceledOnTouchOutside(false)
-
             dialog.show()
         }
-
+        btn_dialog_center2.setOnClickListener {
+            val pp = FgDialog()
+            //pp.isCancelable = true
+            pp.show(supportFragmentManager,"fgdialog")
+        }
     }
 }

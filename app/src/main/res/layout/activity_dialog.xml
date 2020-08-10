@@ -20,7 +20,11 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="中间"/>
-
+            <Button
+                android:id="@+id/btn_dialog_center2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DialogFragment"/>
         </LinearLayout>
 
 
