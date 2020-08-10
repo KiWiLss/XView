@@ -16,6 +16,7 @@ import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.view.dialog.DialogActivity
 import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
 import com.kiwilss.xview.ui.view.popup.PopupActivity
 import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
@@ -23,6 +24,7 @@ import com.kiwilss.xview.ui.view.shaw.ShawActivity
 import com.kiwilss.xview.ui.view.shawshape.ShawShapeActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
 import com.kiwilss.xview.ui.view.viewpager.ViewPageActivity
+import com.kiwilss.xview.utils.data.MainUtils
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,20 +34,7 @@ class MainActivity : AppCompatActivity() {
     private val mActivitys = listOf(ConstraintActivity::class.java,ViewStubActivity::class.java,
         GlideJActivity::class.java)
 
-    private val mData = arrayListOf<MainBean>(
-        MainBean("约束布局",ConstraintActivity::class.java),
-        MainBean("ViewStub",ViewStubActivity::class.java),
-        MainBean("Glide java",GlideJActivity::class.java),
-        MainBean("TextView",TextViewActivity::class.java),
-        MainBean("MeiTuan",MTActivity::class.java),
-        MainBean("Banner",BannerActivity::class.java),
-        MainBean("RecyclerView",RecyclerViewActivity::class.java),
-        MainBean("Dialog",MdDialogActivity::class.java),
-        MainBean("ViewPager2",ViewPageActivity::class.java),
-        MainBean("PopupWindow",PopupActivity::class.java),
-        MainBean("ShawLayout",ShawActivity::class.java),
-        MainBean("ShawShape",ShawShapeActivity::class.java)
-    )
+    private val mData = MainUtils.getMainData()
 
     //test
     private val mAdapter by lazy { MainAdapter() }

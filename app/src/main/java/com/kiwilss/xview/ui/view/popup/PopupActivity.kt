@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
 import com.kiwilss.xview.ui.view.popup.easy.TestEasy
 import com.kiwilss.xview.ui.view.popup.easy.TestMenu
+import com.kiwilss.xview.ui.view.popup.easy.Xpopup
 import com.kiwilss.xview.ui.view.popup.popup.*
 import com.kiwilss.xview.ui.view.popup.smart.HorizontalPosition
 import com.kiwilss.xview.ui.view.popup.smart.SmartPopupWindow
@@ -127,6 +128,12 @@ class PopupActivity : AppCompatActivity() {
         btn_popup_center8.setOnClickListener {
             val menu = TestMenu(this)
             menu.showMenu(btn_popup_center8)
+        }
+        //xpopup自定义对话框
+        btn_popup_xpopup.setOnClickListener {
+            Xpopup(this,R.layout.pw_center)
+                .setIsMask(true)
+                .showCenter()
         }
     }
 

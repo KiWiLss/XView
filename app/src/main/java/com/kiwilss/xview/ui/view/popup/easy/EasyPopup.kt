@@ -25,6 +25,7 @@ import androidx.core.widget.PopupWindowCompat
 import com.kiwilss.xview.ui.view.popup.smart.HorizontalPosition
 import com.kiwilss.xview.ui.view.popup.smart.SmartPopupWindow
 import com.kiwilss.xview.ui.view.popup.smart.VerticalPosition
+import com.kiwilss.xview.utils.LogUtils
 
 /**
  *@FileName: EasyPopup
@@ -77,8 +78,9 @@ abstract class EasyPopup(val activity: Activity, layout: Int) : PopupWindow(acti
     /**
      * 设置是否显示阴影
      */
-    fun setIsMask(isMask: Boolean) {
+    fun setIsMask(isMask: Boolean) : EasyPopup{
         this.isMask = isMask
+        return this
     }
 
     /**
@@ -86,13 +88,16 @@ abstract class EasyPopup(val activity: Activity, layout: Int) : PopupWindow(acti
      */
     @SuppressLint("ClickableViewAccessibility")
     fun setIsTouchOutsideDimiss(isTouchOutsideDimiss: Boolean) {
+        LogUtils.e(isTouchOutsideDimiss)
         if (!isTouchOutsideDimiss) {
-            isFocusable = true
+            isFocusable = false
             isOutsideTouchable = false
             setBackgroundDrawable(ColorDrawable())
             contentView.isFocusable = true
             contentView.isFocusableInTouchMode = true
+
             contentView.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+                LogUtils.e(keyCode)
                 if (keyCode == KeyEvent.KEYCODE_BACK) {
                     dismiss()
                     return@OnKeyListener true

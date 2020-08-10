@@ -48,7 +48,7 @@
 
         <activity android:name=".ui.view.shaw.ShawActivity"/>
         <activity android:name=".ui.view.shawshape.ShawShapeActivity"/>
-
+        <activity android:name=".ui.view.dialog.DialogActivity"/>
 
     </application>
 

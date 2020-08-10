@@ -126,6 +126,12 @@
             android:text="菜单样式7"
             android:layout_gravity="end"/>
 
+        <Button
+            android:id="@+id/btn_popup_xpopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xpopup"
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

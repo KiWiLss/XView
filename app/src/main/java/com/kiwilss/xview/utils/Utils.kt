@@ -17,6 +17,20 @@ import android.content.pm.PackageManager
 import android.view.WindowManager
 import com.kiwilss.App
 import com.kiwilss.xview.model.banner.BannerBean
+import com.kiwilss.xview.model.main.MainBean
+import com.kiwilss.xview.ui.banner.BannerActivity
+import com.kiwilss.xview.ui.copy.MTActivity
+import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
+import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
+import com.kiwilss.xview.ui.view.dialog.DialogActivity
+import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
+import com.kiwilss.xview.ui.view.popup.PopupActivity
+import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
+import com.kiwilss.xview.ui.view.shaw.ShawActivity
+import com.kiwilss.xview.ui.view.shawshape.ShawShapeActivity
+import com.kiwilss.xview.ui.view.textview.TextViewActivity
+import com.kiwilss.xview.ui.view.viewpager.ViewPageActivity
 import java.io.Closeable
 import java.io.IOException
 
@@ -127,4 +141,7 @@ object Utils {
             }
         }
     }
+
+
+
 }
