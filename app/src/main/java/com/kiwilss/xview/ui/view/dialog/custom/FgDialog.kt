@@ -30,19 +30,20 @@ import com.kiwilss.xview.utils.LogUtils
  * @desc   : {DESCRIPTION}
  */
 class FgDialog : DialogFragment() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         LogUtils.e("onCreate")
 
-
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         LogUtils.e("onCreateView")
         return inflater.inflate(R.layout.pw_center, container, false)
     }
