@@ -11,6 +11,7 @@
 
 package com.kiwilss.xview.utils.data
 
+import com.kiwilss.xview.design.DesignActivity
 import com.kiwilss.xview.model.main.MainBean
 import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
@@ -48,7 +49,8 @@ object MainUtils {
             MainBean("PopupWindow", PopupActivity::class.java),
             MainBean("ShawLayout", ShawActivity::class.java),
             MainBean("ShawShape", ShawShapeActivity::class.java),
-            MainBean("Dialog", DialogActivity::class.java)
+            MainBean("Dialog", DialogActivity::class.java),
+            MainBean("Design", DesignActivity::class.java)
         )
 
 

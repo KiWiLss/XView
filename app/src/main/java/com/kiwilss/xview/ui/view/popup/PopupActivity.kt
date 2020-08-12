@@ -135,6 +135,7 @@ class PopupActivity : AppCompatActivity() {
                 .setIsMask(true)
                 .showCenter()
         }
+        //com.kiwilss.lpopup.x.Xpopup.Builder(this,R.layout.pw_center).build().show()
     }
 
     private fun showMenuPw2() {

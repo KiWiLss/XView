@@ -26,6 +26,7 @@ class App : Application(){
         mContext = this
         app = this
 
+
     }
     companion object{
         var mContext: Context? = null

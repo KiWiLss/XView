@@ -50,6 +50,11 @@
         <activity android:name=".ui.view.shawshape.ShawShapeActivity"/>
         <activity android:name=".ui.view.dialog.DialogActivity"/>
 
+        <activity android:name=".design.DesignActivity"/>
+        <activity android:name=".design.toolbar.ToolbarActivity"/>
+
+
+
     </application>
 
 </manifest>
