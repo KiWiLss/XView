@@ -15,6 +15,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
 import com.kiwilss.xview.design.toolbar.ToolbarActivity
+import com.kiwilss.xview.design.toolbar.ToolbarScrollActivity
 import kotlinx.android.synthetic.main.activity_design.*
 
 /**
@@ -32,7 +33,9 @@ class DesignActivity : AppCompatActivity(){
         btn_design_toolbar.setOnClickListener {
             startActivity(Intent(this,ToolbarActivity::class.java))
         }
-
+        btn_design_toolbars.setOnClickListener {
+            startActivity(Intent(this,ToolbarScrollActivity::class.java))
+        }
 
 
     }

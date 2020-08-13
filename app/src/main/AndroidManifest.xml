@@ -52,7 +52,7 @@
 
         <activity android:name=".design.DesignActivity"/>
         <activity android:name=".design.toolbar.ToolbarActivity"/>
-
+        <activity android:name=".design.toolbar.ToolbarScrollActivity"/>
 
 
     </application>

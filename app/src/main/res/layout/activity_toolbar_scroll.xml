@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_tb_scroll_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@mipmap/ic_navigation_back_white"
+            app:title="toolbar滚动"
+            app:titleTextColor="@color/white"
+            android:background="@color/blue_74D3FF"
+           app:layout_scrollFlags="scroll|enterAlways"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <include layout="@layout/content_scrolling"/>
+
+<!--   <androidx.core.widget.NestedScrollView-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="match_parent"-->
+<!--       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">-->
+<!--       <TextView-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_margin="@dimen/m12"-->
+<!--           android:text="@string/large_text" />-->
+<!--   </androidx.core.widget.NestedScrollView>-->
+
+<!--    悬浮按钮-->
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab_tb_scroll_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end|bottom"
+    android:layout_margin="@dimen/m12"
+    android:src="@mipmap/ic_navigation_menu"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
