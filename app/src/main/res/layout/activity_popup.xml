@@ -8,6 +8,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原生的方法实现对话框效果"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -32,6 +36,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="菜单形式"
+                android:layout_gravity="end"/>
+            <Button
+                android:id="@+id/btn_popup_menu22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="菜单形式2"
                 android:layout_gravity="end"/>
         </LinearLayout>
 

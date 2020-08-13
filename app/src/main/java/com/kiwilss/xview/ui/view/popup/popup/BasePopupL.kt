@@ -23,6 +23,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.view.WindowManager
 import android.widget.PopupWindow
 import androidx.core.widget.PopupWindowCompat
+import com.kiwilss.xview.R
 
 
 /**
@@ -105,6 +106,7 @@ abstract class BasePopupL(val activity: Activity, layout: Int) : PopupWindow(act
 
 
     fun showCenter() {
+        animationStyle = R.style.AnimFadeCenter
         showAtLocation(
             activity.window.decorView,
             Gravity.CENTER or Gravity.CENTER_HORIZONTAL,
@@ -132,6 +134,7 @@ abstract class BasePopupL(val activity: Activity, layout: Int) : PopupWindow(act
     ) {
         super.showAtLocation(parent, gravity, x, y)
         if (isMask) {
+            //setScreenMaskView(0.5f)
             updateDimAmount(0.5f)
         }
     }
@@ -158,12 +161,15 @@ abstract class BasePopupL(val activity: Activity, layout: Int) : PopupWindow(act
         mWidth = width
         super.showAsDropDown(anchor, xoff, yoff,gravity)
         if (isMask) {
-            updateDimAmount(0.5f)
+            setScreenMaskView(0.5f)
         }
     }
 
 
     override fun dismiss() {
+        if (isMask) {
+            //setScreenMaskView(1f)
+        }
         super.dismiss()
     }
 
@@ -202,6 +208,7 @@ abstract class BasePopupL(val activity: Activity, layout: Int) : PopupWindow(act
     private fun setScreenMaskView(alpha: Float) {
         val attributes = activity.window.attributes
         attributes.alpha = alpha
+        attributes.windowAnimations = R.style.AnimFadeCenter
         activity.window.attributes = attributes
     }
 

@@ -31,7 +31,12 @@
                 android:textAllCaps="false"/>
 
         </LinearLayout>
-
+        <Button
+            android:id="@+id/btn_design_zt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可折叠标题滚动"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

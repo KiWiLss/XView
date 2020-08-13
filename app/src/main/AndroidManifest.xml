@@ -53,7 +53,7 @@
         <activity android:name=".design.DesignActivity"/>
         <activity android:name=".design.toolbar.ToolbarActivity"/>
         <activity android:name=".design.toolbar.ToolbarScrollActivity"/>
-
+        <activity android:name=".design.collapsing.CollapsingOneActivity"/>
 
     </application>
 

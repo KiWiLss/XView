@@ -41,6 +41,7 @@ class PopupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_popup)
+        //原生实现对话框
         btn_popup_center.setOnClickListener {
             showCenterPw(Gravity.CENTER)
         }
@@ -49,6 +50,9 @@ class PopupActivity : AppCompatActivity() {
         }
         btn_popup_menu.setOnClickListener {
             showMenuPw()
+        }
+        btn_popup_menu22.setOnClickListener {
+            showMenuPw22()
         }
         //22
         btn_popup_center2.setOnClickListener {
@@ -136,6 +140,15 @@ class PopupActivity : AppCompatActivity() {
                 .showCenter()
         }
         //com.kiwilss.lpopup.x.Xpopup.Builder(this,R.layout.pw_center).build().show()
+    }
+
+    private fun showMenuPw22() {
+        val contentView = layoutInflater.inflate(R.layout.pw_menu2, null)
+        val popup = PopupWindow(contentView,
+            ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true)
+        //对整个 popupwindow 设置背景
+        //popup.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this,R.color.red)))
+        popup.showAsDropDown(btn_popup_menu22)
     }
 
     private fun showMenuPw2() {

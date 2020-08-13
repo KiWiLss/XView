@@ -12,8 +12,12 @@
 package com.kiwilss.xview.design.toolbar
 
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import kotlinx.android.synthetic.main.activity_toolbar.*
 
 /**
  *@FileName: ToolbarActivity
@@ -27,8 +31,24 @@ class ToolbarActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_toolbar)
 
+        tb_toolbar_tb.title = "主标题"//设置标题
+        tb_toolbar_tb.setNavigationOnClickListener {
+            finish()
+        }
+        //tb_toolbar_tb.setMenu()//设置菜单
+        tb_toolbar_tb.setOnMenuItemClickListener(object : Toolbar.OnMenuItemClickListener,
+            androidx.appcompat.widget.Toolbar.OnMenuItemClickListener {
+            override fun onMenuItemClick(item: MenuItem?): Boolean {
 
-
+                if (item?.itemId == R.id.action_add){
+                    Toast.makeText(this@ToolbarActivity, "add", Toast.LENGTH_SHORT).show()
+                    return true
+                }else{
+                    Toast.makeText(this@ToolbarActivity, "hello", Toast.LENGTH_SHORT).show()
+                }
+                return false
+            }
+        })
 
     }
 }

@@ -36,6 +36,7 @@ class ToolbarScrollActivity: AppCompatActivity() {
         scroll: 表示向上滚动时,toolbar一起滚动并隐藏
         snap: 表示当toolbar还没有显示或隐藏时,会根据当前的距离自动选择显示还是隐藏
         enterAlways: 表示向下滚动时,toolbar会一起滚动并显示
+        exitUntilCollapsed: 表示当 collapsingToolbarLayout 随着滚动完成折叠后就保留在界面上
          */
         tb_tb_scroll_tb.setNavigationOnClickListener {
             finish()

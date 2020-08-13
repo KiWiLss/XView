@@ -15,7 +15,7 @@
             app:title="toolbar滚动"
             app:titleTextColor="@color/white"
             android:background="@color/blue_74D3FF"
-           app:layout_scrollFlags="scroll|enterAlways"/>
+           app:layout_scrollFlags="scroll|enterAlways|snap"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
