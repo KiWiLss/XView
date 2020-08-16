@@ -57,6 +57,7 @@ android {
 
 dependencies {
 
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     def appDependencies = rootProject.ext.dependencies
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -81,7 +82,7 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     //design
     //implementation 'com.android.support:design:28.0.0'
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0'
     //json
     implementation 'com.squareup.moshi:moshi:1.8.0'
     implementation "androidx.cardview:cardview:1.0.0"
