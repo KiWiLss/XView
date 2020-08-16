@@ -40,6 +40,8 @@
     android:layout_height="wrap_content"
     android:layout_gravity="end|bottom"
     android:layout_margin="@dimen/m12"
-    android:src="@mipmap/ic_navigation_menu"/>
+    android:src="@drawable/ic_cloud"
+    app:layout_behavior=".design.behavior.ScrollAwareFABBehavior"
+    />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
