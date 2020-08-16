@@ -72,7 +72,7 @@ class Refresh2Activity:AppCompatActivity() {
             }
 
         })
-        //悬浮按钮
+        //悬浮按钮error
         fab_refresh_fab.setOnClickListener {
             Snackbar.make(fab_refresh_fab,"hello", Snackbar.LENGTH_SHORT)
                 .show()
