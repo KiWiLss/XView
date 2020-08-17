@@ -92,6 +92,7 @@
     </string>
 
     <string name="scale_up_show_behavior">com.kiwilss.xview.design.behavior.ScaleUpShowBehavior</string>
+    <string name="bottom_navigation_behavior">com.kiwilss.xview.design.behavior.BottomNavigationBehavior</string>
 
 
 

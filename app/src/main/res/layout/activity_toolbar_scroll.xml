@@ -33,15 +33,30 @@
 <!--           android:text="@string/large_text" />-->
 <!--   </androidx.core.widget.NestedScrollView>-->
 
-<!--    悬浮按钮-->
-<com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/fab_tb_scroll_menu"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="end|bottom"
-    android:layout_margin="@dimen/m12"
-    android:src="@drawable/ic_cloud"
-    app:layout_behavior="@string/scale_up_show_behavior"
-   />
+
+    <!--    加个底部滑动隐藏,适用于底部有控件的情况,上滑显示,-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/yellow_FF9B52"
+        app:layout_behavior="@string/bottom_navigation_behavior">
+
+
+    </RelativeLayout>
+
+    <!--    悬浮按钮-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_tb_scroll_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="@dimen/m12"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/ic_cloud"
+        app:layout_behavior=".design.behavior.ScrollAwareFABBehavior"
+        />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
