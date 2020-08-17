@@ -91,5 +91,8 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
 
+    <string name="scale_up_show_behavior">com.kiwilss.xview.design.behavior.ScaleUpShowBehavior</string>
+
+
 
 </resources>

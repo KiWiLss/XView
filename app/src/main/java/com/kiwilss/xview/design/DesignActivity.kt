@@ -14,6 +14,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.design.behavioractivity.TopScaleActivity
 import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
 import com.kiwilss.xview.design.refresh.Refresh2Activity
 import com.kiwilss.xview.design.refresh.RefreshActivity
@@ -47,6 +48,9 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_refresh2.setOnClickListener {
             startActivity(Intent(this, Refresh2Activity::class.java))
+        }
+        btn_design_topscale.setOnClickListener {
+            startActivity(Intent(this, TopScaleActivity::class.java))
         }
     }
 }

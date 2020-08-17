@@ -1,4 +1,4 @@
-package com.kiwilss.lxkj.mvvmtest.utils.behavior
+package com.kiwilss.xview.design.behavior
 
 import android.annotation.SuppressLint
 import android.content.Context

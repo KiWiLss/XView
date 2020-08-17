@@ -55,7 +55,18 @@
                 android:text="可折叠标题,下拉刷新在最外层"
                 android:textAllCaps="false"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_design_topscale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="顶部布局缩放"
+                android:textAllCaps="false"/>
 
+
+        </LinearLayout>
 
 
     </LinearLayout>

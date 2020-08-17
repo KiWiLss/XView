@@ -5,6 +5,11 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="transparent">#00000000</color>
+
+    <color name="colorInitFloatBackground">#b0ffffff</color>
+    <color name="colorCollapsedFloatBackground">#e4e4e4</color>
+
+
 <!--    black-->
     <color name="black">#000000</color>
     <color name="black_333333">#333333</color>

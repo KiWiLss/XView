@@ -5,6 +5,12 @@
     <dimen name="m11">10.56dp</dimen>
     <dimen name="m12">11.52dp</dimen>
 
+    <dimen name="collapsed_header_height">50dp</dimen>
+    <dimen name="init_float_offset_y">130dp</dimen>
+    <dimen name="collapsed_float_offset_y">5dp</dimen>
+    <dimen name="init_float_margin">20dp</dimen>
+    <dimen name="collapsed_float_margin">5dp</dimen>
+
 
     <!--全局样式-->
     <dimen name="xui_config_content_spacing_horizontal_tablet_big">20dp

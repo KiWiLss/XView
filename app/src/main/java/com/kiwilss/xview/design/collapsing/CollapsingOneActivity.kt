@@ -50,6 +50,7 @@ class CollapsingOneActivity: AppCompatActivity() {
             Snackbar.make(fab_collaspingone_fab,"hello",Snackbar.LENGTH_SHORT)
                 .show()
         }
+
         tb_collaspingone_tb.setNavigationOnClickListener {
             finish()
         }
