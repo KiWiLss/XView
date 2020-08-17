@@ -25,6 +25,9 @@ public class ScaleUpShowBehavior extends FloatingActionButton.Behavior {
         super();
     }
 
+    private boolean isAnimatingOut = false;
+    private boolean isShow = true;
+
     @Override
     public boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout,
                                        @NonNull FloatingActionButton child, @NonNull View directTargetChild, @NonNull View target, int axes, int type) {
@@ -49,19 +52,37 @@ public class ScaleUpShowBehavior extends FloatingActionButton.Behavior {
 //            System.out.println("到边界了，还在下滑。。。");
 //        }
         // 手指上滑，隐藏FAB
-        if (((dyConsumed > 0 && dyUnconsumed == 0) || (dyConsumed == 0
-                && dyUnconsumed > 0)) && child.getVisibility() != View.VISIBLE) {// 显示
-            AnimatorUtil.INSTANCE.scaleShow(child, null);
-        } else if (((dyConsumed < 0 && dyUnconsumed == 0) || (dyConsumed == 0
-                && dyUnconsumed < 0)) && child.getVisibility() != View.GONE && !isAnimatingOut) {
-            AnimatorUtil.INSTANCE.scaleHide(child, viewPropertyAnimatorListener);
+        // 手指上滑，隐藏FAB
+        if ((dyConsumed > 0 || dyUnconsumed > 0) && !isAnimatingOut && isShow) {
+            AnimatorUtil.INSTANCE.scaleHide(child, viewPropertyAnimatorListenerHide);
+        } else if (dyConsumed < 0 || dyUnconsumed < 0 && !isAnimatingOut && !isShow) {
+            // 手指下滑，显示FAB
+            AnimatorUtil.INSTANCE.scaleShow(child,viewPropertyAnimatorListener);
         }
-
     }
 
-    private boolean isAnimatingOut = false;
+
 
     ViewPropertyAnimatorListener viewPropertyAnimatorListener = new ViewPropertyAnimatorListener() {
+
+        @Override
+        public void onAnimationStart(View view) {
+            //view.setVisibility(View.VISIBLE);
+            isAnimatingOut = true;
+        }
+
+        @Override
+        public void onAnimationEnd(View view) {
+            isAnimatingOut = false;
+        }
+
+        @Override
+        public void onAnimationCancel(View arg0) {
+            isAnimatingOut = false;
+        }
+    };
+
+    ViewPropertyAnimatorListener viewPropertyAnimatorListenerHide = new ViewPropertyAnimatorListener() {
 
         @Override
         public void onAnimationStart(View view) {
@@ -71,7 +92,7 @@ public class ScaleUpShowBehavior extends FloatingActionButton.Behavior {
         @Override
         public void onAnimationEnd(View view) {
             isAnimatingOut = false;
-            view.setVisibility(View.GONE);
+            //view.setVisibility(View.GONE);
         }
 
         @Override

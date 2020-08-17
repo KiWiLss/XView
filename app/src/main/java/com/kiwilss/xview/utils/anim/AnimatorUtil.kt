@@ -26,12 +26,12 @@ object AnimatorUtil {
      * @param listener ViewPropertyAnimatorListener
      */
     fun scaleShow(view: View, listener: ViewPropertyAnimatorListener) {
-        view.visibility = View.VISIBLE
+        //view.visibility = View.VISIBLE
         ViewCompat.animate(view)
                 .scaleX(1.0f)
                 .scaleY(1.0f)
                 .alpha(1.0f)
-                .setDuration(800)
+                .setDuration(200)
                 .setListener(listener)
                 .setInterpolator(FAST_OUT_SLOW_IN_INTERPOLATOR)
                 .start()
@@ -47,7 +47,7 @@ object AnimatorUtil {
                 .scaleX(0.0f)
                 .scaleY(0.0f)
                 .alpha(0.0f)
-                .setDuration(800)
+                .setDuration(500)
                 .setInterpolator(FAST_OUT_SLOW_IN_INTERPOLATOR)
                 .setListener(listener)
                 .start()
