@@ -31,12 +31,25 @@
                 android:textAllCaps="false"/>
 
         </LinearLayout>
-        <Button
-            android:id="@+id/btn_design_zt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="可折叠标题滚动"
-            android:textAllCaps="false"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_design_zt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可折叠标题滚动"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_design_collasping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CollaspingToolbarLayout"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,6 +90,22 @@
                 android:text="顶部下拉放大回弹,刷新"
                 android:textAllCaps="false"/>
         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_design_js"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仿简书首页"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+
 
 
     </LinearLayout>

@@ -18,6 +18,8 @@ import com.kiwilss.xview.design.behavioractivity.TopBackActivity
 import com.kiwilss.xview.design.behavioractivity.TopBackRefreshActivity
 import com.kiwilss.xview.design.behavioractivity.TopScaleActivity
 import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
+import com.kiwilss.xview.design.collapsing.CollaspingTwoActivity
+import com.kiwilss.xview.design.imitate.JianSuActivity
 import com.kiwilss.xview.design.refresh.Refresh2Activity
 import com.kiwilss.xview.design.refresh.RefreshActivity
 import com.kiwilss.xview.design.toolbar.ToolbarActivity
@@ -59,6 +61,12 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_topscale3.setOnClickListener {
             startActivity(Intent(this, TopBackRefreshActivity::class.java))
+        }
+        btn_design_collasping.setOnClickListener {
+            startActivity(Intent(this, CollaspingTwoActivity::class.java))
+        }
+        btn_design_js.setOnClickListener {
+            startActivity(Intent(this, JianSuActivity::class.java))
         }
     }
 }
