@@ -62,10 +62,20 @@
                 android:id="@+id/btn_design_topscale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="顶部布局缩放"
+                android:text="顶部缩放"
                 android:textAllCaps="false"/>
-
-
+            <Button
+                android:id="@+id/btn_design_topscale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="顶部下拉放大回弹"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_design_topscale3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="顶部下拉放大回弹,刷新"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
 

@@ -58,7 +58,7 @@ class Refresh2Activity:AppCompatActivity() {
         }
         //下拉刷新和下拉会有冲突
         appbar_refresh_appbar.addOnOffsetChangedListener(object : AppBarStateChangeListener(){
-            override fun onStateChanged(appBarLayout: AppBarLayout?, state: State?) {
+            override fun onStateChanged(appBarLayout: AppBarLayout?, state: State?, i: Int) {
                 if( state == State.EXPANDED ) {
                     //展开状态
                     srl_refresh_refresh.isEnabled = true

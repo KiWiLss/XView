@@ -57,6 +57,9 @@
         <activity android:name=".design.refresh.RefreshActivity"/>
         <activity android:name=".design.refresh.Refresh2Activity"/>
         <activity android:name=".design.behavioractivity.TopScaleActivity"/>
+        <activity android:name=".design.behavioractivity.TopBackActivity"/>
+        <activity android:name=".design.behavioractivity.TopBackRefreshActivity"/>
+
 
 
     </application>

@@ -14,6 +14,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.design.behavioractivity.TopBackActivity
+import com.kiwilss.xview.design.behavioractivity.TopBackRefreshActivity
 import com.kiwilss.xview.design.behavioractivity.TopScaleActivity
 import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
 import com.kiwilss.xview.design.refresh.Refresh2Activity
@@ -51,6 +53,12 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_topscale.setOnClickListener {
             startActivity(Intent(this, TopScaleActivity::class.java))
+        }
+        btn_design_topscale2.setOnClickListener {
+            startActivity(Intent(this, TopBackActivity::class.java))
+        }
+        btn_design_topscale3.setOnClickListener {
+            startActivity(Intent(this, TopBackRefreshActivity::class.java))
         }
     }
 }

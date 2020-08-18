@@ -1,4 +1,4 @@
-package com.kiwilss.xview.design.behavior;
+package com.kiwilss.xview.design.behavior.fab;
 
 import android.content.Context;
 import android.util.AttributeSet;
