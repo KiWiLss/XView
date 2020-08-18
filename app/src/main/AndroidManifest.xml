@@ -62,8 +62,8 @@
         <activity android:name=".design.collapsing.CollaspingTwoActivity"/>
 
         <activity android:name=".design.imitate.JianSuActivity"/>
-
-
+        <activity android:name=".design.imitate.MeiTuanHomeActivity"/>
+        <activity android:name=".design.imitate.PictureActivity"/>
 
     </application>
 

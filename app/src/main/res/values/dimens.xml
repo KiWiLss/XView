@@ -10,6 +10,7 @@
     <dimen name="collapsed_float_offset_y">5dp</dimen>
     <dimen name="init_float_margin">20dp</dimen>
     <dimen name="collapsed_float_margin">5dp</dimen>
+    <dimen name="m160">160dp</dimen>
 
 
     <!--全局样式-->

@@ -20,6 +20,7 @@ import com.kiwilss.xview.design.behavioractivity.TopScaleActivity
 import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
 import com.kiwilss.xview.design.collapsing.CollaspingTwoActivity
 import com.kiwilss.xview.design.imitate.JianSuActivity
+import com.kiwilss.xview.design.imitate.PictureActivity
 import com.kiwilss.xview.design.refresh.Refresh2Activity
 import com.kiwilss.xview.design.refresh.RefreshActivity
 import com.kiwilss.xview.design.toolbar.ToolbarActivity
@@ -67,6 +68,12 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_js.setOnClickListener {
             startActivity(Intent(this, JianSuActivity::class.java))
+        }
+        btn_design_mt.setOnClickListener {
+
+        }
+        btn_design_picture.setOnClickListener {
+            startActivity(Intent(this, PictureActivity::class.java))
         }
     }
 }

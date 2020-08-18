@@ -101,8 +101,18 @@
                 android:layout_height="wrap_content"
                 android:text="仿简书首页"
                 android:textAllCaps="false"/>
-
-
+            <Button
+                android:id="@+id/btn_design_mt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仿美团首页"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_design_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片不动滚动"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
 
