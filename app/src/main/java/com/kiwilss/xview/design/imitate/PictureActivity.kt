@@ -20,7 +20,7 @@ import com.kiwilss.xview.R
  *@author : Lss kiwilss
  * @e-mail : kiwilss@163.com
  * @time   : 2020/8/18
- * @desc   : {DESCRIPTION}
+ * @desc   : {顶部图片固定,问题,下面快速滑动会有部分图片依然可以显示}
  */
 class PictureActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

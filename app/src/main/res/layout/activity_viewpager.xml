@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,11 +36,56 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="复制fragment布局切换"/>
+            android:text="复杂fragment布局切换"/>
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vp_viewpager_fg"
             android:layout_width="match_parent"
             android:layout_height="160dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复制fragment布局+ tablyout"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_vp_tab1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_viewpager_tb"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"/>
+
+        <!--
+     tabIndicatorColor  指示器颜色
+     tabIndicatorHeight 指示器高度
+     tabIndicatorFullWidth  设置为false 则指示器跟文本宽度一致
+     tabUnboundedRipple 设置为true点击时会有一个水波纹效果
+     tabGravity 可设置center或fill；center指的是居中显示，fill指的是沾满全屏。
+     tabMode 可设置fixed和 scrollable；fixed：指的是固定tab；scrollable指的是tab可滑动。
+     tabTextColor tab文字颜色
+     tabSelectedTextColor 选中时的tab颜色
+
+ -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_vp_tab2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:tabGravity="fill"
+            app:tabIndicatorFullWidth="false"
+            app:tabTextColor="@color/black_333333"
+            app:tabSelectedTextColor="@color/blue_74D3FF"
+            app:tabInlineLabel="false"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_vp_tab3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_viewpager_tb2"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"/>
+
+
 
 
     </LinearLayout>

@@ -25,6 +25,7 @@ import com.kiwilss.xview.design.refresh.Refresh2Activity
 import com.kiwilss.xview.design.refresh.RefreshActivity
 import com.kiwilss.xview.design.toolbar.ToolbarActivity
 import com.kiwilss.xview.design.toolbar.ToolbarScrollActivity
+import com.kiwilss.xview.design.toolbar.ToolbarTabVpActivity
 import kotlinx.android.synthetic.main.activity_design.*
 
 /**
@@ -74,6 +75,9 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_picture.setOnClickListener {
             startActivity(Intent(this, PictureActivity::class.java))
+        }
+        btn_design_tab1.setOnClickListener {
+            startActivity(Intent(this, ToolbarTabVpActivity::class.java))
         }
     }
 }

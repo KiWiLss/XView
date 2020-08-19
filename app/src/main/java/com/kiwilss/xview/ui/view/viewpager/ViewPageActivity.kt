@@ -11,11 +11,17 @@
 
 package com.kiwilss.xview.ui.view.viewpager
 
+import android.graphics.Typeface
 import android.os.Bundle
+import android.util.TypedValue
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.kiwilss.xview.R
 import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_viewpager.*
@@ -56,6 +62,7 @@ class ViewPageActivity: AppCompatActivity() {
         //设置边距
         vp_viewpager_icon.setPageTransformer(MarginPageTransformer(resources.getDimension(R.dimen.dp_10).toInt()))
 
+
         //fragment切换相关
         val fragments = arrayListOf<Fragment>()
         //for (i in 0 until 3)
@@ -69,7 +76,69 @@ class ViewPageActivity: AppCompatActivity() {
         vp_viewpager_fg.offscreenPageLimit = 3
 
         //tablyout + viewpager test
+        initTab1()
+        initTab2()
 
 
+    }
+
+    private val  activeColor = R.color.blue_74D3FF
+    private val  normalColor = R.color.black_666666
+    private val activeSize = 20f
+     var  normalSize : Float = 14f
+    private fun initTab2() {
+        normalSize = resources.getDimensionPixelSize(R.dimen.m12).toFloat()
+        val tabs = arrayOf("关注", "推荐", "最新","关注", "推荐", "最新")
+        //禁用预加载
+        vp_viewpager_tb2.offscreenPageLimit = ViewPager2.OFFSCREEN_PAGE_LIMIT_DEFAULT
+        val fragments = arrayListOf<Fragment>()
+        for ( i in 0..5) {
+            val instance = ViewPagerFragment.instance(i)
+            fragments.add(instance)
+        }
+        val adapter = ViewPagerFragmentAdapter(this,fragments)
+        vp_viewpager_tb2.adapter = adapter
+        //将TabLayout和ViewPager2关联起来
+        val metiaor: TabLayoutMediator = TabLayoutMediator(tl_vp_tab2,vp_viewpager_tb2,
+            TabLayoutMediator.TabConfigurationStrategy { tab, position ->
+                tab.text = tabs[position]
+                //这里可以自定义view,最后调用tab.setCustomView()将自定义布局设置上去
+            })
+        metiaor.attach()
+        //自定义tablayout相关
+        val mediator = TabLayoutMediator(tl_vp_tab3,vp_viewpager_tb2,
+        TabLayoutMediator.TabConfigurationStrategy { tab, position ->
+            val textView = TextView(this)
+            textView.run {
+                text = tabs[position]
+                setTextSize(TypedValue.COMPLEX_UNIT_PX,normalSize)
+                typeface = Typeface.DEFAULT
+                setTextColor(ContextCompat.getColor(this@ViewPageActivity,normalColor))
+            }
+            tab.customView = textView
+        })
+        mediator.attach()
+        //滚动监听,切换标题
+
+    }
+
+    private fun initTab1() {
+        val tabs = arrayOf("关注", "推荐", "最新")
+        //禁用预加载
+        vp_viewpager_tb.offscreenPageLimit = ViewPager2.OFFSCREEN_PAGE_LIMIT_DEFAULT
+        val fragments = arrayListOf<Fragment>()
+        //for (i in 0 until 3)
+        for ( i in 0..2) {
+            val instance = ViewPagerFragment.instance(i)
+            fragments.add(instance)
+        }
+        val adapter = ViewPagerFragmentAdapter(this,fragments)
+        vp_viewpager_tb.adapter = adapter
+        //将TabLayout和ViewPager2关联起来
+        val metiaor: TabLayoutMediator = TabLayoutMediator(tl_vp_tab1,vp_viewpager_tb,
+            TabLayoutMediator.TabConfigurationStrategy { tab, position ->
+                tab.text = tabs[position]
+            })
+       metiaor.attach()
     }
 }
