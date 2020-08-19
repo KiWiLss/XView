@@ -10,6 +10,7 @@
         android:icon="@drawable/ic_cloud"
         android:title="云"
         app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/action_setting"
         android:icon="@drawable/ic_settings"
         android:title="设置"

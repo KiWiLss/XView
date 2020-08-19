@@ -79,5 +79,8 @@ class DesignActivity : AppCompatActivity(){
         btn_design_tab1.setOnClickListener {
             startActivity(Intent(this, ToolbarTabVpActivity::class.java))
         }
+        btn_design_tab2.setOnClickListener {
+
+        }
     }
 }

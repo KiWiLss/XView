@@ -65,6 +65,7 @@
         <activity android:name=".design.imitate.MeiTuanHomeActivity"/>
         <activity android:name=".design.imitate.PictureActivity"/>
         <activity android:name=".design.toolbar.ToolbarTabVpActivity"/>
+        <activity android:name=".design.toolbar.CollaspingTabActivity"/>
     </application>
 
 </manifest>

@@ -124,7 +124,12 @@
                 android:layout_height="wrap_content"
                 android:text="TabLayout+viewpager(Toolbar)"
                 android:textAllCaps="false"/>
-
+            <Button
+                android:id="@+id/btn_design_tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TabLayout+viewpager(Collasping)"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
 
