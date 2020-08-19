@@ -9,9 +9,11 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ctl_collasping_tab_collapsing"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             app:contentScrim="@color/blue_74D3FF"
+            app:title="测试标题"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
             <ImageView
                 android:layout_width="match_parent"

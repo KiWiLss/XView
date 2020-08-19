@@ -83,5 +83,8 @@ class DesignActivity : AppCompatActivity(){
         btn_design_tab2.setOnClickListener {
             startActivity(Intent(this, CollaspingTabActivity::class.java))
         }
+        btn_design_drawer.setOnClickListener {
+
+        }
     }
 }

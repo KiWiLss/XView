@@ -13,6 +13,7 @@ package com.kiwilss.xview.design.toolbar
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiwilss.xview.R
@@ -52,5 +53,10 @@ class CollaspingTabActivity: AppCompatActivity() {
             })
         metiaor.attach()
 
+        //设置标题相关
+        ctl_collasping_tab_collapsing.run {
+            setExpandedTitleColor(ContextCompat.getColor(this@CollaspingTabActivity,R.color.transparent))
+            setCollapsedTitleTextColor(ContextCompat.getColor(this@CollaspingTabActivity,R.color.white))
+        }
     }
 }
