@@ -33,8 +33,6 @@ import kotlinx.android.synthetic.main.activity_viewpager.*
  */
 class ToolbarTabVpActivity: AppCompatActivity() {
     val tabs = arrayOf("关注", "推荐", "最新")
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tabvp)

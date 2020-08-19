@@ -23,6 +23,7 @@ import com.kiwilss.xview.design.imitate.JianSuActivity
 import com.kiwilss.xview.design.imitate.PictureActivity
 import com.kiwilss.xview.design.refresh.Refresh2Activity
 import com.kiwilss.xview.design.refresh.RefreshActivity
+import com.kiwilss.xview.design.toolbar.CollaspingTabActivity
 import com.kiwilss.xview.design.toolbar.ToolbarActivity
 import com.kiwilss.xview.design.toolbar.ToolbarScrollActivity
 import com.kiwilss.xview.design.toolbar.ToolbarTabVpActivity
@@ -80,7 +81,7 @@ class DesignActivity : AppCompatActivity(){
             startActivity(Intent(this, ToolbarTabVpActivity::class.java))
         }
         btn_design_tab2.setOnClickListener {
-
+            startActivity(Intent(this, CollaspingTabActivity::class.java))
         }
     }
 }
