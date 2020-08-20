@@ -31,7 +31,7 @@ class HelpResultActivity: AppCompatActivity(R.layout.activity_help_result) {
             val intent = Intent()
             intent.putExtra("result","hello")
             intent.putExtra("callback","world")
-            setResult(Activity.RESULT_OK,intent)
+            setResult(9,intent)
             finish()
         }
     }

@@ -94,4 +94,7 @@ dependencies {
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
     // kotlin扩展（可选）
     implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
+
+    //leakCanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.3'
 }
