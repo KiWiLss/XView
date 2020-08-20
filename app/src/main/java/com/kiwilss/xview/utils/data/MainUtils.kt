@@ -17,6 +17,7 @@ import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.startforresulthelp.HelpActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.view.dialog.DialogActivity
 import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
@@ -50,7 +51,8 @@ object MainUtils {
             MainBean("ShawLayout", ShawActivity::class.java),
             MainBean("ShawShape", ShawShapeActivity::class.java),
             MainBean("Dialog", DialogActivity::class.java),
-            MainBean("Design", DesignActivity::class.java)
+            MainBean("Design", DesignActivity::class.java),
+            MainBean("ActivityHelp", HelpActivity::class.java)
         )
 
 

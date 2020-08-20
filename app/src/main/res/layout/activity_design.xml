@@ -111,7 +111,7 @@
                 android:id="@+id/btn_design_picture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="图片不动滚动"
+                android:text="图片不动滚动(仿开眼首页)"
                 android:textAllCaps="false"/>
         </LinearLayout>
 
@@ -131,6 +131,20 @@
                 android:text="TabLayout+viewpager(Collasping)"
                 android:textAllCaps="false"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_design_xitu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仿稀土掘金"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
 
 <!--        抽屉相关-->
         <LinearLayout

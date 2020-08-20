@@ -65,7 +65,13 @@
         <activity android:name=".design.imitate.MeiTuanHomeActivity"/>
         <activity android:name=".design.imitate.PictureActivity"/>
         <activity android:name=".design.toolbar.ToolbarTabVpActivity"/>
-        <activity android:name=".design.toolbar.CollaspingTabActivity"/>
+        <activity android:name=".design.toolbar.CollaspingTabActivity" android:theme="@style/AppThemeBlue"/>
+        <activity android:name=".design.imitate.XiTuActivity"/>
+
+        <activity android:name=".ui.startforresulthelp.HelpActivity"/>
+        <activity android:name=".ui.startforresulthelp.HelpResultActivity"/>
+
+
     </application>
 
 </manifest>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_help_result_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取结果"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_help_result_callback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简单回调"/>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_help_result_callback2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="带参数回调"/>
+
+</LinearLayout>

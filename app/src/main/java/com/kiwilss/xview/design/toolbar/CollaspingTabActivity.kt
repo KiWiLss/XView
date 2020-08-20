@@ -11,14 +11,17 @@
 
 package com.kiwilss.xview.design.toolbar
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
+import com.gyf.immersionbar.ktx.immersionBar
 import com.kiwilss.xview.R
 import com.kiwilss.xview.design.toolbar.vp.TabAdapter
 import com.kiwilss.xview.design.toolbar.vp.TabFragment
+import com.kiwilss.xview.utils.StatusBarUtils
 import kotlinx.android.synthetic.main.activity_collasping_tab.*
 import kotlinx.android.synthetic.main.activity_tabvp.*
 
@@ -34,6 +37,15 @@ class CollaspingTabActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_collasping_tab)
+
+        //设置透明状态栏,设置状态栏颜色无效
+        //StatusBarUtils.initStatusBarStyle(this,true,R.color.blue_74D3FF)
+        //StatusBarUtils.initStatusBarStyleColor(this,true, Color.parseColor("#74D3FF"))
+        immersionBar {
+            transparentStatusBar()
+            //statusBarColor(R.color.blue_74D3FF)
+            //fitsSystemWindows(true)
+        }
 
         tb_collasping_tab_tb.setNavigationOnClickListener { finish() }
 

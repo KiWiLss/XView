@@ -12,12 +12,15 @@
 package com.kiwilss.xview.ui.view.viewpager
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kiwilss.xview.R
+import com.kiwilss.xview.ui.startforresulthelp.HelpResultActivity
+import com.kiwilss.xview.ui.startforresulthelp.help.ActivityHelper
 import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.fg_viewpager.*
 
@@ -55,6 +58,16 @@ class ViewPagerFragment: Fragment() {
         val type = arguments?.getInt("type")
         tv_fg_vp_text.text = "第${type}个fragment"
         LogUtils.e("fragment---$type")
+        tv_fg_vp_text.setOnClickListener {
+            ActivityHelper.init(this.activity!!)
+                .startActivityForResult(Intent(activity,HelpResultActivity::class.java),
+                object : ActivityHelper.Callback{
+                    override fun onActivityResult(resultCode: Int, data: Intent?) {
+                        LogUtils.e(resultCode)
 
+                    }
+
+                })
+        }
     }
 }

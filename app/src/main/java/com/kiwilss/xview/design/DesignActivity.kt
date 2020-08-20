@@ -21,6 +21,7 @@ import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
 import com.kiwilss.xview.design.collapsing.CollaspingTwoActivity
 import com.kiwilss.xview.design.imitate.JianSuActivity
 import com.kiwilss.xview.design.imitate.PictureActivity
+import com.kiwilss.xview.design.imitate.XiTuActivity
 import com.kiwilss.xview.design.refresh.Refresh2Activity
 import com.kiwilss.xview.design.refresh.RefreshActivity
 import com.kiwilss.xview.design.toolbar.CollaspingTabActivity
@@ -85,6 +86,9 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_drawer.setOnClickListener {
 
+        }
+        btn_design_xitu.setOnClickListener {
+            startActivity(Intent(this, XiTuActivity::class.java))
         }
     }
 }

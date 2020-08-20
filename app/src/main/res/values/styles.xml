@@ -6,7 +6,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="AppThemeBlue" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/blue_74D3FF</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
     <!--淡入淡出-->
     <style name="AnimFadeCenter" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/fade_center_in</item>
@@ -18,5 +23,15 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
+    <style name="transparentText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor" >#00000000</item>
 
+    </style>
+
+    <style name="ToolBarTitleText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
 </resources>

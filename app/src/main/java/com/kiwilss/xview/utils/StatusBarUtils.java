@@ -1,5 +1,6 @@
 package com.kiwilss.xview.utils;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
@@ -13,7 +14,9 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
 import androidx.annotation.IntDef;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 
 import java.lang.annotation.Retention;
@@ -68,6 +71,7 @@ public class StatusBarUtils {
      * @param activity
      * @param isDark   是否是深色的状态栏
      */
+    @SuppressLint("ResourceType")
     public static void initStatusBarStyle(Activity activity, boolean isDark) {
         initStatusBarStyle(activity, isDark, Color.TRANSPARENT);
     }
@@ -79,7 +83,7 @@ public class StatusBarUtils {
      * @param isDark    是否是深色的状态栏
      * @param colorOn5x 颜色
      */
-    public static void initStatusBarStyle(Activity activity, boolean isDark, @ColorInt int colorOn5x) {
+    public static void initStatusBarStyleRes(Activity activity, boolean isDark, @ColorRes int colorOn5x) {
         //设置沉浸式状态栏的颜色
         translucent(activity, colorOn5x);
         //修改状态栏的字体颜色
@@ -89,16 +93,38 @@ public class StatusBarUtils {
             setStatusBarLightMode(activity);
         }
     }
-
+    public static void initStatusBarStyle(Activity activity, boolean isDark, @ColorInt int colorOn5x) {
+        //设置沉浸式状态栏的颜色
+        translucentColor(activity, colorOn5x);
+        //修改状态栏的字体颜色
+        if (isDark) {
+            setStatusBarDarkMode(activity);
+        } else {
+            setStatusBarLightMode(activity);
+        }
+    }
     /**
      * 沉浸式状态栏。
      * 支持 4.4 以上版本的 MIUI 和 Flyme，以及 5.0 以上版本的其他 Android。
      *
      * @param activity 需要被设置沉浸式状态栏的 Activity。
      */
-    public static void translucent(Activity activity, @ColorInt int colorOn5x) {
+    public static void translucentColor(Activity activity, @ColorInt int colorOn5x) {
         Window window = activity.getWindow();
         translucent(window, colorOn5x);
+    }
+    public static void translucent(Activity activity, @ColorRes int colorOn5x) {
+//        Window window = activity.getWindow();
+//        translucent(window, colorOn5x);
+        Window window = activity.getWindow();
+        //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        //设置状态栏颜色
+        if (Build.VERSION.SDK_INT >= 21) {
+            window.setStatusBarColor(ContextCompat.getColor(activity, colorOn5x));
+        }
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
