@@ -30,7 +30,11 @@ public abstract class AppBarStateChangeListener implements AppBarLayout.OnOffset
             }
             mCurrentState = State.IDLE;
         }
+        onStateChangedAny(appBarLayout,i);
     }
   
     public abstract void onStateChanged(AppBarLayout appBarLayout, State state,int i);
+    public void onStateChangedAny(AppBarLayout appBarLayout, int i){
+
+    }
 }
