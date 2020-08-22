@@ -21,6 +21,7 @@ import com.kiwilss.xview.R
 import com.kiwilss.xview.design.appbar.AppBarStateChangeListener
 import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_meituan_home.*
+import kotlinx.android.synthetic.main.content_scrolling.*
 import kotlin.math.abs
 
 
@@ -46,34 +47,9 @@ class MeiTuanHomeActivity : AppCompatActivity(R.layout.activity_meituan_home) {
 //            collapsedTitleGravity = Gravity.CENTER_HORIZONTAL
 //        }
 
-
-//        appbar_mt_appbar.addOnOffsetChangedListener(object : AppBarStateChangeListener(){
-//            override fun onStateChanged(appBarLayout: AppBarLayout?, state: State?, i: Int) {
-//                LogUtils.e(i)
-//                //对标题设置渐变,向上滑动时i --> 0--- -448,标题先是变不见,后又可见(alpha 0-1)
-//
-//                when(state){
-//                    //折叠 i == -492
-//                    State.COLLAPSED -> {
-//                        alpha = 1f
-//                    }
-//                    //展开 i == 0
-//                    State.EXPANDED -> {
-//                        alpha = 0f
-//                    }
-//                    //中间状态
-//                    State.IDLE -> {
-//                        val a = - (i / 200)
-//                        val max = 0.3f.coerceAtLeast(a.toFloat())
-//                        alpha = max
-//                        LogUtils.e("alpha = $alpha ------max = $max","----alpha--->")
-//                    }
-//                }
-//                tv_mt_title.alpha = alpha
-//            }
-//
-//        })
-
+        //ctl_mt_collapsing.isTitleEnabled = false
+        //这个设置可以让折叠布局不响应滚动
+        //nsv_outer.isNestedScrollingEnabled = false
         appbar_mt_appbar.addOnOffsetChangedListener(object : AppBarStateChangeListener() {
             override fun onStateChanged(appBarLayout: AppBarLayout?, state: State?, i: Int) {
                 when (state) {

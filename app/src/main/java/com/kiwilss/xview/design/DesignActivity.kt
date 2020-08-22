@@ -18,6 +18,7 @@ import com.kiwilss.xview.design.behavioractivity.TopBackActivity
 import com.kiwilss.xview.design.behavioractivity.TopBackRefreshActivity
 import com.kiwilss.xview.design.behavioractivity.TopScaleActivity
 import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
+import com.kiwilss.xview.design.collapsing.CollaspingCenterActivity
 import com.kiwilss.xview.design.collapsing.CollaspingTwoActivity
 import com.kiwilss.xview.design.imitate.JianSuActivity
 import com.kiwilss.xview.design.imitate.MeiTuanHomeActivity
@@ -90,6 +91,9 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_xitu.setOnClickListener {
             startActivity(Intent(this, XiTuActivity::class.java))
+        }
+        btn_design_center.setOnClickListener {
+            startActivity(Intent(this, CollaspingCenterActivity::class.java))
         }
     }
 }

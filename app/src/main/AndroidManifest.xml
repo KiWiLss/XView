@@ -71,7 +71,8 @@
         <activity android:name=".ui.startforresulthelp.HelpActivity"/>
         <activity android:name=".ui.startforresulthelp.HelpResultActivity"/>
 
-
+        <activity android:name=".ui.view.mddialog.FBaiDuMapActivity"/>
+        <activity android:name=".design.collapsing.CollaspingCenterActivity"/>
     </application>
 
 </manifest>

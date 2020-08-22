@@ -11,6 +11,7 @@
 
 package com.kiwilss.xview.ui.view.mddialog
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -38,6 +39,10 @@ class MdDialogActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mddialog)
+
+        btn_mddialog_baidu.setOnClickListener {
+            startActivity(Intent(this,FBaiDuMapActivity::class.java))
+        }
 
         //bottomdialog test
         btn_mddialog_bottomdialog.setOnClickListener {
@@ -106,5 +111,6 @@ class MdDialogActivity: AppCompatActivity() {
         view.findViewById<TextView>(R.id.tv_dialog_bottom_simple_title)
             .text = "第一条标签"
         dialog.show()
+        //view.tv_dialog_bottom_simple_title
     }
 }
