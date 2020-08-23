@@ -12,7 +12,12 @@
     <dimen name="collapsed_float_margin">5dp</dimen>
     <dimen name="m160">160dp</dimen>
 
-
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="avatar_final_size">40dp</dimen>
+    <dimen name="avatar_final_x">8dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
     <!--全局样式-->
     <dimen name="xui_config_content_spacing_horizontal_tablet_big">20dp
     </dimen> <!-- margin 和 padding 等使用的内容通用水平间距 -->

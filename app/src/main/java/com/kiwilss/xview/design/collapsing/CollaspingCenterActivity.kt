@@ -39,6 +39,9 @@ class CollaspingCenterActivity: AppCompatActivity(R.layout.activity_collasping_c
                 }else if (state == State.COLLAPSED){
                     rl_collapsing_center_tittle.visibility = View.VISIBLE
                     tb_collaspingone_tb.navigationIcon = null
+                }else{
+                    rl_collapsing_center_tittle.visibility = View.GONE
+                    tb_collaspingone_tb.setNavigationIcon(R.mipmap.ic_navigation_back_white)
                 }
             }
 

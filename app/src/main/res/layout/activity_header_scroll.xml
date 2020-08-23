@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_header_scroll_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ctl_header_scroll_collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/blue_74D3FF"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_center_appbar_iv"
+                app:layout_collapseMode="parallax"
+                android:fitsSystemWindows="true"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/ctl_header_scroll_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+
+                    <TextView
+                        android:id="@+id/tv_header_scroll_title"
+                        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="个人信息"/>
+
+                    <ImageButton
+                        android:id="@+id/ibtn_header_scroll_titleico"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/usercenter_avator_bg"
+                        android:padding="2dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/avator_default"/>
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_header_scroll_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/usercenter_avator_bg"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/avator_default"
+        app:layout_behavior=".design.behavior.header.UserInfoImageButtonBehavior"/>
+
+    <TextView
+        android:id="@+id/tv_header_scroll_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingTop="32dp"
+        android:text="NickName"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_anchor="@id/ibtn_header_scroll_icon"
+        app:layout_anchorGravity="bottom|center_horizontal"/>
+
+    <include layout="@layout/content_scrolling"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

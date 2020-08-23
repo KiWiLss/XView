@@ -14,9 +14,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
-import com.kiwilss.xview.design.behavioractivity.TopBackActivity
-import com.kiwilss.xview.design.behavioractivity.TopBackRefreshActivity
-import com.kiwilss.xview.design.behavioractivity.TopScaleActivity
+import com.kiwilss.xview.design.behavioractivity.*
 import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
 import com.kiwilss.xview.design.collapsing.CollaspingCenterActivity
 import com.kiwilss.xview.design.collapsing.CollaspingTwoActivity
@@ -94,6 +92,12 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_center.setOnClickListener {
             startActivity(Intent(this, CollaspingCenterActivity::class.java))
+        }
+        btn_design_header.setOnClickListener {
+            startActivity(Intent(this, HeaderScrollActivity::class.java))
+        }
+        btn_design_header2.setOnClickListener {
+            startActivity(Intent(this, Header2Activity::class.java))
         }
     }
 }

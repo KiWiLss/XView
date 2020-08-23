@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_collasping_center_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/ctl_collapsing_center_collapsing"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="220dp"
             app:contentScrim="@color/blue_74D3FF"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:title="@string/app_name">
@@ -29,9 +30,10 @@
                 android:id="@+id/tb_collaspingone_tb"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                app:contentInsetStart="0dp"
                 app:layout_collapseMode="pin"
-               app:contentInsetStart="0dp"
-                app:navigationIcon="@mipmap/ic_navigation_back_white">
+                app:navigationIcon="@mipmap/ic_navigation_back_white"
+                >
 
                 <RelativeLayout
                     android:id="@+id/rl_collapsing_center_tittle"
@@ -43,34 +45,32 @@
                         android:id="@+id/iv_collapsing_center_back"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/ic_navigation_back_white"
                         android:layout_centerVertical="true"
-                        android:layout_marginStart="@dimen/dp_15"/>
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:src="@mipmap/ic_navigation_back_white" />
+
                     <TextView
                         android:id="@+id/tv_collapsing_center_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/app_name"
-                        android:textSize="17sp"
                         android:textColor="@color/black_333333"
+                        android:textSize="17sp"
                         android:layout_centerInParent="true"/>
-
                 </RelativeLayout>
+
 
 
             </androidx.appcompat.widget.Toolbar>
 
 
-
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-
 
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_scrolling"/>
+    <include layout="@layout/content_scrolling" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

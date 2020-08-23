@@ -73,6 +73,8 @@
 
         <activity android:name=".ui.view.mddialog.FBaiDuMapActivity"/>
         <activity android:name=".design.collapsing.CollaspingCenterActivity"/>
+        <activity android:name=".design.behavioractivity.HeaderScrollActivity"/>
+        <activity android:name=".design.behavioractivity.Header2Activity"/>
     </application>
 
 </manifest>

@@ -146,8 +146,18 @@
                 android:layout_height="wrap_content"
                 android:text="仿稀土掘金"
                 android:textAllCaps="false"/>
-
-
+            <Button
+                android:id="@+id/btn_design_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="头像移动"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_design_header2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="头像移动2"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
 

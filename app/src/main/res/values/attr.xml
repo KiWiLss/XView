@@ -19,4 +19,10 @@
     </declare-styleable>
 
 
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalSize" format="dimension"/>
+        <attr name="finalX" format="dimension"/>
+        <attr name="toolBarHeight" format="dimension"/>
+    </declare-styleable>
+
 </resources>
