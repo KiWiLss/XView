@@ -15,6 +15,7 @@ class Header2Activity: AppCompatActivity(R.layout.activity_header2) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //
 
     }
 }
