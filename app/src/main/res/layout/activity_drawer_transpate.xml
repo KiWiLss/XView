@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <!--    简单主界面-->
@@ -15,16 +16,15 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
             >
+<!--            添加这个 theme,可以让图标和标题都变成白色-->
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/tb_drawer_transpate_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/blue_74D3FF"
-                app:navigationIcon="@mipmap/ic_navigation_back_white"
-                app:title="@string/app_name"
-                app:titleTextColor="@color/white"
                 />
         </com.google.android.material.appbar.AppBarLayout>
 
