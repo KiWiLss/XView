@@ -479,5 +479,8 @@
     <dimen name="xui_list_item_height_higher">103dp</dimen>
     <dimen name="xui_group_list_section_header_footer_padding_vertical">8dp</dimen>
     <dimen name="xui_group_list_section_header_footer_text_size">13sp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

@@ -169,9 +169,20 @@
                 android:id="@+id/btn_design_drawer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="抽屉"
+                android:text="常规抽屉"
                 android:textAllCaps="false"/>
-
+            <Button
+                android:id="@+id/btn_design_drawer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抽屉在标题下面"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_design_drawer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抽屉透明状态栏"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
     </LinearLayout>

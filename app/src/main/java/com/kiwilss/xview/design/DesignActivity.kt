@@ -18,6 +18,9 @@ import com.kiwilss.xview.design.behavioractivity.*
 import com.kiwilss.xview.design.collapsing.CollapsingOneActivity
 import com.kiwilss.xview.design.collapsing.CollaspingCenterActivity
 import com.kiwilss.xview.design.collapsing.CollaspingTwoActivity
+import com.kiwilss.xview.design.drawer.DrawerBottomActivity
+import com.kiwilss.xview.design.drawer.DrawerTranspateActivity
+import com.kiwilss.xview.design.drawer.NormalDrawerActivity
 import com.kiwilss.xview.design.imitate.JianSuActivity
 import com.kiwilss.xview.design.imitate.MeiTuanHomeActivity
 import com.kiwilss.xview.design.imitate.PictureActivity
@@ -84,9 +87,7 @@ class DesignActivity : AppCompatActivity(){
         btn_design_tab2.setOnClickListener {
             startActivity(Intent(this, CollaspingTabActivity::class.java))
         }
-        btn_design_drawer.setOnClickListener {
 
-        }
         btn_design_xitu.setOnClickListener {
             startActivity(Intent(this, XiTuActivity::class.java))
         }
@@ -98,6 +99,15 @@ class DesignActivity : AppCompatActivity(){
         }
         btn_design_header2.setOnClickListener {
             startActivity(Intent(this, Header2Activity::class.java))
+        }
+        btn_design_drawer.setOnClickListener {
+            startActivity(Intent(this, NormalDrawerActivity::class.java))
+        }
+        btn_design_drawer2.setOnClickListener {
+            startActivity(Intent(this, DrawerBottomActivity::class.java))
+        }
+        btn_design_drawer3.setOnClickListener {
+            startActivity(Intent(this, DrawerTranspateActivity::class.java))
         }
     }
 }

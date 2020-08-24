@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kiwilss.xview.design.drawer.MyDrawerLayout
+    android:id="@+id/dl_drawer_transpate_drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    简单主界面-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tb_drawer_transpate_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/blue_74D3FF"
+                app:navigationIcon="@mipmap/ic_navigation_back_white"
+                app:title="@string/app_name"
+                app:titleTextColor="@color/white"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <include layout="@layout/content_scrolling"
+            />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!--    抽屉布局-->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nv_drawer_transpate_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        android:background="@color/white"
+        app:menu="@menu/drawer_menu"/>
+
+
+</com.kiwilss.xview.design.drawer.MyDrawerLayout>

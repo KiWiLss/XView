@@ -2,10 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kiwilss.xview">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name="com.kiwilss.App"
@@ -15,6 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".design.drawer.NormalDrawerActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,59 +25,57 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.kiwilss.xview.ui.view.constraint.ConstraintActivity"
+        <activity
+            android:name=".ui.view.constraint.ConstraintActivity"
             android:label="约束布局"
-            android:screenOrientation="nosensor"/>
-        <activity android:name=".ui.view.flexbox.FlexBoxBasicActivity"/>
-        <activity android:name=".ui.optimization.viewstub.ViewStubActivity"/>
-        <activity android:name=".ui.glide.glidej.GlideJActivity"/>
+            android:screenOrientation="nosensor" />
+        <activity android:name=".ui.view.flexbox.FlexBoxBasicActivity" />
+        <activity android:name=".ui.optimization.viewstub.ViewStubActivity" />
+        <activity android:name=".ui.glide.glidej.GlideJActivity" />
+        <activity android:name=".ui.view.textview.TextViewActivity" />
+        <activity android:name=".ui.copy.MTActivity" />
+        <activity android:name=".ui.banner.BannerActivity" />
+        <activity android:name=".ui.view.recyclerview.RecyclerViewActivity" />
+        <activity android:name=".ui.view.recyclerview.fixed.RecyclerItemFixedActivity" />
+        <activity android:name=".ui.view.recyclerview.fixed.RecyclerViewWrapActivity" />
+        <activity android:name=".ui.view.recyclerview.fixed.RecyclerWrapActivity" />
+        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerDecorationLinearActivity" />
+        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerIntervalActivity" />
+        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerGideActivity" />
+        <activity android:name=".ui.view.mddialog.MdDialogActivity" />
+        <activity android:name=".ui.view.popup.PopupActivity" />
+        <activity android:name=".ui.view.viewpager.ViewPageActivity" />
+        <activity android:name=".ui.view.shaw.ShawActivity" />
+        <activity android:name=".ui.view.shawshape.ShawShapeActivity" />
+        <activity android:name=".ui.view.dialog.DialogActivity" />
+        <activity android:name=".design.DesignActivity" />
+        <activity android:name=".design.toolbar.ToolbarActivity" />
+        <activity android:name=".design.toolbar.ToolbarScrollActivity" />
+        <activity android:name=".design.collapsing.CollapsingOneActivity" />
+        <activity android:name=".design.refresh.RefreshActivity" />
+        <activity android:name=".design.refresh.Refresh2Activity" />
+        <activity android:name=".design.behavioractivity.TopScaleActivity" />
+        <activity android:name=".design.behavioractivity.TopBackActivity" />
+        <activity android:name=".design.behavioractivity.TopBackRefreshActivity" />
+        <activity android:name=".design.collapsing.CollaspingTwoActivity" />
+        <activity android:name=".design.imitate.JianSuActivity" />
+        <activity android:name=".design.imitate.MeiTuanHomeActivity" />
+        <activity android:name=".design.imitate.PictureActivity" />
+        <activity android:name=".design.toolbar.ToolbarTabVpActivity" />
+        <activity
+            android:name=".design.toolbar.CollaspingTabActivity"
+            android:theme="@style/AppThemeBlue" />
+        <activity android:name=".design.imitate.XiTuActivity" />
+        <activity android:name=".ui.startforresulthelp.HelpActivity" />
+        <activity android:name=".ui.startforresulthelp.HelpResultActivity" />
+        <activity android:name=".ui.view.mddialog.FBaiDuMapActivity" />
+        <activity android:name=".design.collapsing.CollaspingCenterActivity" />
+        <activity android:name=".design.behavioractivity.HeaderScrollActivity" />
+        <activity android:name=".design.behavioractivity.Header2Activity" />
 
-        <activity android:name=".ui.view.textview.TextViewActivity"/>
-        <activity android:name=".ui.copy.MTActivity"/>
+        <activity android:name=".design.drawer.DrawerBottomActivity"/>
+        <activity android:name=".design.drawer.DrawerTranspateActivity"/>
 
-        <activity android:name=".ui.banner.BannerActivity"/>
-
-        <activity android:name=".ui.view.recyclerview.RecyclerViewActivity"/>
-        <activity android:name=".ui.view.recyclerview.fixed.RecyclerItemFixedActivity"/>
-        <activity android:name=".ui.view.recyclerview.fixed.RecyclerViewWrapActivity"/>
-        <activity android:name=".ui.view.recyclerview.fixed.RecyclerWrapActivity"/>
-        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerDecorationLinearActivity"/>
-        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerIntervalActivity"/>
-        <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerGideActivity"/>
-
-        <activity android:name=".ui.view.mddialog.MdDialogActivity"/>
-        <activity android:name=".ui.view.popup.PopupActivity"/>
-        <activity android:name=".ui.view.viewpager.ViewPageActivity"/>
-
-        <activity android:name=".ui.view.shaw.ShawActivity"/>
-        <activity android:name=".ui.view.shawshape.ShawShapeActivity"/>
-        <activity android:name=".ui.view.dialog.DialogActivity"/>
-
-        <activity android:name=".design.DesignActivity"/>
-        <activity android:name=".design.toolbar.ToolbarActivity"/>
-        <activity android:name=".design.toolbar.ToolbarScrollActivity"/>
-        <activity android:name=".design.collapsing.CollapsingOneActivity"/>
-        <activity android:name=".design.refresh.RefreshActivity"/>
-        <activity android:name=".design.refresh.Refresh2Activity"/>
-        <activity android:name=".design.behavioractivity.TopScaleActivity"/>
-        <activity android:name=".design.behavioractivity.TopBackActivity"/>
-        <activity android:name=".design.behavioractivity.TopBackRefreshActivity"/>
-        <activity android:name=".design.collapsing.CollaspingTwoActivity"/>
-
-        <activity android:name=".design.imitate.JianSuActivity"/>
-        <activity android:name=".design.imitate.MeiTuanHomeActivity"/>
-        <activity android:name=".design.imitate.PictureActivity"/>
-        <activity android:name=".design.toolbar.ToolbarTabVpActivity"/>
-        <activity android:name=".design.toolbar.CollaspingTabActivity" android:theme="@style/AppThemeBlue"/>
-        <activity android:name=".design.imitate.XiTuActivity"/>
-
-        <activity android:name=".ui.startforresulthelp.HelpActivity"/>
-        <activity android:name=".ui.startforresulthelp.HelpResultActivity"/>
-
-        <activity android:name=".ui.view.mddialog.FBaiDuMapActivity"/>
-        <activity android:name=".design.collapsing.CollaspingCenterActivity"/>
-        <activity android:name=".design.behavioractivity.HeaderScrollActivity"/>
-        <activity android:name=".design.behavioractivity.Header2Activity"/>
     </application>
 
 </manifest>
