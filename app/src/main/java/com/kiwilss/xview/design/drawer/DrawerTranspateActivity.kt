@@ -26,8 +26,8 @@ class DrawerTranspateActivity: AppCompatActivity(R.layout.activity_drawer_transp
         super.onCreate(savedInstanceState)
 
         immersionBar {
-            fullScreen(true)
-            //transparentStatusBar()
+            //fullScreen(true)
+            transparentStatusBar()
            //statusBarColor(R.color.blue_74D3FF)
             statusBarDarkFont(false)
         }
