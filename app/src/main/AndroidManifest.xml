@@ -81,6 +81,7 @@
 
         <activity android:name=".ui.startforresulthelp.DebugActivity"/>
         <activity android:name=".ui.ripple.RippleActivity"/>
+        <activity android:name=".ui.anim.AnimActivity"/>
     </application>
 
 </manifest>
