@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_f2f2f2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+      android:background="@color/white"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="原生的波纹"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/red_F7E6ED"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ripple_blue"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ripple波纹"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/red_F7E6ED"/>
+
+       <com.kiwilss.xview.ui.ripple.RippleView
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           app:rv_color="@color/yellow_FF9B52"
+           app:rv_type="simpleRipple"
+           app:rv_centered="false">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="ripple单波纹"
+               android:layout_centerInParent="true"/>
+
+       </com.kiwilss.xview.ui.ripple.RippleView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/red_F7E6ED"/>
+
+        <com.kiwilss.xview.ui.ripple.RippleView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:rv_color="@color/blue_74D3FF"
+            app:rv_type="doubleRipple"
+          >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ripple双波纹"
+                android:layout_centerInParent="true"/>
+
+        </com.kiwilss.xview.ui.ripple.RippleView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/red_F7E6ED"/>
+
+        <com.kiwilss.xview.ui.ripple.RippleView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:rv_color="@color/red_FF6D84"
+            app:rv_type="rectangle"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ripple方形波纹"
+                android:layout_centerInParent="true"/>
+
+        </com.kiwilss.xview.ui.ripple.RippleView>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

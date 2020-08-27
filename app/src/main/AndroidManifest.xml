@@ -79,8 +79,8 @@
         <activity android:name=".ui.supertext.SuperTextActivity"/>
         <activity android:name=".ui.shape.ShapeViewActivity"/>
 
-
-
+        <activity android:name=".ui.startforresulthelp.DebugActivity"/>
+        <activity android:name=".ui.ripple.RippleActivity"/>
     </application>
 
 </manifest>

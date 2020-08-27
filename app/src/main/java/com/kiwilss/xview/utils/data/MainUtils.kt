@@ -17,7 +17,9 @@ import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.ripple.RippleActivity
 import com.kiwilss.xview.ui.shape.ShapeViewActivity
+import com.kiwilss.xview.ui.startforresulthelp.DebugActivity
 import com.kiwilss.xview.ui.startforresulthelp.HelpActivity
 import com.kiwilss.xview.ui.supertext.SuperTextActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
@@ -56,7 +58,9 @@ object MainUtils {
             MainBean("Design", DesignActivity::class.java),
             MainBean("ActivityHelp", HelpActivity::class.java),
             MainBean("SuperText", SuperTextActivity::class.java),
-            MainBean("ShapeView", ShapeViewActivity::class.java)
+            MainBean("ShapeView", ShapeViewActivity::class.java),
+            MainBean("Debug", DebugActivity::class.java),
+            MainBean("Ripple", RippleActivity::class.java)
         )
 
 

@@ -62,14 +62,7 @@ class HelpActivity: AppCompatActivity(R.layout.activity_help) {
             startActivityForResult(Intent(this,HelpResultActivity::class.java),99)
         }
         btn_help_add.setOnClickListener {
-            key++
-            val callback = object : ActivityHelper.Callback{
-                override fun onActivityResult(resultCode: Int, data: Intent?) {
 
-                }
-
-            }
-            mCallbacks.put(key,callback)
         }
 
     }
