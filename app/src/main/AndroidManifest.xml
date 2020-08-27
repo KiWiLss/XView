@@ -76,6 +76,11 @@
         <activity android:name=".design.drawer.DrawerBottomActivity"/>
         <activity android:name=".design.drawer.DrawerTranspateActivity"/>
 
+        <activity android:name=".ui.supertext.SuperTextActivity"/>
+        <activity android:name=".ui.shape.ShapeViewActivity"/>
+
+
+
     </application>
 
 </manifest>

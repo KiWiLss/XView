@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="@dimen/dp_4"
+            app:shape_circle_borderColor="@color/blue_74D3FF"
+            app:shape_circle_borderWidth="2dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/wuhuang"
+                android:scaleType="centerCrop"/>
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m10"
+            app:shape_roundRect_borderColor="@color/blue_74D3FF"
+            app:shape_roundRect_borderWidth="2dp"
+            app:shape_roundRect_topLeftRadius="@dimen/m10">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/wuhuang"
+                android:scaleType="centerCrop"/>
+
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+        <com.github.florent37.shapeofview.shapes.CutCornerView
+            android:id="@+id/clipCorner"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m10"
+            android:elevation="4dp"
+            app:shape_cutCorner_bottomRightSize="30dp"
+            app:shape_cutCorner_bottomLeftSize="30dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue_74D3FF">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="斜角"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="20dp"
+            app:shape_arc_position="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/wuhuang"
+                android:scaleType="centerCrop"/>
+
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <com.github.florent37.shapeofview.shapes.DiagonalView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:elevation="4dp"
+            app:shape_diagonal_angle="4"
+            app:shape_diagonal_direction="right"
+            app:shape_diagonal_position="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/wuhuang"
+                android:scaleType="centerCrop"/>
+
+        </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+
+        <com.github.florent37.shapeofview.shapes.BubbleView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:shape_bubble_arrowHeight="10dp"
+            app:shape_bubble_arrowWidth="10dp"
+            app:shape_bubble_arrowPosition="bottom"
+            app:shape_bubble_borderRadius="20dp"
+            android:layout_gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/wuhuang"
+                android:scaleType="centerCrop"/>
+
+
+        </com.github.florent37.shapeofview.shapes.BubbleView>
+
+        <com.github.florent37.shapeofview.ShapeOfView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:shape_clip_drawable="@mipmap/ic_launcher_round"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/wuhuang"
+                android:scaleType="centerCrop"/>
+
+        </com.github.florent37.shapeofview.ShapeOfView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
