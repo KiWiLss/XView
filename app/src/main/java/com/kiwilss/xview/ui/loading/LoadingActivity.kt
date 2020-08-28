@@ -1,5 +1,6 @@
 package com.kiwilss.xview.ui.loading
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.PersistableBundle
@@ -57,7 +58,9 @@ class LoadingActivity: AppCompatActivity(R.layout.activity_loading) {
             loadingHelper.showEmptyView()
             //handlerContent()
         }
-
+        btn_loading_title.setOnClickListener {
+            startActivity(Intent(this,LoadingTitleActivity::class.java))
+        }
 
         loadingHelper.showLoadingView()
 

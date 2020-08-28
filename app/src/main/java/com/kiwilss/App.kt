@@ -92,9 +92,9 @@ class App : Application(){
 
 
             override fun onActivityResumed(p0: Activity) {
-                val back = p0.findViewById<View>(R.id.iv_layout_toolbar_back)
-                LogUtils.e(back == null, " back resume")
-                back?.setOnClickListener { p0.finish() }
+//                val back = p0.findViewById<View>(R.id.iv_layout_toolbar_back)
+//                LogUtils.e(back == null, " back resume")
+//                back?.setOnClickListener { p0.finish() }
             }
 
         })
