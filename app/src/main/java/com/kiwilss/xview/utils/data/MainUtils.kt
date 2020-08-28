@@ -16,6 +16,7 @@ import com.kiwilss.xview.model.main.MainBean
 import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
+import com.kiwilss.xview.ui.loading.LoadingActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
 import com.kiwilss.xview.ui.ripple.RippleActivity
 import com.kiwilss.xview.ui.shape.ShapeViewActivity
@@ -60,7 +61,8 @@ object MainUtils {
             MainBean("SuperText", SuperTextActivity::class.java),
             MainBean("ShapeView", ShapeViewActivity::class.java),
             MainBean("Debug", DebugActivity::class.java),
-            MainBean("Ripple", RippleActivity::class.java)
+            MainBean("Ripple", RippleActivity::class.java),
+            MainBean("Loading", LoadingActivity::class.java)
         )
 
 

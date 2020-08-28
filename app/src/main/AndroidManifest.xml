@@ -82,6 +82,7 @@
         <activity android:name=".ui.startforresulthelp.DebugActivity"/>
         <activity android:name=".ui.ripple.RippleActivity"/>
         <activity android:name=".ui.anim.AnimActivity"/>
+        <activity android:name=".ui.loading.LoadingActivity" android:label="loading测试"/>
     </application>
 
 </manifest>

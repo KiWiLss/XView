@@ -2,28 +2,14 @@ package com.kiwilss.xview.main
 
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.text.format.DateUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.kiwilss.xview.R
-import com.kiwilss.xview.model.main.MainBean
-import com.kiwilss.xview.ui.banner.BannerActivity
-import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
-import com.kiwilss.xview.ui.view.dialog.DialogActivity
-import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
-import com.kiwilss.xview.ui.view.popup.PopupActivity
-import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
-import com.kiwilss.xview.ui.view.shaw.ShawActivity
-import com.kiwilss.xview.ui.view.shawshape.ShawShapeActivity
-import com.kiwilss.xview.ui.view.textview.TextViewActivity
-import com.kiwilss.xview.ui.view.viewpager.ViewPageActivity
 import com.kiwilss.xview.utils.data.MainUtils
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -42,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
 //        val channel = Utils.getUMChannelName(this)
 //        Log.e("MMM", ": ---$channel" )
