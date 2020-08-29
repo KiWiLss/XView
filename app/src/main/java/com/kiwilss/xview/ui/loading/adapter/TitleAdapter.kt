@@ -26,6 +26,7 @@ class TitleAdapter(val title: String) : LoadingHelper.Adapter<LoadingHelper.View
             tv_layout_toolbar_title?.text = title
         }
 
+        //
 
     }
 
