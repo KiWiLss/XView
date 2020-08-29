@@ -62,6 +62,10 @@ class LoadingActivity: AppCompatActivity(R.layout.activity_loading) {
             startActivity(Intent(this,LoadingTitleActivity::class.java))
         }
 
+        btn_loading_title2.setOnClickListener {
+            startActivity(Intent(this,LoadingToolbarActivity::class.java))
+        }
+
         loadingHelper.showLoadingView()
 
         handlerContent()

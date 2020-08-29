@@ -32,7 +32,6 @@ class DrawerTranspateActivity: AppCompatActivity(R.layout.activity_drawer_transp
             statusBarDarkFont(false)
         }
 
-
         tb_drawer_transpate_toolbar.title = "抽屉透明状态栏"
         setSupportActionBar(tb_drawer_transpate_toolbar)
 

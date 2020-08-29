@@ -52,4 +52,14 @@
         android:layout_height="wrap_content"
         android:text="带标题栏"
         android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_loading_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="baseactivity 控制标题栏"
+        android:textAllCaps="false"/>
+
+
+
+
 </LinearLayout>
