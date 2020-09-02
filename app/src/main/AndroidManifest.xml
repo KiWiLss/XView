@@ -89,6 +89,7 @@
 
         <activity android:name=".ui.anim.AnimActivity" android:label="动画"
             tools:ignore="DuplicateActivity" />
+        <activity android:name=".ui.anim.fragment.AnimFragmentActivity" android:label="帧动画"/>
 
 
     </application>
