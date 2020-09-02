@@ -48,7 +48,6 @@ abstract class BaseActivity(contentLayoutId: Int): AppCompatActivity(contentLayo
         }
         //监听重新点击
         mLoadingHelper.setOnReloadListener(this)
-
     }
 
     abstract fun initData()

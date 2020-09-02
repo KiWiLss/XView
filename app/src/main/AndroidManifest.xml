@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.kiwilss.xview">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -81,11 +82,13 @@
 
         <activity android:name=".ui.startforresulthelp.DebugActivity"/>
         <activity android:name=".ui.ripple.RippleActivity"/>
-        <activity android:name=".ui.anim.AnimActivity"/>
+
         <activity android:name=".ui.loading.LoadingActivity" android:label="loading测试"/>
         <activity android:name=".ui.loading.LoadingTitleActivity"/>
         <activity android:name=".ui.loading.LoadingToolbarActivity" android:label="测试控制标题栏"/>
 
+        <activity android:name=".ui.anim.AnimActivity" android:label="动画"
+            tools:ignore="DuplicateActivity" />
 
 
     </application>
