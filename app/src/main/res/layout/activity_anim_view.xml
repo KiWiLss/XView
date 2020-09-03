@@ -23,7 +23,9 @@
             android:layout_gravity="center_horizontal"
             android:background="@color/blue_74D3FF"
             android:paddingHorizontal="15dp"
-            android:paddingVertical="8dp"/>
+            android:paddingVertical="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="100dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"

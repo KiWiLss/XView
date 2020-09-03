@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.ui.anim.activity.AnimCutInActivity
 import com.kiwilss.xview.ui.anim.fragment.AnimFragmentActivity
 import com.kiwilss.xview.ui.anim.viewanim.AnimViewActivity
 import com.kiwilss.xview.utils.LogUtils
@@ -44,6 +45,12 @@ class AnimActivity: BaseActivity(R.layout.activity_anim) {
         btn_anim_view.setOnClickListener {
             startActivity(Intent(this,AnimViewActivity::class.java))
         }
+        btn_anim_activity.setOnClickListener {
+            startActivity(Intent(this,AnimCutInActivity::class.java))
+        }
+
+
+
     }
 
     override fun initInterface() {

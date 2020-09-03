@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_anim_cutout_no"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="无动画"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_default"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="默认动画"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_alpha"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="淡入淡出"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_translate"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="左右交错"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

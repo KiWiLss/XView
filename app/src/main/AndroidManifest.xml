@@ -92,6 +92,10 @@
         <activity android:name=".ui.anim.fragment.AnimFragmentActivity" android:label="帧动画"/>
         <activity android:name=".ui.anim.viewanim.AnimViewActivity" android:label="View动画"/>
         <activity android:name=".ui.anim.activity.AnimCutInActivity" android:label="Activity转场动画"/>
+        <activity android:name=".ui.anim.activity.AnimCutOutActivity" android:label="Activity 转场动画退出"/>
+
+
+
 
     </application>
 
