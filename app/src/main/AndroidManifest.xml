@@ -91,6 +91,7 @@
             tools:ignore="DuplicateActivity" />
         <activity android:name=".ui.anim.fragment.AnimFragmentActivity" android:label="帧动画"/>
         <activity android:name=".ui.anim.viewanim.AnimViewActivity" android:label="View动画"/>
+        <activity android:name=".ui.anim.activity.AnimCutInActivity" android:label="Activity转场动画"/>
 
     </application>
 
