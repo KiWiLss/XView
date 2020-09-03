@@ -8,8 +8,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-
+        <Button
+            android:id="@+id/btn_anim_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="帧动画"/>
+        <Button
+            android:id="@+id/btn_anim_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View动画"/>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

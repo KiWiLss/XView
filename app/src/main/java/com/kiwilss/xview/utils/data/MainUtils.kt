@@ -13,6 +13,7 @@ package com.kiwilss.xview.utils.data
 
 import com.kiwilss.xview.design.DesignActivity
 import com.kiwilss.xview.model.main.MainBean
+import com.kiwilss.xview.ui.anim.AnimActivity
 import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
@@ -62,7 +63,8 @@ object MainUtils {
             MainBean("ShapeView", ShapeViewActivity::class.java),
             MainBean("Debug", DebugActivity::class.java),
             MainBean("Ripple", RippleActivity::class.java),
-            MainBean("Loading", LoadingActivity::class.java)
+            MainBean("Loading", LoadingActivity::class.java),
+            MainBean("Anim", AnimActivity::class.java)
         )
 
 

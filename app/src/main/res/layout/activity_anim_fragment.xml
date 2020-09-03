@@ -9,14 +9,47 @@
         android:id="@+id/iv_anim_fragment_one"
         android:layout_width="230dp"
         android:layout_height="270dp"
-        android:src="@drawable/anim_list" />
+         />
+<!--    android:src="@drawable/anim_list"-->
 
-    <Button
-        android:id="@+id/startAnimationBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startFrameAnimation"
-        android:text="start animation" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_anim_fragment_xmlStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start animation" />
+
+        <Button
+            android:id="@+id/btn_anim_fragment_xmlStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop animation" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_anim_fragment_two"
+        android:layout_width="230dp"
+        android:layout_height="270dp"
+        />
+    <!--    android:src="@drawable/anim_list"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_anim_fragment_codeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start animation" />
+
+        <Button
+            android:id="@+id/btn_anim_fragment_codeStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop animation" />
+    </LinearLayout>
 
 
 
