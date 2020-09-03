@@ -30,19 +30,29 @@
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/btn_anim_view_alpha"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="渐变"/>
             <Button
                 android:id="@+id/btn_anim_view_translate"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="平移"/>
             <Button
                 android:id="@+id/btn_anim_view_rotate"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="旋转"/>
+            <Button
+                android:id="@+id/btn_anim_view_scale"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="缩放"/>
+            <Button
+                android:id="@+id/btn_anim_view_set"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="集合"/>
         </LinearLayout>
 
         <TextView
@@ -54,19 +64,29 @@
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/btn_anim_view_alpha2"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="渐变"/>
             <Button
                 android:id="@+id/btn_anim_view_translate2"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="平移"/>
             <Button
                 android:id="@+id/btn_anim_view_rotate2"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="旋转"/>
+            <Button
+                android:id="@+id/btn_anim_view_scale2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="缩放"/>
+            <Button
+                android:id="@+id/btn_anim_view_set2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="集合"/>
         </LinearLayout>
 
 
