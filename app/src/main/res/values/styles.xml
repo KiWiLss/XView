@@ -13,6 +13,24 @@
         <item name="colorPrimaryDark">@color/blue_74D3FF</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="AppThemeAnim" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/blue_74D3FF</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/SlideRightLeft</item>
+    </style>
+
+    <style name="SlideRightLeft" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_slide_right_out</item>
+    </style>
+
+
+
     <!--淡入淡出-->
     <style name="AnimFadeCenter" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/fade_center_in</item>

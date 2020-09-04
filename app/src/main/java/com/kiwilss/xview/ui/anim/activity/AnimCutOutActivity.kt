@@ -65,6 +65,12 @@ class AnimCutOutActivity: BaseActivity(R.layout.activity_anim_cutout) {
 
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        // 添加返回过渡动画.
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+    }
+
     override fun initInterface() {
 
     }

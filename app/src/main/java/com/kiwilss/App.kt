@@ -15,7 +15,8 @@ import android.app.Application
 import android.content.Context
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
+import android.view.animation.AccelerateInterpolator
+import android.view.animation.DecelerateInterpolator
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.kiwilss.xview.R
@@ -24,7 +25,8 @@ import com.kiwilss.xview.ui.loading.adapter.EmptyAdapter
 import com.kiwilss.xview.ui.loading.adapter.LoadingAdapter
 import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.layout_toolbar.*
-import kotlinx.android.synthetic.main.layout_toolbar.view.*
+import top.wefor.circularanim.CircularAnim
+import top.wefor.circularanim.CircularAnim.OnAnimatorDeployListener
 
 /**
  *@FileName: App
@@ -42,7 +44,26 @@ class App : Application(){
         monitorActivityLife()
         //初始化话全局状态
         initStatus()
+        //初始化转场动画设置
+        initCircularAnim()
+    }
 
+    private fun initCircularAnim() {
+        // optional. change the default duration and fullActivity resource.
+        // the original value is (618, 618,android.R.color.white).
+        CircularAnim.init(700, 618, R.color.colorPrimary)
+        // optional. set the default duration OnAnimatorDeployListener.
+        // optional. set the default duration OnAnimatorDeployListener.
+        CircularAnim.initDefaultDeployAnimators(
+            OnAnimatorDeployListener { animator ->
+                animator.interpolator = AccelerateInterpolator()
+            },
+            OnAnimatorDeployListener { animator ->
+                animator.interpolator = DecelerateInterpolator()
+            },
+            null,
+            null
+        )
     }
 
     private fun initStatus() {

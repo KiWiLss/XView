@@ -59,7 +59,7 @@ class ViewPagerFragment: Fragment() {
         tv_fg_vp_text.text = "第${type}个fragment"
         LogUtils.e("fragment---$type")
         tv_fg_vp_text.setOnClickListener {
-            ActivityHelper.init(this.activity!!)
+            ActivityHelper.init(requireActivity())
                 .startActivityForResult(Intent(activity,HelpResultActivity::class.java),
                 object : ActivityHelper.Callback{
                     override fun onActivityResult(resultCode: Int, data: Intent?) {

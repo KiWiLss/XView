@@ -114,4 +114,7 @@ dependencies {
     implementation 'com.github.florent37:shapeofview:1.3.2'
 
     implementation 'com.dylanc:loadinghelper:2.1.0'
+
+    implementation 'com.github.XunMengWinter:CircularAnim:0.4.6'
+
 }

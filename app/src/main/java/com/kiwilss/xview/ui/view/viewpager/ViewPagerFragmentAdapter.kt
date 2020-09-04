@@ -34,4 +34,5 @@ class ViewPagerFragmentAdapter(fragmentActivity: FragmentActivity,
     }
 
 
+
 }

@@ -1,9 +1,12 @@
 package com.kiwilss.xview.ui.anim.activity
 
 import android.content.Intent
+import android.view.View
+import android.view.animation.AccelerateInterpolator
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_anim_cutin.*
+import top.wefor.circularanim.CircularAnim
 
 /**
  *@FileName: AnimCutInActivity
@@ -66,7 +69,40 @@ class AnimCutInActivity: BaseActivity(R.layout.activity_anim_cutin) {
 
     }
 
+    var isShow = false
     override fun initInterface() {
+        //复杂动画效果
+        btn_anim_cutin_color.setOnClickListener {
+            CircularAnim.fullActivity(this,it)
+                //.colorOrImageRes(R.color.blue_74D3FF)
+//                .deployStartAnimator {
+//                    it.duration = 700L
+//                    it.interpolator = AccelerateInterpolator()
+//                }
+                .deployReturnAnimator { it ->
+                    //this .setDuration() with override CircularAnim.setDuration().
+                    it.duration = 700L
+                    it.interpolator = AccelerateInterpolator()
+                }
+                .go {
+                    startActivity(Intent(this,AnimCutOutActivity::class.java))
+                }
+        }
+        btn_anim_cutin_picture.setOnClickListener {
+            CircularAnim.fullActivity(this,it)
+                .colorOrImageRes(R.mipmap.wuhuang)
+                .go {
+                    startActivity(Intent(this,AnimCutOutActivity::class.java))
+                }
+        }
+        btn_anim_cutin_show.setOnClickListener {
+                pb_anim_cutin_progress.visibility = View.VISIBLE
+                CircularAnim.hide(it).go()
+        }
+        pb_anim_cutin_progress.setOnClickListener {
+            pb_anim_cutin_progress.visibility = View.GONE
+            CircularAnim.show(btn_anim_cutin_show).go()
+        }
     }
 
     override fun onReload() {

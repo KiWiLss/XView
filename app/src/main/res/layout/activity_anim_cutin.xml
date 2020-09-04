@@ -87,6 +87,43 @@
                 android:layout_height="wrap_content"
                 android:text="进入上进下出,退出下进上出"/>
         </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义复杂转场动画"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_anim_cutin_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="颜色跳转"/>
+            <Button
+                android:id="@+id/btn_anim_cutin_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片跳转"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <ProgressBar
+                android:id="@+id/pb_anim_cutin_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/btn_anim_cutin_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="伸缩"
+                android:layout_gravity="center_horizontal"/>
+        </FrameLayout>
 
     </LinearLayout>
 
