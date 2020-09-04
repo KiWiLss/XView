@@ -8,6 +8,15 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_vp_test_vp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_vp_test_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/blue_74D3FF"
+        android:orientation="horizontal"
+        android:gravity="center"/>
 
 </LinearLayout>

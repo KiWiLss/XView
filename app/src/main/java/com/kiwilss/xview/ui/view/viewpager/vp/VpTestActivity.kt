@@ -33,6 +33,9 @@ class VpTestActivity : BaseActivity(R.layout.activity_vp_test) {
         //初始位置设置到比较大的位置
         vp_vp_test_vp.currentItem = dataList.size * 1000
 
+
+
+
     }
 
     override fun onReload() {
