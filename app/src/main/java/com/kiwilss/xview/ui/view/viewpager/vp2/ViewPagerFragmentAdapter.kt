@@ -33,6 +33,9 @@ class ViewPagerFragmentAdapter(fragmentActivity: FragmentActivity,
         return fragments[position]
     }
 
+    override fun containsItem(itemId: Long): Boolean {
+        return super.containsItem(itemId)
+    }
 
 
 }

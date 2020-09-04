@@ -24,12 +24,14 @@ class VpTestActivity : BaseActivity(R.layout.activity_vp_test) {
     override fun initInterface() {
 
         val dataList = arrayListOf<Fragment>()
-        for (i in 0..5){
+        for (i in 0..3){
             dataList.add(VpTestFg.newInstance(i))
         }
         val adapter = VpTestAdapter(supportFragmentManager,dataList)
         vp_vp_test_vp.adapter = adapter
 
+        //初始位置设置到比较大的位置
+        vp_vp_test_vp.currentItem = dataList.size * 1000
 
     }
 

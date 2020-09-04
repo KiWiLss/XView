@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/app_name"
-        android:background="@color/blue_74D3FF"
+        android:background="@color/red_FF8EB7"
         android:gravity="center"
         android:textColor="@color/white"/>
 </RelativeLayout>

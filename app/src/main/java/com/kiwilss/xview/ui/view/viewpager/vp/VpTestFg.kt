@@ -1,6 +1,7 @@
 package com.kiwilss.xview.ui.view.viewpager.vp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -42,6 +43,10 @@ class VpTestFg: Fragment() {
         val type = arguments?.getInt("type")
         tv_fg_vp_test_text.text = "this is fragment $type"
 
+        tv_fg_vp_test_text.setOnClickListener {
+            //进入另一种方法
+            startActivity(Intent(context,VpTestTwoActivity::class.java))
+        }
     }
 
 }

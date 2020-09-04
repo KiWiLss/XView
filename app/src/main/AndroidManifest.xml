@@ -96,8 +96,8 @@
         <activity android:name=".ui.anim.activity.AnimCutOutActivity" android:label="Activity 转场动画退出"
           />
 
-    <activity android:name=".ui.view.viewpager.vp.VpTestActivity" android:label="Viewpager"/>
-
+    <activity android:name=".ui.view.viewpager.vp.VpTestActivity" android:label="Viewpager无限滑动"/>
+    <activity android:name=".ui.view.viewpager.vp.VpTestTwoActivity" android:label="Viewpager无限滑动"/>
 
     </application>
 

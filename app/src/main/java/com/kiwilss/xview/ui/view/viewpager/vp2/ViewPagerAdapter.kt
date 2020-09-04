@@ -24,8 +24,14 @@ import com.kiwilss.xview.R
  * @time   : 2020/8/4
  * @desc   : {DESCRIPTION}
  */
-class ViewPagerAdapter(resId: Int = R.layout.item_viewpager): BaseQuickAdapter<String,BaseViewHolder>(resId) {
+class ViewPagerAdapter(resId: Int = R.layout.item_viewpager):
+    BaseQuickAdapter<String,BaseViewHolder>(resId) {
+
+
     override fun convert(holder: BaseViewHolder, item: String) {
         holder.getView<View>(R.id.tv_item_viewpager_text).setBackgroundColor(Color.parseColor(item))
     }
+
+
+
 }

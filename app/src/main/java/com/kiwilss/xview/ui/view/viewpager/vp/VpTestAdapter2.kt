@@ -13,18 +13,18 @@ import androidx.fragment.app.FragmentPagerAdapter
  * @time   : 2020/9/4
  * @desc   : {DESCRIPTION}
  */
-class VpTestAdapter(fragmentManager: FragmentManager, val data: ArrayList<Fragment>) :
+class VpTestAdapter2(fragmentManager: FragmentManager, val data: ArrayList<Fragment>) :
     FragmentPagerAdapter(fragmentManager) {
 
     override fun getItem(position: Int): Fragment = data[position]
 
-    override fun getCount(): Int = Int.MAX_VALUE
+    override fun getCount(): Int = data.size
 
 
-    override fun instantiateItem(container: ViewGroup,  position: Int): Any {
-        //处理position。让数组下标落在[0,fragmentList.size)中，防止越界
-        var position = position
-        position %= data.size
-        return super.instantiateItem(container, position)
-    }
+//    override fun instantiateItem(container: ViewGroup,  position: Int): Any {
+//        //处理position。让数组下标落在[0,fragmentList.size)中，防止越界
+//        var position = position
+//        position %= data.size
+//        return super.instantiateItem(container, position)
+//    }
 }
