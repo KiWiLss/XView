@@ -17,7 +17,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kiwilss.xview.R
-import com.kiwilss.xview.ui.view.viewpager.ViewPagerFragment
 import com.kiwilss.xview.utils.LogUtils
 
 /**

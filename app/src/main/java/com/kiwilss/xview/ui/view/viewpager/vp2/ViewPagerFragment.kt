@@ -9,7 +9,7 @@
  * 作者姓名           修改时间           版本号              描述
  */
 
-package com.kiwilss.xview.ui.view.viewpager
+package com.kiwilss.xview.ui.view.viewpager.vp2
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -34,10 +34,11 @@ import kotlinx.android.synthetic.main.fg_viewpager.*
 class ViewPagerFragment: Fragment() {
 
     companion object{
-        fun instance(type: Int): ViewPagerFragment{
+        fun instance(type: Int): ViewPagerFragment {
             val bundle = Bundle()
             bundle.putInt("type",type)
-            val viewPagerFragment = ViewPagerFragment()
+            val viewPagerFragment =
+                ViewPagerFragment()
             viewPagerFragment.arguments = bundle
             return viewPagerFragment
         }

@@ -45,7 +45,7 @@
         <activity android:name=".ui.view.recyclerview.decoration_activity.RecyclerGideActivity" />
         <activity android:name=".ui.view.mddialog.MdDialogActivity" />
         <activity android:name=".ui.view.popup.PopupActivity" />
-        <activity android:name=".ui.view.viewpager.ViewPageActivity" />
+        <activity android:name=".ui.view.viewpager.vp2.ViewPageActivity" />
         <activity android:name=".ui.view.shaw.ShawActivity" />
         <activity android:name=".ui.view.shawshape.ShawShapeActivity" />
         <activity android:name=".ui.view.dialog.DialogActivity" />
@@ -96,7 +96,7 @@
         <activity android:name=".ui.anim.activity.AnimCutOutActivity" android:label="Activity 转场动画退出"
           />
 
-
+    <activity android:name=".ui.view.viewpager.vp.VpTestActivity" android:label="Viewpager"/>
 
 
     </application>

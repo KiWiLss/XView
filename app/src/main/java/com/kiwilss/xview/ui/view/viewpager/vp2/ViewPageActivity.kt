@@ -9,7 +9,7 @@
  * 作者姓名           修改时间           版本号              描述
  */
 
-package com.kiwilss.xview.ui.view.viewpager
+package com.kiwilss.xview.ui.view.viewpager.vp2
 
 import android.graphics.Typeface
 import android.os.Bundle
@@ -20,7 +20,6 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiwilss.xview.R
 import com.kiwilss.xview.utils.LogUtils
@@ -68,10 +67,17 @@ class ViewPageActivity: AppCompatActivity() {
         //for (i in 0 until 3)
         for ( i in 0..2) {
             LogUtils.e(i)
-            val instance = ViewPagerFragment.instance(i)
+            val instance =
+                ViewPagerFragment.instance(
+                    i
+                )
             fragments.add(instance)
         }
-        val adapter = ViewPagerFragmentAdapter(this,fragments)
+        val adapter =
+            ViewPagerFragmentAdapter(
+                this,
+                fragments
+            )
         vp_viewpager_fg.adapter = adapter
         vp_viewpager_fg.offscreenPageLimit = 3
 
@@ -93,10 +99,17 @@ class ViewPageActivity: AppCompatActivity() {
         vp_viewpager_tb2.offscreenPageLimit = ViewPager2.OFFSCREEN_PAGE_LIMIT_DEFAULT
         val fragments = arrayListOf<Fragment>()
         for ( i in 0..5) {
-            val instance = ViewPagerFragment.instance(i)
+            val instance =
+                ViewPagerFragment.instance(
+                    i
+                )
             fragments.add(instance)
         }
-        val adapter = ViewPagerFragmentAdapter(this,fragments)
+        val adapter =
+            ViewPagerFragmentAdapter(
+                this,
+                fragments
+            )
         vp_viewpager_tb2.adapter = adapter
         //将TabLayout和ViewPager2关联起来
         val metiaor: TabLayoutMediator = TabLayoutMediator(tl_vp_tab2,vp_viewpager_tb2,
@@ -129,10 +142,17 @@ class ViewPageActivity: AppCompatActivity() {
         val fragments = arrayListOf<Fragment>()
         //for (i in 0 until 3)
         for ( i in 0..2) {
-            val instance = ViewPagerFragment.instance(i)
+            val instance =
+                ViewPagerFragment.instance(
+                    i
+                )
             fragments.add(instance)
         }
-        val adapter = ViewPagerFragmentAdapter(this,fragments)
+        val adapter =
+            ViewPagerFragmentAdapter(
+                this,
+                fragments
+            )
         vp_viewpager_tb.adapter = adapter
         //将TabLayout和ViewPager2关联起来
         val metiaor: TabLayoutMediator = TabLayoutMediator(tl_vp_tab1,vp_viewpager_tb,

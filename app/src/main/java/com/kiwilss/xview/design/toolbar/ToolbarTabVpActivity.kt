@@ -19,10 +19,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.kiwilss.xview.R
 import com.kiwilss.xview.design.toolbar.vp.TabAdapter
 import com.kiwilss.xview.design.toolbar.vp.TabFragment
-import com.kiwilss.xview.ui.view.viewpager.ViewPagerFragment
-import com.kiwilss.xview.ui.view.viewpager.ViewPagerFragmentAdapter
 import kotlinx.android.synthetic.main.activity_tabvp.*
-import kotlinx.android.synthetic.main.activity_viewpager.*
 
 /**
  *@FileName: ToolbarTabVpActivity

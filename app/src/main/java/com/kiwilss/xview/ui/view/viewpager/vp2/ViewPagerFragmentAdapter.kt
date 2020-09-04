@@ -9,7 +9,7 @@
  * 作者姓名           修改时间           版本号              描述
  */
 
-package com.kiwilss.xview.ui.view.viewpager
+package com.kiwilss.xview.ui.view.viewpager.vp2
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
