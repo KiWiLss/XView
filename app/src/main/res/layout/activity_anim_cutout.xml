@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="系统原生"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -28,6 +32,54 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="左右交错"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义简单动画"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_anim_cutout_alpha2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="淡入淡出"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_left"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="左进右出"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_right"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="右进左出"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_leftRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入右进左出,退出左进右出"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_anim_cutout_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上进下出"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下进上出"/>
+        <Button
+            android:id="@+id/btn_anim_cutout_topbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入上进下出,退出下进上出"/>
     </LinearLayout>
 
 

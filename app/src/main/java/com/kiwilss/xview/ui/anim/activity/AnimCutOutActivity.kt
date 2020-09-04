@@ -33,6 +33,36 @@ class AnimCutOutActivity: BaseActivity(R.layout.activity_anim_cutout) {
             finish()
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right)
         }
+        //自定义简单动画
+        btn_anim_cutout_alpha2.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.activity_fade_in,R.anim.activity_fade_out)
+        }
+        btn_anim_cutout_left.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.activity_slide_left_in,R.anim.activity_slide_right_out)
+        }
+        btn_anim_cutout_right.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.activity_slide_right_in,R.anim.activity_slide_left_out)
+        }
+        btn_anim_cutout_leftRight.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.activity_slide_left_in,R.anim.activity_slide_right_out)
+        }
+        btn_anim_cutout_top.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.activity_slide_top_in,R.anim.activity_slide_bottom_out)
+        }
+        btn_anim_cutout_bottom.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.activity_slide_bottom_in,R.anim.activity_slide_top_out)
+        }
+        btn_anim_cutout_topbottom.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.activity_slide_top_in,R.anim.activity_slide_bottom_out)
+        }
+
     }
 
     override fun initInterface() {
