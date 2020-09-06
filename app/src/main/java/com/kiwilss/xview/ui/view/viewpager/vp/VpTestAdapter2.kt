@@ -20,11 +20,4 @@ class VpTestAdapter2(fragmentManager: FragmentManager, val data: ArrayList<Fragm
 
     override fun getCount(): Int = data.size
 
-
-//    override fun instantiateItem(container: ViewGroup,  position: Int): Any {
-//        //处理position。让数组下标落在[0,fragmentList.size)中，防止越界
-//        var position = position
-//        position %= data.size
-//        return super.instantiateItem(container, position)
-//    }
 }

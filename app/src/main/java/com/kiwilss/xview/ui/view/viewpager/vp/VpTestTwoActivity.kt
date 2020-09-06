@@ -1,6 +1,9 @@
 package com.kiwilss.xview.ui.view.viewpager.vp
 
 import android.annotation.SuppressLint
+import android.os.Handler
+import android.os.Message
+import android.view.MotionEvent
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -19,7 +22,38 @@ import kotlinx.android.synthetic.main.nav_header_main.*
  * @time   : 2020/9/4
  * @desc   : {DESCRIPTION}
  */
-class VpTestTwoActivity: BaseActivity(R.layout.activity_vp_test) {
+class VpTestTwoActivity: BaseActivity(R.layout.activity_vp_test) ,Runnable{
+
+    private val mDelayTime: Long = 3000
+
+    private val mHandler = @SuppressLint("HandlerLeak")
+    object : Handler(){
+        override fun handleMessage(msg: Message) {
+            super.handleMessage(msg)
+        }
+    }
+
+    override fun run() {
+        var currentItem = vp_vp_test_vp.currentItem
+        currentItem ++
+       vp_vp_test_vp.currentItem = currentItem
+        mHandler.postDelayed(this,mDelayTime)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mHandler.postDelayed(this,mDelayTime)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mHandler.removeCallbacks(this)
+    }
+
+
+
+
+
     override fun initData() {
 
     }
@@ -29,6 +63,7 @@ class VpTestTwoActivity: BaseActivity(R.layout.activity_vp_test) {
 
     lateinit var dataList: ArrayList<Fragment>
     var mCurrent2 = 1
+    @SuppressLint("ClickableViewAccessibility")
     override fun initInterface() {
 
          dataList = arrayListOf<Fragment>()
@@ -79,6 +114,7 @@ class VpTestTwoActivity: BaseActivity(R.layout.activity_vp_test) {
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
+                //这里可以自定义指示器切换动画效果
 
             }
 
@@ -89,6 +125,25 @@ class VpTestTwoActivity: BaseActivity(R.layout.activity_vp_test) {
             }
 
         })
+
+        //监听,手动滑动时取消轮播
+        vp_vp_test_vp.setOnTouchListener { v, event ->
+            when(event.action){
+                MotionEvent.ACTION_DOWN -> {
+                    LogUtils.e("action-down")
+                    mHandler.removeCallbacks(this)
+                }
+                MotionEvent.ACTION_UP -> {
+                    LogUtils.e("action-up")
+                    mHandler.postDelayed(this,mDelayTime)
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    //LogUtils.e("action-move")
+                    //mHandler.removeCallbacks(this)
+                }
+            }
+            false
+        }
     }
 
     private fun changeIndicator(position: Int) {

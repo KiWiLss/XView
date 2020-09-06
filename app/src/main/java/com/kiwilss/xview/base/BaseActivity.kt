@@ -8,6 +8,7 @@ import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.kiwilss.xview.ui.loading.adapter.TitleAdapter
 import com.kiwilss.xview.utils.LogUtils
+import java.util.logging.Handler
 
 /**
  *@FileName: BaseActivity
@@ -18,6 +19,9 @@ import com.kiwilss.xview.utils.LogUtils
  */
 abstract class BaseActivity(contentLayoutId: Int): AppCompatActivity(contentLayoutId)
     , LoadingHelper.OnReloadListener{
+
+
+
 
     lateinit var mLoadingHelper: LoadingHelper
 
