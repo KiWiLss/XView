@@ -22,7 +22,9 @@ class ScrollViewActivity : BaseActivity(R.layout.activity_scrollview) {
         btn_scrollview_top.setOnClickListener {
             startActivity(Intent(this,ScrollTitleActivity::class.java))
         }
+        btn_scrollview_stick.setOnClickListener {
 
+        }
 
 
     }
