@@ -29,6 +29,7 @@ import com.kiwilss.xview.ui.view.dialog.DialogActivity
 import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
 import com.kiwilss.xview.ui.view.popup.PopupActivity
 import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
+import com.kiwilss.xview.ui.view.scrollview.ScrollViewActivity
 import com.kiwilss.xview.ui.view.shaw.ShawActivity
 import com.kiwilss.xview.ui.view.shawshape.ShawShapeActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
@@ -66,7 +67,8 @@ object MainUtils {
             MainBean("Debug", DebugActivity::class.java),
             MainBean("Ripple", RippleActivity::class.java),
             MainBean("Loading", LoadingActivity::class.java),
-            MainBean("Anim", AnimActivity::class.java)
+            MainBean("Anim", AnimActivity::class.java),
+            MainBean("ScrollView", ScrollViewActivity::class.java)
         )
 
 
