@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.kiwilss.xview.ui.view.scrollview.widget.ObservableScrollView
+        android:id="@+id/sv_scroll_stick2_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<!--                头部view-->
+
+            <TextView
+                android:id="@+id/tv_scroll_stick2_header"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:text="上半部分内容"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/blue_74D3FF"/>
+<!--            悬浮标题-->
+
+            <LinearLayout
+                android:id="@+id/ll_scroll_stick2_stick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_scroll_stick2_stick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_scroll_stick2_stick"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/red"
+                        android:text="悬浮部分"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/yellow_FF9B52"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/green_07C0C2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/red_F7E6ED"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/black_999999"/>
+        </LinearLayout>
+
+    </com.kiwilss.xview.ui.view.scrollview.widget.ObservableScrollView>
+
+   <LinearLayout
+       android:id="@+id/ll_scroll_stick2_title"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"/>
+
+</FrameLayout>

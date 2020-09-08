@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_scroll_stick.*
  *@FileName: ScrollStickActivity
  *@author : Lss Administrator
  * @e-mail : kiwilss@163.com
- * @time   : 2020/9/7
+ * @time   : 2020/9/7  https://blog.csdn.net/yechaoa/article/details/86612136
  * @desc   : {原理,两个view,控制view的显示和隐藏}
  */
 class ScrollStickActivity : BaseActivity(R.layout.activity_scroll_stick) {

@@ -20,6 +20,10 @@ import java.util.logging.Handler
 abstract class BaseActivity(contentLayoutId: Int): AppCompatActivity(contentLayoutId)
     , LoadingHelper.OnReloadListener{
 
+    override fun onReload() {
+        //出错或是别的情况,再次点击时调用
+
+    }
 
     lateinit var mLoadingHelper: LoadingHelper
 

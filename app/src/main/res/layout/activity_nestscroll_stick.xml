@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/blue_74D3FF"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@mipmap/wuhuang"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+<!--        悬浮标题-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="要悬浮的标题"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_scroll_stick_outer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_scroll_title_one"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/blue_74D3FF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/yellow_FF9B52"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/green_07C0C2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/red_F7E6ED"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/black_999999"/>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
