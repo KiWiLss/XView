@@ -24,7 +24,8 @@ public class MTActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rl_test);
-         findViewById(R.id.btn_rl_camera).setOnClickListener(new View.OnClickListener() {
+        View btnCamera = findViewById(R.id.btn_rl_camera);
+        btnCamera.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
 //                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -41,6 +42,14 @@ public class MTActivity extends AppCompatActivity {
 
         Coupon coupon = new Coupon(9,"hello");
         LogUtils.e(coupon.isBeanShort());
+
+        btnCamera.post(new Runnable() {
+            @Override
+            public void run() {
+                int height = btnCamera.getHeight();
+                LogUtils.e("height= " + height);
+            }
+        });
 
     }
 }

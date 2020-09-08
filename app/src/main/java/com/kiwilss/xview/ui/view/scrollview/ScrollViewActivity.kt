@@ -3,6 +3,7 @@ package com.kiwilss.xview.ui.view.scrollview
 import android.content.Intent
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.ui.view.scrollview.scroll.ScrollStickActivity
 import com.kiwilss.xview.ui.view.scrollview.scroll.ScrollTitleActivity
 import kotlinx.android.synthetic.main.activity_scrollview.*
 
@@ -23,7 +24,7 @@ class ScrollViewActivity : BaseActivity(R.layout.activity_scrollview) {
             startActivity(Intent(this,ScrollTitleActivity::class.java))
         }
         btn_scrollview_stick.setOnClickListener {
-
+            startActivity(Intent(this,ScrollStickActivity::class.java))
         }
 
 

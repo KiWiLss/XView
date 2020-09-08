@@ -102,7 +102,7 @@
     <activity android:name=".ui.view.viewpager.vp.VpTestActivity" android:label="Viewpager无限滑动(最大值)"/>
     <activity android:name=".ui.view.viewpager.vp.VpTestTwoActivity" android:label="Viewpager无限滑动(前后各加一个)"/>
         <activity android:name=".ui.view.scrollview.scroll.ScrollTitleActivity" android:label="控制标题显示隐藏"/>
-        <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity" android:label="吸顶效果"/>
+        <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity" android:label="吸顶效果两个View实现"/>
 
 
 

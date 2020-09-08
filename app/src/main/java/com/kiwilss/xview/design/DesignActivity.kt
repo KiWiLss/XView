@@ -31,6 +31,7 @@ import com.kiwilss.xview.design.toolbar.CollaspingTabActivity
 import com.kiwilss.xview.design.toolbar.ToolbarActivity
 import com.kiwilss.xview.design.toolbar.ToolbarScrollActivity
 import com.kiwilss.xview.design.toolbar.ToolbarTabVpActivity
+import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_design.*
 
 /**
@@ -109,5 +110,11 @@ class DesignActivity : AppCompatActivity(){
         btn_design_drawer3.setOnClickListener {
             startActivity(Intent(this, DrawerTranspateActivity::class.java))
         }
+
+        btn_design_drawer3.post {
+            LogUtils.e("height=${btn_design_drawer3.height}")
+        }
+
+
     }
 }

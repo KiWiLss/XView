@@ -21,8 +21,6 @@ abstract class BaseActivity(contentLayoutId: Int): AppCompatActivity(contentLayo
     , LoadingHelper.OnReloadListener{
 
 
-
-
     lateinit var mLoadingHelper: LoadingHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +40,7 @@ abstract class BaseActivity(contentLayoutId: Int): AppCompatActivity(contentLayo
     //控制是否显示标题栏
     open fun initIsToolbar(): Boolean = true
 
-    private fun initLoadingHelp(isUseToolbar: Boolean) {
+    open fun initLoadingHelp(isUseToolbar: Boolean) {
         LogUtils.e("initLoadinghelp")
         mLoadingHelper = LoadingHelper(this)
         if (isUseToolbar){
