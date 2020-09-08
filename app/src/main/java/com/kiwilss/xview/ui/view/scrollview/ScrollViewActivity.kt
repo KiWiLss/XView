@@ -3,10 +3,7 @@ package com.kiwilss.xview.ui.view.scrollview
 import android.content.Intent
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
-import com.kiwilss.xview.ui.view.scrollview.scroll.NestScrollStickActivity
-import com.kiwilss.xview.ui.view.scrollview.scroll.ScrollStickActivity
-import com.kiwilss.xview.ui.view.scrollview.scroll.ScrollStickActivity2
-import com.kiwilss.xview.ui.view.scrollview.scroll.ScrollTitleActivity
+import com.kiwilss.xview.ui.view.scrollview.scroll.*
 import kotlinx.android.synthetic.main.activity_scrollview.*
 
 /**
@@ -34,6 +31,10 @@ class ScrollViewActivity : BaseActivity(R.layout.activity_scrollview) {
         btn_scrollview_stick3.setOnClickListener {
             startActivity(Intent(this, NestScrollStickActivity::class.java))
         }
+        btn_scrollview_stick4.setOnClickListener {
+            startActivity(Intent(this, ScrollStickActivity3::class.java))
+        }
+
     }
 
     override fun initInterface() {

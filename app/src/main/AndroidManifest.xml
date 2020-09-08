@@ -105,6 +105,7 @@
         <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity" android:label="吸顶效果两个View实现"/>
         <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity2" android:label="吸顶效果add-remove实现"/>
         <activity android:name=".ui.view.scrollview.scroll.NestScrollStickActivity" android:label="吸顶MD实现"/>
+        <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity3" android:label="自定义View实现吸顶"/>
 
     </application>
 
