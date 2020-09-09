@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--右侧字母索引-->
+    <declare-styleable name="SideIndexBar">
+        <attr name="cpIndexBarTextSize" format="reference|dimension" />
+        <attr name="cpIndexBarNormalTextColor" format="reference|color" />
+        <attr name="cpIndexBarSelectedTextColor" format="reference|color" />
+    </declare-styleable>
 
+<!--    scrollview sticky-->
     <declare-styleable name="StickyScrollView">
         <attr name="stuckShadowHeight" format="dimension" />
         <attr name="stuckShadowDrawable" format="reference" />
     </declare-styleable>
-
 
     <!-- 圆形按钮 -->
     <declare-styleable name="RoundButton">

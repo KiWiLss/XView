@@ -14,6 +14,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
+import com.kiwilss.xview.ui.view.recyclerview.basequick.QucikHeaderFooterActivity
+import com.kiwilss.xview.ui.view.recyclerview.basequick.SectionQuickActivity
+import com.kiwilss.xview.ui.view.recyclerview.basequick.drag.DragDeleteActivity
+import com.kiwilss.xview.ui.view.recyclerview.basequick.mutil.MuiltQuickActivity
 import com.kiwilss.xview.ui.view.recyclerview.decoration_activity.RecyclerDecorationLinearActivity
 import com.kiwilss.xview.ui.view.recyclerview.decoration_activity.RecyclerGideActivity
 import com.kiwilss.xview.ui.view.recyclerview.decoration_activity.RecyclerIntervalActivity
@@ -59,6 +63,22 @@ class RecyclerViewActivity : AppCompatActivity(){
         btn_recycler_interval.setOnClickListener {
             startActivity(Intent(this,
                 RecyclerIntervalActivity::class.java))
+        }
+        btn_recycler_add.setOnClickListener {
+            startActivity(Intent(this,
+                QucikHeaderFooterActivity::class.java))
+        }
+        btn_recycler_section.setOnClickListener {
+            startActivity(Intent(this,
+                SectionQuickActivity::class.java))
+        }
+        btn_recycler_muilt.setOnClickListener {
+            startActivity(Intent(this,
+                MuiltQuickActivity::class.java))
+        }
+        btn_recycler_delete.setOnClickListener {
+            startActivity(Intent(this,
+                DragDeleteActivity::class.java))
         }
     }
 }

@@ -48,5 +48,29 @@
             android:text="设置分割线作为Item的上下左右间隔"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_recycler_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="basequickadapter加头加尾加空布局"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_recycler_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="basequickadapter分组布局"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_recycler_muilt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="basequickadapter多布局"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_recycler_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="basequickadapter拖拽和滑动删除"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

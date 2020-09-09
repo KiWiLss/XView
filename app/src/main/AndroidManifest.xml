@@ -74,39 +74,77 @@
         <activity android:name=".design.behavioractivity.HeaderScrollActivity" />
         <activity android:name=".design.behavioractivity.Header2Activity" />
 
-        <activity android:name=".design.drawer.DrawerBottomActivity"/>
-        <activity android:name=".design.drawer.DrawerTranspateActivity"/>
+        <activity android:name=".design.drawer.DrawerBottomActivity" />
+        <activity android:name=".design.drawer.DrawerTranspateActivity" />
 
-        <activity android:name=".ui.supertext.SuperTextActivity"/>
-        <activity android:name=".ui.shape.ShapeViewActivity"/>
+        <activity android:name=".ui.supertext.SuperTextActivity" />
+        <activity android:name=".ui.shape.ShapeViewActivity" />
 
-        <activity android:name=".ui.startforresulthelp.DebugActivity"/>
-        <activity android:name=".ui.ripple.RippleActivity"/>
+        <activity android:name=".ui.startforresulthelp.DebugActivity" />
+        <activity android:name=".ui.ripple.RippleActivity" />
 
-        <activity android:name=".ui.loading.LoadingActivity" android:label="loading测试"/>
-        <activity android:name=".ui.loading.LoadingTitleActivity"/>
-        <activity android:name=".ui.loading.LoadingToolbarActivity" android:label="测试控制标题栏"/>
+        <activity
+            android:name=".ui.loading.LoadingActivity"
+            android:label="loading测试" />
+        <activity android:name=".ui.loading.LoadingTitleActivity" />
+        <activity
+            android:name=".ui.loading.LoadingToolbarActivity"
+            android:label="测试控制标题栏" />
 
-        <activity android:name=".ui.anim.AnimActivity" android:label="动画"
+        <activity
+            android:name=".ui.anim.AnimActivity"
+            android:label="动画"
             tools:ignore="DuplicateActivity" />
-        <activity android:name=".ui.anim.fragment.AnimFragmentActivity" android:label="帧动画"/>
-        <activity android:name=".ui.anim.viewanim.AnimViewActivity" android:label="View动画"/>
-        <activity android:name=".ui.anim.activity.AnimCutInActivity" android:label="Activity转场动画"/>
-<!--      android:theme="@style/AppThemeAnim"      />-->
-        <activity android:name=".ui.anim.activity.AnimCutOutActivity" android:label="Activity 转场动画退出"
-          />
+        <activity
+            android:name=".ui.anim.fragment.AnimFragmentActivity"
+            android:label="帧动画" />
+        <activity
+            android:name=".ui.anim.viewanim.AnimViewActivity"
+            android:label="View动画" />
+        <activity
+            android:name=".ui.anim.activity.AnimCutInActivity"
+            android:label="Activity转场动画" />
+        <!--      android:theme="@style/AppThemeAnim"      />-->
+        <activity
+            android:name=".ui.anim.activity.AnimCutOutActivity"
+            android:label="Activity 转场动画退出" />
 
-<!--    <activity android:name=".ui.view.viewpager.vp.VpTestActivity" android:label="Viewpager"/>-->
+        <!--    <activity android:name=".ui.view.viewpager.vp.VpTestActivity" android:label="Viewpager"/>-->
 
-        <activity android:name=".ui.view.scrollview.ScrollViewActivity" android:label="ScrollView"/>
-    <activity android:name=".ui.view.viewpager.vp.VpTestActivity" android:label="Viewpager无限滑动(最大值)"/>
-    <activity android:name=".ui.view.viewpager.vp.VpTestTwoActivity" android:label="Viewpager无限滑动(前后各加一个)"/>
-        <activity android:name=".ui.view.scrollview.scroll.ScrollTitleActivity" android:label="控制标题显示隐藏"/>
-        <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity" android:label="吸顶效果两个View实现"/>
-        <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity2" android:label="吸顶效果add-remove实现"/>
-        <activity android:name=".ui.view.scrollview.scroll.NestScrollStickActivity" android:label="吸顶MD实现"/>
-        <activity android:name=".ui.view.scrollview.scroll.ScrollStickActivity3" android:label="自定义View实现吸顶"/>
+        <activity
+            android:name=".ui.view.scrollview.ScrollViewActivity"
+            android:label="ScrollView" />
+        <activity
+            android:name=".ui.view.viewpager.vp.VpTestActivity"
+            android:label="Viewpager无限滑动(最大值)" />
+        <activity
+            android:name=".ui.view.viewpager.vp.VpTestTwoActivity"
+            android:label="Viewpager无限滑动(前后各加一个)" />
+        <activity
+            android:name=".ui.view.scrollview.scroll.ScrollTitleActivity"
+            android:label="控制标题显示隐藏" />
+        <activity
+            android:name=".ui.view.scrollview.scroll.ScrollStickActivity"
+            android:label="吸顶效果两个View实现" />
+        <activity
+            android:name=".ui.view.scrollview.scroll.ScrollStickActivity2"
+            android:label="吸顶效果add-remove实现" />
+        <activity
+            android:name=".ui.view.scrollview.scroll.NestScrollStickActivity"
+            android:label="吸顶MD实现" />
+        <activity
+            android:name=".ui.view.scrollview.scroll.ScrollStickActivity3"
+            android:label="自定义View实现吸顶" />
 
+
+        <activity android:name=".ui.indexbar.IndexBarActivity" android:label="IndexBar"/>
+
+        <activity android:name=".ui.view.recyclerview.basequick.QucikHeaderFooterActivity" android:label="加头加尾空布局"/>
+        <activity android:name=".ui.view.recyclerview.basequick.SectionQuickActivity" android:label="分组布局"/>
+        <activity android:name=".ui.view.recyclerview.basequick.mutil.MuiltQuickActivity" android:label="多布局"/>
+        <activity android:name=".ui.view.recyclerview.basequick.drag.DragDeleteActivity" android:label="拖拽和侧滑删除"/>
+
+        <activity android:name=".ui.view.recyclerview.stick.StickTestActivity" android:label="吸顶效果"/>
     </application>
 
 </manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.kiwilss.xview.ui.indexbar.SideIndexBar
+        android:id="@+id/sb_indexbar_one"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        app:cpIndexBarTextSize="20dp"
+        />
+<!--app:cpIndexBarNormalTextColor="@color/colorAccent"
+        app:cpIndexBarSelectedTextColor="@color/red_F7E6ED"
+        app:cpIndexBarTextSize="15sp" -->
+
+    <TextView
+        android:id="@+id/tv_indexbar_hint"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/app_name"
+        android:background="@drawable/bg_yellow_all_fillet_10"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</RelativeLayout>

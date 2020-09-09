@@ -17,6 +17,7 @@ import com.kiwilss.xview.ui.anim.AnimActivity
 import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
+import com.kiwilss.xview.ui.indexbar.IndexBarActivity
 import com.kiwilss.xview.ui.loading.LoadingActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
 import com.kiwilss.xview.ui.ripple.RippleActivity
@@ -68,7 +69,8 @@ object MainUtils {
             MainBean("Ripple", RippleActivity::class.java),
             MainBean("Loading", LoadingActivity::class.java),
             MainBean("Anim", AnimActivity::class.java),
-            MainBean("ScrollView", ScrollViewActivity::class.java)
+            MainBean("ScrollView", ScrollViewActivity::class.java),
+            MainBean("IndexBar", IndexBarActivity::class.java)
         )
 
 
