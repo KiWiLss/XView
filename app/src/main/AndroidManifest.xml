@@ -144,7 +144,7 @@
         <activity android:name=".ui.view.recyclerview.basequick.mutil.MuiltQuickActivity" android:label="多布局"/>
         <activity android:name=".ui.view.recyclerview.basequick.drag.DragDeleteActivity" android:label="拖拽和侧滑删除"/>
 
-        <activity android:name=".ui.view.recyclerview.stick.StickTestActivity" android:label="吸顶效果"/>
+        <activity android:name=".ui.view.recyclerview.stick.test.StickTestActivity" android:label="吸顶效果"/>
     </application>
 
 </manifest>

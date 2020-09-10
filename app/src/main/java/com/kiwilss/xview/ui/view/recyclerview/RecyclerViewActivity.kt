@@ -24,6 +24,7 @@ import com.kiwilss.xview.ui.view.recyclerview.decoration_activity.RecyclerInterv
 import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerItemFixedActivity
 import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerViewWrapActivity
 import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerWrapActivity
+import com.kiwilss.xview.ui.view.recyclerview.stick.test.StickTestActivity
 import kotlinx.android.synthetic.main.activity_recyclerview.*
 
 /**
@@ -79,6 +80,10 @@ class RecyclerViewActivity : AppCompatActivity(){
         btn_recycler_delete.setOnClickListener {
             startActivity(Intent(this,
                 DragDeleteActivity::class.java))
+        }
+        btn_recycler_stick.setOnClickListener {
+            startActivity(Intent(this,
+                StickTestActivity::class.java))
         }
     }
 }
