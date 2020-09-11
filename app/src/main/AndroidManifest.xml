@@ -146,7 +146,7 @@
 
         <activity android:name=".ui.view.recyclerview.stick.test.StickTestActivity" android:label="吸顶效果"/>
         <activity android:name=".ui.view.recyclerview.stick.two.StickyTwoActivity" android:label="吸顶效果"/>
-
+        <activity android:name=".ui.view.recyclerview.flow.FlowActivity" android:label="流式布局测试"/>
 
     </application>
 

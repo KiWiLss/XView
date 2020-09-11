@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/tv_item_my_home_tag_text"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:text="生活娱乐"
+    android:textSize="@dimen/m11"
+    android:textColor="@color/green_07C0C2"
+    android:background="@drawable/bg_yellow_all_fillet_10"
+    android:paddingVertical="4dp"
+    android:paddingHorizontal="8dp"
+    android:layout_margin="3dp">
+
+
+</TextView>
