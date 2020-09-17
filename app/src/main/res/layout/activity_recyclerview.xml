@@ -84,5 +84,11 @@
             android:layout_height="wrap_content"
             android:text="flow"
             android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_recycler_stick2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="吸顶效果2"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

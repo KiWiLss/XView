@@ -29,7 +29,7 @@ public class LinearItemDecoration extends RecyclerView.ItemDecoration {
     private boolean mShowLastLine; 
     private int mSpanSpace = 2; 
     private int mLeftPadding; 
-    private int mRightPadding; 
+    private int mRightPadding;
     
     public LinearItemDecoration(int span,int leftPadding,int rightPadding,int color,boolean show){ 
         mSpanSpace = span; 

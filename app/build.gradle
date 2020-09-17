@@ -117,7 +117,7 @@ dependencies {
 
     implementation 'com.github.XunMengWinter:CircularAnim:0.4.6'
 
-    implementation 'com.gavin.com.library:stickyDecoration:1.5.2'
+    //implementation 'com.gavin.com.library:stickyDecoration:1.5.2'
 
 
 }
