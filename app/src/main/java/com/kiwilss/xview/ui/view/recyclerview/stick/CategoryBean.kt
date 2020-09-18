@@ -10,6 +10,7 @@ import java.io.Serializable
  * @desc   : {DESCRIPTION}
  */
 class CategoryBean(val tag: String, val categoryName: String): Serializable {
+    
     companion object{
         const val serialVersionUID = 5136218664701666396L
     }

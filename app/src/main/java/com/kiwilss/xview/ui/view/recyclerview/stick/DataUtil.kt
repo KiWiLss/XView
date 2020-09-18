@@ -8,7 +8,7 @@ package com.kiwilss.xview.ui.view.recyclerview.stick
  * @desc   : {DESCRIPTION}
  */
 object DataUtil {
-    fun getCategoryList(): List<CategoryBean>{
+    fun getCategoryList(): ArrayList<CategoryBean>{
         val lists = arrayListOf<CategoryBean>()
         lists.add(
             CategoryBean(

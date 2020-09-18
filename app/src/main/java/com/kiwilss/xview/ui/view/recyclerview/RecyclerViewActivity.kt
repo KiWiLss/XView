@@ -27,6 +27,8 @@ import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerWrapActivity
 import com.kiwilss.xview.ui.view.recyclerview.flow.FlowActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.test.StickTestActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.two.StickyTwoActivity
+import com.kiwilss.xview.ui.view.recyclerview.stick.two.StickyTwoCustomActivity
+import com.kiwilss.xview.ui.view.recyclerview.stick.two.StickyTwoGridActivity
 import kotlinx.android.synthetic.main.activity_recyclerview.*
 
 /**
@@ -94,6 +96,14 @@ class RecyclerViewActivity : AppCompatActivity(){
         btn_recycler_stick2.setOnClickListener {
             startActivity(Intent(this,
                 StickyTwoActivity::class.java))
+        }
+        btn_recycler_stick3.setOnClickListener {
+            startActivity(Intent(this,
+                StickyTwoGridActivity::class.java))
+        }
+        btn_recycler_stick4.setOnClickListener {
+            startActivity(Intent(this,
+                StickyTwoCustomActivity::class.java))
         }
     }
 }

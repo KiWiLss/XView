@@ -3,43 +3,37 @@ package com.kiwilss.xview.ui.view.recyclerview.stick.two
 import android.graphics.Color
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.DataUtil
 import com.kiwilss.xview.ui.view.recyclerview.stick.itemdecration.StickyDecoration
-import com.kiwilss.xview.ui.view.recyclerview.stick.two.adapter.StickyTwoAdapter
+import com.kiwilss.xview.ui.view.recyclerview.stick.two.adapter.StickyTwoGridAdapter
 import com.kiwilss.xview.utils.DensityUtils
-import kotlinx.android.synthetic.main.activity_sticky_two.*
+import kotlinx.android.synthetic.main.activity_sticky_twogrid.*
 
 /**
- *@FileName: StickyTwoActivity
+ *@FileName: StickyTwoGridActivity
  *@author : Lss Administrator
  * @e-mail : kiwilss@163.com
- * @time   : 2020/9/10
+ * @time   : 2020/9/18
  * @desc   : {DESCRIPTION}
  */
-class StickyTwoActivity : BaseActivity(R.layout.activity_sticky_two) {
+class StickyTwoGridActivity: BaseActivity(R.layout.activity_sticky_twogrid) {
 
-
-    val mAdapter by lazy { StickyTwoAdapter() }
-
+    val mAdapter by lazy { StickyTwoGridAdapter() }
 
     override fun initData() {
-       val lists = DataUtil.getCategoryList()
+        val lists = DataUtil.getCategoryList()
+        lists.addAll(lists)
         mAdapter.setList(lists)
     }
 
     override fun initEvent() {
+
     }
 
     override fun initInterface() {
-        rv_sticky_two_list?.run {
-            layoutManager = LinearLayoutManager(this@StickyTwoActivity)
-            adapter = mAdapter
-        }
-
-        //------------- StickyDecoration 使用部分  ----------------
 
         val red = ContextCompat.getColor(this,R.color.red)
         val yellow = ContextCompat.getColor(this,R.color.yellow_FF9B52)
@@ -49,7 +43,7 @@ class StickyTwoActivity : BaseActivity(R.layout.activity_sticky_two) {
                 //组名回调
                 if (mAdapter.data.size > position && position > -1) {
                     //获取组名，用于判断是否是同一组
-                   mAdapter.data[position].tag
+                    mAdapter.data[position].tag
                 } else null
             } //背景色
             .setGroupBackground(red) //高度
@@ -68,13 +62,19 @@ class StickyTwoActivity : BaseActivity(R.layout.activity_sticky_two) {
                 Toast.makeText(this, content, Toast.LENGTH_SHORT).show()
             }
 
-        rv_sticky_two_list.addItemDecoration(builder.build())
-        //单独设置添加分割线
-//        val itemDivider = LinearItemDecoration.Builder(this)
-//            .setColorResource(R.color.black_333333)
-//            .setLeftPadding(R.dimen.m10)
-//            .build()
-//        rv_sticky_two_list.addItemDecoration(itemDivider)
+        val manager = GridLayoutManager(this@StickyTwoGridActivity,2)
+        builder.resetSpan(rv_sticky_twogrid_list, manager)
+
+        rv_sticky_twogrid_list?.run {
+            layoutManager = manager
+            adapter = mAdapter
+            addItemDecoration(builder.build())
+        }
+
+        mAdapter.setOnItemClickListener { adapter, view, position ->
+            val content = "normal --> " + position + " " +mAdapter.data[position].categoryName
+            Toast.makeText(this, content, Toast.LENGTH_SHORT).show()
+        }
 
     }
 }
