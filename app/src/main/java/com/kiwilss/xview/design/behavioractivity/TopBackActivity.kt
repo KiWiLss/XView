@@ -13,8 +13,12 @@ package com.kiwilss.xview.design.behavioractivity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.kiwilss.xview.R
 import com.kiwilss.xview.utils.LogUtils
+import kotlinx.android.synthetic.main.activity_top_back.*
 
 /**
  *@FileName: TopBackActivity
@@ -24,10 +28,30 @@ import com.kiwilss.xview.utils.LogUtils
  * @desc   : {DESCRIPTION}
  */
 class TopBackActivity: AppCompatActivity() {
+
+    val mAdapter by lazy { TopBackAdapter() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_top_back)
-        //setContentView(R.layout.activity_top_back2)
+//        setContentView(R.layout.activity_top_back2)
+
+
+        val list = arrayListOf<String>("1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4","1","2","3","4")
+        rv_top_back_list?.run {
+            layoutManager = LinearLayoutManager(this@TopBackActivity)
+            adapter = mAdapter
+        }
+        mAdapter.setList(list)
+
+        srl_top_back_refresh.isEnabled = false
 
     }
+}
+
+class TopBackAdapter : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_sticky_two){
+    override fun convert(holder: BaseViewHolder, item: String) {
+        holder.setText(R.id.tv_item_sticky_two_text,item)
+    }
+
 }

@@ -10,7 +10,9 @@ import kotlinx.android.synthetic.main.activity_indexbar.*
  *@author : Lss Administrator
  * @e-mail : kiwilss@163.com
  * @time   : 2020/9/8
- * @desc   : {DESCRIPTION}
+ * @desc   : {自定义indexbar,新增设置数据源,可以很方便管理提示TextView,
+ * 数据源少时,只能动态调整整个indexbar的高度才能达到字母紧凑和居住的效果,
+ * 适用于数据源比较完整的情况}
  */
 class IndexBarActivity : BaseActivity(R.layout.activity_indexbar) {
     private val data = arrayOf(

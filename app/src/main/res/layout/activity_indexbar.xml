@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.kiwilss.xview.ui.indexbar.SideIndexBar
+    <com.kiwilss.xview.ui.indexbar.view.SideIndexBar
         android:id="@+id/sb_indexbar_one"
         android:layout_width="50dp"
         android:layout_height="match_parent"
         app:cpIndexBarTextSize="20dp"
+        android:layout_marginVertical="80dp"
         />
 <!--app:cpIndexBarNormalTextColor="@color/colorAccent"
         app:cpIndexBarSelectedTextColor="@color/red_F7E6ED"

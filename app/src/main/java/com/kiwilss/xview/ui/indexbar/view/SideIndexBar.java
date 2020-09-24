@@ -1,4 +1,4 @@
-package com.kiwilss.xview.ui.indexbar;
+package com.kiwilss.xview.ui.indexbar.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;

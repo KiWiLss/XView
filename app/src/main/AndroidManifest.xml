@@ -150,6 +150,7 @@
         <activity android:name=".ui.view.recyclerview.stick.two.StickyTwoGridActivity" android:label="吸顶网格"/>
         <activity android:name=".ui.view.recyclerview.stick.two.StickyTwoCustomActivity" android:label="吸顶自定义顶部"/>
 
+        <activity android:name=".ui.indexbar.IndexBarAllActivity" android:label="indexbar all"/>
 
 
 

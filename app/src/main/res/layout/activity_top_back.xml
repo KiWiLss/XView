@@ -5,14 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
-
+<!--    srl_store_detail_sep_refresh
+  tools:targetApi="lollipop"
+     android:theme="@style/AppTheme.AppBarOverlay"-->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:transitionName="picture"
         app:layout_behavior=".design.behavior.appbar.AppbarZoomBehavior"
-        tools:targetApi="lollipop">
+      >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsingToolbarLayout"
@@ -39,15 +39,31 @@
                 android:layout_height="?attr/actionBarSize"
                 app:contentInsetEnd="64dp"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay"
                 app:navigationIcon="@mipmap/ic_navigation_back_white"/>
-
+<!-- app:popupTheme="@style/AppTheme.PopupOverlay"-->
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_scrolling"/>
+    <include layout="@layout/content_scrolling"
+        android:visibility="gone"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_top_back_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_back_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
