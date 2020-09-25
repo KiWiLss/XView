@@ -55,6 +55,13 @@
         app:layout_anchor="@id/abl_collaspone_appbar"
         app:layout_anchorGravity="end|bottom" />
 
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:src="@mipmap/wuhuang"-->
+<!--        app:layout_anchor="@id/abl_collaspone_appbar"-->
+<!--        app:layout_anchorGravity="bottom"-->
+<!--        android:layout_margin="10dp"/>-->
 
 
 

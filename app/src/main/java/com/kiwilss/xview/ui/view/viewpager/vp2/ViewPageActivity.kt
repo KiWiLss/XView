@@ -20,10 +20,12 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiwilss.xview.R
 import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_viewpager.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 
 /**
  *@FileName: ViewPageActivity
@@ -91,7 +93,7 @@ class ViewPageActivity: AppCompatActivity() {
     private val  activeColor = R.color.blue_74D3FF
     private val  normalColor = R.color.black_666666
     private val activeSize = 20f
-     var  normalSize : Float = 14f
+     var  normalSize : Float = 18f
     private fun initTab2() {
         normalSize = resources.getDimensionPixelSize(R.dimen.m12).toFloat()
         val tabs = arrayOf("关注", "推荐", "最新","关注", "推荐", "最新")
@@ -132,7 +134,32 @@ class ViewPageActivity: AppCompatActivity() {
         })
         mediator.attach()
         //滚动监听,切换标题
+        tl_vp_tab3.addOnTabSelectedListener(object :TabLayout.OnTabSelectedListener{
+            override fun onTabReselected(tab: TabLayout.Tab?) {
 
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+               val view = tab?.customView as TextView?
+                view?.run {
+                   setTextColor(ContextCompat.getColor(this@ViewPageActivity,normalColor))
+                    setTextSize(TypedValue.COMPLEX_UNIT_PX,normalSize)
+                    typeface =  Typeface.defaultFromStyle(Typeface.NORMAL)
+                }
+
+            }
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val view = tab?.customView as TextView?
+                view?.run {
+                   setTextColor(ContextCompat.getColor(this@ViewPageActivity,activeColor))
+                    setTextSize(TypedValue.COMPLEX_UNIT_PX,activeSize)
+                   typeface =  Typeface.defaultFromStyle(Typeface.BOLD)
+                }
+
+            }
+
+        })
     }
 
     private fun initTab1() {

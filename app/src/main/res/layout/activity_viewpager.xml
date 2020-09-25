@@ -65,7 +65,7 @@
      tabMode 可设置fixed和 scrollable；fixed：指的是固定tab；scrollable指的是tab可滑动。
      tabTextColor tab文字颜色
      tabSelectedTextColor 选中时的tab颜色
-
+tabInlineLabel：设置图标和文件的方向（默认为false）
  -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_vp_tab2"
@@ -79,7 +79,8 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_vp_tab3"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            app:tabGravity="center"/>
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vp_viewpager_tb2"
             android:layout_width="match_parent"

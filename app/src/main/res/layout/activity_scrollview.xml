@@ -45,6 +45,18 @@
             android:layout_height="wrap_content"
             android:text="吸顶多个悬浮"
             />
+        <Button
+            android:id="@+id/btn_scrollview_zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下拉放大图片"
+            />
+        <Button
+            android:id="@+id/btn_scrollview_zoom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下拉放大图片2"
+            />
 
     </LinearLayout>
 

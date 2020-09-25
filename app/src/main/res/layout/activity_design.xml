@@ -185,5 +185,17 @@
                 android:textAllCaps="false"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_design_zoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉放大"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

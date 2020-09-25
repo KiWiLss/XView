@@ -114,7 +114,9 @@ class DesignActivity : AppCompatActivity(){
         btn_design_drawer3.post {
             LogUtils.e("height=${btn_design_drawer3.height}")
         }
-
+        btn_design_zoom.setOnClickListener {
+            startActivity(Intent(this, HeaderZoomActivity::class.java))
+        }
 
     }
 }

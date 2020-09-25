@@ -34,7 +34,12 @@ class ScrollViewActivity : BaseActivity(R.layout.activity_scrollview) {
         btn_scrollview_stick4.setOnClickListener {
             startActivity(Intent(this, ScrollStickActivity3::class.java))
         }
-
+        btn_scrollview_zoom.setOnClickListener {
+            startActivity(Intent(this, ZoomScrollActivity::class.java))
+        }
+        btn_scrollview_zoom2.setOnClickListener {
+            startActivity(Intent(this, ZoomScrollActivity2::class.java))
+        }
     }
 
     override fun initInterface() {

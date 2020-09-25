@@ -136,6 +136,9 @@
             android:name=".ui.view.scrollview.scroll.ScrollStickActivity3"
             android:label="自定义View实现吸顶" />
 
+        <activity android:name=".ui.view.scrollview.scroll.ZoomScrollActivity" android:label="下拉放大图片"/>
+        <activity android:name=".ui.view.scrollview.scroll.ZoomScrollActivity2" android:label="下拉放大图片"/>
+        <activity android:name=".design.behavioractivity.HeaderZoomActivity" android:label="下拉放大"/>
 
         <activity android:name=".ui.indexbar.IndexBarActivity" android:label="IndexBar"/>
 
