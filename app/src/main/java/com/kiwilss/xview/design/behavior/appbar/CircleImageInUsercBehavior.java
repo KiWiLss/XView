@@ -56,10 +56,11 @@ public class CircleImageInUsercBehavior extends CoordinatorLayout.Behavior<Circl
         if (percent < 0) {
             percent = 0;
         }
+
         if (this.percent == percent || percent > 1) return true;
         this.percent = percent;
         //LogUtils.e(percent,"----percent--->");
-        LogUtils.e(child.getY() + "-------------" + mStartAvatarY + "-------toolbar---" + mToolBarHeight + "percent--" + percent);
+        LogUtils.e(child.getY() + "-------------" + mStartAvatarY + "-------toolbar---" + mToolBarHeight + "percent--" + percent + "---" + dependency.getHeight());
        //设置头像的大小
         ViewCompat.setScaleX(child, percent);
         ViewCompat.setScaleY(child, percent);

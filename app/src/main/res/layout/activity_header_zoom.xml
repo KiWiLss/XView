@@ -56,24 +56,25 @@
         <com.kiwilss.xview.design.behavior.appbar.DisInterceptNestedScrollView
             android:id="@+id/sv_header_zoom_middle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:tag="middle"
             android:layout_marginTop="300dp"
             app:layout_collapseMode="parallax"
-            app:layout_collapseParallaxMultiplier="0.5">
+            app:layout_collapseParallaxMultiplier="0.5"
+            android:background="@color/red">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 >
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="match_parent"
                     android:text="任意布局一"
                     android:textColor="@color/white"
                     android:gravity="center"
-                    android:background="@color/red"/>
+                   />
 <!--                <TextView-->
 <!--                    android:layout_width="match_parent"-->
 <!--                    android:layout_height="100dp"-->

@@ -19,7 +19,8 @@ import kotlinx.android.synthetic.main.activity_viewpager.*
  *@author : Lss Administrator
  * @e-mail : kiwilss@163.com
  * @time   : 2020/9/25
- * @desc   : {DESCRIPTION}
+ * @desc   : {https://github.com/JmStefanAndroid/EasyBehavior,
+ * https://juejin.im/entry/6844903485415096334}
  */
 class HeaderZoomActivity : BaseActivity(R.layout.activity_header_zoom) {
     override fun initData() {
