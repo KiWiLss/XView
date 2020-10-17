@@ -25,6 +25,7 @@ import com.kiwilss.xview.ui.shape.ShapeViewActivity
 import com.kiwilss.xview.ui.startforresulthelp.DebugActivity
 import com.kiwilss.xview.ui.startforresulthelp.HelpActivity
 import com.kiwilss.xview.ui.supertext.SuperTextActivity
+import com.kiwilss.xview.ui.util.UtilsActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.view.dialog.DialogActivity
 import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
@@ -70,7 +71,8 @@ object MainUtils {
             MainBean("Loading", LoadingActivity::class.java),
             MainBean("Anim", AnimActivity::class.java),
             MainBean("ScrollView", ScrollViewActivity::class.java),
-            MainBean("IndexBar", IndexBarActivity::class.java)
+            MainBean("IndexBar", IndexBarActivity::class.java),
+            MainBean("Util", UtilsActivity::class.java)
         )
 
 
