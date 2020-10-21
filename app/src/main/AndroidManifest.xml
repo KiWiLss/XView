@@ -80,7 +80,7 @@
         <activity android:name=".ui.supertext.SuperTextActivity" />
         <activity android:name=".ui.shape.ShapeViewActivity" />
 
-        <activity android:name=".ui.startforresulthelp.DebugActivity" />
+        <activity android:name=".ui.startforresulthelp.DebugActivity" android:label="Debug" />
         <activity android:name=".ui.ripple.RippleActivity" />
 
         <activity
@@ -155,6 +155,9 @@
 
         <activity android:name=".ui.indexbar.IndexBarAllActivity" android:label="indexbar all"/>
         <activity android:name=".ui.util.UtilsActivity" android:label="工具类"/>
+        <activity android:name=".ui.view.recyclerview.stick.two.StickyTwoCustomGridActivity" android:label="自定义悬浮"/>
+        <activity android:name=".ui.view.recyclerview.stick.two.AddressBookActivity" android:label="自定义通讯录"/>
+
 
 
     </application>

@@ -109,7 +109,7 @@ class App : Application(){
                 LogUtils.e("onActivitycreate")
                 ActivityManager.instance.addActivity(p0)
                 //初始化标题栏
-                //initToolbar(p0,p1)
+                initToolbar(p0,p1)
             }
 
 
@@ -128,6 +128,7 @@ class App : Application(){
         LogUtils.e("initToolbar")
         val back = p0.findViewById<View>(R.id.iv_layout_toolbar_back)
         LogUtils.e(back == null, " back")
+        LogUtils.e(p0.iv_layout_toolbar_back == null,"kotlin-back-->")
         p0.run {
             //返回点击
             val ivback = findViewById<View>(R.id.iv_layout_toolbar_back)
@@ -139,7 +140,6 @@ class App : Application(){
             LogUtils.e(title,"title-->")
             //设置标题
             tv_layout_toolbar_title?.text = title ?: "标题"
-
         }
     }
 }

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="m2">2dp</dimen>
     <dimen name="m5">5dp</dimen>
-    <dimen name="m9">8.64dp</dimen>
-    <dimen name="m10">9.60dp</dimen>
-    <dimen name="m11">10.56dp</dimen>
-    <dimen name="m12">11.52dp</dimen>
+    <dimen name="m9">9dp</dimen>
+    <dimen name="m10">10dp</dimen>
+    <dimen name="m11">11dp</dimen>
+    <dimen name="m12">12dp</dimen>
+    <dimen name="m15">155dp</dimen>
     <dimen name="m27">27dp</dimen>
     <dimen name="m35">35dp</dimen>
 

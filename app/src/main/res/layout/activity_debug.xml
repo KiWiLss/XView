@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include layout="@layout/layout_toolbar"/>
     <Button
         android:id="@+id/btn_debug_alone"
         android:layout_width="wrap_content"

@@ -191,7 +191,7 @@
             <com.allen.library.SuperTextView
                 android:id="@+id/stv_supertext_setting"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 app:sLeftTextString="设置"
                 app:sLeftTextSize="@dimen/dp_15"
                 app:sRightTextString="点击"
@@ -200,6 +200,7 @@
                 app:sDividerLineType="bottom"
                 app:sDividerLineColor="@color/red"
                 app:sDividerLineHeight="1dp"
+                app:sShapeStrokeColor="@color/black_999999"
                 />
             <com.allen.library.SuperTextView
                 android:id="@+id/stv_supertext_setting2"
@@ -212,6 +213,21 @@
                 app:sRightIconRes="@mipmap/ic_navigation_more"
                 />
         </LinearLayout>
+
+
+        <com.allen.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="30dp"
+            app:sShapeSelectorNormalColor="@color/red_FF6D84"
+            app:sShapeCornersRadius="@dimen/m10"
+            app:sCenterTextString="测试圆角"
+            app:sUseShape="true"
+            app:sShapeStrokeColor="@color/yellow_FF9B52"
+            app:sShapeStrokeWidth="1dp"
+            />
+
+
 
 
 

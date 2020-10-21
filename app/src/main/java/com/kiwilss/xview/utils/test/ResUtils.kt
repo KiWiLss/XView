@@ -133,7 +133,7 @@ object ResUtils {
      */
     fun getAnim(@AnimRes resId: Int): Animation? {
         return AnimationUtils.loadAnimation(
-            Utils.getContext(),
+            getContext(),
             resId
         )
     }

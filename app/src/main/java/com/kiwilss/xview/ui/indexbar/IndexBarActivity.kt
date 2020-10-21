@@ -50,6 +50,10 @@ class IndexBarActivity : BaseActivity(R.layout.activity_indexbar) {
             setSelectColor(R.color.colorAccent)
             setOverlayTextView(tv_indexbar_hint)
         }
+        //索引变化监听
+        sb_indexbar_one.setOnIndexChangedListener { index, position ->
+
+        }
     }
 
     override fun initInterface() {

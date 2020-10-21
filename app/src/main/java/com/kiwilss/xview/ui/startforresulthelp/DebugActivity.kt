@@ -13,8 +13,9 @@ import kotlinx.android.synthetic.main.activity_debug.*
  * @time   : 2020/8/27
  * @desc   : {DESCRIPTION}
  */
-class DebugActivity: AppCompatActivity(R.layout.activity_debug) {
+class DebugActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setContentView(R.layout.activity_debug)
         super.onCreate(savedInstanceState)
 
         add1()
