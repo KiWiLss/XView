@@ -95,7 +95,9 @@ dependencies {
     //json
     implementation 'com.squareup.moshi:moshi:1.8.0'
     implementation "androidx.cardview:cardview:1.0.0"
-    implementation 'com.github.lihangleo2:ShadowLayout:2.1.8'
+//    implementation 'com.github.lihangleo2:ShadowLayout:2.1.8'
+    implementation 'com.github.lihangleo2:ShadowLayout:3.0.4'
+    implementation 'com.loopeer.lib:shadow:0.0.4-beta3'
     //对话框相关
     //implementation 'com.github.KiWiLss:LPopup:1.0.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'

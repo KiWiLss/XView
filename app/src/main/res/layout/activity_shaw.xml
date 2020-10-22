@@ -70,17 +70,17 @@
         </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
+
         <com.lihang.ShadowLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="@dimen/m10"
-            app:hl_shadowBackColor="@color/white"
+            app:hl_layoutBackground="@color/white"
             app:hl_shadowColor="@color/black_999999"
             app:hl_cornerRadius="@dimen/m10"
             app:hl_shadowLimit="4dp"
-            app:hl_isShowShadow="true"
-            app:hl_dx="0dp"
-            app:hl_dy="4dp"
+            app:hl_shadowOffsetX="0dp"
+            app:hl_shadowOffsetY="4dp"
             android:layout_marginHorizontal="6dp">
 
             <TextView

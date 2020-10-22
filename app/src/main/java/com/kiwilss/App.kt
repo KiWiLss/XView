@@ -121,9 +121,7 @@ class App : Application(){
 
         })
     }
-    /**
-     * 无效方法
-    */
+
     private fun initToolbar(p0: Activity, p1: Bundle?) {
         LogUtils.e("initToolbar")
         val back = p0.findViewById<View>(R.id.iv_layout_toolbar_back)

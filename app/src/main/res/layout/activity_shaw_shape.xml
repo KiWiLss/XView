@@ -2,6 +2,7 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,7 +87,125 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_height="wrap_content"
+            android:text="supertext实现阴影效果"/>
 
+
+        <com.allen.library.shape.ShapeRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginHorizontal="10dp"
+            app:shadowCornersRadius="10dp"
+            app:shadowColor="#1f003D43"
+            app:showShadow="true"
+            app:shadowLeftWidth="5dp"
+            app:shadowRightWidth="5dp"
+            app:shadowTopWidth="5dp"
+            app:shadowBottomWidth="5dp"
+            >
+            <com.allen.library.shape.ShapeRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shapeSolidColor="@color/white"
+                app:shapeCornersRadius="@dimen/m10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="supertext实现阴影效果"
+                    android:layout_centerInParent="true"/>
+
+            </com.allen.library.shape.ShapeRelativeLayout>
+
+        </com.allen.library.shape.ShapeRelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/new_home_user_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片实现阴影效果"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            app:hl_shadowColor="#1f003D43"
+            app:hl_shadowLimit="@dimen/m10"
+            android:layout_marginHorizontal="6dp"
+            app:hl_shadowOffsetX="0dp"
+            app:hl_shadowOffsetY="1dp"
+            app:hl_cornerRadius="@dimen/m10"
+            app:hl_layoutBackground_true="@color/red_FF6D84"
+            app:hl_layoutBackground="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ShadowLayout库实现阴影效果"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"/>
+
+        </com.lihang.ShadowLayout>
+
+
+
+        <com.loopeer.shadow.ShadowView
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            app:shadowDy="1"
+            app:shadowDx="0"
+            app:shadowMargin="@dimen/m10"
+            app:shadowColor="#1f003D43"
+            app:shadowRadius="@dimen/m10"
+            app:cornerRadius="@dimen/m10"
+            android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center"
+                android:text="ShadowView库实现阴影"
+                />
+        </com.loopeer.shadow.ShadowView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            app:cardCornerRadius="@dimen/m10"
+            android:layout_marginHorizontal="16dp"
+            app:cardElevation="@dimen/m10"
+            app:cardBackgroundColor="#1f003D43">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="CardView库实现阴影"
+                    />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
