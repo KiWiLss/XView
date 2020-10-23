@@ -16,7 +16,7 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_weight="1"
-         android:text="不确定宽度,不确定字数不确定宽度,不确定字数不确定宽度,不确定字数"
+         android:text="不宽度,不确定字数不确定宽度,不确定字数"
          android:singleLine="true"
          />
 
@@ -41,5 +41,46 @@
         android:text="打开摄像头"
         />
 
+
+
+    <com.kiwilss.xview.widget.MixtureTextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/text1"
+        android:textSize="14sp"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/daren_red_icon"
+            android:tint="@color/red_FF6D84"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/daren_red_icon"
+            android:tint="@color/red_FF6D84"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/daren_red_icon"
+            android:layout_centerHorizontal="true"
+            android:tint="@color/red_FF6D84"/>
+
+    </com.kiwilss.xview.widget.MixtureTextView>
+
+    <TextView
+        android:id="@+id/tv_rl_test_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不确定宽度,,度,不确定字数"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
 
 </LinearLayout>
