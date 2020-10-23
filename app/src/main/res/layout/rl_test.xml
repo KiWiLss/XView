@@ -13,10 +13,10 @@
      android:orientation="horizontal">
 
      <TextView
-         android:layout_width="wrap_content"
+         android:layout_width="0dp"
          android:layout_height="wrap_content"
          android:layout_weight="1"
-         android:text="不宽度,不确定字数不确定宽度,不确定字数"
+         android:text="不宽度,不确定字数不确定宽度,不确定字数不确定字数"
          android:singleLine="true"
          />
 
@@ -33,6 +33,44 @@
          android:background="@color/blue_74D3FF"/>
  </LinearLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/refund_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="长数据长数据长数据长数据长数据长数据长数据长数据长数据"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/refund_mark_num"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/refund_mark_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow_FF9B52"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="无限次"
+            android:textSize="10dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintLeft_toRightOf="@+id/refund_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btn_rl_camera"
@@ -82,5 +120,28 @@
         android:maxLines="2"
         android:ellipsize="end"
         />
+
+    <com.kiwilss.xview.widget.CustomLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="android开发android开发android开发android开发android开发android开发android开发android开发android开发android开发android开发android开发"
+            android:textSize="15sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+           />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/female_icon"
+            android:background="#3e95ec"/>
+
+
+    </com.kiwilss.xview.widget.CustomLayout>
+
 
 </LinearLayout>
