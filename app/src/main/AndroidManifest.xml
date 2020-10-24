@@ -158,6 +158,7 @@
         <activity android:name=".ui.view.recyclerview.stick.two.StickyTwoCustomGridActivity" android:label="自定义悬浮"/>
         <activity android:name=".ui.view.recyclerview.stick.two.AddressBookActivity" android:label="自定义通讯录"/>
 
+        <activity android:name=".ui.imitation.JingDongSearchActivity" android:label="仿京东搜索"/>
 
 
     </application>
