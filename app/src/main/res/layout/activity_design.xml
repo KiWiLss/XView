@@ -195,7 +195,12 @@
                 android:layout_height="wrap_content"
                 android:text="下拉放大"
                 android:textAllCaps="false"/>
-
+            <Button
+                android:id="@+id/btn_design_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索缩放"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

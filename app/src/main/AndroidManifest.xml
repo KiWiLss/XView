@@ -159,6 +159,7 @@
         <activity android:name=".ui.view.recyclerview.stick.two.AddressBookActivity" android:label="自定义通讯录"/>
 
         <activity android:name=".ui.imitation.JingDongSearchActivity" android:label="仿京东搜索"/>
+        <activity android:name=".design.toolbar.SearchTabActivity" android:label="搜索缩放"/>
 
 
     </application>

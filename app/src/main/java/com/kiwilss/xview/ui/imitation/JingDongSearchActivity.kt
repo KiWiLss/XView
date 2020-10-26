@@ -1,5 +1,6 @@
 package com.kiwilss.xview.ui.imitation
 
+import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 
 /**
@@ -9,7 +10,7 @@ import com.kiwilss.xview.base.BaseActivity
  * @time   : 2020/10/24
  * @desc   : {DESCRIPTION}
  */
-class JingDongSearchActivity: BaseActivity() {
+class JingDongSearchActivity: BaseActivity(R.layout.activity_jingdong_search) {
     override fun initData() {
 
     }

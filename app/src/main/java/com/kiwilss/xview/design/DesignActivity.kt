@@ -27,10 +27,7 @@ import com.kiwilss.xview.design.imitate.PictureActivity
 import com.kiwilss.xview.design.imitate.XiTuActivity
 import com.kiwilss.xview.design.refresh.Refresh2Activity
 import com.kiwilss.xview.design.refresh.RefreshActivity
-import com.kiwilss.xview.design.toolbar.CollaspingTabActivity
-import com.kiwilss.xview.design.toolbar.ToolbarActivity
-import com.kiwilss.xview.design.toolbar.ToolbarScrollActivity
-import com.kiwilss.xview.design.toolbar.ToolbarTabVpActivity
+import com.kiwilss.xview.design.toolbar.*
 import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_design.*
 
@@ -117,6 +114,8 @@ class DesignActivity : AppCompatActivity(){
         btn_design_zoom.setOnClickListener {
             startActivity(Intent(this, HeaderZoomActivity::class.java))
         }
-
+        btn_design_search.setOnClickListener {
+            startActivity(Intent(this, SearchTabActivity::class.java))
+        }
     }
 }
