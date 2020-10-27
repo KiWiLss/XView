@@ -17,6 +17,11 @@
             android:background="@color/blue_74D3FF"
            app:layout_scrollFlags="scroll|enterAlways|snap"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="保留部分"
+            android:textColor="@color/white"/>
     </com.google.android.material.appbar.AppBarLayout>
 
 

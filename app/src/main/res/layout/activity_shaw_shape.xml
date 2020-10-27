@@ -1,120 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#F5F5F5">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="roundButton测试"/>
+            android:text="roundButton测试" />
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical">
+
+            <com.kiwilss.xview.ui.widget.button.RoundButton
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:gravity="center_vertical">
+                android:layout_height="40dp"
+                android:paddingHorizontal="4dp"
+                android:text="默认圆角大小"
+                app:rb_backgroundColor="@color/yellow_FF9B52" />
 
-                <com.kiwilss.xview.ui.widget.button.RoundButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="默认圆角大小"
-                    app:rb_backgroundColor="@color/yellow_FF9B52"
-                    android:paddingHorizontal="4dp"
-                    />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="BTN"
-                    android:background="@color/red_F7E6ED"/>
-                <com.kiwilss.xview.ui.widget.button.RoundButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="半圆"
-                    app:rb_radius="20dp"
-                    app:rb_backgroundColor="@color/blue_74D3FF"/>
-                <com.kiwilss.xview.ui.widget.button.RoundButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="边框"
-                    app:rb_borderColor="@color/blue_74D3FF"
-                    app:rb_borderWidth="1dp"
-                    app:rb_backgroundColor="@color/white"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/red_F7E6ED"
+                android:text="BTN" />
+
+            <com.kiwilss.xview.ui.widget.button.RoundButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="半圆"
+                app:rb_backgroundColor="@color/blue_74D3FF"
+                app:rb_radius="20dp" />
+
+            <com.kiwilss.xview.ui.widget.button.RoundButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="边框"
+                app:rb_backgroundColor="@color/white"
+                app:rb_borderColor="@color/blue_74D3FF"
+                app:rb_borderWidth="1dp" />
 
 
-            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/cloud_right"/>
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cloud_right" />
 
 
         </LinearLayout>
+
         <SeekBar
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
         <androidx.appcompat.widget.AppCompatSeekBar
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="wrap_content" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="代码实现shape"/>
+            android:text="代码实现shape" />
 
 
         <TextView
             android:id="@+id/tv_shaw_shape_corner"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="设置圆角"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_gravity="center"/>
+            android:text="设置圆角" />
+
+
+
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="supertext实现阴影效果"/>
+            android:text="supertext实现阴影效果" />
 
 
         <com.allen.library.shape.ShapeRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="94dp"
-            android:layout_marginTop="@dimen/m10"
             android:layout_marginHorizontal="10dp"
-            app:shadowCornersRadius="10dp"
+            android:layout_marginTop="@dimen/m10"
+            app:shadowBottomWidth="5dp"
             app:shadowColor="#1f003D43"
-            app:showShadow="true"
+            app:shadowCornersRadius="10dp"
             app:shadowLeftWidth="5dp"
             app:shadowRightWidth="5dp"
             app:shadowTopWidth="5dp"
-            app:shadowBottomWidth="5dp"
-            >
+            app:showShadow="true">
+
             <com.allen.library.shape.ShapeRelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:shapeSolidColor="@color/white"
-                app:shapeCornersRadius="@dimen/m10">
+                app:shapeCornersRadius="@dimen/m10"
+                app:shapeSolidColor="@color/white">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="supertext实现阴影效果"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"
+                    android:text="supertext实现阴影效果" />
 
             </com.allen.library.shape.ShapeRelativeLayout>
 
@@ -126,86 +132,129 @@
             android:layout_height="94dp"
             android:layout_marginTop="20dp"
             android:background="@mipmap/new_home_user_bg">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="图片实现阴影效果"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:text="图片实现阴影效果" />
+
         </RelativeLayout>
 
 
         <com.lihang.ShadowLayout
             android:layout_width="match_parent"
             android:layout_height="94dp"
+            android:layout_marginHorizontal="6dp"
+            app:hl_cornerRadius="@dimen/m10"
+            app:hl_layoutBackground="@color/white"
+            app:hl_layoutBackground_true="@color/red_FF6D84"
             app:hl_shadowColor="#1f003D43"
             app:hl_shadowLimit="@dimen/m10"
-            android:layout_marginHorizontal="6dp"
             app:hl_shadowOffsetX="0dp"
-            app:hl_shadowOffsetY="1dp"
-            app:hl_cornerRadius="@dimen/m10"
-            app:hl_layoutBackground_true="@color/red_FF6D84"
-            app:hl_layoutBackground="@color/white">
+            app:hl_shadowOffsetY="1dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ShadowLayout库实现阴影效果"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardElevation="0dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/wuhuang"
+                    android:visibility="visible"
+                    android:background="@drawable/bg_white_fillet2_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:text="ShadowLayout库实现阴影效果" />
+            </androidx.cardview.widget.CardView>
+
 
         </com.lihang.ShadowLayout>
+
 
 
 
         <com.loopeer.shadow.ShadowView
             android:layout_width="match_parent"
             android:layout_height="94dp"
-            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginHorizontal="5dp"
             android:clickable="true"
-            app:shadowDy="1"
-            app:shadowDx="0"
-            app:shadowMargin="@dimen/m10"
-            app:shadowColor="#1f003D43"
-            app:shadowRadius="@dimen/m10"
+            android:foreground="?attr/selectableItemBackground"
             app:cornerRadius="@dimen/m10"
-            android:layout_marginHorizontal="5dp">
+            app:shadowColor="#1f003D43"
+            app:shadowDx="0"
+            app:shadowDy="1"
+            app:shadowMargin="@dimen/m10"
+            app:shadowRadius="@dimen/m10">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_gravity="center"
-                android:text="ShadowView库实现阴影"
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/wuhuang"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="ShadowView库实现阴影"
+                    app:layout_gravity="center" />
+            </RelativeLayout>
+
         </com.loopeer.shadow.ShadowView>
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="94dp"
-            app:cardCornerRadius="@dimen/m10"
+            android:layout_marginTop="30dp"
             android:layout_marginHorizontal="16dp"
-            app:cardElevation="@dimen/m10"
-            app:cardBackgroundColor="#1f003D43">
+            app:cardBackgroundColor="#1f003D43"
+            app:cardCornerRadius="@dimen/m10"
+            app:cardElevation="@dimen/m10">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/wuhuang"
+                    android:visibility="visible" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="CardView库实现阴影"
-                    />
+                    android:text="CardView库实现阴影" />
 
             </RelativeLayout>
-
 
         </androidx.cardview.widget.CardView>
 
 
+
+
+
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_height="200dp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
