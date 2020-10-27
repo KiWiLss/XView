@@ -60,7 +60,7 @@
         <activity android:name=".design.behavioractivity.TopBackRefreshActivity" />
         <activity android:name=".design.collapsing.CollaspingTwoActivity" />
         <activity android:name=".design.imitate.JianSuActivity" />
-        <activity android:name=".design.imitate.MeiTuanHomeActivity" />
+        <activity android:name=".design.imitate.MeiTuanHomeActivity"  android:label="TextView设置标签"/>
         <activity android:name=".design.imitate.PictureActivity" />
         <activity android:name=".design.toolbar.ToolbarTabVpActivity" />
         <activity
