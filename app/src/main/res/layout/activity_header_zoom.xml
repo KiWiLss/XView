@@ -176,7 +176,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginLeft="15dp"
-        android:src="@mipmap/leak_canary_icon"
+        android:src="@mipmap/wuhuang"
         app:civ_border_color="@color/yellow_FF9B52"
         app:civ_border_width="2dp"
         app:layout_anchor="@+id/sv_header_zoom_middle"

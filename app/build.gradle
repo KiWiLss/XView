@@ -23,12 +23,22 @@ loadProperties()//调用方法
 android {
     signingConfigs {
         release {
-            storeFile file(buildProperty.storeFile)
-            storePassword buildProperty.storePassword
-            keyAlias buildProperty.keyAlias
-            keyPassword buildProperty.keyPassword
+            storeFile file('C:\\Users\\Administrator\\Desktop\\apktool\\kiwi.jks')
+            storePassword '123456'
+            keyAlias 'kiwi'
+            keyPassword '123456'
         }
     }
+
+
+//    signingConfigs {
+//        release {
+//            storeFile file(buildProperty.storeFile)
+//            storePassword buildProperty.storePassword
+//            keyAlias buildProperty.keyAlias
+//            keyPassword buildProperty.keyPassword
+//        }
+//    }
     compileSdkVersion app.compileSdkVersion
     buildToolsVersion app.buildToolsVersion
 
@@ -43,11 +53,25 @@ android {
     }
 
     buildTypes {
+        debug{
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.put("appName","XView测试版")
+        }
+        pre{
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.put("appName","XView预览版")
+        }
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.put("appName","XView正式版")
         }
+
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

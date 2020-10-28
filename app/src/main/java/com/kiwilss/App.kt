@@ -17,6 +17,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
+import com.dylanc.loadinghelper.BuildConfig
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.kiwilss.xview.R
@@ -72,6 +73,7 @@ class App : Application(){
             register(ViewType.EMPTY, EmptyAdapter())
         }
         LoadingHelper.setDefaultAdapterPool(adapterPool)
+
     }
 
 

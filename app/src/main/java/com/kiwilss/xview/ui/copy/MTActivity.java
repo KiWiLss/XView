@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.kiwilss.xview.R;
 import com.kiwilss.xview.nulltest.enumtest.Coupon;
 import com.kiwilss.xview.utils.LogUtils;
-import com.kiwilss.xview.utils.StringLengthsUtil;
 
 /**
  * @author : Lss Administrator
@@ -57,15 +55,15 @@ public class MTActivity extends AppCompatActivity {
 
 
         String name = "不确定宽度,,度,不确定字数--不确定宽度,,度,不确定字数--不确定宽度,,度,不确定不确定宽度,,度,不确定字数--不确定宽度,,度,不确定字数--不确定宽度,,度,不确定字数哈哈哈";
-        TextView tvIcon = (TextView) findViewById(R.id.tv_rl_test_icon);
-        tvIcon.setText(name);
-
-        tvIcon.setOnClickListener(view -> {
-            String newName = tvIcon.getText().toString();
-            int lineCount = tvIcon.getLineCount();
-            String singleLines = StringLengthsUtil.getSingleLines(tvIcon, 1);
-            LogUtils.e(singleLines);
-        });
+//        TextView tvIcon = (TextView) findViewById(R.id.tv_rl_test_icon);
+//        tvIcon.setText(name);
+//
+//        tvIcon.setOnClickListener(view -> {
+//            String newName = tvIcon.getText().toString();
+//            int lineCount = tvIcon.getLineCount();
+//            String singleLines = StringLengthsUtil.getSingleLines(tvIcon, 1);
+//            LogUtils.e(singleLines);
+//        });
 
 
 //        Drawable drawable = ContextCompat.getDrawable(this,R.mipmap.female_icon);
