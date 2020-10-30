@@ -133,7 +133,7 @@ public class MTActivity extends AppCompatActivity {
 //            });
 //        TagUtils.addTagToTextView(this,tvTestOne,"正常的文本内容正常的文本内容正常的文本内容正常的文本内容正常的文本","标签");
         String line = getLine(tvTestOne, 1);
-
+        //
 
 
 
