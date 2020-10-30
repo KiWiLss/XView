@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
 
@@ -141,10 +142,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="android开发android开发and"
+                android:text="android开发android开发andandroid开发android开发andandroid开发android开发andandroid开发android开发andandroid开发android开发andandroid开发android开发andandroid开发android开发and"
                 android:textSize="15sp"
-                android:maxLines="2"
-                android:ellipsize="end"
                 />
 
             <ImageView
@@ -153,6 +152,131 @@
                 android:src="@mipmap/female_icon"
                 android:background="#3e95ec"/>
         </com.kiwilss.xview.widget.CustomLayout>
+
+
+<!--        限制两行-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="限制两行"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前面加标签"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            />
+
+        <TextView
+            android:id="@+id/tv_start_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前面加一个图片标签"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.kiwilss.xview.widget.textview.TagTextView
+                android:id="@+id/tv_rl_test_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/bg_yellow_all_fillet_10"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.kiwilss.xview.widget.tag.TextViewTag
+            android:id="@+id/tag_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_marginTop="@dimen/m15"
+            android:singleLine="true"/>
+
+        <com.kiwilss.xview.widget.tag.TextViewTag
+            android:id="@+id/tag_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_marginTop="@dimen/m15"/>
+
+        <com.kiwilss.xview.widget.tag.TextViewTag
+            android:id="@+id/tag_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_marginTop="@dimen/m15"/>
+
+        <com.kiwilss.xview.widget.tag.TextViewTag
+            android:id="@+id/tag_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_marginTop="@dimen/m15"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_rl_test_tagEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:background="@color/blue_74D3FF"/>
+
+            <TextView
+                android:id="@+id/tv_rl_test_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标签"
+                android:background="@color/blue_74D3FF"/>
+
+            <TextView
+                android:id="@+id/tv_rl_test_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/m5"
+                android:text="           正常的文本内容 正常的文本内容 正常的文本内容 正常的文本内容 正常的文本内容 正常的文本内容 正常的文本内容 正常的文本内容 正常的文本内容 正常的文本内容"/>
+
+            <TextView
+                android:id="@+id/tv_rl_test_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标签"
+                android:background="@color/blue_74D3FF"
+                android:layout_gravity="end|bottom"
+                />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_rl_test_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/m15"
+            android:text="实现两行标签"
+            android:layout_marginHorizontal="@dimen/m15"
+            android:layout_marginTop="@dimen/m15"
+            android:maxLines="5"
+            />
+
 
 
 

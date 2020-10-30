@@ -15,6 +15,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.view.WindowManager
+import android.widget.TextView
 import com.kiwilss.App
 import com.kiwilss.xview.model.banner.BannerBean
 import java.io.Closeable
@@ -49,6 +50,7 @@ object Utils {
         }
         return channelName
     }
+
     fun getUMChannelName(ctx: Context?, channel: String = "UMENG_CHANNEL"): String? {
         if (ctx == null) {
             return null
@@ -77,9 +79,9 @@ object Utils {
      */
     fun getContext(): Context {
         val context = App.mContext
-        if (context != null){
+        if (context != null) {
             return context
-        }else{
+        } else {
             throw NullPointerException("app.mContext should init")
         }
     }
@@ -92,18 +94,20 @@ object Utils {
         "https://video.dakale.net/image/cover/F86AE51D775D4E90A126E1B0B495E26E-6-2.png",
         "https://video.dakale.net/image/cover/820BA482154E4930B362D93970AA2278-6-2.png"
     )
-    fun getBannerList1(): List<BannerBean>{
+
+    fun getBannerList1(): List<BannerBean> {
         val list = arrayListOf<BannerBean>()
-        for (index in imageUrls.indices){
-            val bannerBean = BannerBean(null,null, imageUrls[index],false)
+        for (index in imageUrls.indices) {
+            val bannerBean = BannerBean(null, null, imageUrls[index], false)
             list.add(bannerBean)
         }
         return list
     }
-    fun getBannerList2(): List<BannerBean>{
+
+    fun getBannerList2(): List<BannerBean> {
         val list = arrayListOf<BannerBean>()
-        for (index in imageUrls.indices){
-            val bannerBean = BannerBean("测试看标题$index",null, imageUrls[index],true)
+        for (index in imageUrls.indices) {
+            val bannerBean = BannerBean("测试看标题$index", null, imageUrls[index], true)
             list.add(bannerBean)
         }
         return list
@@ -125,7 +129,7 @@ object Utils {
      * 设置添加屏幕的背景透明度
      * @param bgAlpha
      */
-    fun backgroundAlpha(context: Activity,bgAlpha: Float) {
+    fun backgroundAlpha(context: Activity, bgAlpha: Float) {
         val lp: WindowManager.LayoutParams = context.window.attributes
         lp.alpha = bgAlpha //0.0-1.0
         context.window.attributes = lp
@@ -147,6 +151,21 @@ object Utils {
         }
     }
 
+    /**
+     * 获取textview某行内容
+     */
+    fun getTextLineContent(textView: TextView?, line: Int, src: String?): String? {
+        var result: String? = null
+        if (textView == null || src.isNullOrEmpty()) {
+            return result
+        }
+        if (line > textView.lineCount) {
+            return result
+        }
+        val layout = textView.layout
+        val sb = StringBuilder(src)
+        return sb.subSequence(layout.getLineStart(line), layout.getLineEnd(line)).toString()
+    }
 
 
 }

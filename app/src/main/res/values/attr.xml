@@ -67,4 +67,8 @@
         <attr name="rv_zoomScale" format="float" />
 
     </declare-styleable>
+
+
+
+
 </resources>
