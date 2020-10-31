@@ -7,6 +7,7 @@ import android.provider.MediaStore;
 import android.text.Layout;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,7 @@ import androidx.core.content.ContextCompat;
 import com.kiwilss.xview.R;
 import com.kiwilss.xview.nulltest.enumtest.Coupon;
 import com.kiwilss.xview.utils.LogUtils;
+import com.kiwilss.xview.utils.Utils;
 import com.kiwilss.xview.widget.tag.TextViewTag;
 import com.kiwilss.xview.widget.tag.WeightHotTopicList;
 import com.kiwilss.xview.widget.textview.TagTextView;
@@ -69,11 +71,11 @@ public class MTActivity extends AppCompatActivity {
         //
 
 
-        String name = "#前面加一个标签";
+        String name = "# 前面加一个标签";
         TextView tvStartTag = (TextView) findViewById(R.id.tv_start_tag);
 
         Drawable drawable = ContextCompat.getDrawable(this,R.drawable.weight_topic_recommend);
-        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+        drawable.setBounds(0, 0, getResources().getDimensionPixelSize(R.dimen.m15), getResources().getDimensionPixelSize(R.dimen.m15));
         ImageSpan imgSpan = new ImageSpan(drawable);
         SpannableString spannableString = new SpannableString(name);
         spannableString.setSpan(imgSpan, 0 , 1 , Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -133,7 +135,53 @@ public class MTActivity extends AppCompatActivity {
 //            });
 //        TagUtils.addTagToTextView(this,tvTestOne,"正常的文本内容正常的文本内容正常的文本内容正常的文本内容正常的文本","标签");
         String line = getLine(tvTestOne, 1);
-        //
+        //限制显示两行,后面跟随一个标签
+        //要显示的数据源
+        String tagSrc = "文字是人类用表意符号记录表达信息以传之久远的方式和工具。现代文字大多是记录语言的工具。人类往往先有口头的语言后产生书面文字，很多小语种，有语言但没有文字。文字的不同体现了国家和民族的书面表达的方式和思维不同。文字使人类进入有历史记录的文明社会。";
+        TextView tvTagOnes = (TextView) findViewById(R.id.tv_rl_test_tagOne);
+        TextView tvTagTwo = (TextView) findViewById(R.id.tv_rl_test_tagTwo);
+        tvTagOnes.setText(tagSrc);
+        tvTestOne.setText(tagSrc);
+        //判断第一行是否可以完整显示
+        tvTagOnes.post(new Runnable() {
+            @Override
+            public void run() {
+                String lineContent = Utils.INSTANCE.getTextLineContent(tvTagOnes, 0, tagSrc);
+                LogUtils.e(tagSrc + "---------" + lineContent);
+                if (TextUtils.equals(tagSrc,lineContent)){//可以显示完整
+                    tvTagOnes.setVisibility(View.GONE);
+                    tvTagTwo.setText(tagSrc);
+                }else {//显示不完整,需要分行
+                    tvTagOnes.setVisibility(View.VISIBLE);
+                    String srcTwoContent = tagSrc.substring(lineContent.length(), tagSrc.length());
+                    tvTagTwo.setText(srcTwoContent);
+                }
+            }
+        });
+
+        //前面加标签
+        TextView tvFront = (TextView) findViewById(R.id.tv_rl_test_tagFront);
+        TextView tvFrontOne = (TextView) findViewById(R.id.tv_rl_test_frontOne);
+        TextView tvFrontTwo = (TextView) findViewById(R.id.tv_rl_test_frontTwo);
+
+        tvFrontOne.setText(tagSrc);
+        //获取tvFrontOne显示的内容
+        tvFrontOne.post(new Runnable() {
+            @Override
+            public void run() {
+                String lineContent = Utils.INSTANCE.getTextLineContent(tvFrontOne, 0, tagSrc);
+                if (TextUtils.equals(lineContent,tagSrc)){
+                    //一行可以完整显示
+                    tvFrontTwo.setVisibility(View.GONE);
+                }else {
+                    //需要多行才能显示
+                    tvFrontTwo.setVisibility(View.VISIBLE);
+                    String nextContent = tagSrc.substring(lineContent.length(), tagSrc.length());
+                    tvFrontTwo.setText(nextContent);
+                }
+            }
+        });
+
 
 
 

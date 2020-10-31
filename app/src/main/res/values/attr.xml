@@ -68,7 +68,9 @@
 
     </declare-styleable>
 
-
+    <declare-styleable name="AlignTextView">
+        <attr name="alignOnlyOneLine" format="boolean"/>
+    </declare-styleable>
 
 
 </resources>

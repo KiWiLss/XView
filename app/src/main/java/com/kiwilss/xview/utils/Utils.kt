@@ -154,16 +154,18 @@ object Utils {
     /**
      * 获取textview某行内容
      */
-    fun getTextLineContent(textView: TextView?, line: Int, src: String?): String? {
-        var result: String? = null
+    fun getTextLineContent(textView: TextView?, line: Int, src: String?): String {
+        var result: String = ""
         if (textView == null || src.isNullOrEmpty()) {
             return result
         }
+        LogUtils.e("$line--line-->${textView.lineCount}"  )
         if (line > textView.lineCount) {
             return result
         }
         val layout = textView.layout
         val sb = StringBuilder(src)
+        LogUtils.e("--start-${layout.getLineStart(line)}----end---${layout.getLineEnd(line)}")
         return sb.subSequence(layout.getLineStart(line), layout.getLineEnd(line)).toString()
     }
 
