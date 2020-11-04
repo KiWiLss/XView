@@ -20,7 +20,6 @@
             android:layout_height="120dp"
             android:layout_margin="10dp"
             app:banner_indicator_normal_color="@color/white"
-            app:banner_indicator_radius="6dp"
             app:banner_indicator_selected_color="@color/green_07C0C2" />
         <TextView
             android:layout_width="wrap_content"
@@ -108,7 +107,11 @@
             android:layout_height="120dp"
             android:layout_margin="10dp"
             app:banner_indicator_normal_color="@color/white"
-            app:banner_indicator_selected_color="@color/green_07C0C2"
+            app:banner_indicator_selected_color="#99ffffff"
+            app:banner_indicator_radius="1.5dp"
+            app:banner_indicator_normal_width="10dp"
+            app:banner_indicator_height="3dp"
+            app:banner_indicator_selected_width="15dp"
             />
 
         <com.youth.banner.indicator.CircleIndicator
@@ -118,6 +121,8 @@
             android:background="@color/red_F7E6ED"
             android:layout_gravity="center"
             />
+
+
 
         <TextView
             android:layout_width="wrap_content"

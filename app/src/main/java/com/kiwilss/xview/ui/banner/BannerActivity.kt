@@ -19,6 +19,7 @@ import com.kiwilss.xview.utils.Utils
 import com.youth.banner.config.IndicatorConfig
 import com.youth.banner.indicator.CircleIndicator
 import com.youth.banner.indicator.RectangleIndicator
+import com.youth.banner.indicator.RoundLinesIndicator
 import com.youth.banner.transformer.*
 import kotlinx.android.synthetic.main.activity_banner.*
 
@@ -90,7 +91,7 @@ class BannerActivity: AppCompatActivity() {
         }
         //圆形指示器 + 圆形指示器外置
         banner_outer?.let {
-            it.setIndicator(indicator,false)
+            it.setIndicator(indicator,false)//外置圆形指示器
             it.addBannerLifecycleObserver(this)
             //it.setIndicatorGravity(IndicatorConfig.Direction.RIGHT)
             //添加透明效果(画廊配合透明效果更棒)
