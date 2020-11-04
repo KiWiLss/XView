@@ -24,7 +24,8 @@ class ZoomScrollActivity : BaseActivity(R.layout.activity_zoom_scroll) {
 
         ScrollZoomUtil.scrollZoom(sv_zoom_scroll_outer, iv_zoom_scroll_icon)
 
-
+        
 
     }
+
 }

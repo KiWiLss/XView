@@ -26,7 +26,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="不宽度,不确定字数"
+                android:singleLine="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跟随标签"
+                android:background="@color/yellow_FF9B52"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跟随标签2"
+                android:background="@color/blue_74D3FF"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -34,13 +55,11 @@
                 android:text="不宽度,不确定字数不确定宽度,不确定字数不确定字数"
                 android:singleLine="true"
                 />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="跟随标签"
                 android:background="@color/yellow_FF9B52"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -304,8 +323,8 @@
             android:text="两端文字对齐效果实现两行标签实现两行标签实现两行标签实现两行标签实现两行标签实现两行标签实现两行标签实现两行标签实现两行标签实现两行标签"
             android:layout_marginHorizontal="@dimen/m15"
             android:layout_marginTop="@dimen/m15"
-            android:maxLines="5"
-            android:ellipsize="end"/>
+            app:alignOnlyOneLine="true"
+            />
         <com.kiwilss.xview.widget.textview.AlignTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -316,7 +335,7 @@
             android:maxLines="5"
             android:ellipsize="end"/>
 
-        <!--        签名跟随标签-->
+        <!--        前面跟随标签-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

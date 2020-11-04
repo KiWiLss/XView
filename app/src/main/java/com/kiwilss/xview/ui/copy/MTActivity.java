@@ -146,6 +146,7 @@ public class MTActivity extends AppCompatActivity {
         tvTagOnes.post(new Runnable() {
             @Override
             public void run() {
+                //获取第一个 textview 显示的内容
                 String lineContent = Utils.INSTANCE.getTextLineContent(tvTagOnes, 0, tagSrc);
                 LogUtils.e(tagSrc + "---------" + lineContent);
                 if (TextUtils.equals(tagSrc,lineContent)){//可以显示完整
@@ -161,14 +162,15 @@ public class MTActivity extends AppCompatActivity {
 
         //前面加标签
         TextView tvFront = (TextView) findViewById(R.id.tv_rl_test_tagFront);
-        TextView tvFrontOne = (TextView) findViewById(R.id.tv_rl_test_frontOne);
-        TextView tvFrontTwo = (TextView) findViewById(R.id.tv_rl_test_frontTwo);
+        TextView tvFrontOne =  findViewById(R.id.tv_rl_test_frontOne);
+        TextView tvFrontTwo =  findViewById(R.id.tv_rl_test_frontTwo);
 
         tvFrontOne.setText(tagSrc);
         //获取tvFrontOne显示的内容
         tvFrontOne.post(new Runnable() {
             @Override
             public void run() {
+                //获取第一行显示的内容
                 String lineContent = Utils.INSTANCE.getTextLineContent(tvFrontOne, 0, tagSrc);
                 if (TextUtils.equals(lineContent,tagSrc)){
                     //一行可以完整显示
