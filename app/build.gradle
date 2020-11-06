@@ -23,9 +23,9 @@ loadProperties()//调用方法
 android {
     signingConfigs {
         release {
-            storeFile file('/Users/kiwilss/Desktop/tools/studioTools/key/Lss.jks')
+            storeFile file('C:\\Users\\Administrator\\Desktop\\apktool\\kiwi.jks')
             storePassword '123456'
-            keyAlias 'lss'
+            keyAlias 'kiwi'
             keyPassword '123456'
         }
     }
