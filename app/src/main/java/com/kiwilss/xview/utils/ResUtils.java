@@ -21,8 +21,6 @@ import androidx.annotation.StyleableRes;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 
-
-
 /**
  * 获取res中的资源
  *
