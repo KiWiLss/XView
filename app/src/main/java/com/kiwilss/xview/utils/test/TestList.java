@@ -1,6 +1,5 @@
 package com.kiwilss.xview.utils.test;
 
-import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -12,14 +11,20 @@ import java.util.List;
  */
 public class TestList {
     public static void main(String[] args) {
-        String one = "9";
-        double two = 10.69369;
-        System.out.println(Double.parseDouble(one));
+//        String one = "9";
+//        double two = 10.69369;
+//        System.out.println(Double.parseDouble(one));
+//
+//        DecimalFormat df = new DecimalFormat("#0.00");
+//        String str = df.format(two);
+//        System.out.println(str);
+        String src = "就会很尴尬反光衣好好过过户籍卡就哈尴尬广告费好借好还GV";
+        String target = "就会很尴尬反光衣好好过过";
 
-        DecimalFormat df = new DecimalFormat("#0.00");
-        String str = df.format(two);
-        System.out.println(str);
-
+        int index = src.indexOf(target);
+        System.out.println(index);
+        String substring = src.substring(target.length(), src.length());
+        System.out.println(substring);
     }
 
     private static <E> void swap(List<E> list,int index1,int index2) {
