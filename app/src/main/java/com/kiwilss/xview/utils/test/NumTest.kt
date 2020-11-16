@@ -87,9 +87,6 @@ object NumTest{
         return double2String(dd,dig)
     }
 
-
-
-
 }
 
 fun main() {
@@ -115,7 +112,8 @@ fun main() {
     println(NumTest.double2String(3.2))
     println(NumTest.double2String(3.289))
     println(NumTest.double2String(3.4567))
-
-
-
+    println("------------")
+    val src = ""
+//    val subSequence = src.subSequence(src.length, src.length)
+    println(src.isNullOrEmpty())
 }

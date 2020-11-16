@@ -10,6 +10,7 @@ import com.chad.library.adapter.base.listener.OnItemSwipeListener
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.utils.LogUtils
+import com.kiwilss.xview.utils.test.SpannableStringUtils
 import kotlinx.android.synthetic.main.activity_drag_delete.*
 
 /**
@@ -132,6 +133,9 @@ class DragDeleteActivity: BaseActivity(R.layout.activity_drag_delete) {
 //            }
 //
 //        })
+
+
+
 
     }
 }

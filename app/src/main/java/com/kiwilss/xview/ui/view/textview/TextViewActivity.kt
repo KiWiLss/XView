@@ -37,10 +37,18 @@ class TextViewActivity : AppCompatActivity(){
 //        val create = SpannableStringUtils.getBuilder("测试一下")
 //            .setBlur(10f,BlurMaskFilter.Blur.NORMAL).create()
 //        tv_textview_test.text = create
-        val create1 = SpannableStringUtils.getBuilder("普通样式的文字,加粗")
-            .setBold()
-            .create()
-        tv_textview_blod.text = create1
+
+        val build = com.kiwilss.xview.utils.test.SpannableStringUtils.Builder("普通样式的文字,测试全部文字改变")
+            .isBold(true)
+            .isStrikethrough(true)
+            .isUnderline(true)
+            .build()
+        tv_textview_blod.text = build
+
+//        val create1 = SpannableStringUtils.getBuilder("普通样式的文字,加粗")
+//            .setBold()
+//            .create()
+//        tv_textview_blod.text = create1
 
         val create2 = SpannableStringUtils.getBuilder("普通样式的文字,加粗倾斜")
             .setBoldItalic()
