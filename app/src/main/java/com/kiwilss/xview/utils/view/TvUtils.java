@@ -70,6 +70,21 @@ public class TvUtils {
         return mSp;
     }
 
+    public static SpannableString setTextPartColor(String srcString,String tartgetString, String target2,int targetColor){
+        int position = srcString.indexOf(tartgetString);
+        SpannableString mSp = new SpannableString(srcString);
+        if (position >= 0) {
+            mSp.setSpan(new ForegroundColorSpan(targetColor), position, position + tartgetString.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        int position2 = srcString.indexOf(target2);
+        if (position2 >= 0) {
+            mSp.setSpan(new ForegroundColorSpan(targetColor), position2, position2+ target2.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        return mSp;
+    }
+
     /**富文本设置部分文字背景色
      * @param srcString
      * @param tartgetString

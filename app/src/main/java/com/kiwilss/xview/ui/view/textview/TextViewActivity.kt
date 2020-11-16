@@ -20,7 +20,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.kiwilss.xview.R
+import com.kiwilss.xview.utils.LogUtils
 import com.kiwilss.xview.utils.view.SpannableStringUtils
+import com.kiwilss.xview.utils.view.TvUtils
 import kotlinx.android.synthetic.main.activity_textview.*
 
 /**
@@ -34,15 +36,37 @@ class TextViewActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_textview)
-//        val create = SpannableStringUtils.getBuilder("测试一下")
-//            .setBlur(10f,BlurMaskFilter.Blur.NORMAL).create()
-//        tv_textview_test.text = create
 
-        val build = com.kiwilss.xview.utils.test.SpannableStringUtils.Builder("普通样式的文字,测试全部文字改变")
+        val src = "普通样式的文字测试全部文字改变"
+        val target1 = "样式"
+        val target2 = "测试"
+        val textPartColor = TvUtils.setTextPartColor(
+            src,
+            target1,
+            target2,
+            ContextCompat.getColor(this, R.color.red)
+        )
+
+        tv_textview_test.text = textPartColor
+
+        val build = com.kiwilss.xview.utils.test.
+        SpannableStringUtils.Builder("普通样式的文字测试全部文字改变","改变")
             .isBold(true)
-            .isStrikethrough(true)
-            .isUnderline(true)
+//            .isStrikethrough(true)
+//            .isUnderline(true)
+            .textSize(R.dimen.m15)
+            .foregroundColor(R.color.red)
+//            .isSubscript(true)
+//            .clickSpan(object : ClickableSpan(){
+//                override fun onClick(widget: View) {
+//                    LogUtils.e("span")
+//                    Toast.makeText(this@TextViewActivity, "hello", Toast.LENGTH_SHORT).show()
+//                }
+//
+//            })
+            .url("https://www.baidu.com")
             .build()
+        tv_textview_blod.movementMethod = LinkMovementMethod.getInstance()
         tv_textview_blod.text = build
 
 //        val create1 = SpannableStringUtils.getBuilder("普通样式的文字,加粗")
@@ -127,8 +151,9 @@ class TextViewActivity : AppCompatActivity(){
             .create()
         tv_textview_15.text = create15
 
-        val create16 = SpannableStringUtils.getBuilder("普通样式的文字,设置超链接")
+        val create16 = SpannableStringUtils.getBuilder("普通样式的文字,设置超链接普通样式的文字,设置超链接")
             .setForegroundColor(ContextCompat.getColor(this,R.color.red))
+            .setLeadingMargin(2,0)
             .setUrl("https://www.baidu.com")
             .create()
         tv_textview_16.movementMethod = LinkMovementMethod.getInstance()

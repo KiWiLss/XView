@@ -73,6 +73,7 @@ public class SpannableStringUtils {
 
         private float     proportion;
         private float     xProportion;
+
         private boolean   isStrikethrough;
         private boolean   isUnderline;
         private boolean   isSuperscript;

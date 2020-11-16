@@ -43,7 +43,7 @@ import java.util.HashMap;
  * @author xuexiang
  * @since 2019/1/14 下午10:04
  */
-public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
+public class KeyboardUtils2 implements ViewTreeObserver.OnGlobalLayoutListener {
 
     private final static int MAGIC_NUMBER = 200;
 
@@ -51,7 +51,7 @@ public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
     private View mRootView;
     private Boolean prevValue = null;
     private float mScreenDensity = 1;
-    private static HashMap<SoftKeyboardToggleListener, KeyboardUtils> sListenerMap = new HashMap<>();
+    private static HashMap<SoftKeyboardToggleListener, KeyboardUtils2> sListenerMap = new HashMap<>();
 
     public interface SoftKeyboardToggleListener {
         void onToggleSoftKeyboard(boolean isVisible);
@@ -80,7 +80,7 @@ public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
      */
     public static void addKeyboardToggleListener(Activity act, SoftKeyboardToggleListener listener) {
         removeKeyboardToggleListener(listener);
-        sListenerMap.put(listener, new KeyboardUtils(act, listener));
+        sListenerMap.put(listener, new KeyboardUtils2(act, listener));
     }
 
     /**
@@ -91,7 +91,7 @@ public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
      */
     public static void addKeyboardToggleListener(ViewGroup act, SoftKeyboardToggleListener listener) {
         removeKeyboardToggleListener(listener);
-        sListenerMap.put(listener, new KeyboardUtils(act, listener));
+        sListenerMap.put(listener, new KeyboardUtils2(act, listener));
     }
 
     /**
@@ -101,7 +101,7 @@ public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
      */
     public static void removeKeyboardToggleListener(SoftKeyboardToggleListener listener) {
         if (sListenerMap.containsKey(listener)) {
-            KeyboardUtils k = sListenerMap.get(listener);
+            KeyboardUtils2 k = sListenerMap.get(listener);
             if (k != null) {
                 k.removeListener();
             }
@@ -114,7 +114,7 @@ public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
      */
     public static void removeAllKeyboardToggleListeners() {
         for (SoftKeyboardToggleListener l : sListenerMap.keySet()) {
-            KeyboardUtils k = sListenerMap.get(l);
+            KeyboardUtils2 k = sListenerMap.get(l);
             if (k != null) {
                 k.removeListener();
             }
@@ -152,7 +152,7 @@ public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
         }
     }
 
-    private KeyboardUtils(Activity act, SoftKeyboardToggleListener listener) {
+    private KeyboardUtils2(Activity act, SoftKeyboardToggleListener listener) {
         mCallback = listener;
 
         mRootView = ((ViewGroup) act.findViewById(android.R.id.content)).getChildAt(0);
@@ -161,7 +161,7 @@ public class KeyboardUtils implements ViewTreeObserver.OnGlobalLayoutListener {
         mScreenDensity = act.getResources().getDisplayMetrics().density;
     }
 
-    private KeyboardUtils(ViewGroup viewGroup, SoftKeyboardToggleListener listener) {
+    private KeyboardUtils2(ViewGroup viewGroup, SoftKeyboardToggleListener listener) {
         mCallback = listener;
 
         mRootView = viewGroup;

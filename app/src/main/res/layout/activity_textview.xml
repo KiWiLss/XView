@@ -22,13 +22,14 @@
             android:id="@+id/tv_textview_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="普通样式的文字"/>
+            android:text="普通样式的文字普通样式的文字"/>
 
         <TextView
             android:id="@+id/tv_textview_blod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="普通样式的文字,加粗"
+            android:textSize="@dimen/m10"
             android:layout_marginTop="5dp"/>
 
         <TextView

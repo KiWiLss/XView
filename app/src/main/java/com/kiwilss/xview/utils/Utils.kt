@@ -86,6 +86,10 @@ object Utils {
         }
     }
 
+
+
+    fun getApp() = App.app!!
+
     var imageUrls = listOf(
         "https://video.dakale.net/image/cover/61CFD4772F0D4B5199002F2739DA2D25-6-2.png",
         "https://video.dakale.net/image/cover/50D7058C125B4894BD19EB3A7B7A686D-6-2.png",

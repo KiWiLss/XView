@@ -162,6 +162,9 @@
         <activity android:name=".ui.imitation.JingDongSearchActivity" android:label="仿京东搜索"/>
         <activity android:name=".design.toolbar.SearchTabActivity" android:label="搜索缩放"/>
 
+        <activity android:name=".ui.keyboard.KeyboardActivity" android:label="键盘相关"
+           />
+
 
     </application>
 
