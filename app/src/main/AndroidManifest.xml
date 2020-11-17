@@ -165,6 +165,9 @@
         <activity android:name=".ui.keyboard.KeyboardActivity" android:label="键盘相关"
            />
 
+        <activity android:name=".ui.view.recyclerview.itemdecration.ItemDerationActivity"
+            android:label="间隔和分割线"/>
+
 
     </application>
 

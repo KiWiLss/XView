@@ -25,6 +25,7 @@ import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerItemFixedActivity
 import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerViewWrapActivity
 import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerWrapActivity
 import com.kiwilss.xview.ui.view.recyclerview.flow.FlowActivity
+import com.kiwilss.xview.ui.view.recyclerview.itemdecration.ItemDerationActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.test.StickTestActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.two.*
 import kotlinx.android.synthetic.main.activity_recyclerview.*
@@ -110,6 +111,10 @@ class RecyclerViewActivity : AppCompatActivity(){
         btn_recycler_stick6.setOnClickListener {
             startActivity(Intent(this,
                 AddressBookActivity::class.java))
+        }
+        btn_recycler_item.setOnClickListener {
+            startActivity(Intent(this,
+                ItemDerationActivity::class.java))
         }
     }
 }

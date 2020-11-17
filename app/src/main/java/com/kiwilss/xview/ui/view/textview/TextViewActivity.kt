@@ -12,8 +12,10 @@ package com.kiwilss.xview.ui.view.textview
 
 import android.graphics.BlurMaskFilter
 import android.os.Bundle
+import android.text.Spanned
 import android.text.Spanned.SPAN_INCLUSIVE_EXCLUSIVE
 import android.text.method.LinkMovementMethod
+import android.text.style.BackgroundColorSpan
 import android.text.style.ClickableSpan
 import android.view.View
 import android.widget.Toast
@@ -40,17 +42,17 @@ class TextViewActivity : AppCompatActivity(){
         val src = "普通样式的文字测试全部文字改变"
         val target1 = "样式"
         val target2 = "测试"
-        val textPartColor = TvUtils.setTextPartColor(
-            src,
-            target1,
-            target2,
-            ContextCompat.getColor(this, R.color.red)
-        )
+        val ssb1 = com.kiwilss.xview.utils.test.SpannableStringUtils.Builder(src, target1)
+            .foregroundColor(R.color.red)
+            .build()
+      com.kiwilss.xview.utils.test.SpannableStringUtils.foregroundColor(ssb1,target2,R.color.blue_74D3FF)
+      com.kiwilss.xview.utils.test.SpannableStringUtils.foregroundColor(ssb1,0,1,R.color.yellow_FF9B52)
 
-        tv_textview_test.text = textPartColor
+        tv_textview_test.text = ssb1
 
         val build = com.kiwilss.xview.utils.test.
-        SpannableStringUtils.Builder("普通样式的文字测试全部文字改变","改变")
+        SpannableStringUtils
+            .Builder("普通样式的文字测试全部文字改变","改变")
             .isBold(true)
 //            .isStrikethrough(true)
 //            .isUnderline(true)
@@ -66,6 +68,8 @@ class TextViewActivity : AppCompatActivity(){
 //            })
             .url("https://www.baidu.com")
             .build()
+        build.setSpan(BackgroundColorSpan(
+            ContextCompat.getColor(this,R.color.yellow_FF9B52)), 0, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         tv_textview_blod.movementMethod = LinkMovementMethod.getInstance()
         tv_textview_blod.text = build
 

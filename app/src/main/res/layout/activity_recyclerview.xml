@@ -115,5 +115,12 @@
            android:layout_height="wrap_content"
            android:text="自定义实现通讯录"
            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_recycler_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="万能间隔"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
