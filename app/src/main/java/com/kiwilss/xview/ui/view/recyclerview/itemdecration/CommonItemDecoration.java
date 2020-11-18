@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.kiwilss.xview.utils.LogUtils;
-
 /**
  * Description：RecyclerView的万能间距
  * Created by kang on 2018/3/9.
@@ -48,7 +46,6 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
         int count = parent.getAdapter().getItemCount();
  
         if (parent.getLayoutManager() instanceof GridLayoutManager) { // 网格布局
-            LogUtils.e("gridlayoutmanager");
             GridLayoutManager gridLayoutManager = (GridLayoutManager) parent.getLayoutManager();
             // 得到网格布局的列数
             int spanCount = gridLayoutManager.getSpanCount();
@@ -67,7 +64,6 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
                 }
             }
         } else if (parent.getLayoutManager() instanceof LinearLayoutManager) { // 线性布局
-            LogUtils.e("linearlayout");
             LinearLayoutManager layoutManager = (LinearLayoutManager) parent.getLayoutManager();
             if (LinearLayoutManager.VERTICAL == layoutManager.getOrientation()) { // 垂直
                 verticalColumnOne(outRect, position, count);
@@ -119,7 +115,7 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
             outRect.set(left,
                     topMargin,
                     right,
-                    0);
+                    verticalSpace);
         } else if (row == totalRow - 1) {
             outRect.set(left,
                     0,
@@ -166,21 +162,25 @@ public class CommonItemDecoration extends RecyclerView.ItemDecoration {
         // 通过对position加1对spanCount取余得到row
         // 保证row等于1为第一行，等于0为最后一个，其它值为中间行
         int row = (position + 1) % spanCount;
+        int mEachSpace = (topMargin + bottomMargin + (spanCount - 1) * verticalSpace) / spanCount;
+        int diff = ((mEachSpace - bottomMargin) - topMargin) / (spanCount - 1);
+        int top = (position % spanCount + 1  - 1) * diff + topMargin;
+        int bottom = mEachSpace - top;
         if (row == 1) {
             outRect.set(column == 0 ? leftMargin : horizontalSpace / 2,
-                    topMargin,
+                    top,
                     column == totalColumn - 1 ? rightMargin : horizontalSpace / 2,
-                    0);
+                    bottom);
         } else if (row == 0) {
             outRect.set(column == 0 ? leftMargin : horizontalSpace / 2,
-                    verticalSpace,
+                    top,
                     column == totalColumn - 1 ? rightMargin : horizontalSpace / 2,
-                    bottomMargin);
+                    bottom);
         } else {
             outRect.set(column == 0 ? leftMargin : horizontalSpace / 2,
-                    verticalSpace,
+                    top,
                     column == totalColumn - 1 ? rightMargin : horizontalSpace / 2,
-                    0);
+                    bottom);
         }
     }
  
