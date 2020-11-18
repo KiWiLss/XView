@@ -2,6 +2,8 @@ package com.kiwilss.xview.utils;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 /**
  * 屏幕密度工具类
@@ -133,8 +135,34 @@ public final class DensityUtils {
         DisplayMetrics metric = context.getResources().getDisplayMetrics();
         float xdpi = metric.xdpi;
         float ydpi = metric.ydpi;
-
         return (int) (((xdpi + ydpi) / 2.0F) + 0.5F);
     }
+
+    @SuppressWarnings("deprecation")
+    public static int getScreenWidth(Context context) {
+        WindowManager wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        return display.getWidth();
+    }
+
+    @SuppressWarnings("deprecation")
+    public static int getScreenHeight(Context context) {
+        WindowManager wm = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        return display.getHeight();
+    }
+    public static int getScreenHeight(WindowManager manager) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        manager.getDefaultDisplay().getMetrics(metrics);
+        return metrics.heightPixels;
+    }
+    public static int getScreenWidth(WindowManager manager) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        manager.getDefaultDisplay().getMetrics(metrics);
+        return metrics.widthPixels;
+    }
+
 
 }

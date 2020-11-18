@@ -11,7 +11,7 @@ import com.kiwilss.xview.R
  * @time   : 2020/11/17
  * @desc   : {DESCRIPTION}
  */
-class ItemDecrationAdapter : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_decration_vertical) {
+class ItemDecrationAdapter : BaseQuickAdapter<String,BaseViewHolder>(R.layout.item_decration_hor) {
     override fun convert(holder: BaseViewHolder, item: String) {
         holder.setText(R.id.tv_item_decoration_text,item)
     }

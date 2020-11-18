@@ -38,6 +38,7 @@ import com.kiwilss.xview.ui.view.shawshape.ShawShapeActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
 import com.kiwilss.xview.ui.view.viewpager.vp.VpTestActivity
 import com.kiwilss.xview.ui.view.viewpager.vp2.ViewPageActivity
+import com.kiwilss.xview.ui.watermark.WatermarkActivity
 
 /**
  *@FileName: MainUtils
@@ -74,7 +75,8 @@ object MainUtils {
             MainBean("ScrollView", ScrollViewActivity::class.java),
             MainBean("IndexBar", IndexBarActivity::class.java),
             MainBean("Util", UtilsActivity::class.java),
-            MainBean("Keyboard", KeyboardActivity::class.java)
+            MainBean("Keyboard", KeyboardActivity::class.java),
+            MainBean("水印", WatermarkActivity::class.java)
         )
 
 

@@ -8,6 +8,8 @@ import android.text.style.*
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.annotation.DimenRes
+import androidx.annotation.IntDef
+import com.kiwilss.xview.utils.DensityUtils
 import com.kiwilss.xview.utils.LogUtils
 
 /**
@@ -251,6 +253,38 @@ class SpannableStringUtils private constructor() {
             return ssb
         }
 
+
+        fun textSize(
+            ssb: SpannableStringBuilder,
+            target: String?,
+             textSize: Float
+        ): SpannableStringBuilder {
+            if (!target.isNullOrEmpty()) {
+                ssb.setSpan(
+                    AbsoluteSizeSpan(DensityUtils.dp2px(textSize)),
+                    getStart(ssb, target),
+                    getEnd(ssb, target),
+                    flag
+                )
+            }
+            return ssb
+        }
+
+        fun textSize(
+            ssb: SpannableStringBuilder,
+            start: Int,
+            end: Int,
+             textSize: Float
+        ): SpannableStringBuilder {
+            ssb.setSpan(
+                AbsoluteSizeSpan(DensityUtils.dp2px(textSize)),
+                getPosStart(ssb, start),
+                getPosEnd(ssb, end),
+                flag
+            )
+            return ssb
+        }
+
         fun clickSpan(
             ssb: SpannableStringBuilder,
             target: String?,
@@ -347,6 +381,11 @@ class SpannableStringUtils private constructor() {
         private var url: String? = null//超链接
 
         private var textSize: Int = 0 //设置字体大小
+
+        fun textSize(textSize: Float): Builder {
+            this.textSize = DensityUtils.dp2px(textSize)
+            return this
+        }
 
         fun textSize(@DimenRes textSize: Int): Builder {
             this.textSize = ResUtils.getDimensionPixelSize(textSize)
