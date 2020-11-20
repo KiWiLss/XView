@@ -1,5 +1,6 @@
 package com.kiwilss.xview.ui.view.recyclerview.itemdecration
 
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kiwilss.xview.R
@@ -34,15 +35,20 @@ class ItemDerationActivity : BaseActivity(R.layout.activity_item_decration){
             resources.getDimensionPixelOffset(R.dimen.m15) * 2,resources.getDimensionPixelOffset(R.dimen.m15) * 2,
             resources.getDimensionPixelOffset(R.dimen.m15) * 2,0
         )
+
+        val itemDecoration2 = MyDivider(this,resources.getDimensionPixelOffset(R.dimen.m2),
+            ContextCompat.getColor(this,R.color.red))
+
         val gridLayoutManager = GridLayoutManager(this@ItemDerationActivity, 3)
         gridLayoutManager.orientation = GridLayoutManager.HORIZONTAL
         val linearLayoutManager = LinearLayoutManager(this)
-        linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
+        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         //线性布局,垂直方向
         rv_item?.run {
-            layoutManager = gridLayoutManager
+            layoutManager = linearLayoutManager
             adapter = adapterVertical
-            addItemDecoration(itemDecoration)
+            //addItemDecoration(itemDecoration)
+            addItemDecoration(itemDecoration2)
         }
 
         val list = ArrayList<String>()
