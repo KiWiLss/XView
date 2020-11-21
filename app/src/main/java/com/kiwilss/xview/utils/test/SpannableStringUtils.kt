@@ -340,8 +340,8 @@ class SpannableStringUtils private constructor() {
     }
 
     //针对单个部分使用
-    class Builder(val src: String, val target: String? = null) {
-        var ssb: SpannableStringBuilder = SpannableStringBuilder(src)
+    class Builder(private val src: String, private val target: String? = null) {
+        private var ssb: SpannableStringBuilder = SpannableStringBuilder(src)
         private var start: Int = 0
         private var end: Int = 0
 
@@ -372,8 +372,29 @@ class SpannableStringUtils private constructor() {
 
         private var proportion = 0f //字体比例
         private var xProportion = 0f    //横向字体比例
-
+        /**
+         * 设置字体
+         *
+         * @param fontFamily 字体
+         *                   <ul>
+         *                   <li>monospace</li>
+         *                   <li>serif</li>
+         *                   <li>sans-serif</li>
+         *                   </ul>
+         * @return {@link Builder}
+         */
         private var fontFamily: String? = null
+        /**
+         * 设置对齐
+         *
+         * @param align 对其方式
+         *              <ul>
+         *             Alignment#ALIGN_NORMAL}正常</li>
+         *             Alignment#ALIGN_OPPOSITE}相反</li>
+         *             Alignment#ALIGN_CENTER}居中</li>
+         *              </ul>
+         * @return {@link Builder}
+         */
         private var align: Layout.Alignment? = null
 
         //<p>需添加view.setMovementMethod(LinkMovementMethod.getInstance())</p>
@@ -518,7 +539,7 @@ class SpannableStringUtils private constructor() {
             return ssb
         }
 
-        fun setSpan() {
+        private fun setSpan() {
             //处理start,end 防止越界
             if (start < 0) {
                 start = 0
