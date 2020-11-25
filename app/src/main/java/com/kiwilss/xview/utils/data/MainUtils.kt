@@ -29,6 +29,7 @@ import com.kiwilss.xview.ui.supertext.SuperTextActivity
 import com.kiwilss.xview.ui.util.UtilsActivity
 import com.kiwilss.xview.ui.view.constraint.ConstraintActivity
 import com.kiwilss.xview.ui.view.dialog.DialogActivity
+import com.kiwilss.xview.ui.view.edittext.EditTextActivity
 import com.kiwilss.xview.ui.view.mddialog.MdDialogActivity
 import com.kiwilss.xview.ui.view.popup.PopupActivity
 import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
@@ -76,7 +77,8 @@ object MainUtils {
             MainBean("IndexBar", IndexBarActivity::class.java),
             MainBean("Util", UtilsActivity::class.java),
             MainBean("Keyboard", KeyboardActivity::class.java),
-            MainBean("水印", WatermarkActivity::class.java)
+            MainBean("水印", WatermarkActivity::class.java),
+            MainBean("EditText", EditTextActivity::class.java)
         )
 
 

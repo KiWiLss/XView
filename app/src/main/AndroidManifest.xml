@@ -169,7 +169,7 @@
             android:label="间隔和分割线"/>
 
         <activity android:name=".ui.watermark.WatermarkActivity" android:label="水印"/>
-
+        <activity android:name=".ui.view.edittext.EditTextActivity" android:label="EditText"/>
 
     </application>
 
