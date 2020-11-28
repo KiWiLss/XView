@@ -20,13 +20,17 @@
             android:name=".design.drawer.NormalDrawerActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".main.MainActivity">
+
+        <activity android:name="com.kiwilss.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".main.MainActivity"/>
         <activity
             android:name=".ui.view.constraint.ConstraintActivity"
             android:label="约束布局"

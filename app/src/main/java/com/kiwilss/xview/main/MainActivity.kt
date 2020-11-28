@@ -75,4 +75,7 @@ class MainActivity : AppCompatActivity() {
 ////        mAdapter.setNewInstance(datas)
 //    }
 
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 }
