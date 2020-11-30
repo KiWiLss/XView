@@ -12,6 +12,19 @@ import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
  */
 object AnimatorUtil {
 
+
+    const val ALPHA = "alpha"
+    const val SCALE_X = "scaleX"
+    const val SCALE_Y = "scaleY"
+    const val ROTATION = "rotation"
+    const val ROTATION_X = "rotationX"
+    const val ROTATION_Y = "rotationY"
+    const val TRANSLATION_X = "translationX"
+    const val TRANSLATION_Y = "translationY"
+
+
+
+
     private val FAST_OUT_SLOW_IN_INTERPOLATOR: LinearOutSlowInInterpolator by lazy {
         LinearOutSlowInInterpolator()
     }

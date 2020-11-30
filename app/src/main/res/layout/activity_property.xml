@@ -8,35 +8,134 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_property_valueAnimator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="valueAnimator"
-            android:textAllCaps="false"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_property_valueAnimatorxml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="xml valueAnimator"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_property_valueAnimator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="valueAnimator"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btn_property_valueAnimator2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="将控件拉长"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/tv_property_anim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="动画"
-            android:padding="5dp"
+            android:padding="15dp"
+            android:gravity="center"
             android:background="@color/blue_74D3FF"
             android:layout_gravity="center"/>
 
-        <LinearLayout
+<!--        xml实现-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="布局实现"/>
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btn_property_bkAlpha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="alpha"
-                android:textAllCaps="false"/>
-        </LinearLayout>
+                <Button
+                    android:id="@+id/btn_property_bkAlpha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="alpha"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="scale"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_rotate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rotate"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_transe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="trante"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="set"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
 
+        </HorizontalScrollView>
 
+<!--        code-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="代码实现"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_property_alpha2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="alpha"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_scale2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="scale"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_rotate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rotate"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_transe2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="trante"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_set2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="set"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+
+        </HorizontalScrollView>
 
 
     </LinearLayout>
