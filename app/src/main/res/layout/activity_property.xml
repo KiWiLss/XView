@@ -41,7 +41,7 @@
             android:padding="15dp"
             android:gravity="center"
             android:background="@color/blue_74D3FF"
-            android:layout_gravity="center"/>
+            />
 
 <!--        xml实现-->
         <TextView
@@ -136,6 +136,86 @@
             </LinearLayout>
 
         </HorizontalScrollView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一个实现多个动画效果"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_property_transe3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一个objectanimator实现三个动画效果"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_propertyValuesHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="propertyValuesHolder"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自由落体"
+                    android:textAllCaps="false"/>
+                <Button
+                    android:id="@+id/btn_property_vertical2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抛物线"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+
+        <LinearLayout
+            android:id="@+id/llAddAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="-70dp"
+            android:background="@color/yellow_FF9B52">
+
+        <ImageView
+            android:id="@+id/ivMakeNote"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="2dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:src="@mipmap/close_x_white" />
+
+        <TextView
+            android:id="@+id/tvAddAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:text="添加账户"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+<ImageView
+    android:id="@+id/iv_header"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@mipmap/default_head_icon"/>
+
+        <ImageView
+            android:id="@+id/iv_header2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/default_head_icon"/>
 
 
     </LinearLayout>

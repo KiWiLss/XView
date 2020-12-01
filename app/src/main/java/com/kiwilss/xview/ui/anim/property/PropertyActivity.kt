@@ -1,12 +1,12 @@
 package com.kiwilss.xview.ui.anim.property
 
-import android.animation.AnimatorInflater
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
+import android.animation.*
+import androidx.core.animation.addListener
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.utils.DensityUtils
 import com.kiwilss.xview.utils.LogUtils
+import com.kiwilss.xview.utils.ResUtils
 import com.kiwilss.xview.utils.anim.AnimatorUtil
 import kotlinx.android.synthetic.main.activity_property.*
 
@@ -69,6 +69,36 @@ class PropertyActivity : BaseActivity(R.layout.activity_property) {
 
         initCodeAnim()
 
+        initTranslation()
+
+        initAimator()
+    }
+
+    private fun initAimator() {
+        //只执行一次
+        iv_header.setOnClickListener {
+            iv_header.animate().translationX(500f).rotation(180f)
+                .setDuration(1000).start()
+        }
+        //每次点击会再次执行
+        iv_header2.setOnClickListener {
+            iv_header2.animate().translationXBy(500f).rotationBy(180f).setDuration(1000).start()
+        }
+
+    }
+
+    private fun initTranslation() {
+        val translation = DensityUtils.dp2px(-70f).toFloat()
+        llAddAccount.setOnClickListener {
+            ObjectAnimator.ofFloat(ivMakeNote,AnimatorUtil.ROTATION,0f,45f)
+                .setDuration(500)
+                .start()
+            ObjectAnimator.ofFloat(llAddAccount,AnimatorUtil.TRANSLATION_X,0f,translation)
+                .setDuration(500)
+                .start()
+        }
+
+
 
     }
 
@@ -107,7 +137,37 @@ class PropertyActivity : BaseActivity(R.layout.activity_property) {
             set.duration = 2000
             set.start()
         }
-        //tv_property_anim.animate().al
+        //一个objectanimator实现多个动画效果
+        btn_property_transe3.setOnClickListener {
+            val anim = ObjectAnimator.ofFloat(
+                tv_property_anim,
+                "AnimatorUtil.SCALE_X",
+                1f, 0f
+            ).setDuration(2000)
+            anim.start()
+            anim.addUpdateListener {
+                val fl = it.animatedValue as Float
+                tv_property_anim.alpha = fl
+                tv_property_anim.scaleX = fl
+                tv_property_anim.scaleY = fl
+            }
+        }
+        btn_property_propertyValuesHolder.setOnClickListener {
+            val alpha = PropertyValuesHolder.ofFloat(AnimatorUtil.ALPHA, 1f, 0f, 1f)
+            val scalex = PropertyValuesHolder.ofFloat(AnimatorUtil.SCALE_X, 1f, 0f, 1f)
+            val scaley = PropertyValuesHolder.ofFloat(AnimatorUtil.SCALE_Y, 1f, 0f, 1f)
+            ObjectAnimator.ofPropertyValuesHolder(tv_property_anim,alpha,scalex,scaley).setDuration(2000).start()
+        }
+        btn_property_vertical.setOnClickListener {
+            val valueAnimator = ValueAnimator.ofFloat(0f, 500f)
+            valueAnimator.setTarget(tv_property_anim)
+            valueAnimator.duration = 1000
+            valueAnimator.start()
+            valueAnimator.addUpdateListener {
+                tv_property_anim.translationY = it.animatedValue as Float
+            }
+        }
+
     }
 
     /*
@@ -122,10 +182,15 @@ class PropertyActivity : BaseActivity(R.layout.activity_property) {
         btn_property_scale.setOnClickListener {
             val scaleX = AnimatorInflater.loadAnimator(this, R.animator.scale_x)
             scaleX.setTarget(tv_property_anim)
+
             scaleX.start()
         }
         btn_property_rotate.setOnClickListener {
             val rotateZ = AnimatorInflater.loadAnimator(this, R.animator.rorate_x)
+            //设置中心
+            tv_property_anim.pivotX = 0f
+            tv_property_anim.pivotY = 0f
+            tv_property_anim.invalidate()
             rotateZ.setTarget(tv_property_anim)
             rotateZ.start()
         }

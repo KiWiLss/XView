@@ -15,6 +15,9 @@ public class TestList {
 
         searchAllFor();
         //searchAllIndex();
+
+
+
     }
 
     static String str = "开发中遇到要将某些字符文本使用SpannableStringBuilder替换成一个表情";
