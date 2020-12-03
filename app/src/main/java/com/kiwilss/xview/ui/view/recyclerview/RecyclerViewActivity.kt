@@ -28,6 +28,7 @@ import com.kiwilss.xview.ui.view.recyclerview.flow.FlowActivity
 import com.kiwilss.xview.ui.view.recyclerview.itemdecration.ItemDerationActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.test.StickTestActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.two.*
+import com.kiwilss.xview.ui.view.recyclerview.swapadpter.SwapAdapterActivity
 import kotlinx.android.synthetic.main.activity_recyclerview.*
 
 /**
@@ -115,6 +116,10 @@ class RecyclerViewActivity : AppCompatActivity(){
         btn_recycler_item.setOnClickListener {
             startActivity(Intent(this,
                 ItemDerationActivity::class.java))
+        }
+        btn_recycler_swap.setOnClickListener {
+            startActivity(Intent(this,
+                SwapAdapterActivity::class.java))
         }
     }
 }

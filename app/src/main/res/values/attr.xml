@@ -7,7 +7,7 @@
         <attr name="cpIndexBarSelectedTextColor" format="reference|color" />
     </declare-styleable>
 
-<!--    scrollview sticky-->
+    <!--    scrollview sticky-->
     <declare-styleable name="StickyScrollView">
         <attr name="stuckShadowHeight" format="dimension" />
         <attr name="stuckShadowDrawable" format="reference" />
@@ -69,8 +69,17 @@
     </declare-styleable>
 
     <declare-styleable name="AlignTextView">
-        <attr name="alignOnlyOneLine" format="boolean"/>
+        <attr name="alignOnlyOneLine" format="boolean" />
     </declare-styleable>
 
-
+    <!--MultiplTextView的属性-->
+    <declare-styleable name="MultiplTextView">
+        <attr name="runText" format="boolean" />
+        <attr name="gradient" format="boolean" />
+        <attr name="gradientStartColor" format="color" />
+        <attr name="gradientCenterColor" format="color" />
+        <attr name="gradientEndColor" format="color" />
+        <attr name="removeDefaultPadding" format="boolean" />
+        <attr name="textFont" format="string" />
+    </declare-styleable>
 </resources>

@@ -1,6 +1,7 @@
 package com.kiwilss.xview.utils.test;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,11 +14,22 @@ import java.util.List;
 public class TestList {
     public static void main(String[] args) {
 
-        searchAllFor();
+        //searchAllFor();
         //searchAllIndex();
+        removeList();
 
 
+    }
 
+    public static void removeList(){
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        for (int i = list.size() - 1; i >= 6; i--) {
+            list.remove(i);
+        }
+        System.out.println(list);
     }
 
     static String str = "开发中遇到要将某些字符文本使用SpannableStringBuilder替换成一个表情";

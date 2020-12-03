@@ -14,9 +14,9 @@ import java.text.NumberFormat
  */
 object NumTest {
 
-    const val five = "#.00000"
-    const val four = "#.0000"
-    const val two = "#.00"
+    const val five = "#0.00000"
+    const val four = "#0.0000"
+    const val two = "#0.00"
 
     /**
      * stirng -> double
@@ -139,17 +139,24 @@ object NumTest {
 }
 
 fun main() {
-
-    val one = "90"
-    val one2 = "900"
-    val two = "902"
-    val three = "90725"
-
-    println(NumTest.convertRate2Decimal(9.0))
-    println(NumTest.convertRate2Decimal(9.00))
-    println(NumTest.convertRate2Decimal(9.045))
-    println(NumTest.convertRate2Decimal(9.044))
-
+    println(NumTest.doubleWipeZero(1.02))
+    println(NumTest.doubleWipeZero(1.00))
+    println(NumTest.doubleWipeZero(1.0))
+    println("-----------------------")
+    println(NumTest.string2String("1"))
+    println(NumTest.string2String("1.0"))
+    println(NumTest.string2String("1.00"))
+    println(NumTest.string2String("0.00"))
+    println(NumTest.string2String("0.0"))
+    println(NumTest.string2String("0.003"))
+    println("-----------------------")
+    println(NumTest.string2StringRound("1"))
+    println(NumTest.string2StringRound("1.04"))
+    println(NumTest.string2StringRound("1.006"))
+    println(NumTest.string2StringRound("0.00"))
+    println(NumTest.string2StringRound("0.0"))
+    println(NumTest.string2StringRound("0.003"))
+    println(NumTest.string2StringRound("0.006"))
 
 
 }
