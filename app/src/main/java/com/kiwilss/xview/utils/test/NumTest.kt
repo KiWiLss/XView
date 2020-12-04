@@ -4,6 +4,7 @@ import com.kiwilss.xview.utils.test.NumTest.string2Bean
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.NumberFormat
+import kotlin.time.days
 
 /**
  * @author : Lss Administrator
@@ -157,6 +158,7 @@ fun main() {
     println(NumTest.string2StringRound("0.0"))
     println(NumTest.string2StringRound("0.003"))
     println(NumTest.string2StringRound("0.006"))
+
 
 
 }

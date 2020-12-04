@@ -69,5 +69,19 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="通过tag获取dialog"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_dialog_dslx"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="dslx"/>
+
+
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

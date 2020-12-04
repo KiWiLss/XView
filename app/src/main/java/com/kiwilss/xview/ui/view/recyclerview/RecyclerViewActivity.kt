@@ -10,6 +10,7 @@
  */
 package com.kiwilss.xview.ui.view.recyclerview
 
+import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,7 @@ import com.kiwilss.xview.ui.view.recyclerview.stick.test.StickTestActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.two.*
 import com.kiwilss.xview.ui.view.recyclerview.swapadpter.SwapAdapterActivity
 import kotlinx.android.synthetic.main.activity_recyclerview.*
+import kotlin.time.days
 
 /**
  *@FileName: RecyclerViewActivity
@@ -42,6 +44,14 @@ class RecyclerViewActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recyclerview)
+
+
+//        val permission = Manifest.permission.WRITE_EXTERNAL_STORAGE
+//        registerForActivityResult(ActivityResultContracts.RequestPermission()) { result ->
+//// 请求结果，result 为 boolean true 代表已授权，false 代表未授权
+//        }.launch(permission)
+
+
 
         btn_recycler_itemFixed.setOnClickListener {
             startActivity(Intent(this,

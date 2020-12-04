@@ -1,31 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
-        <LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_edittext_outer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/et_edittext_input"
+            <LinearLayout
+                android:id="@+id/ll_edittext_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="输入"/>
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_edittext_change"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="改变文字"
-                />
-            <Button
-                android:id="@+id/btn_edittext_select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="改变光标位置"
-                />
+                <EditText
+                    android:id="@+id/et_edittext_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="输入"/>
 
-        </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+                <Button
+                    android:id="@+id/btn_edittext_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="改变文字"
+                    />
+                <Button
+                    android:id="@+id/btn_edittext_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="改变光标位置"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_edittext_top"
+                >
+
+                <EditText
+                    android:id="@+id/et_edittext_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_edittext_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:background="@color/blue_74D3FF"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/ll_edittext_express">
+        <TextView
+            android:id="@+id/tv_edittext_express"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="表情"/>
+        <TextView
+            android:id="@+id/tv_edittext_keyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="keyboard"
+            android:layout_marginStart="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_edittext_express"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/yellow_FF9B52"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

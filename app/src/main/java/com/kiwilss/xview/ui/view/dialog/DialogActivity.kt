@@ -11,6 +11,7 @@
 
 package com.kiwilss.xview.ui.view.dialog
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
@@ -25,6 +26,7 @@ import com.kiwilss.xview.ui.view.dialog.custom.BaseDialogTest2
 import com.kiwilss.xview.ui.view.dialog.custom.FgDialog
 import com.kiwilss.xview.ui.view.dialog.custom.PersonThree
 import com.kiwilss.xview.ui.view.dialog.dialog_test.CenterDialog
+import com.kiwilss.xview.ui.view.dialog.dslext.showXDialog
 import kotlinx.android.synthetic.main.activity_dialog.*
 
 /**
@@ -35,6 +37,7 @@ import kotlinx.android.synthetic.main.activity_dialog.*
  * @desc   : {DESCRIPTION}
  */
 class DialogActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialog)
@@ -76,6 +79,13 @@ class DialogActivity : AppCompatActivity() {
             BaseDialogTest2().show(supportFragmentManager,"test2")
         }
         btn_dialog_tag.setOnClickListener {
+
+        }
+
+        btn_dialog_dslx.setOnClickListener {
+            val xDialog = showXDialog(R.layout.pw_center){
+                setText(R.id.tv_pw_onetitle_title,"测试DSL")
+            }
 
         }
 
