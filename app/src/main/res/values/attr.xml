@@ -82,4 +82,8 @@
         <attr name="removeDefaultPadding" format="boolean" />
         <attr name="textFont" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="NoPaddingTextView">
+        <attr name="textSize2" format="dimension" />
+    </declare-styleable>
 </resources>

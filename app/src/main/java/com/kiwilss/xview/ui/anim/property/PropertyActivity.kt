@@ -2,6 +2,7 @@ package com.kiwilss.xview.ui.anim.property
 
 import android.animation.*
 import androidx.core.animation.addListener
+import androidx.core.view.ViewCompat
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.utils.DensityUtils
@@ -77,13 +78,16 @@ class PropertyActivity : BaseActivity(R.layout.activity_property) {
     private fun initAimator() {
         //只执行一次
         iv_header.setOnClickListener {
-            iv_header.animate().translationX(500f).rotation(180f)
-                .setDuration(1000).start()
+//            iv_header.animate().translationX(500f).rotation(180f)
+//                .setDuration(1000).start()
+            ViewCompat.animate(iv_header)
+                .translationX(500f).rotation(180f).setDuration(1000)
         }
         //每次点击会再次执行
         iv_header2.setOnClickListener {
             iv_header2.animate().translationXBy(500f).rotationBy(180f).setDuration(1000).start()
         }
+
 
     }
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -34,9 +35,9 @@
             android:textSize="20dp"
             android:background="@color/red_FF6D84"
             app:removeDefaultPadding="true"
-            android:visibility="gone"/>
+            android:visibility="visible"/>
 
-        <com.kiwilss.xview.widget.textview.NoPaddingTextView
+        <com.kiwilss.xview.widget.textview.NoPaddingTextView2
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="汉字"
@@ -44,13 +45,56 @@
             android:includeFontPadding="false"
             android:background="@color/yellow_FF9B52"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汉字"
+            android:textSize="20dp"
+            android:background="@color/red"
+            android:includeFontPadding="false"/>
+
+        <com.kiwilss.xview.widget.textview.NoPaddingTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汉字"
+            app:textSize2="20dp"
+            android:background="@color/blue_74D3FF"/>
+
     </LinearLayout>
 
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汉字"
+            android:textSize="30dp"
+            android:background="@color/red"
+           app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汉字"
+            android:textSize="20dp"
+            android:background="@color/yellow_FF9B52"
+            app:layout_constraintStart_toEndOf="@+id/tv_left"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_left"
+         />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
 
-</RelativeLayout>
+</LinearLayout>
