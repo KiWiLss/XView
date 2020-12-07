@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gyf.immersionbar.ktx.immersionBar
 import com.kiwilss.xview.R
 import com.kiwilss.xview.main.MainActivity
+import com.kiwilss.xview.widget.textview.NoTextView
 
 /**
  * @author : Lss Administrator
@@ -24,6 +25,7 @@ class SplashActivity : AppCompatActivity() {
 //            transparentStatusBar()
 //            //fullScreen()
 //        }
+
 
 
     }

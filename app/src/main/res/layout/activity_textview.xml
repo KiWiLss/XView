@@ -144,6 +144,7 @@
                 android:text="汉字汉字汉汉字汉字汉字汉字汉字汉字汉字"
                 android:textSize="40dp"
                 android:background="@color/yellow_FF9B52"
+                android:padding="-10dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -153,14 +154,37 @@
                 android:includeFontPadding="false"
                 android:background="@color/blue_74D3FF"
                 />
-            <com.kiwilss.xview.widget.textview.NoPaddingTextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="23223jfie jfiejfie 汉字"
-                app:textSize2="40dp"
-                android:textSize="20dp"
-                android:background="@color/red"/>
+                android:gravity="bottom">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="汉字字"
+                    android:textSize="20dp"
+                    android:includeFontPadding="false"
+                    android:background="@color/yellow_FF9B52"
+                    />
 
+                <com.kiwilss.xview.widget.textview.NoPaddingTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="汉字字"
+                    android:textSize="20dp"
+                    app:textSize2="20dp"
+                    android:background="@color/red"/>
+
+                <com.kiwilss.xview.widget.textview.NoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="汉字字"
+                    android:textSize="20dp"
+                    android:background="@color/blue_74D3FF"
+                    />
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
