@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="默认小姑"/>
+            <Button
+                android:id="@+id/btn_layout_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add"/>
+            <Button
+                android:id="@+id/btn_layout_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reduce"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="two"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_layout_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_anim">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="two"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

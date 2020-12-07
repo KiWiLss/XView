@@ -14,6 +14,7 @@ package com.kiwilss.xview.utils.data
 import com.kiwilss.xview.design.DesignActivity
 import com.kiwilss.xview.model.main.MainBean
 import com.kiwilss.xview.ui.anim.AnimActivity
+import com.kiwilss.xview.ui.anim.layout.LayoutActivity
 import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
@@ -23,6 +24,7 @@ import com.kiwilss.xview.ui.loading.LoadingActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
 import com.kiwilss.xview.ui.ripple.RippleActivity
 import com.kiwilss.xview.ui.shape.ShapeViewActivity
+import com.kiwilss.xview.ui.shortcuts.ShortcutsActivity
 import com.kiwilss.xview.ui.startforresulthelp.DebugActivity
 import com.kiwilss.xview.ui.startforresulthelp.HelpActivity
 import com.kiwilss.xview.ui.supertext.SuperTextActivity
@@ -78,7 +80,8 @@ object MainUtils {
             MainBean("Util", UtilsActivity::class.java),
             MainBean("Keyboard", KeyboardActivity::class.java),
             MainBean("水印", WatermarkActivity::class.java),
-            MainBean("EditText", EditTextActivity::class.java)
+            MainBean("EditText", EditTextActivity::class.java),
+            MainBean("EditText", ShortcutsActivity::class.java)
         )
 
 

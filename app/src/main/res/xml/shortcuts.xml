@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/default_head_icon"
+        android:shortcutDisabledMessage="@string/short_hint_message"
+        android:shortcutId="@string/short_id"
+        android:shortcutLongLabel="@string/short_long"
+        android:shortcutShortLabel="@string/short_short"
+       >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass=".ui.view.flexbox.FlexBoxBasicActivity"
+            android:targetPackage=".ui.view.flexbox" />
+    </shortcut>
+<!--    <shortcut-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_android_black_24dp"-->
+<!--        android:shortcutDisabledMessage="@string/static_shortcut_disabled_message"-->
+<!--        android:shortcutId="static_2"-->
+<!--        android:shortcutLongLabel="@string/static_shortcut_long_label_2"-->
+<!--        android:shortcutShortLabel="@string/static_shortcut_short_label_2">-->
+<!--        <intent-->
+<!--            android:action="android.intent.action.MAIN"-->
+<!--            android:targetClass="com.ddmeng.hellonougat.MainActivity"-->
+<!--            android:targetPackage="com.ddmeng.hellonougat" />-->
+<!--        <intent-->
+<!--            android:action="com.ddmeng.hellonougat.action.STATIC_SHORTCUT_2"-->
+<!--            android:targetClass="com.ddmeng.hellonougat.shortcuts.StaticShortcutActivity"-->
+<!--            android:targetPackage="com.ddmeng.hellonougat" />-->
+<!--    </shortcut>-->
+</shortcuts>

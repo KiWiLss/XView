@@ -10,6 +10,7 @@ import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.ui.anim.activity.AnimCutInActivity
 import com.kiwilss.xview.ui.anim.fragment.AnimFragmentActivity
+import com.kiwilss.xview.ui.anim.layout.LayoutActivity
 import com.kiwilss.xview.ui.anim.property.PropertyActivity
 import com.kiwilss.xview.ui.anim.viewanim.AnimViewActivity
 import com.kiwilss.xview.utils.LogUtils
@@ -52,7 +53,9 @@ class AnimActivity: BaseActivity(R.layout.activity_anim) {
         btn_anim_property.setOnClickListener {
             startActivity(Intent(this,PropertyActivity::class.java))
         }
-
+        btn_anim_layout.setOnClickListener {
+            startActivity(Intent(this,LayoutActivity::class.java))
+        }
 
     }
 

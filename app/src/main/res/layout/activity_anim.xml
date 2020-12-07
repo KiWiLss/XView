@@ -28,5 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="属性动画"/>
+        <Button
+            android:id="@+id/btn_anim_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="布局动画"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        window.decorView.postDelayed(next,3000)
+        window.decorView.postDelayed(next,1000)
     }
 
     val next = Runnable {

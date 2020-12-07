@@ -1,5 +1,9 @@
 package com.kiwilss.xview.utils.test
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import com.kiwilss.xview.utils.test.NumTest.string2Bean
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -137,28 +141,45 @@ object NumTest {
         return nf.format(rate)
     }
 
+    fun testStart(vararg params: Pair<String, Any?>){
+        println(params[0].first)
+    }
+
+
 }
 
-fun main() {
-    println(NumTest.doubleWipeZero(1.02))
-    println(NumTest.doubleWipeZero(1.00))
-    println(NumTest.doubleWipeZero(1.0))
-    println("-----------------------")
-    println(NumTest.string2String("1"))
-    println(NumTest.string2String("1.0"))
-    println(NumTest.string2String("1.00"))
-    println(NumTest.string2String("0.00"))
-    println(NumTest.string2String("0.0"))
-    println(NumTest.string2String("0.003"))
-    println("-----------------------")
-    println(NumTest.string2StringRound("1"))
-    println(NumTest.string2StringRound("1.04"))
-    println(NumTest.string2StringRound("1.006"))
-    println(NumTest.string2StringRound("0.00"))
-    println(NumTest.string2StringRound("0.0"))
-    println(NumTest.string2StringRound("0.003"))
-    println(NumTest.string2StringRound("0.006"))
+fun test(){
+    val list = arrayOf(
+        "1" to "one",
+        "2" to "two"
+    )
+    println(list)
+    println("${list[0]}------${list[0].first}-----${list[0].second}")
+    val bundle = Bundle()
+    list.forEach {
+        bundle.putString(it.first,it.second)
+    }
+}
 
+inline fun <reified T> Context.startActivity(flag: Int = -1, bundle: Array<out Pair<String, Any?>>? = null) {
+    val intent = Intent(this, T::class.java).apply {
+        if (flag != -1) {
+            this.addFlags(flag)
+        }
+        if (this !is Activity) {
+            this.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        val b = Bundle()
+        if (bundle != null) putExtras(b)
+    }
+    startActivity(intent)
+}
+
+
+
+fun main() {
+
+    test()
 
 
 }
