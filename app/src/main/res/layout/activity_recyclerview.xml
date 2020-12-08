@@ -73,6 +73,12 @@
             android:text="basequickadapter拖拽和滑动删除"
             android:textAllCaps="false"/>
         <Button
+            android:id="@+id/btn_recycler_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="basequickadapter加载更多"
+            android:textAllCaps="false"/>
+        <Button
             android:id="@+id/btn_recycler_stick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

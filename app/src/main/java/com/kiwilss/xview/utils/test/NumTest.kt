@@ -5,6 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.kiwilss.xview.utils.test.NumTest.string2Bean
+import com.kiwilss.xview.utils.test.NumTest.string2String
+import com.kiwilss.xview.utils.test.NumTest.string2StringWip
+import com.kiwilss.xview.utils.test.NumTest.stringWipeZero
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.NumberFormat
@@ -20,6 +23,7 @@ import kotlin.time.days
 object NumTest {
 
     const val five = "#0.00000"
+    const val ten = "#0.0000000000"
     const val four = "#0.0000"
     const val two = "#0.00"
 
@@ -77,9 +81,8 @@ object NumTest {
         if (d == null) {
             return ""
         }
-        val doubleFormat = getDoubleFormat(five)
+        val doubleFormat = getDoubleFormat(ten)
         val result = doubleFormat.format(d)
-
         var index = result.indexOf(".")
         if (index > result.length) {
             index = result.length
@@ -105,8 +108,23 @@ object NumTest {
     }
 
     /**
+     * string --> string 保留dig位,不四舍五入,保留有效位
+     * d: 数据源
+     * dig: 保留小数点后几位
+    */
+    fun string2StringWip(string: String?, dig: Int = 2): String{
+        if (string.isNullOrEmpty()) {
+            return ""
+        }
+        val dd = string2Double(string)
+        val ss = double2String(dd,dig)
+        return stringWipeZero(ss)
+    }
+
+
+    /**
      * doulble  ---->  string
-     * .0 会去除掉
+     * .0 会去除掉,只保留有效位
     */
     fun doubleWipeZero(double: Double?): String{
         if (double == null){
@@ -116,6 +134,18 @@ object NumTest {
             DecimalFormat("###################.###########")
         return decimalFormat.format(double)
     }
+
+    fun stringWipeZero(amount: String?): String{
+      if (amount.isNullOrEmpty()){
+          return ""
+      }
+        val double = string2Double(amount)
+        val decimalFormat =
+            DecimalFormat("###################.###########")
+       return decimalFormat.format(double)
+    }
+
+
 
     fun string2Bean(string: String?): String {
         if (string.isNullOrEmpty()) {
@@ -145,41 +175,20 @@ object NumTest {
         println(params[0].first)
     }
 
-
 }
 
-fun test(){
-    val list = arrayOf(
-        "1" to "one",
-        "2" to "two"
-    )
-    println(list)
-    println("${list[0]}------${list[0].first}-----${list[0].second}")
-    val bundle = Bundle()
-    list.forEach {
-        bundle.putString(it.first,it.second)
-    }
-}
 
-inline fun <reified T> Context.startActivity(flag: Int = -1, bundle: Array<out Pair<String, Any?>>? = null) {
-    val intent = Intent(this, T::class.java).apply {
-        if (flag != -1) {
-            this.addFlags(flag)
-        }
-        if (this !is Activity) {
-            this.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        }
-        val b = Bundle()
-        if (bundle != null) putExtras(b)
-    }
-    startActivity(intent)
-}
+
 
 
 
 fun main() {
 
-    test()
+    println(string2StringWip("1.0"))
+    println(string2StringWip("1.00"))
+    println(string2StringWip("1.020"))
+    println(string2StringWip("0.0020",dig = 4))
+
 
 
 }

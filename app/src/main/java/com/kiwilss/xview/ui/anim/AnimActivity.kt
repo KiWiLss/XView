@@ -12,8 +12,10 @@ import com.kiwilss.xview.ui.anim.activity.AnimCutInActivity
 import com.kiwilss.xview.ui.anim.fragment.AnimFragmentActivity
 import com.kiwilss.xview.ui.anim.layout.LayoutActivity
 import com.kiwilss.xview.ui.anim.property.PropertyActivity
+import com.kiwilss.xview.ui.anim.transition.TransitionActivity
 import com.kiwilss.xview.ui.anim.viewanim.AnimViewActivity
 import com.kiwilss.xview.utils.LogUtils
+import com.kiwilss.xview.utils.ktx.IntentKtx.startActivity2
 import kotlinx.android.synthetic.main.activity_anim.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 
@@ -56,7 +58,9 @@ class AnimActivity: BaseActivity(R.layout.activity_anim) {
         btn_anim_layout.setOnClickListener {
             startActivity(Intent(this,LayoutActivity::class.java))
         }
-
+        btn_anim_transition.setOnClickListener {
+            startActivity2<TransitionActivity>()
+        }
     }
 
     override fun initInterface() {

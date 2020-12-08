@@ -33,5 +33,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="布局动画"/>
+        <Button
+            android:id="@+id/btn_anim_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="过渡动画"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -81,7 +81,7 @@ object MainUtils {
             MainBean("Keyboard", KeyboardActivity::class.java),
             MainBean("水印", WatermarkActivity::class.java),
             MainBean("EditText", EditTextActivity::class.java),
-            MainBean("EditText", ShortcutsActivity::class.java)
+            MainBean("快捷菜单", ShortcutsActivity::class.java)
         )
 
 

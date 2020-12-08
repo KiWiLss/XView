@@ -183,6 +183,14 @@
 
         <activity android:name=".ui.anim.layout.LayoutActivity" android:label="布局动画"/>
         <activity android:name=".ui.shortcuts.ShortcutsActivity" android:label="快捷菜单"/>
+
+        <activity android:name=".ui.anim.transition.TransitionActivity" android:label="过渡动画"/>
+        <activity android:name=".ui.view.recyclerview.loadmore.LoadMoreActivity" android:label="下拉刷新,上拉加载更多"/>
+
+        <activity android:name=".ui.anim.transition.explode.ExplodeAActivity" android:label="ExploadeA"/>
+        <activity android:name=".ui.anim.transition.explode.ExplodeBActivity" android:label="ExploadeB"/>
+
+
     </application>
 
 </manifest>

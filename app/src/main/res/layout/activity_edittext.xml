@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nsv_edittext_outer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,10 +9,7 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true">
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nsv_edittext_outer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -44,9 +43,10 @@
 
             </LinearLayout>
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="500dp"
                 android:layout_below="@+id/ll_edittext_top"
                 >
 
@@ -54,49 +54,50 @@
                     android:id="@+id/et_edittext_bottom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
                     />
 
 
 
 
-            </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </RelativeLayout>
 
-    </androidx.core.widget.NestedScrollView>
 
 
-    <LinearLayout
-        android:id="@+id/ll_edittext_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:visibility="visible"
-        android:background="@color/blue_74D3FF"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/ll_edittext_express">
-        <TextView
-            android:id="@+id/tv_edittext_express"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="表情"/>
-        <TextView
-            android:id="@+id/tv_edittext_keyboard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="keyboard"
-            android:layout_marginStart="30dp"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_edittext_express"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone"
-        android:background="@color/yellow_FF9B52"
-        app:layout_constraintBottom_toBottomOf="parent">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_edittext_bottom"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="@color/blue_74D3FF"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/ll_edittext_express">-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_edittext_express"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="表情"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_edittext_keyboard"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="keyboard"-->
+<!--            android:layout_marginStart="30dp"/>-->
+<!--    </LinearLayout>-->
 
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_edittext_express"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="@color/yellow_FF9B52"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--    </LinearLayout>-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

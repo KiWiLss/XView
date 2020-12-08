@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--activity_second.xml文件内容-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/wuhuang"
+        android:transitionName="activityTransform" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ivImage"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="我是第2个Activity"
+        android:textColor="@color/black_62"
+        android:textSize="18sp" />
+</RelativeLayout>

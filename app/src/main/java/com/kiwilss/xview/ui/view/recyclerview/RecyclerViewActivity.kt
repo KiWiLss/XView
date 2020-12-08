@@ -27,9 +27,11 @@ import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerViewWrapActivity
 import com.kiwilss.xview.ui.view.recyclerview.fixed.RecyclerWrapActivity
 import com.kiwilss.xview.ui.view.recyclerview.flow.FlowActivity
 import com.kiwilss.xview.ui.view.recyclerview.itemdecration.ItemDerationActivity
+import com.kiwilss.xview.ui.view.recyclerview.loadmore.LoadMoreActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.test.StickTestActivity
 import com.kiwilss.xview.ui.view.recyclerview.stick.two.*
 import com.kiwilss.xview.ui.view.recyclerview.swapadpter.SwapAdapterActivity
+import com.kiwilss.xview.utils.ktx.IntentKtx.startActivity2
 import kotlinx.android.synthetic.main.activity_recyclerview.*
 import kotlin.time.days
 
@@ -130,6 +132,9 @@ class RecyclerViewActivity : AppCompatActivity(){
         btn_recycler_swap.setOnClickListener {
             startActivity(Intent(this,
                 SwapAdapterActivity::class.java))
+        }
+        btn_recycler_more.setOnClickListener {
+            startActivity2<LoadMoreActivity>()
         }
     }
 }
