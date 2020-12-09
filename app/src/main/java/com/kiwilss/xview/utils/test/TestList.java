@@ -16,9 +16,36 @@ public class TestList {
 
         //searchAllFor();
         //searchAllIndex();
-        removeList();
+        //removeList();
 
+        testBreak2();
 
+    }
+    public static void testBreak2(){
+        ArrayList<Integer> list = new ArrayList<>();
+         for (int i = 0; i < 6; i++) {
+            for (int i1 = 0; i1 < 6; i1++) {
+                if (i1 == 3){
+                    continue;
+                }
+                list.add(i1);
+            }
+        }
+        System.out.println(list);
+    }
+
+    public static void testBreak(){
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            if (i == 3){
+                //break , 结果[0, 1, 2], 跳出for循环
+                //continue , 结果[0, 1, 2, 4, 5] ,跳出此次循环
+                //return  整个结束
+                return;
+            }
+            list.add(i);
+        }
+        System.out.println(list);
     }
 
     public static void removeList(){
