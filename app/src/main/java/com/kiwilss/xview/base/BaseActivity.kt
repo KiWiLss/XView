@@ -17,7 +17,7 @@ import java.util.logging.Handler
  * @time   : 2020/8/28
  * @desc   : {简单设置全局状态切换,可以自由选择是否使用toolbar}
  */
-abstract class BaseActivity(contentLayoutId: Int): AppCompatActivity(contentLayoutId)
+abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(contentLayoutId)
     , LoadingHelper.OnReloadListener{
 
     override fun onReload() {
