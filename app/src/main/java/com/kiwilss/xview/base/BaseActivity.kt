@@ -29,11 +29,11 @@ abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(content
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        LogUtils.e("oncreate")
         //设置切换状态相关
         initLoadingHelp(initIsToolbar())
         //初始化界面
         initInterface()
+        initInterface2(savedInstanceState)
         //初始化点击
         initEvent()
         //初始化数据
@@ -41,11 +41,14 @@ abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(content
 
     }
 
+    open fun initInterface2(savedInstanceState: Bundle?) {
+
+    }
+
     //控制是否显示标题栏
     open fun initIsToolbar(): Boolean = true
 
     open fun initLoadingHelp(isUseToolbar: Boolean) {
-        LogUtils.e("initLoadinghelp")
         mLoadingHelper = LoadingHelper(this)
         if (isUseToolbar){
             val titleBar = title ?: "标题"

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_transition_two_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户昵称"
+        android:textSize="@dimen/m14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_transition_two_one"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/iv_transition_two_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/wuhuang"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/m14"
+        app:layout_constraintTop_toBottomOf="@+id/tv_transition_two_name"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

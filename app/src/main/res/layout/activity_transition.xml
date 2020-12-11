@@ -17,9 +17,9 @@
 
         <Button
             android:id="@+id/btn_transition_one"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="过渡库一"
+            android:text="过渡库一,只支持一个控件"
             android:textAllCaps="false"/>
 
 
