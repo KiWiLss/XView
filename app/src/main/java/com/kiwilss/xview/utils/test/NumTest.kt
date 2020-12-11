@@ -1,17 +1,9 @@
 package com.kiwilss.xview.utils.test
 
-import android.app.Activity
-import android.content.Context
-import android.content.Intent
-import android.os.Bundle
 import com.kiwilss.xview.utils.test.NumTest.string2Bean
-import com.kiwilss.xview.utils.test.NumTest.string2String
-import com.kiwilss.xview.utils.test.NumTest.string2StringWip
-import com.kiwilss.xview.utils.test.NumTest.stringWipeZero
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.NumberFormat
-import kotlin.time.days
 
 /**
  * @author : Lss Administrator
@@ -157,7 +149,8 @@ object NumTest {
         } else {
             val bean = num * 100
             val d = bean / 10000
-            doubleWipeZero(d) + "万"
+            stringWipeZero(double2String(d))+ "万"
+//            doubleWipeZero(d) + "万"
         }
     }
 
@@ -183,11 +176,9 @@ object NumTest {
 
 
 fun main() {
-
-    println(string2StringWip("1.0"))
-    println(string2StringWip("1.00"))
-    println(string2StringWip("1.020"))
-    println(string2StringWip("0.0020",dig = 4))
+    println(string2Bean("100.002"))
+    println(string2Bean("100.825"))
+    println(string2Bean("111.825"))
 
 
 

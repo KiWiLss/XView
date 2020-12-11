@@ -22,7 +22,9 @@ class TransitionActivity: BaseActivity(R.layout.activity_transition) {
         btn_transition_explode.setOnClickListener {
             startActivity2<ExplodeAActivity>()
         }
+        btn_transition_one.setOnClickListener {
 
+        }
     }
 
     override fun initInterface() {

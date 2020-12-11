@@ -190,7 +190,8 @@
         <activity android:name=".ui.anim.transition.explode.ExplodeAActivity" android:label="ExploadeA"/>
         <activity android:name=".ui.anim.transition.explode.ExplodeBActivity" android:label="ExploadeB"/>
 
-
+        <activity android:name=".ui.anim.transition.one.TransitionOneActivity" android:label="Activity跳转"/>
+        <activity android:name=".ui.anim.transition.one.TransitionTwoActivity" android:label="Activity接收"/>
     </application>
 
 </manifest>
