@@ -11,6 +11,8 @@ import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.ui.anim.activity.AnimCutInActivity
 import com.kiwilss.xview.ui.anim.fragment.AnimFragmentActivity
 import com.kiwilss.xview.ui.anim.layout.LayoutActivity
+import com.kiwilss.xview.ui.anim.motionlayout.MotionActivity
+import com.kiwilss.xview.ui.anim.motionlayout.MotionLayoutActivity
 import com.kiwilss.xview.ui.anim.property.PropertyActivity
 import com.kiwilss.xview.ui.anim.transition.TransitionActivity
 import com.kiwilss.xview.ui.anim.viewanim.AnimViewActivity
@@ -60,6 +62,9 @@ class AnimActivity: BaseActivity(R.layout.activity_anim) {
         }
         btn_anim_transition.setOnClickListener {
             startActivity2<TransitionActivity>()
+        }
+        btn_anim_motion.setOnClickListener {
+            startActivity2<MotionActivity>()
         }
     }
 

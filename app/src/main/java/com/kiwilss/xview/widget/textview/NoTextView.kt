@@ -15,7 +15,7 @@ import kotlin.math.ceil
  * @time   : 2020/12/7
  * @desc   : {DESCRIPTION}
  */
-class NoTextView @JvmOverloads constructor(context: Context?,
+class NoTextView @JvmOverloads constructor(context: Context,
                  attrs: AttributeSet? = null,
                  defStyleAttr: Int = 0) : AppCompatTextView(context,attrs, defStyleAttr) {
 

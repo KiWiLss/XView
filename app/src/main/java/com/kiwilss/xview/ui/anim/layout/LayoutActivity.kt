@@ -5,7 +5,9 @@ import android.animation.LayoutTransition
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.annotation.SuppressLint
+import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
+import android.view.animation.ScaleAnimation
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_layout.*
@@ -35,18 +37,21 @@ class LayoutActivity : BaseActivity(R.layout.activity_layout) {
             reduceListener()
         }
 
+//        val loadAnimation = AnimationUtils.loadAnimation(this, R.anim.layout_anim)
+//        val layoutAnimationController1 =
+//            LayoutAnimationController(loadAnimation, 0.5f)
         //通过代码设置
-////设置过渡动画
-//        val scaleAnimation = ScaleAnimation(0f, 1f, 0f, 1f)
-//        scaleAnimation.duration = 2000
-////设置布局动画的显示属性,第一个参数是动画,第二个参数是每个控件完成动画的延迟,为0时不能设置执行顺序
-////设置布局动画的显示属性,第一个参数是动画,第二个参数是每个控件完成动画的延迟,为0时不能设置执行顺序
-//        val layoutAnimationController =
-//            LayoutAnimationController(scaleAnimation, 0.5f)
-////设置执行顺序,LayoutAnimationController.ORDER_NORMAL,顺序;ORDER_RANDOM,随机;ORDER_REVERSE逆序
-////设置执行顺序,LayoutAnimationController.ORDER_NORMAL,顺序;ORDER_RANDOM,随机;ORDER_REVERSE逆序
-//        layoutAnimationController.order = LayoutAnimationController.ORDER_NORMAL
-//        ll_layout_two.layoutAnimation = layoutAnimationController
+//设置过渡动画
+        val scaleAnimation = ScaleAnimation(0f, 1f, 0f, 1f)
+        scaleAnimation.duration = 2000
+//设置布局动画的显示属性,第一个参数是动画,第二个参数是每个控件完成动画的延迟,为0时不能设置执行顺序
+//设置布局动画的显示属性,第一个参数是动画,第二个参数是每个控件完成动画的延迟,为0时不能设置执行顺序
+        val layoutAnimationController =
+            LayoutAnimationController(scaleAnimation, 0.5f)
+//设置执行顺序,LayoutAnimationController.ORDER_NORMAL,顺序;ORDER_RANDOM,随机;ORDER_REVERSE逆序
+//设置执行顺序,LayoutAnimationController.ORDER_NORMAL,顺序;ORDER_RANDOM,随机;ORDER_REVERSE逆序
+        layoutAnimationController.order = LayoutAnimationController.ORDER_NORMAL
+        ll_layout_two.layoutAnimation = layoutAnimationController
 
 //        val layoutTransition = LayoutTransition()
 //        layoutTransition.setAnimator(LayoutTransition.APPEARING,getOutAnim())

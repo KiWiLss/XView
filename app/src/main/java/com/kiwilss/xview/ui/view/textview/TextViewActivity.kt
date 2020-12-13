@@ -36,9 +36,15 @@ class TextViewActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_textview)
 
+
+
         val src = "普通样式的文字测试富文本部分加粗"
         val target1 = "样式"
         val target2 = "测试"
+
+        ntv_textview_nopading.text = src
+
+
         //使用方法一
         val ss1 = SpannableStringUtils.Builder(src,target1)
             .isBold(true).build()

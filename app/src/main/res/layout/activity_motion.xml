@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:showPaths="true"
+    app:layoutDescription="@xml/activity_motion_scene"
+  >
+
+    <TextView
+        android:id="@+id/vStartStatus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="从上到下"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
