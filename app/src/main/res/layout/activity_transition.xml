@@ -21,7 +21,12 @@
             android:layout_height="wrap_content"
             android:text="过渡库一,只支持一个控件"
             android:textAllCaps="false"/>
-
+        <Button
+            android:id="@+id/btn_transition_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="过渡库二"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

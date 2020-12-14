@@ -192,9 +192,14 @@
         <activity android:name=".ui.anim.motionlayout.MotionLayoutActivity" android:label="MotionLayout"/>
         <activity android:name=".ui.anim.motionlayout.MotionActivity" android:label="Motion"/>
 
-
         <activity android:name=".ui.anim.transition.one.TransitionOneActivity" android:label="Activity跳转"/>
         <activity android:name=".ui.anim.transition.one.TransitionTwoActivity" android:label="Activity接收"/>
+
+        <activity android:name=".ui.anim.transition.two.TwoTransitionListActivity" android:label="库列表"/>
+        <activity android:name=".ui.anim.transition.two.transition.TransitionActivity1" android:label="Transitions"/>
+
+        <activity android:name=".ui.anim.transition.two.transition.TransitionActivity2" android:label="Explode"/>
+
     </application>
 
 </manifest>

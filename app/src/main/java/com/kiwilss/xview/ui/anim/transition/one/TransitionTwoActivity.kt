@@ -42,7 +42,8 @@ class TransitionTwoActivity: BaseActivity(R.layout.activity_transition_two) {
         LogUtils.e(value)
 
          mExitTransition = ActivityTransition.with(intent)
-            .to(iv_transition_two_one).to(tv_transition_two_name)
+            .to(iv_transition_two_one)
+             //.to(tv_transition_two_name)
             .start(savedInstanceState)
 
 

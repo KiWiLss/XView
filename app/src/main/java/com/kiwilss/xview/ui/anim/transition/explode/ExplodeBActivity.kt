@@ -22,8 +22,5 @@ class ExplodeBActivity : BaseActivity(R.layout.activity_exploade_b) {
     override fun initInterface() {
     }
 
-    override fun finish() {
-        super.finish()
 
-    }
 }

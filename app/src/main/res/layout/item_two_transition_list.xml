@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/m16">
+
+
+    <ImageView
+        android:id="@+id/iv_item_two_transition_list_icon"
+        android:layout_width="@dimen/m48"
+        android:layout_height="@dimen/m48"
+        android:src="@drawable/circle_24dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_item_two_transition_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/m10"/>
+</LinearLayout>

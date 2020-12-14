@@ -2,7 +2,11 @@ package com.kiwilss.xview.ui.anim.transition.explode
 
 import android.app.ActivityOptions
 import android.content.Intent
+import android.os.Bundle
+import android.transition.Transition
+import android.transition.TransitionInflater
 import android.view.View
+import android.view.Window
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_exploade_a.*
@@ -28,10 +32,12 @@ class ExplodeAActivity : BaseActivity(R.layout.activity_exploade_a) {
 
         //单个元素
         ivImage.setOnClickListener {
-                val bundle =
-                    ActivityOptions.makeSceneTransitionAnimation(this, ivImage, "activityTransform")
-                        .toBundle()
-                startActivity(Intent(this, ExplodeBActivity::class.java), bundle)
+//                val bundle =
+//                    ActivityOptions.makeSceneTransitionAnimation(this, ivImage, "activityTransform")
+//                        .toBundle()
+//                startActivity(Intent(this, ExplodeBActivity::class.java), bundle)
+
+            startActivity(Intent(this, ExplodeBActivity::class.java),ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
 
         }
         //多个元素
@@ -49,16 +55,21 @@ class ExplodeAActivity : BaseActivity(R.layout.activity_exploade_a) {
 
     }
 
+    override fun beforeSetContent(savedInstanceState: Bundle?) {
+        super.beforeSetContent(savedInstanceState)
+        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+        val explode: Transition =
+            TransitionInflater.from(this).inflateTransition(R.transition.activity_explode)
+//退出时使用
+        window.exitTransition = explode
+//第一次进入时使用
+        window.enterTransition = explode
+//再次进入时使用
+        window.reenterTransition = explode
+    }
+
     override fun initInterface() {
-        //window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-//        val explode: Transition =
-//            TransitionInflater.from(this).inflateTransition(R.transition.activity_explode)
-////退出时使用
-//        window.exitTransition = explode
-////第一次进入时使用
-//        window.enterTransition = explode
-////再次进入时使用
-//        window.reenterTransition = explode
+
     }
 
 

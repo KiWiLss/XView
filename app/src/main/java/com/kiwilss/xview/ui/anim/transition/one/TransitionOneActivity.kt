@@ -28,7 +28,8 @@ class TransitionOneActivity : BaseActivity(R.layout.activity_transition_one) {
             val intent = Intent(this,TransitionTwoActivity::class.java)
             intent.putExtra("key","value")
             ActivityTransitionLauncher.with(this)
-                .from(iv_transition_one_one).from(tv_transition_one_name)
+                .from(iv_transition_one_one)
+                //.from(tv_transition_one_name)
                 .launch(intent)
 
         }

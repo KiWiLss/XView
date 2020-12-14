@@ -1,14 +1,17 @@
 package com.kiwilss.xview.base
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
+import androidx.core.util.Pair
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
+import com.kiwilss.xview.help.TransitionHelper
+
 import com.kiwilss.xview.ui.loading.adapter.TitleAdapter
-import com.kiwilss.xview.utils.LogUtils
-import java.util.logging.Handler
+
 
 /**
  *@FileName: BaseActivity
@@ -20,6 +23,13 @@ import java.util.logging.Handler
 abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(contentLayoutId)
     , LoadingHelper.OnReloadListener{
 
+    val EXTRA_SAMPLE = "sample"
+    val EXTRA_TYPE = "type"
+    val TYPE_PROGRAMMATICALLY = 0
+    val TYPE_XML = 1
+
+
+
     override fun onReload() {
         //出错或是别的情况,再次点击时调用
 
@@ -28,6 +38,7 @@ abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(content
     lateinit var mLoadingHelper: LoadingHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        beforeSetContent(savedInstanceState)
         super.onCreate(savedInstanceState)
         //设置切换状态相关
         initLoadingHelp(initIsToolbar())
@@ -38,6 +49,10 @@ abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(content
         initEvent()
         //初始化数据
         initData()
+
+    }
+
+    open fun beforeSetContent(savedInstanceState: Bundle?) {
 
     }
 
@@ -57,6 +72,13 @@ abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(content
         }
         //监听重新点击
         mLoadingHelper.setOnReloadListener(this)
+    }
+
+    open fun transitionTo(i: Intent?) {
+        val pairs: Array<Pair<View, String>> = TransitionHelper.createSafeTransitionParticipants(this,true)
+        val transitionActivityOptions: ActivityOptionsCompat =
+            ActivityOptionsCompat.makeSceneTransitionAnimation(this, *pairs)
+        startActivity(i, transitionActivityOptions.toBundle())
     }
 
     abstract fun initData()
