@@ -49,10 +49,12 @@ class TransitionActivity1 : BaseActivity(R.layout.activity_transition1) {
         }
         //slide 跳转
         sample1_button3.setOnClickListener {
-
+            transitionTo(Intent(this,TransitionActivity3::class.java))
         }
         sample1_button4.setOnClickListener {
-
+            val intent = Intent(this,TransitionActivity3::class.java)
+            intent.putExtra(EXTRA_TYPE,TYPE_XML)
+            transitionTo(intent)
         }
     }
 
