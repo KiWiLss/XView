@@ -22,7 +22,8 @@ class ShareElementFgActivity: BaseActivity(R.layout.activity_share_element_fg) {
 
     override fun initEvent() {
         iv_layout_toolbar_back?.setOnClickListener {
-            finishAfterTransition()
+//            finishAfterTransition()
+            onBackPressed()
         }
     }
 
