@@ -21,8 +21,12 @@ class MotionActivity: BaseActivity(R.layout.activity_motion_all) {
         btn_motion_one.setOnClickListener {
             startActivity2<MotionLayoutActivity>()
         }
+        btn_motion_scrollview.setOnClickListener {
+            startActivity2<ScrollViewMotionActivity>()
+        }
     }
 
     override fun initInterface() {
+
     }
 }

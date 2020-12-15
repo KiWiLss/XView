@@ -203,6 +203,8 @@
 
         <activity android:name=".ui.anim.transition.two.shared.ShareElementActivity" android:label="ShareElementActivity"/>
         <activity android:name=".ui.anim.transition.two.shared.ShareElementFgActivity" android:label="ShareElementFg"/>
+        <activity android:name=".ui.anim.motionlayout.ScrollViewMotionActivity" android:label="ScrollViewMotionLayout"/>
+
 
 
     </application>

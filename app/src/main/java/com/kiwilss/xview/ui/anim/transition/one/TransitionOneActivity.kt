@@ -31,7 +31,6 @@ class TransitionOneActivity : BaseActivity(R.layout.activity_transition_one) {
                 .from(iv_transition_one_one)
                 //.from(tv_transition_one_name)
                 .launch(intent)
-
         }
 
 
