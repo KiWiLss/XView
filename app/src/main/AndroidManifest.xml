@@ -199,6 +199,9 @@
         <activity android:name=".ui.anim.transition.two.transition.TransitionActivity1" android:label="Transitions"/>
 
         <activity android:name=".ui.anim.transition.two.transition.TransitionActivity2" android:label="Explode"/>
+        <activity android:name=".ui.anim.transition.two.transition.TransitionActivity3" android:label="Slide"/>
+
+
 
     </application>
 

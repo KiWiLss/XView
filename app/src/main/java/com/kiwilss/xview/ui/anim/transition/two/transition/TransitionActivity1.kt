@@ -47,8 +47,13 @@ class TransitionActivity1 : BaseActivity(R.layout.activity_transition1) {
             intent.putExtra(EXTRA_TYPE,TYPE_XML)
             transitionTo(intent)
         }
+        //slide 跳转
+        sample1_button3.setOnClickListener {
 
+        }
+        sample1_button4.setOnClickListener {
 
+        }
     }
 
     override fun initInterface() {

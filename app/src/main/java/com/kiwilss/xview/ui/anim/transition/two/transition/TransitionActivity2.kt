@@ -36,6 +36,8 @@ class TransitionActivity2 : BaseActivity(R.layout.activity_transition2) {
             finishAfterTransition()
         }
 
+
+
     }
 
     override fun initInterface() {
