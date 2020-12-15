@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--上半部分是activity直接跳转共享动画-->
+        <ImageView
+            android:layout_width="@dimen/m100"
+            android:layout_height="@dimen/m100"
+            android:src="@drawable/circle_24dp"
+            android:transitionName="@string/square_red_name"
+            android:layout_gravity="center_horizontal"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionName="@string/square_blue_name"
+        android:text="Toolbar title is a shared element between MainActivity and this activity" />
+
+
+<!--    下半部分是fragment之间的跳转共享动画-->
+
+
+
+
+</LinearLayout>

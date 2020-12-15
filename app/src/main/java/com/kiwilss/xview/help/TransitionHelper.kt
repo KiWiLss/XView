@@ -57,7 +57,7 @@ internal object TransitionHelper {
         if (!(otherParticipants.size == 1
                     && otherParticipants[0] == null)
         ) {
-            participants.addAll(Arrays.asList(*otherParticipants))
+            participants.addAll(listOf(*otherParticipants))
         }
         return participants.toTypedArray()
     }

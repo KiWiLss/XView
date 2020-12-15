@@ -201,6 +201,8 @@
         <activity android:name=".ui.anim.transition.two.transition.TransitionActivity2" android:label="Explode"/>
         <activity android:name=".ui.anim.transition.two.transition.TransitionActivity3" android:label="Slide"/>
 
+        <activity android:name=".ui.anim.transition.two.shared.ShareElementActivity" android:label="ShareElementActivity"/>
+        <activity android:name=".ui.anim.transition.two.shared.ShareElementFgActivity" android:label="ShareElementFg"/>
 
 
     </application>
