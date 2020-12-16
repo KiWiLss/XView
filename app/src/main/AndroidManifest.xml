@@ -205,7 +205,7 @@
         <activity android:name=".ui.anim.transition.two.shared.ShareElementFgActivity" android:label="ShareElementFg"/>
         <activity android:name=".ui.anim.motionlayout.ScrollViewMotionActivity" android:label="ScrollViewMotionLayout"/>
 
-
+        <activity android:name=".ui.captcha.CaptchaActivity" android:label="行为式验证"/>
 
     </application>
 
