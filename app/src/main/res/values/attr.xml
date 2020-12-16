@@ -86,4 +86,12 @@
     <declare-styleable name="NoPaddingTextView">
         <attr name="textSize2" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="SwipeCaptchaView">
+        <attr name="captchaWidth" format="dimension"/>
+        <attr name="captchaHeight" format="dimension"/>
+        <attr name="matchDeviation" format="dimension"/>
+    </declare-styleable>
+
+
 </resources>

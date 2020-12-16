@@ -1,4 +1,19 @@
 package com.kiwilss.xview.ui.captcha.puzzle
+
+import android.animation.ValueAnimator
+import android.content.Context
+import android.graphics.*
+import android.renderscript.Allocation
+import android.renderscript.Element
+import android.renderscript.RenderScript
+import android.renderscript.ScriptIntrinsicBlur
+import android.util.AttributeSet
+import android.view.View
+import com.kiwilss.xview.utils.BitmapUtils
+import com.kiwilss.xview.utils.RandomUtils
+import kotlin.properties.Delegates
+import kotlin.random.Random
+
 /*
  * Date: 2020/5/5 19:59
  * Author: wsdydeni

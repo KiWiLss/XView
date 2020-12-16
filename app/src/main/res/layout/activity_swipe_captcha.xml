@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.kiwilss.xview.ui.captcha.swipe.SwipeCaptchaView
+        android:id="@+id/swipeCaptchaView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m164"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_slide_puzzle_test"
+        app:captchaHeight="30dp"
+        app:captchaWidth="30dp"
+        app:matchDeviation="@dimen/m20"/>
+
+    <SeekBar
+        android:id="@+id/dragBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/swipeCaptchaView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:progressDrawable="@drawable/dragbg"
+        android:thumb="@drawable/ic_slide"/>
+
+    <Button
+        android:id="@+id/btnChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="老板换码"
+        android:layout_marginTop="@dimen/m200"/>
+</RelativeLayout>

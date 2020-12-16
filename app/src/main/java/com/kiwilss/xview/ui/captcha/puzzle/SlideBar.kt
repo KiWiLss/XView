@@ -1,4 +1,17 @@
 package com.kiwilss.xview.ui.captcha.puzzle
+
+import android.animation.ValueAnimator
+import android.annotation.SuppressLint
+import android.content.Context
+import android.graphics.*
+import android.util.AttributeSet
+import android.view.MotionEvent
+import android.view.View
+import com.kiwilss.xview.R
+import com.kiwilss.xview.utils.BitmapUtils
+import com.kiwilss.xview.utils.PixelUtils
+import kotlin.properties.Delegates
+
 /*
  * Date: 2020/5/5 19:59
  * Author: wsdydeni
@@ -49,14 +62,15 @@ class SlideBar : View {
         super.onDraw(canvas)
         mBitmapHeight = height / 5 * 3
         mBitmapWidth = width / 8
-        mBitmap = BitmapUtils.getNewBitmap(mBitmap,mBitmapWidth,mBitmapHeight)
-        backgroundRect.set(0f, height.toFloat() / 5 * 2, width.toFloat(), height.toFloat() / 5 * 3)
+        //mBitmap = BitmapUtils.getNewBitmap(mBitmap,mBitmap.width,mBitmap.height)
+        backgroundRect.set(0f, 0f, width.toFloat(), height.toFloat())
         //绘制拖动条背景
-        canvas.drawRoundRect(backgroundRect,PixelUtils.dp2pxF(context,5f),PixelUtils.dp2pxF(context,5f),mPaint)
+        canvas.drawRoundRect(backgroundRect,
+            PixelUtils.dp2pxF(context,10f),PixelUtils.dp2pxF(context,10f),mPaint)
         if(mDistance >= width - mBitmapWidth ) mDistance = width - mBitmapWidth
         if(mDistance <= 0) mDistance = 0
         //绘制拖动图片
-        canvas.drawBitmap(mBitmap, mDistance.toFloat(), ((height - mBitmapHeight) / 2).toFloat(),mPaint)
+        canvas.drawBitmap(mBitmap, mDistance.toFloat(), ((height - mBitmap.height) / 2).toFloat(),mPaint)
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -84,7 +98,7 @@ class SlideBar : View {
         mPaint.style = Paint.Style.FILL
         mPaint.color = Color.parseColor("#E7E7E7")
         backgroundRect = RectF()
-        mBitmap = BitmapUtils.getBitmap(context,R.drawable.ic_slide)
+        mBitmap = BitmapUtils.getBitmap(context, R.drawable.ic_slide)
     }
 
     constructor(context: Context) : super(context) { initView() }

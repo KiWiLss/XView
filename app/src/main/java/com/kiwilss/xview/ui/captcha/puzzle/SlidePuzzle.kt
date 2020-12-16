@@ -1,4 +1,17 @@
 package com.kiwilss.xview.ui.captcha.puzzle
+
+import android.animation.ValueAnimator
+import android.content.Context
+import android.graphics.Bitmap
+import android.util.AttributeSet
+import android.view.View
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.animation.doOnEnd
+import com.kiwilss.xview.R
+import kotlinx.android.synthetic.main.layout_slide_puzzle.view.*
+import kotlin.math.abs
+
 /*
  * Date: 2020/5/5 19:59
  * Author: wsdydeni
@@ -32,7 +45,7 @@ class SlidePuzzle : ConstraintLayout {
         }else {
             context.resources.getText(R.string.failure_text)
         }
-        mTipText.visibility = View.VISIBLE
+        mTipText.visibility = View.GONE
         ValueAnimator.ofFloat(0.8f,0.72f).apply {
             addUpdateListener { mTipText.translationY = it.animatedValue as Float }
             duration = 1500

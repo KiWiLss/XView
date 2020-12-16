@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.kiwilss.xview.ui.captcha.puzzle.Puzzle
+        android:id="@+id/puzzle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m64"
+       />
+
+    <TextView
+        android:id="@+id/tips_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:background="@color/blue_74D3FF"
+        tools:targetApi="o" />
+
+    <com.kiwilss.xview.ui.captcha.puzzle.SlideBar
+        android:id="@+id/slide_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m25"
+        android:layout_marginTop="@dimen/m16"
+
+       />
+</LinearLayout>

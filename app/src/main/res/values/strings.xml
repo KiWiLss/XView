@@ -121,5 +121,8 @@
     <string name="square_blue_name">square_blue</string>
     <string name="square_green_name">square_green</string>
 
+    <string name="success_text">拼图成功: 耗时0.12秒,打败了10%的用户!</string>
+    <string name="failure_text">拼图失败: 请重新拖动</string>
+
 
 </resources>

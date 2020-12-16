@@ -206,6 +206,9 @@
         <activity android:name=".ui.anim.motionlayout.ScrollViewMotionActivity" android:label="ScrollViewMotionLayout"/>
 
         <activity android:name=".ui.captcha.CaptchaActivity" android:label="行为式验证"/>
+        <activity android:name=".ui.captcha.puzzle.PuzzleActivity" android:label="滑块拼图"/>
+        <activity android:name=".ui.captcha.swipe.SwipePuzzleActivity" android:label="滑块拼图"/>
+
 
     </application>
 
