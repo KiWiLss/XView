@@ -6,6 +6,7 @@ import android.widget.Toast
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.ui.click.aop.SingleClick
+import com.kiwilss.xview.ui.click.aop.XClickUtil
 import com.kiwilss.xview.ui.click.java.ClickProxy
 import com.kiwilss.xview.ui.click.java.CustomClickListener
 import com.kiwilss.xview.ui.click.kotlin.click
@@ -61,7 +62,12 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
         btn_click_all_aop1.setOnClickListener(object : View.OnClickListener {
 
             override fun onClick(p0: View?) {
-                LogUtils.e("aop")
+                if (XClickUtil.isFastDoubleClick(p0,1000)) {
+                    LogUtils.e("多次点击")
+                }else{
+                    LogUtils.e("aop")
+                }
+
             }
 
         })
@@ -116,8 +122,12 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
     }
 
     override fun onClick(p0: View?) {
-     
+        if (XClickUtil.isFastDoubleClick(p0,1000)) {
+            LogUtils.e("多次点击--")
+        }else{
             LogUtils.e("已经登录过了")
+        }
+
 
     }
 }
