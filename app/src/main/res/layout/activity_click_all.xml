@@ -28,6 +28,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="点击4代理"/>
+
+        <Button
+            android:id="@+id/btn_click_all_aop1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击aop1"/>
+        <Button
+            android:id="@+id/btn_click_all_aop2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击aop2"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_click_all_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="倒计时功能"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_click_all_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start"
+                />
+            <Button
+                android:id="@+id/btn_click_all_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="restart"
+                />
+            <Button
+                android:id="@+id/btn_click_all_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pause"
+                />
+            <Button
+                android:id="@+id/btn_click_all_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stop"
+                />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

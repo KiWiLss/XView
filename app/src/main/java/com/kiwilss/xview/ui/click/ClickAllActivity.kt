@@ -9,6 +9,9 @@ import com.kiwilss.xview.ui.click.java.CustomClickListener
 import com.kiwilss.xview.ui.click.kotlin.click
 import com.kiwilss.xview.ui.click.kotlin.clickWithTrigger
 import com.kiwilss.xview.ui.click.kotlin.withTrigger
+import com.kiwilss.xview.ui.click.time.LCountDownTimer
+import com.kiwilss.xview.ui.click.time.TimerListener
+import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_click_all.*
 
 /**
@@ -18,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_click_all.*
  * @time   : 2020/12/17
  * @desc   : {DESCRIPTION}
  */
-class ClickAllActivity: BaseActivity(R.layout.activity_click_all) {
+class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClickListener {
     override fun initData() {
 
     }
@@ -31,7 +34,7 @@ class ClickAllActivity: BaseActivity(R.layout.activity_click_all) {
             Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show()
         }
 
-        btn_click_all_three.setOnClickListener(object : CustomClickListener(){
+        btn_click_all_three.setOnClickListener(object : CustomClickListener() {
             override fun onSingleClick(view: View?) {
                 Toast.makeText(this@ClickAllActivity, "单击", Toast.LENGTH_SHORT).show()
             }
@@ -50,10 +53,64 @@ class ClickAllActivity: BaseActivity(R.layout.activity_click_all) {
         }))
 
 
+        btn_click_all_aop1.setOnClickListener(object : View.OnClickListener {
+
+            override fun onClick(p0: View?) {
+                LogUtils.e("aop")
+            }
+
+        })
+
+        btn_click_all_aop2.setOnClickListener(this)
 
     }
 
+     var mCountTime: LCountDownTimer? = null
     override fun initInterface() {
+        //倒计时相关
+        mCountTime = LCountDownTimer(60*1000 + 100, 1000)
 
+        btn_click_all_start.setOnClickListener {
+            mCountTime?.start()
+        }
+
+        btn_click_all_restart.setOnClickListener {
+            mCountTime?.resume()
+        }
+
+        btn_click_all_pause.setOnClickListener {
+            mCountTime?.pause()
+        }
+        btn_click_all_stop.setOnClickListener {
+            mCountTime?.cancel()
+        }
+
+        mCountTime?.setCountDownListener(object : TimerListener{
+            override fun onFinish() {
+                LogUtils.e("onFinish")
+            }
+
+            override fun onTick(millisUntilFinished: Long) {
+                tv_click_all_num.text = "${millisUntilFinished / 1000}, 倒计时"
+                LogUtils.e("onTick--${millisUntilFinished/1000}")
+            }
+
+            override fun onStart() {
+                LogUtils.e("onStart")
+            }
+
+        })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mCountTime?.run {
+            cancel()
+        }
+        mCountTime = null
+    }
+
+    override fun onClick(p0: View?) {
+        LogUtils.e("aop22")
     }
 }
