@@ -14,5 +14,6 @@
         android:id="@+id/btn_captcha_puzzle2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="滑块验证2"/>
+        android:text="滑块验证仿斗鱼"/>
+
 </LinearLayout>

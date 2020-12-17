@@ -209,6 +209,7 @@
         <activity android:name=".ui.captcha.puzzle.PuzzleActivity" android:label="滑块拼图"/>
         <activity android:name=".ui.captcha.swipe.SwipePuzzleActivity" android:label="滑块拼图"/>
 
+        <activity android:name=".ui.click.ClickAllActivity" android:label="点击限制"/>
 
     </application>
 

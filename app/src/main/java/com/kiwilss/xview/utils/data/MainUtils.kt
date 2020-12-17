@@ -17,6 +17,7 @@ import com.kiwilss.xview.ui.anim.AnimActivity
 import com.kiwilss.xview.ui.anim.layout.LayoutActivity
 import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.captcha.CaptchaActivity
+import com.kiwilss.xview.ui.click.ClickAllActivity
 import com.kiwilss.xview.ui.copy.MTActivity
 import com.kiwilss.xview.ui.glide.glidej.GlideJActivity
 import com.kiwilss.xview.ui.indexbar.IndexBarActivity
@@ -83,7 +84,9 @@ object MainUtils {
             MainBean("水印", WatermarkActivity::class.java),
             MainBean("EditText", EditTextActivity::class.java),
             MainBean("快捷菜单", ShortcutsActivity::class.java),
-            MainBean("行为式验证", CaptchaActivity::class.java)
+            MainBean("行为式验证", CaptchaActivity::class.java),
+            MainBean("点击限制", ClickAllActivity::class.java)
+
         )
 
 
