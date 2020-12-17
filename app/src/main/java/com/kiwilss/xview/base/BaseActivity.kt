@@ -1,5 +1,6 @@
 package com.kiwilss.xview.base
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -9,8 +10,10 @@ import androidx.core.util.Pair
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.kiwilss.xview.help.TransitionHelper
+import com.kiwilss.xview.ui.click.aop.SingleClick
 
 import com.kiwilss.xview.ui.loading.adapter.TitleAdapter
+import com.kiwilss.xview.utils.LogUtils
 
 
 /**
@@ -56,9 +59,24 @@ abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(content
 
     }
 
+//    var isLogin = false
     open fun initInterface2(savedInstanceState: Bundle?) {
-
+//        if (javaClass.isAnnotationPresent(SingleClick::class.java)){
+//            val singleClick = javaClass.getAnnotation(SingleClick::class.java)
+//            singleClick?.run {
+//                LogUtils.e("---single--$value")
+//                isLogin = true
+//            }
+//        }
     }
+
+//    fun isLogin(action: ()->Unit){
+//        if (isLogin){
+//            action.invoke()
+//        }else{
+//            LogUtils.e("去登录")
+//        }
+//    }
 
     //控制是否显示标题栏
     open fun initIsToolbar(): Boolean = true

@@ -1,9 +1,11 @@
 package com.kiwilss.xview.ui.click
 
+import android.content.Context
 import android.view.View
 import android.widget.Toast
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.ui.click.aop.SingleClick
 import com.kiwilss.xview.ui.click.java.ClickProxy
 import com.kiwilss.xview.ui.click.java.CustomClickListener
 import com.kiwilss.xview.ui.click.kotlin.click
@@ -21,10 +23,13 @@ import kotlinx.android.synthetic.main.activity_click_all.*
  * @time   : 2020/12/17
  * @desc   : {DESCRIPTION}
  */
+
+@SingleClick(value = 1000)
 class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClickListener {
     override fun initData() {
 
     }
+
 
     override fun initEvent() {
         btn_click_all_one.clickWithTrigger {
@@ -111,6 +116,10 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
     }
 
     override fun onClick(p0: View?) {
-        LogUtils.e("aop22")
+     
+            LogUtils.e("已经登录过了")
+
     }
 }
+
+
