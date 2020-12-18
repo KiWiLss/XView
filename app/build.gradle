@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 //apply plugin: 'android-aspectjx'
-
+//apply plugin: 'com.jakewharton.hugo' // 应用 Hugo 插件
 
 //实例化统一版本管理器
 def app = rootProject.ext.android
@@ -86,8 +86,9 @@ android {
 }
 
 //aspectjx {
-//    enabled true
-//    exclude 'com.google','com.taobao'
+//    //enabled true
+//    //exclude 'com.google','com.taobao'
+//    exclude 'androidx','com.google','com.squareup','com.alipay','org.apache'
 //}
 
 dependencies {
@@ -164,7 +165,9 @@ dependencies {
     //过渡动画相关
     implementation 'com.kogitune:pre-lollipop-activity-transition:1.3.3'
     //aop
-    //implementation 'org.aspectj:aspectjrt:1.8.9'
+//    implementation 'org.aspectj:aspectjrt:1.8.5'
 //    api 'org.aspectj:aspectjrt:1.9.5'
+//    implementation 'com.github.zhujiang521:AndroidAOP:1.1.1'
+
 
 }

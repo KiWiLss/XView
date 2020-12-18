@@ -25,7 +25,7 @@ import kotlinx.android.synthetic.main.activity_click_all.*
  * @desc   : {DESCRIPTION}
  */
 
-@SingleClick(value = 1000)
+
 class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClickListener {
     override fun initData() {
 
@@ -60,17 +60,18 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
 
 
         btn_click_all_aop1.setOnClickListener(object : View.OnClickListener {
-
+            @SingleClick
             override fun onClick(p0: View?) {
-                if (XClickUtil.isFastDoubleClick(p0,1000)) {
-                    LogUtils.e("多次点击")
-                }else{
-                    LogUtils.e("aop")
-                }
-
+//                if (XClickUtil.isFastDoubleClick(p0,1000)) {
+//                    LogUtils.e("多次点击")
+//                }else{
+//                    LogUtils.e("aop")
+//                }
+                LogUtils.e("多次点击")
             }
 
         })
+
 
         btn_click_all_aop2.setOnClickListener(this)
 
@@ -121,13 +122,15 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
         mCountTime = null
     }
 
-    override fun onClick(p0: View?) {
-        if (XClickUtil.isFastDoubleClick(p0,1000)) {
-            LogUtils.e("多次点击--")
-        }else{
-            LogUtils.e("已经登录过了")
-        }
 
+    @SingleClick(2000)
+    override fun onClick(p0: View?) {
+//        if (XClickUtil.isFastDoubleClick(p0,1000)) {
+//            LogUtils.e("多次点击--")
+//        }else{
+//            LogUtils.e("已经登录过了")
+//        }
+        LogUtils.e("使用了SingleClick")
 
     }
 }

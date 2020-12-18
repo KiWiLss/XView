@@ -1,7 +1,9 @@
 package com.kiwilss.xview.ui.click.aop;
 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
  * @author : Lss Administrator
@@ -11,7 +13,7 @@ import java.lang.annotation.RetentionPolicy;
  * @desc : {DESCRIPTION}
  */
 @Retention(RetentionPolicy.RUNTIME)
-//@Target(ElementType.FIELD)
+@Target(ElementType.METHOD)
 public @interface SingleClick {
     //点击间隔时间
     long value() default 1000;

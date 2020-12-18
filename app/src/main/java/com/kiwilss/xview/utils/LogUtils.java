@@ -42,6 +42,7 @@ public class LogUtils {
     public static final String TAG = "MMM";
     public static boolean isLog = true;
 
+
     public static void e(String content){
        e(content,TAG,"");
     }

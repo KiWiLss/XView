@@ -94,7 +94,6 @@ class App : Application(){
             }
 
             override fun onActivityDestroyed(p0: Activity) {
-                LogUtils.e("onActivityDestroyed")
                 //ActivityManager.instance.finishActivity(p0)
                 ActivityManager.instance.removeActivity(p0)
             }
@@ -108,10 +107,9 @@ class App : Application(){
             }
 
             override fun onActivityCreated(p0: Activity, p1: Bundle?) {
-                LogUtils.e("onActivitycreate")
                 ActivityManager.instance.addActivity(p0)
                 //初始化标题栏
-                initToolbar(p0,p1)
+                //initToolbar(p0,p1)
             }
 
 
