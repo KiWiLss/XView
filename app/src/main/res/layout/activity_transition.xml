@@ -28,5 +28,18 @@
             android:text="过渡库二"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_transition_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="过渡demo单一元素"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_transition_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="过渡demo列表元素"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

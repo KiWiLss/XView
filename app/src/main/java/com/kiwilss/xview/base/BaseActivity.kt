@@ -99,6 +99,13 @@ abstract class BaseActivity(contentLayoutId: Int = 0): AppCompatActivity(content
         startActivity(i, transitionActivityOptions.toBundle())
     }
 
+    open fun transitionTo(i: Intent?,vararg pairs: Pair<View, String>) {
+        //val pairs: Array<Pair<View, String>> = TransitionHelper.createSafeTransitionParticipants(this,true)
+        val transitionActivityOptions: ActivityOptionsCompat =
+            ActivityOptionsCompat.makeSceneTransitionAnimation(this, *pairs)
+        startActivity(i, transitionActivityOptions.toBundle())
+    }
+
     abstract fun initData()
 
     abstract fun initEvent()

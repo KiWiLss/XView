@@ -40,7 +40,12 @@
                     android:layout_height="wrap_content"
                     android:text="改变光标位置"
                     />
-
+                <Button
+                    android:id="@+id/btn_edittext_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="emoji"
+                    />
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout

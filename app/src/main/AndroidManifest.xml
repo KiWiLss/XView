@@ -204,12 +204,18 @@
         <activity android:name=".ui.anim.transition.two.shared.ShareElementActivity" android:label="ShareElementActivity"/>
         <activity android:name=".ui.anim.transition.two.shared.ShareElementFgActivity" android:label="ShareElementFg"/>
         <activity android:name=".ui.anim.motionlayout.ScrollViewMotionActivity" android:label="ScrollViewMotionLayout"/>
+        <activity android:name=".ui.anim.transition.test.TransitionDemoActivity" android:label="demo单一元素"/>
+        <activity android:name=".ui.anim.transition.test.TransitionDemoDetailActivity" android:label="元素详情页"/>
+        <activity android:name=".ui.anim.transition.test.TransitionDemoListActivity" android:label="demo列表"/>
 
         <activity android:name=".ui.captcha.CaptchaActivity" android:label="行为式验证"/>
         <activity android:name=".ui.captcha.puzzle.PuzzleActivity" android:label="滑块拼图"/>
         <activity android:name=".ui.captcha.swipe.SwipePuzzleActivity" android:label="滑块拼图"/>
 
         <activity android:name=".ui.click.ClickAllActivity" android:label="点击限制"/>
+
+
+
 
     </application>
 

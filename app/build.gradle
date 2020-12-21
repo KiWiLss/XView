@@ -169,5 +169,6 @@ dependencies {
 //    api 'org.aspectj:aspectjrt:1.9.5'
 //    implementation 'com.github.zhujiang521:AndroidAOP:1.1.1'
 
+    implementation 'com.freddy:kulakeyboard_lib:1.0.1'
 
 }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    标题相关部分-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m45"
+    android:background="@color/blue_74D3FF">
+
+    <ImageView
+        android:id="@+id/iv_transition_demo_detail_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_navigation_back_white"
+         />
+
+
+    <ImageView
+        android:id="@+id/iv_transition_demo_detail_header"
+        android:layout_width="@dimen/m35"
+        android:layout_height="@dimen/m35"
+        android:src="@mipmap/default_head_icon"
+        android:layout_marginStart="@dimen/m35"
+        android:layout_centerVertical="true"
+        android:transitionName="@string/transition_demo_header"/>
+
+
+    <TextView
+        android:id="@+id/tv_transition_demo_detail_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户昵称"
+        android:textSize="@dimen/m14"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/iv_transition_demo_detail_header"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/m15"
+        android:transitionName="@string/transition_demo_nickname"/>
+</RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_transition_demo_detial_pic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m300"
+        android:src="@mipmap/wuhuang"
+        android:scaleType="centerCrop"
+        android:transitionName="@string/transition_demo_pic"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试过渡元素,详情界面"
+        android:layout_marginTop="@dimen/m15"/>
+
+
+
+</LinearLayout>

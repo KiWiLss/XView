@@ -4,6 +4,8 @@ import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.ui.anim.transition.explode.ExplodeAActivity
 import com.kiwilss.xview.ui.anim.transition.one.TransitionOneActivity
+import com.kiwilss.xview.ui.anim.transition.test.TransitionDemoActivity
+import com.kiwilss.xview.ui.anim.transition.test.TransitionDemoListActivity
 import com.kiwilss.xview.ui.anim.transition.two.TwoTransitionListActivity
 import com.kiwilss.xview.utils.ktx.IntentKtx.startActivity2
 import kotlinx.android.synthetic.main.activity_transition.*
@@ -29,6 +31,12 @@ class TransitionActivity: BaseActivity(R.layout.activity_transition) {
         }
         btn_transition_two.setOnClickListener {
             startActivity2<TwoTransitionListActivity>()
+        }
+        btn_transition_three.setOnClickListener {
+            startActivity2<TransitionDemoActivity>()
+        }
+        btn_transition_four.setOnClickListener {
+            startActivity2<TransitionDemoListActivity>()
         }
     }
 
