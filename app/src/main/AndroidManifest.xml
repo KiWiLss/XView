@@ -214,7 +214,7 @@
 
         <activity android:name=".ui.click.ClickAllActivity" android:label="点击限制"/>
 
-
+        <activity android:name=".ui.picker.PickerAllActivity" android:label="选择器相关"/>
 
 
     </application>

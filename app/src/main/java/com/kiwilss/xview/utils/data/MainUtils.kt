@@ -24,6 +24,7 @@ import com.kiwilss.xview.ui.indexbar.IndexBarActivity
 import com.kiwilss.xview.ui.keyboard.KeyboardActivity
 import com.kiwilss.xview.ui.loading.LoadingActivity
 import com.kiwilss.xview.ui.optimization.viewstub.ViewStubActivity
+import com.kiwilss.xview.ui.picker.PickerAllActivity
 import com.kiwilss.xview.ui.ripple.RippleActivity
 import com.kiwilss.xview.ui.shape.ShapeViewActivity
 import com.kiwilss.xview.ui.shortcuts.ShortcutsActivity
@@ -85,7 +86,8 @@ object MainUtils {
             MainBean("EditText", EditTextActivity::class.java),
             MainBean("快捷菜单", ShortcutsActivity::class.java),
             MainBean("行为式验证", CaptchaActivity::class.java),
-            MainBean("点击限制", ClickAllActivity::class.java)
+            MainBean("点击限制", ClickAllActivity::class.java),
+            MainBean("选择器", PickerAllActivity::class.java)
 
         )
 
