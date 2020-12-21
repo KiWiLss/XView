@@ -8,9 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.kiwilss.xview.R
 import com.kiwilss.xview.ui.anim.transition.bean.Sample
+import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.fg_share_element1.*
 
 /**
@@ -60,7 +62,14 @@ class ShareFg1 : Fragment() {
             addNextFragment(sample, square_blue, true)
         }
 
+        //监控返回,什么都不写相当于拦截返回
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object :OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                LogUtils.e("onback")
+                activity?.finishAfterTransition()
+            }
 
+        })
     }
 
     private fun addNextFragment(sample: Sample, squareBlue: ImageView?, overlap: Boolean) {

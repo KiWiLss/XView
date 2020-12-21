@@ -3,6 +3,8 @@ package com.kiwilss.xview.ui.anim.transition.two.shared
 import android.transition.ChangeBounds
 import android.transition.Slide
 import android.view.Gravity
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.ui.anim.transition.bean.Sample
@@ -47,6 +49,12 @@ class ShareElementFgActivity: BaseActivity(R.layout.activity_share_element_fg) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fl_share_elementfg_fg,fragment)
             .commit()
+
+//        supportFragmentManager.commit {
+//            add<ShareFg1>(R.id.fl_share_elementfg_fg)
+//        }
+
+
 
     }
 }
