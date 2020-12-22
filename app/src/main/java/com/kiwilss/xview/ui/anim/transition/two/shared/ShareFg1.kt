@@ -62,6 +62,7 @@ class ShareFg1 : Fragment() {
             addNextFragment(sample, square_blue, true)
         }
 
+//        requireActivity().finishAfterTransition()
         //监控返回,什么都不写相当于拦截返回
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object :OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
