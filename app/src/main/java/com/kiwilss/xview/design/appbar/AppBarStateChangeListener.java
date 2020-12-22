@@ -34,6 +34,12 @@ public abstract class AppBarStateChangeListener implements AppBarLayout.OnOffset
     }
   
     public abstract void onStateChanged(AppBarLayout appBarLayout, State state,int i);
+
+    /**
+     * 任意滚动位置都可以监听
+     * @param appBarLayout
+     * @param i
+     */
     public void onStateChangedAny(AppBarLayout appBarLayout, int i){
 
     }
