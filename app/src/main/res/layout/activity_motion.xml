@@ -13,10 +13,12 @@
         android:id="@+id/vStartStatus"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:background="@color/colorPrimary"
         android:text="从上到下"
         android:textColor="@color/white"
-        android:background="@color/colorPrimary"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        />
+
 
 
 

@@ -1,7 +1,5 @@
 package com.kiwilss.xview.ui.click.java;
 
-import android.view.View;
-
 /**
  * @author : Lss Administrator
  * @FileName: ClickUtils
@@ -22,17 +20,6 @@ public class ClickUtils {
         lastClickTime = currentClickTime;
         return flag;
     }
-
-
-    public void test(View view){
-        view.setOnClickListener(new ClickProxy(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        }));
-    }
-
 
 }
 

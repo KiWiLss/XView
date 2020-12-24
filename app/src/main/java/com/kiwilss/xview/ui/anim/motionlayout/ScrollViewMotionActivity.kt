@@ -11,6 +11,7 @@ import com.kiwilss.xview.base.BaseActivity
  * @desc   : {DESCRIPTION}
  */
 class ScrollViewMotionActivity: BaseActivity(R.layout.activity_scrollview_motionlayout) {
+
     override fun initData() {
 
     }
