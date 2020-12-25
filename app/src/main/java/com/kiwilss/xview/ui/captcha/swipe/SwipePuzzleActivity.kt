@@ -30,7 +30,7 @@ class SwipePuzzleActivity: BaseActivity(R.layout.activity_swipe_captcha) {
 
     override fun initEvent() {
         btnChange.setOnClickListener {
-            swipeCaptchaView.createCaptcha();
+            swipeCaptchaView.createCaptcha()
             dragBar.setEnabled(true)
             dragBar.setProgress(0)
         }
@@ -76,19 +76,20 @@ class SwipePuzzleActivity: BaseActivity(R.layout.activity_swipe_captcha) {
         })
 
 
+
         //测试从网络加载图片是否ok
-        Glide.with(this).asBitmap()
-            .load("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1733226354,2596892520&fm=26&gp=0.jpg")
-            .into(object : CustomTarget<Bitmap>(){
-                override fun onLoadCleared(placeholder: Drawable?) {
-                }
-
-                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-                    swipeCaptchaView.setImageBitmap(resource)
-                    swipeCaptchaView.createCaptcha()
-                }
-
-            })
+//        Glide.with(this).asBitmap()
+//            .load("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1733226354,2596892520&fm=26&gp=0.jpg")
+//            .into(object : CustomTarget<Bitmap>(){
+//                override fun onLoadCleared(placeholder: Drawable?) {
+//                }
+//
+//                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+//                    swipeCaptchaView.setImageBitmap(resource)
+//                    swipeCaptchaView.createCaptcha()
+//                }
+//
+//            })
 
     }
 }

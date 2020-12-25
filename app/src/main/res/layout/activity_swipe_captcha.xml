@@ -19,12 +19,17 @@
     <SeekBar
         android:id="@+id/dragBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/m25"
+        android:layout_marginHorizontal="@dimen/m20"
         android:layout_below="@id/swipeCaptchaView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:progressDrawable="@drawable/dragbg"
-        android:thumb="@drawable/ic_slide"/>
+        android:thumb="@mipmap/sb_dialog_video"
+        android:paddingStart="@dimen/m0"
+        android:paddingEnd="@dimen/m0"
+        android:thumbOffset="@dimen/m0"
+        />
 
     <Button
         android:id="@+id/btnChange"
@@ -32,5 +37,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:text="老板换码"
-        android:layout_marginTop="@dimen/m200"/>
+        android:layout_marginTop="@dimen/m250"/>
 </RelativeLayout>
