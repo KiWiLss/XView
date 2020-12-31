@@ -1,12 +1,9 @@
 package com.kiwilss.xview.ui.click
 
-import android.content.Context
 import android.view.View
 import android.widget.Toast
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
-import com.kiwilss.xview.ui.click.aop.SingleClick
-import com.kiwilss.xview.ui.click.aop.XClickUtil
 import com.kiwilss.xview.ui.click.java.ClickProxy
 import com.kiwilss.xview.ui.click.java.CustomClickListener
 import com.kiwilss.xview.ui.click.kotlin.click
@@ -15,6 +12,7 @@ import com.kiwilss.xview.ui.click.kotlin.withTrigger
 import com.kiwilss.xview.ui.click.time.LCountDownTimer
 import com.kiwilss.xview.ui.click.time.TimerListener
 import com.kiwilss.xview.utils.LogUtils
+import com.xuexiang.xaop.annotation.SingleClick
 import kotlinx.android.synthetic.main.activity_click_all.*
 
 /**
@@ -57,6 +55,7 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
         }, ClickProxy.IAgain {
             Toast.makeText(this@ClickAllActivity, "再次点击", Toast.LENGTH_SHORT).show()
         }))
+
 
 
         btn_click_all_aop1.setOnClickListener(object : View.OnClickListener {
@@ -123,7 +122,7 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
     }
 
 
-    @SingleClick(2000)
+
     override fun onClick(p0: View?) {
 //        if (XClickUtil.isFastDoubleClick(p0,1000)) {
 //            LogUtils.e("多次点击--")

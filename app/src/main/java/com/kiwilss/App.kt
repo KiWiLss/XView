@@ -14,6 +14,7 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
@@ -25,6 +26,7 @@ import com.kiwilss.xview.help.ActivityManager
 import com.kiwilss.xview.ui.loading.adapter.EmptyAdapter
 import com.kiwilss.xview.ui.loading.adapter.LoadingAdapter
 import com.kiwilss.xview.utils.LogUtils
+import com.xuexiang.xaop.XAOP
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import top.wefor.circularanim.CircularAnim
 import top.wefor.circularanim.CircularAnim.OnAnimatorDeployListener
@@ -47,6 +49,11 @@ class App : Application(){
         initStatus()
         //初始化转场动画设置
         initCircularAnim()
+
+        //aop初始化
+        XAOP.init(this) //初始化插件
+        XAOP.debug(true) //日志打印切片开启
+        XAOP.setPriority(Log.INFO) //设置日志打印的等级,默认为0
     }
 
     private fun initCircularAnim() {

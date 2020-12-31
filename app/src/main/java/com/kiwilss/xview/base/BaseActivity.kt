@@ -1,6 +1,5 @@
 package com.kiwilss.xview.base
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -10,10 +9,8 @@ import androidx.core.util.Pair
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.kiwilss.xview.help.TransitionHelper
-import com.kiwilss.xview.ui.click.aop.SingleClick
 
 import com.kiwilss.xview.ui.loading.adapter.TitleAdapter
-import com.kiwilss.xview.utils.LogUtils
 
 
 /**

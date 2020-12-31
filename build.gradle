@@ -6,11 +6,14 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
+        classpath 'com.github.xuexiangjys.XAOP:xaop-plugin:1.1.0'
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
 //        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1' // 添加 Hugo 的 Gradle 插件依赖
 //    classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
         // NOTE: Do not place your application dependencies here; they belong
@@ -23,6 +26,8 @@ allprojects {
         mavenLocal()
         google()
         jcenter()
+        maven { url "http://jcenter.bintray.com"}
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }
