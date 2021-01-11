@@ -13,12 +13,14 @@ package com.kiwilss
 import android.app.Activity
 import android.app.Application
 import android.content.Context
+import android.media.AudioRecord.MetricsConstants.SOURCE
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
-import com.dylanc.loadinghelper.BuildConfig
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.kiwilss.xview.R
@@ -26,6 +28,7 @@ import com.kiwilss.xview.help.ActivityManager
 import com.kiwilss.xview.ui.loading.adapter.EmptyAdapter
 import com.kiwilss.xview.ui.loading.adapter.LoadingAdapter
 import com.kiwilss.xview.utils.LogUtils
+import com.lqr.emoji.LQREmotionKit
 import com.xuexiang.xaop.XAOP
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import top.wefor.circularanim.CircularAnim
@@ -39,6 +42,9 @@ import top.wefor.circularanim.CircularAnim.OnAnimatorDeployListener
  * @desc   : {DESCRIPTION}
  */
 class App : Application(){
+
+    var keyboardHeight = 0
+
     override fun onCreate() {
         super.onCreate()
         mContext = this
@@ -54,6 +60,11 @@ class App : Application(){
         XAOP.init(this) //初始化插件
         XAOP.debug(true) //日志打印切片开启
         XAOP.setPriority(Log.INFO) //设置日志打印的等级,默认为0
+
+        LQREmotionKit.init(this) { context, path, imageView ->
+            Glide.with(context).load(path).centerCrop()
+                .diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(imageView)
+        }
     }
 
     private fun initCircularAnim() {
@@ -85,8 +96,8 @@ class App : Application(){
 
 
     companion object{
-        var mContext: Context? = null
-        var app: App? = null
+        lateinit var mContext: Context
+        lateinit var app: App
     }
 
     private fun monitorActivityLife() {

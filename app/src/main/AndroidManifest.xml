@@ -216,6 +216,8 @@
 
         <activity android:name=".ui.picker.PickerAllActivity" android:label="选择器相关"/>
 
+        <activity android:name=".ui.view.edittext.emoji.EmojiEdittextActiity" android:label="表情键盘切换"
+            android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
 
     </application>
 

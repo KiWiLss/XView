@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llOuter"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+        <!--    内容区域，可以输入内容-->
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="1">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/m200"-->
+<!--                        android:text="@string/app_name"-->
+<!--                        android:background="@color/yellow_FF9B52"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/m200"-->
+<!--                        android:text="@string/app_name"-->
+<!--                        android:background="@color/green_07C0C2_60"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/m200"-->
+<!--                        android:text="@string/app_name"-->
+<!--                        android:background="@color/red_FF6D84"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/m200"-->
+<!--                        android:text="@string/app_name"-->
+<!--                        android:background="@color/blue_74D3FF"/>-->
+<!--                </LinearLayout>-->
+
+<!--            </RelativeLayout>-->
+
+
+                <LinearLayout
+                    android:id="@+id/llBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m50"
+                    android:background="@color/white"
+                    >
+                    <EditText
+                        android:id="@+id/etKey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="键盘"/>
+                    <TextView
+                        android:id="@+id/tvExpression"
+                        android:layout_width="@dimen/m100"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="表情"/>
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <!--    表情-->
+
+        <com.lqr.emoji.EmotionLayout
+            android:id="@+id/elEmotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+
+
+</LinearLayout>

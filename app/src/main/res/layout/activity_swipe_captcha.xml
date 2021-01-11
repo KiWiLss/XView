@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/m164"
         android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/m20"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_slide_puzzle_test"
         app:captchaHeight="30dp"
@@ -38,4 +39,18 @@
         android:layout_alignParentRight="true"
         android:text="老板换码"
         android:layout_marginTop="@dimen/m250"/>
+
+
+    <TextView
+        android:id="@+id/tvSwipeCaptchaTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m300"
+        android:textSize="@dimen/m20"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="@dimen/m5"
+        />
 </RelativeLayout>

@@ -75,6 +75,7 @@ class SwipePuzzleActivity: BaseActivity(R.layout.activity_swipe_captcha) {
             }
         })
 
+        tvSwipeCaptchaTv.text = "      真的超级爱这种搭配也太好看了种搭种搭配也太好看了配也太好看了种搭配也太好看了种搭配也太好看了种搭配也太好看了吧"
 
 
         //测试从网络加载图片是否ok

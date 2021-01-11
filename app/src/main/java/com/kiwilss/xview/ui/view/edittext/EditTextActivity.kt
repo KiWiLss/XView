@@ -1,13 +1,16 @@
 package com.kiwilss.xview.ui.view.edittext
 
+import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import androidx.core.view.isVisible
 import androidx.core.widget.*
+import com.kiwilss.App
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.ui.view.edittext.emoji.EmojiEdittextActiity
 import com.kiwilss.xview.utils.LogUtils
 import com.kiwilss.xview.utils.keyboard.KeyboardUtils
 import com.kiwilss.xview.utils.ktx.textWatch
@@ -21,6 +24,10 @@ import kotlinx.android.synthetic.main.activity_edittext.*
  * @desc   : {edittext监听相关操作}
  */
 class EditTextActivity : BaseActivity(R.layout.activity_edittext) {
+
+    private lateinit var softKeyboardStateHelper: SoftKeyboardStateHelper
+
+
     override fun initData() {
     }
 
@@ -68,6 +75,22 @@ class EditTextActivity : BaseActivity(R.layout.activity_edittext) {
 
      var mHeight = 0
     override fun initInterface() {
+        //提前获取键盘高度
+//        softKeyboardStateHelper = SoftKeyboardStateHelper(nsv_edittext_outer)
+//        softKeyboardStateHelper.addSoftKeyboardStateListener(object :
+//            SoftKeyboardStateHelper.SoftKeyboardStateListener {
+//
+//            override fun onSoftKeyboardOpened(keyboardHeight: Int) {
+//                App.app.keyboardHeight = keyboardHeight
+//            }
+//
+//            override fun onSoftKeyboardClosed() {
+//            }
+//        })
+        btn_edittext_emoji.setOnClickListener {
+            startActivity(Intent(this,EmojiEdittextActiity::class.java))
+        }
+
 //        KeyboardUtils.registerSoftInputChangedListener(this,object :KeyboardUtils.OnSoftInputChangedListener{
 //            override fun onSoftInputChanged(height: Int) {
 //                LogUtils.e(height)

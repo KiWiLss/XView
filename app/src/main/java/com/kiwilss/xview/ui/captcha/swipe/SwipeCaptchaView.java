@@ -17,7 +17,6 @@ import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
@@ -132,6 +131,9 @@ public class SwipeCaptchaView extends ImageView {
         mPorterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
         mMaskPaint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
 
+        mMaskPaint.setColor(Color.WHITE);
+        mMaskPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        mMaskPaint.setStrokeWidth(4);
 
         // 实例化阴影画笔
         mMaskShadowPaint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);

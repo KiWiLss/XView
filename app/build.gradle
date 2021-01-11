@@ -175,8 +175,12 @@ dependencies {
 //    implementation 'com.github.zhujiang521:AndroidAOP:1.1.1'
     //如果是androidx项目，使用1.1.0版本及以上
     implementation 'com.github.xuexiangjys.XAOP:xaop-runtime:1.1.0'
-
-    implementation 'com.freddy:kulakeyboard_lib:1.0.1'
+    //键盘相关
+//    implementation 'com.freddy:kulakeyboard_lib:1.0.1'
+    implementation 'com.lqr.emoji:library:1.0.2'
     //选择器
     //implementation 'com.contrarywind:Android-PickerView:4.1.9'
+
+
+
 }
