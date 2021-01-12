@@ -10,6 +10,7 @@ import androidx.core.widget.*
 import com.kiwilss.App
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.ui.view.edittext.emoji.EmojiEditTwoActivity
 import com.kiwilss.xview.ui.view.edittext.emoji.EmojiEdittextActiity
 import com.kiwilss.xview.utils.LogUtils
 import com.kiwilss.xview.utils.keyboard.KeyboardUtils
@@ -89,6 +90,10 @@ class EditTextActivity : BaseActivity(R.layout.activity_edittext) {
 //        })
         btn_edittext_emoji.setOnClickListener {
             startActivity(Intent(this,EmojiEdittextActiity::class.java))
+        }
+
+        btn_edittext_emoji2.setOnClickListener {
+            startActivity(Intent(this,EmojiEditTwoActivity::class.java))
         }
 
 //        KeyboardUtils.registerSoftInputChangedListener(this,object :KeyboardUtils.OnSoftInputChangedListener{

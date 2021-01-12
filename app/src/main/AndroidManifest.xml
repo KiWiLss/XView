@@ -218,6 +218,9 @@
 
         <activity android:name=".ui.view.edittext.emoji.EmojiEdittextActiity" android:label="表情键盘切换"
             android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name=".ui.view.edittext.emoji.EmojiEditTwoActivity" android:label="表情键盘切换"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+        android:screenOrientation="portrait"/>
 
     </application>
 

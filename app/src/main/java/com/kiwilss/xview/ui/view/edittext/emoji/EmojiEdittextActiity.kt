@@ -4,6 +4,8 @@ import android.view.View
 import android.widget.Toast
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.utils.LogUtils
+import com.kiwilss.xview.utils.keyboard.KeyboardUtils
 import com.lqr.emoji.EmotionKeyboard
 import com.lqr.emoji.IEmotionExtClickListener
 import com.lqr.emoji.IEmotionSelectedListener
@@ -22,6 +24,17 @@ class EmojiEdittextActiity: BaseActivity(R.layout.activity_emoji_edittext) {
     }
 
     override fun initEvent() {
+
+        KeyboardUtils.registerSoftInputChangedListener(this,object : KeyboardUtils.OnSoftInputChangedListener{
+            override fun onSoftInputChanged(height: Int) {
+                LogUtils.e(height)
+                if (height > 0){
+                    elEmotion.layoutParams.height = height
+                }
+            }
+
+        })
+
     }
 
     override fun initInterface() {

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.kiwilss.xview.ui.view.edittext.SoftInputLayout
+        android:id="@+id/silEmojiTwoOuter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<!--        内容-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+               >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50"
+                        android:hint="输入任意内容"
+                        android:background="@color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="800dp"
+                        android:background="@color/red_FF6D84"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50"
+                        android:hint="输入任意内容"
+                        android:background="@color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@color/blue_74D3FF"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+<!--            弹起键盘时,底部显示内容-->
+
+        <LinearLayout
+            android:id="@+id/llExpress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="表情"/>
+            <Button
+                android:id="@+id/btnFens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粉丝"/>
+        </LinearLayout>
+        </LinearLayout>
+
+
+<!--        表情-->
+        <RelativeLayout
+            android:id="@+id/rlEmoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这里是表情"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="这里是表情_底部"/>
+        </RelativeLayout>
+
+
+    </com.kiwilss.xview.ui.view.edittext.SoftInputLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
