@@ -222,6 +222,10 @@
             android:windowSoftInputMode="adjustResize|stateHidden"
         android:screenOrientation="portrait"/>
 
+        <activity android:name=".ui.aac.viewbinding.ViewBindingActivity" android:label="ViewBinding"/>
+        <activity android:name=".ui.aac.AACTestActivity" android:label="AAC"/>
+
+
     </application>
 
 </manifest>

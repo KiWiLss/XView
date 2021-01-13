@@ -13,8 +13,8 @@ package com.kiwilss.xview.utils.data
 
 import com.kiwilss.xview.design.DesignActivity
 import com.kiwilss.xview.model.main.MainBean
+import com.kiwilss.xview.ui.aac.AACTestActivity
 import com.kiwilss.xview.ui.anim.AnimActivity
-import com.kiwilss.xview.ui.anim.layout.LayoutActivity
 import com.kiwilss.xview.ui.banner.BannerActivity
 import com.kiwilss.xview.ui.captcha.CaptchaActivity
 import com.kiwilss.xview.ui.click.ClickAllActivity
@@ -87,7 +87,8 @@ object MainUtils {
             MainBean("快捷菜单", ShortcutsActivity::class.java),
             MainBean("行为式验证", CaptchaActivity::class.java),
             MainBean("点击限制", ClickAllActivity::class.java),
-            MainBean("选择器", PickerAllActivity::class.java)
+            MainBean("选择器", PickerAllActivity::class.java),
+            MainBean("AAC", AACTestActivity::class.java)
 
         )
 
