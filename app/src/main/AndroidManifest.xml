@@ -224,7 +224,7 @@
 
         <activity android:name=".ui.aac.viewbinding.ViewBindingActivity" android:label="ViewBinding"/>
         <activity android:name=".ui.aac.AACTestActivity" android:label="AAC"/>
-
+        <activity android:name=".ui.aac.viewbinding.VBTestActivity" android:label="VBTest"/>
 
     </application>
 

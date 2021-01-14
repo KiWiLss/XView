@@ -2,6 +2,7 @@ package com.kiwilss.xview.ui.aac
 
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.ui.aac.viewbinding.VBTestActivity
 import com.kiwilss.xview.ui.aac.viewbinding.ViewBindingActivity
 import com.kiwilss.xview.utils.ktx.IntentKtx.startActivity2
 import kotlinx.android.synthetic.main.activity_aac.*
@@ -20,6 +21,9 @@ class AACTestActivity : BaseActivity(R.layout.activity_aac) {
     override fun initEvent() {
         btnAACViewBinding.setOnClickListener {
             startActivity2<ViewBindingActivity>()
+        }
+        btnAACViewBinding2.setOnClickListener {
+            startActivity2<VBTestActivity>()
         }
     }
 

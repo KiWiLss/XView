@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.databinding.ActivityAacBinding
 import com.kiwilss.xview.databinding.ActivityMainBinding
 import com.kiwilss.xview.databinding.ActivityViewbindingBinding
 
@@ -24,6 +25,7 @@ class ViewBindingActivity : AppCompatActivity(){
 
         //获取name进行赋值
         binding.textAccount.text = "viewBinding test"
+
 
 
     }
