@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_scroll_scene">
+
+    <TextView
+        android:id="@+id/tvSvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:background="@color/green_07C0C2"
+        android:gravity="center"
+        android:text="悬浮标题"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="206dp" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

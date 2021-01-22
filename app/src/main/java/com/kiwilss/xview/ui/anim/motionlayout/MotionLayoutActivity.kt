@@ -11,13 +11,16 @@ import com.kiwilss.xview.base.BaseActivity
  * @desc   : {DESCRIPTION}
  */
 class MotionLayoutActivity: BaseActivity(R.layout.activity_motion) {
+
     override fun initData() {
 
     }
 
     override fun initEvent() {
+
     }
 
     override fun initInterface() {
+
     }
 }

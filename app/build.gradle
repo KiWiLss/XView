@@ -93,7 +93,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    
+
 }
 
 //aspectjx {
@@ -184,6 +184,9 @@ dependencies {
     //键盘相关
 //    implementation 'com.freddy:kulakeyboard_lib:1.0.1'
     implementation 'com.lqr.emoji:library:1.0.2'
+    //implementation 'com.github.zhujiang521:AndroidAOP:1.1.1'
+
+    implementation 'com.freddy:kulakeyboard_lib:1.0.1'
     //选择器
     //implementation 'com.contrarywind:Android-PickerView:4.1.9'
     //viewbinding

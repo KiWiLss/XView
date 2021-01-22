@@ -8,9 +8,9 @@ import com.kiwilss.xview.base.BaseActivity
  *@author : Lss Administrator
  * @e-mail : kiwilss@163.com
  * @time   : 2020/12/15
- * @desc   : {DESCRIPTION}
+ * @desc   : {DESCRIPTION}  R.layout.activity_scrollview_motionlayout
  */
-class ScrollViewMotionActivity: BaseActivity(R.layout.activity_scrollview_motionlayout) {
+class ScrollViewMotionActivity: BaseActivity(R.layout.activity_motionlayout) {
 
     override fun initData() {
 
