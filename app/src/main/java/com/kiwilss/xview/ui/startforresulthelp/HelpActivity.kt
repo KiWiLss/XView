@@ -54,6 +54,8 @@ class HelpActivity: AppCompatActivity(R.layout.activity_help) {
         }
 
 
+
+
         btn_help_jump2.setOnClickListener {
 
             val intent = Intent(this,HelpResultActivity::class.java)

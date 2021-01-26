@@ -14,6 +14,7 @@ import com.dylanc.loadinghelper.LoadingHelper
  * time   : 2021/01/14
  *  desc   :
  */
+
 abstract class BaseFragment<VB : ViewBinding> : Fragment(), LoadingHelper.OnReloadListener {
 
     val mVb by lazy {

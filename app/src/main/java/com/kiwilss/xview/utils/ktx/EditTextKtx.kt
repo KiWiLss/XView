@@ -9,8 +9,18 @@ import android.widget.EditText
  *@author : Lss Administrator
  * @e-mail : kiwilss@163.com
  * @time   : 2020/12/8
- * @desc   : {DESCRIPTION}
+ * @desc   : {EditText监听优化}
  */
+
+fun EditText?.text(value: CharSequence?){
+    this?.run {
+        if (!value.isNullOrEmpty()){
+            setText(value)
+            setSelection(text.length)
+        }
+    }
+}
+
 //EditText输入监听
 fun EditText.textWatch(textWatcher: SimpleTextWatcher.() -> Unit){
     val simpleTextWatcher = SimpleTextWatcher(this)
