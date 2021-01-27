@@ -207,5 +207,13 @@ dependencies {
     //viewbinding
     implementation 'com.dylanc:viewbinding-ktx:1.0.1'
 
+    def dataStoreVersion = "1.0.0-alpha05"
+// 在 Android 开发者网站上确认最新的版本号
+// https://developer.android.google.cn/jetpack/androidx/releases/datastore
+// Preferences DataStore
+    implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
+// Proto DataStore
+    implementation  "androidx.datastore:datastore-core:$dataStoreVersion"
+
 
 }

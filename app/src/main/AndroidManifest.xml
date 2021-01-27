@@ -226,7 +226,7 @@
         <activity android:name=".ui.aac.AACTestActivity" android:label="AAC"/>
         <activity android:name=".ui.aac.viewbinding.basic.VBTestActivity" android:label="VBTest"/>
         <activity android:name=".ui.aac.viewbinding.upgrade.VbLoadingTitleActivity" android:label="VB测试标题Loading"/>
-
+        <activity android:name=".ui.aac.datastore.DataStoreBasicActivity" android:label="DataStore"/>
 
 
 
