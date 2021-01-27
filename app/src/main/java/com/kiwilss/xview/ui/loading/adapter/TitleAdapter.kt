@@ -15,13 +15,21 @@ import kotlinx.android.synthetic.main.layout_toolbar.view.*
  * @desc   : {DESCRIPTION}
  */
 class TitleAdapter(val title: String) : LoadingHelper.Adapter<LoadingHelper.ViewHolder>() {
+    lateinit var mHolder: LoadingHelper.ViewHolder
     override fun onBindViewHolder(holder: LoadingHelper.ViewHolder) {
+        mHolder = holder
         holder.rootView.run {
             iv_layout_toolbar_back?.setOnClickListener {
                 if (context is Activity) {
                     (context as Activity).finish()
                 }
             }
+            tv_layout_toolbar_title?.text = title
+        }
+    }
+
+    fun changeTitle(title: String){
+        mHolder.rootView.run {
             tv_layout_toolbar_title?.text = title
         }
     }

@@ -224,7 +224,11 @@
 
         <activity android:name=".ui.aac.viewbinding.ViewBindingActivity" android:label="ViewBinding"/>
         <activity android:name=".ui.aac.AACTestActivity" android:label="AAC"/>
-        <activity android:name=".ui.aac.viewbinding.VBTestActivity" android:label="VBTest"/>
+        <activity android:name=".ui.aac.viewbinding.basic.VBTestActivity" android:label="VBTest"/>
+        <activity android:name=".ui.aac.viewbinding.upgrade.VbLoadingTitleActivity" android:label="VB测试标题Loading"/>
+
+
+
 
     </application>
 

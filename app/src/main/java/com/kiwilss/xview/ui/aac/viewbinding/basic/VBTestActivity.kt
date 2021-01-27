@@ -1,11 +1,9 @@
-package com.kiwilss.xview.ui.aac.viewbinding
+package com.kiwilss.xview.ui.aac.viewbinding.basic
 
 import android.os.Bundle
 import com.kiwilss.xview.R
-import com.kiwilss.xview.base.BaseActivity
 import com.kiwilss.xview.base.BaseActivity2
 import com.kiwilss.xview.databinding.ActivityViewbindingBinding
-import com.kiwilss.xview.databinding.ActivityViewbindingBinding.*
 
 /**
  * author : Administrator
@@ -14,6 +12,7 @@ import com.kiwilss.xview.databinding.ActivityViewbindingBinding.*
  *  desc   :
  */
 class VBTestActivity : BaseActivity2<ActivityViewbindingBinding>() {
+
     override fun initBinding(): ActivityViewbindingBinding {
         return ActivityViewbindingBinding.inflate(layoutInflater)
     }
@@ -32,7 +31,7 @@ class VBTestActivity : BaseActivity2<ActivityViewbindingBinding>() {
         //初始化fragment
         val vbFg = VBFg()
         supportFragmentManager.beginTransaction()
-            .add(R.id.flViewBindingTest,vbFg)
+            .add(R.id.flViewBindingTest, vbFg)
             .commit()
 
     }

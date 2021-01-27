@@ -1,7 +1,8 @@
-package com.kiwilss.xview.ui.aac.viewbinding
+package com.kiwilss.xview.ui.aac.viewbinding.basic
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.kiwilss.xview.base.BaseActivity2
 import com.kiwilss.xview.base.BaseFragment
 import com.kiwilss.xview.databinding.FgVbBinding
 
@@ -17,6 +18,8 @@ class VBFg: BaseFragment<FgVbBinding>() {
     }
 
     override fun initEvent() {
+        //getLoadingHelper()?.showLoadingView()
+
     }
 
     override fun initInterface() {

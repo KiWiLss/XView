@@ -30,6 +30,7 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
     }
 
 
+
     override fun initEvent() {
         btn_click_all_one.clickWithTrigger {
             Toast.makeText(this, "hai", Toast.LENGTH_SHORT).show()
@@ -122,7 +123,7 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
     }
 
 
-
+    @SingleClick
     override fun onClick(p0: View?) {
 //        if (XClickUtil.isFastDoubleClick(p0,1000)) {
 //            LogUtils.e("多次点击--")

@@ -28,6 +28,10 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(), LoadingHelper.OnRelo
 
     }
 
+//    fun getLoadingHelper(): LoadingHelper?{
+//        return if (activity is BaseActivity2<*>)  null
+//       else (activity as BaseActivity2<*>).mLoadingHelper
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
