@@ -7,9 +7,11 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.preferencesKey
 import androidx.datastore.preferences.createDataStore
+import androidx.lifecycle.lifecycleScope
 import com.kiwilss.xview.base.viewbinding.BaseVBActivity
 import com.kiwilss.xview.databinding.ActivityDatastoreBasicBinding
 import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
 import java.io.IOException
 
 
@@ -32,6 +34,10 @@ class DataStoreBasicActivity: BaseVBActivity<ActivityDatastoreBasicBinding>() {
     val dataStore: DataStore<Preferences> = createDataStore(
         name = "settings"
     )
+
+    private val mKey = preferencesKey<Int>(name = "my_counter")
+
+
     override fun initInterface(savedInstanceState: Bundle?) {
 
         // 创建 Preferences DataStore
@@ -41,9 +47,12 @@ class DataStoreBasicActivity: BaseVBActivity<ActivityDatastoreBasicBinding>() {
         //存数据
         binding.btnSave.setOnClickListener {
         val key = preferencesKey<Boolean>("true")
-
-            //saveData(key)
+            lifecycleScope.launch {
+                saveData(key)
+            }
         }
+
+
 
 
         val keyB = preferencesKey<Boolean>("keyB")
@@ -54,6 +63,16 @@ class DataStoreBasicActivity: BaseVBActivity<ActivityDatastoreBasicBinding>() {
 
 
     }
+
+    //取DataStore的值加一后再次存入
+    private suspend fun incrementCounter() {
+        dataStore.edit { settings ->
+            val currentCounterValue = settings[mKey] ?: 0
+            settings[mKey] = currentCounterValue + 1
+        }
+    }
+
+
 
      suspend fun saveData(key: Preferences.Key<Boolean>) {
         dataStore.edit { mutablePreferences ->
