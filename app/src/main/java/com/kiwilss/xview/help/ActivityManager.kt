@@ -172,8 +172,8 @@ class ActivityManager private constructor() {
         }
     }
 
-    fun getList(){
-        LogUtils.e(mActivityStack.size)
-    }
+//    fun getList(){
+//        LogUtils.e(mActivityStack.size)
+//    }
 
 }

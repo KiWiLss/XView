@@ -48,7 +48,7 @@ class LoadingActivity: AppCompatActivity(R.layout.activity_loading) {
         }
         tv_layout_toolbar_right.visibility = View.VISIBLE
         tv_layout_toolbar_right.setOnClickListener {
-            ActivityManager.instance.getList()
+            //ActivityManager.instance.getList()
         }
         btn_loading_loading.setOnClickListener {
             loadingHelper.showLoadingView()

@@ -8,8 +8,11 @@ import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.preferencesKey
 import androidx.datastore.preferences.createDataStore
 import androidx.lifecycle.lifecycleScope
+import com.kiwilss.App
 import com.kiwilss.xview.base.viewbinding.BaseVBActivity
+import com.kiwilss.xview.config.Constant
 import com.kiwilss.xview.databinding.ActivityDatastoreBasicBinding
+import com.kiwilss.xview.utils.LogUtils
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.io.IOException
@@ -21,8 +24,7 @@ import java.io.IOException
  * time   : 2021/01/27
  *  desc   :
  */
-class DataStoreBasicActivity: BaseVBActivity<ActivityDatastoreBasicBinding>() {
-
+class DataStoreBasicActivity : BaseVBActivity<ActivityDatastoreBasicBinding>() {
 
 
     override fun initData() {
@@ -31,58 +33,92 @@ class DataStoreBasicActivity: BaseVBActivity<ActivityDatastoreBasicBinding>() {
 
     override fun initEvent() {
     }
-    val dataStore: DataStore<Preferences> = createDataStore(
-        name = "settings"
-    )
 
-    private val mKey = preferencesKey<Int>(name = "my_counter")
+    // 创建 Preferences DataStore
+    private lateinit var  dataStore: DataStore<Preferences>
 
+    private lateinit var  mKey: Preferences.Key<String>
 
     override fun initInterface(savedInstanceState: Bundle?) {
-
-        // 创建 Preferences DataStore
-//        val dataStore: DataStore<Preferences> = createDataStore(
-//            name = "settings"
-//        )
+        LogUtils.e(Thread.currentThread().name,"初始线程：")
+        dataStore  =  createDataStore(Constant.DATA_STORE_GLOBAL)
+        mKey = preferencesKey(Constant.DATA_STORE_TEST)
         //存数据
         binding.btnSave.setOnClickListener {
-        val key = preferencesKey<Boolean>("true")
             lifecycleScope.launch {
-                saveData(key)
+                saveData("存一个String类型数据")
             }
         }
 
-
-
-
-        val keyB = preferencesKey<Boolean>("keyB")
-
-        readData(keyB).map {
-
+        binding.btnQuery.setOnClickListener {
+            val flow = dataStore.data.map {
+                it[mKey]
+            }
+            lifecycleScope.launch {
+                flow.collectLatest {
+                    LogUtils.e(it,"查询数据：")
+                }
+            }
         }
 
+        binding.btnDelete.setOnClickListener {
+            lifecycleScope.launch {
+                deleteData()
+            }
+        }
 
+        binding.btnSet.setOnClickListener {
+            lifecycleScope.launch{
+                val data = readData()
+                data.collectLatest {
+                    //设置以后改变了存储的数据，textview的text也会改变
+                        binding.tvDataStoreData.text = it
+                }
+            }
+        }
+
+    }
+
+    private suspend fun deleteData(){
+        dataStore.edit {
+            it[mKey] = ""
+        }
+    }
+
+    private suspend fun readData(): Flow<String?> {
+        LogUtils.e("read")
+        return dataStore.data
+            .catch {
+                // 当读取数据遇到错误时，如果是 `IOException` 异常，发送一个 emptyPreferences 来重新使用
+                // 但是如果是其他的异常，最好将它抛出去，不要隐藏问题
+                LogUtils.e(it)
+                if (it is IOException) {
+                    it.printStackTrace()
+                    emit(emptyPreferences())
+                } else {
+                    throw it
+                }
+            }.map {
+               it[mKey]
+            }
+    }
+
+    private suspend fun saveData(s: String) {
+        dataStore.edit {
+            it[mKey] = s
+        }
     }
 
     //取DataStore的值加一后再次存入
-    private suspend fun incrementCounter() {
-        dataStore.edit { settings ->
-            val currentCounterValue = settings[mKey] ?: 0
-            settings[mKey] = currentCounterValue + 1
-        }
-    }
+//    private suspend fun incrementCounter() {
+//        dataStore.edit { settings ->
+//            val currentCounterValue = settings[mKey] ?: 0
+//            settings[mKey] = currentCounterValue + 1
+//        }
+//    }
 
 
-
-     suspend fun saveData(key: Preferences.Key<Boolean>) {
-        dataStore.edit { mutablePreferences ->
-            val value = mutablePreferences[key] ?: false
-            mutablePreferences[key] = !value
-        }
-    }
-
-
-     fun readData(key: Preferences.Key<Boolean>): Flow<Boolean> =
+    fun readData2(key: Preferences.Key<Boolean>): Flow<Boolean> =
         dataStore.data
             .catch {
                 // 当读取数据遇到错误时，如果是 `IOException` 异常，发送一个 emptyPreferences 来重新使用

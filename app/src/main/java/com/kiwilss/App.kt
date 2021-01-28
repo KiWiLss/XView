@@ -19,11 +19,15 @@ import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.createDataStore
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.kiwilss.xview.R
+import com.kiwilss.xview.config.Constant
 import com.kiwilss.xview.help.ActivityManager
 import com.kiwilss.xview.ui.loading.adapter.EmptyAdapter
 import com.kiwilss.xview.ui.loading.adapter.LoadingAdapter
@@ -49,6 +53,7 @@ class App : Application(){
         super.onCreate()
         mContext = this
         app = this
+
         //对Activity生命周期监听
         monitorActivityLife()
         //初始化话全局状态

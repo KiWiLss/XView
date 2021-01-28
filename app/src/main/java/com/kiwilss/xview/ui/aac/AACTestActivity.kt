@@ -2,6 +2,7 @@ package com.kiwilss.xview.ui.aac
 
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.ui.aac.datastore.DataStoreBasicActivity
 import com.kiwilss.xview.ui.aac.viewbinding.basic.VBTestActivity
 import com.kiwilss.xview.ui.aac.viewbinding.ViewBindingActivity
 import com.kiwilss.xview.ui.aac.viewbinding.upgrade.VbLoadingTitleActivity
@@ -29,7 +30,9 @@ class AACTestActivity : BaseActivity(R.layout.activity_aac) {
         btnAACViewBinding3.setOnClickListener {
             startActivity2<VbLoadingTitleActivity>("title" to "测试标题")
         }
-
+        btnAACDataStore.setOnClickListener {
+            startActivity2<DataStoreBasicActivity>()
+        }
 
 
     }
