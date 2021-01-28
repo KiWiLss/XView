@@ -7,6 +7,9 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.preferencesKey
 import androidx.datastore.preferences.createDataStore
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.kiwilss.App
 import com.kiwilss.xview.base.viewbinding.BaseVBActivity
@@ -41,6 +44,7 @@ class DataStoreBasicActivity : BaseVBActivity<ActivityDatastoreBasicBinding>() {
 
     override fun initInterface(savedInstanceState: Bundle?) {
         LogUtils.e(Thread.currentThread().name,"初始线程：")
+        //可以放在baseactivity中
         dataStore  =  createDataStore(Constant.DATA_STORE_GLOBAL)
         mKey = preferencesKey(Constant.DATA_STORE_TEST)
         //存数据
@@ -76,6 +80,8 @@ class DataStoreBasicActivity : BaseVBActivity<ActivityDatastoreBasicBinding>() {
                 }
             }
         }
+
+
 
     }
 
