@@ -12,7 +12,6 @@ import com.kiwilss.xview.ui.click.kotlin.withTrigger
 import com.kiwilss.xview.ui.click.time.LCountDownTimer
 import com.kiwilss.xview.ui.click.time.TimerListener
 import com.kiwilss.xview.utils.LogUtils
-import com.xuexiang.xaop.annotation.SingleClick
 import kotlinx.android.synthetic.main.activity_click_all.*
 
 /**
@@ -60,7 +59,7 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
 
 
         btn_click_all_aop1.setOnClickListener(object : View.OnClickListener {
-            @SingleClick
+            //@SingleClick
             override fun onClick(p0: View?) {
 //                if (XClickUtil.isFastDoubleClick(p0,1000)) {
 //                    LogUtils.e("多次点击")
@@ -123,7 +122,7 @@ class ClickAllActivity : BaseActivity(R.layout.activity_click_all), View.OnClick
     }
 
 
-    @SingleClick
+//    @SingleClick
     override fun onClick(p0: View?) {
 //        if (XClickUtil.isFastDoubleClick(p0,1000)) {
 //            LogUtils.e("多次点击--")

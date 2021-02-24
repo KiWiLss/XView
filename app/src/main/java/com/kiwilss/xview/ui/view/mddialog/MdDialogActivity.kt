@@ -26,6 +26,7 @@ import com.kiwilss.xview.ui.view.mddialog.adapter.ListDialogAdapter
 import com.kiwilss.xview.ui.view.mddialog.dialog.FullListDialog
 import com.kiwilss.xview.ui.view.mddialog.dialog.ListDialog
 import com.kiwilss.xview.ui.view.mddialog.dialog.SimpleDialog
+import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_mddialog.*
 
 /**
@@ -69,6 +70,30 @@ class MdDialogActivity: AppCompatActivity() {
 
         //把这个底部菜单和一个BottomSheetBehavior关联起来
         val behavior = BottomSheetBehavior.from(ll_mddialog_bottom)
+        behavior.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback(){
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                //LogUtils.e(newState)
+            }
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+               LogUtils.e(slideOffset)
+                vBg.alpha = slideOffset * 0.6f
+//                if (slideOffset >= 0.01){
+//                    tv_mddialog_bottomDialog.setBackgroundResource(R.drawable.bg_blue_fillet_10)
+//                }else{
+//                    tv_mddialog_bottomDialog.setBackgroundResource(R.drawable.bg_yellow_fillet_10)
+//                }
+                if (slideOffset > 0){
+                    rlBg.visibility = View.GONE
+                    tv_mddialog_bottomDialog.setBackgroundResource(R.drawable.bg_blue_fillet_10)
+                }else{
+                    rlBg.visibility = View.VISIBLE
+                    tv_mddialog_bottomDialog.setBackgroundResource(R.drawable.bg_yellow_fillet_10)
+                }
+
+            }
+
+        })
         //底部对话框展开点击
         btn_mddialog_expande.setOnClickListener {
             if(behavior.state == BottomSheetBehavior.STATE_EXPANDED) {//展开不管
@@ -79,7 +104,7 @@ class MdDialogActivity: AppCompatActivity() {
         }
         //底部对话框隐藏点击
         btn_mddialog_hide.setOnClickListener {
-            behavior.setState(BottomSheetBehavior.STATE_HIDDEN)
+            //behavior.setState(BottomSheetBehavior.STATE_HIDDEN)
         }
         //底部对话框关闭
         btn_mddialog_collose.setOnClickListener {

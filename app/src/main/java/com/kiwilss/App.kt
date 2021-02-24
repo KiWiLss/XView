@@ -33,7 +33,6 @@ import com.kiwilss.xview.ui.loading.adapter.EmptyAdapter
 import com.kiwilss.xview.ui.loading.adapter.LoadingAdapter
 import com.kiwilss.xview.utils.LogUtils
 import com.lqr.emoji.LQREmotionKit
-import com.xuexiang.xaop.XAOP
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import top.wefor.circularanim.CircularAnim
 import top.wefor.circularanim.CircularAnim.OnAnimatorDeployListener
@@ -62,9 +61,9 @@ class App : Application(){
         initCircularAnim()
 
         //aop初始化
-        XAOP.init(this) //初始化插件
-        XAOP.debug(true) //日志打印切片开启
-        XAOP.setPriority(Log.INFO) //设置日志打印的等级,默认为0
+//        XAOP.init(this) //初始化插件
+//        XAOP.debug(true) //日志打印切片开启
+//        XAOP.setPriority(Log.INFO) //设置日志打印的等级,默认为0
 
         LQREmotionKit.init(this) { context, path, imageView ->
             Glide.with(context).load(path).centerCrop()
@@ -79,10 +78,10 @@ class App : Application(){
         // optional. set the default duration OnAnimatorDeployListener.
         // optional. set the default duration OnAnimatorDeployListener.
         CircularAnim.initDefaultDeployAnimators(
-            OnAnimatorDeployListener { animator ->
+            { animator ->
                 animator.interpolator = AccelerateInterpolator()
             },
-            OnAnimatorDeployListener { animator ->
+            { animator ->
                 animator.interpolator = DecelerateInterpolator()
             },
             null,

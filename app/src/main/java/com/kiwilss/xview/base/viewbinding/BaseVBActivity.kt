@@ -6,6 +6,9 @@ import androidx.viewbinding.ViewBinding
 import com.dylanc.loadinghelper.LoadingHelper
 import com.dylanc.loadinghelper.ViewType
 import com.dylanc.viewbinding.inflateBindingWithGeneric
+import com.gyf.immersionbar.ImmersionBar
+import com.gyf.immersionbar.ktx.immersionBar
+import com.kiwilss.xview.R
 import com.kiwilss.xview.ui.loading.adapter.TitleAdapter
 
 /**
@@ -35,6 +38,8 @@ abstract class BaseVBActivity<VB : ViewBinding> : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = inflateBindingWithGeneric(layoutInflater)
         setContentView(binding.root)
+        //设置状态栏
+        setStatusBar()
         //设置切换状态相关
         initLoadingHelp(initIsToolbar())
         //初始化界面
@@ -44,6 +49,18 @@ abstract class BaseVBActivity<VB : ViewBinding> : AppCompatActivity(),
         //初始化数据
         initData()
 
+    }
+
+    /**
+     * 设置状态栏
+     */
+    open fun setStatusBar() {
+        immersionBar {
+            fitsSystemWindows(true)
+            statusBarColor(R.color.white)
+            statusBarDarkFont(true,0f)
+            init()
+        }
     }
 
     abstract fun initData()

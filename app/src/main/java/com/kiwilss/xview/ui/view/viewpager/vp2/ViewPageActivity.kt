@@ -48,6 +48,7 @@ class ViewPageActivity: AppCompatActivity() {
         vp_viewpager_icon.adapter = mAdapter
         mAdapter.setList(dataList)
 
+        vp_viewpager_icon.isUserInputEnabled = false
         btn_vp_horizontal.setOnClickListener {
             vp_viewpager_icon.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         }

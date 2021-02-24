@@ -96,9 +96,23 @@
 
     </androidx.core.widget.NestedScrollView>
 
-
+    <View
+        android:id="@+id/vBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="0"/>
 
 <!--    底部可以拉出的对话框,仿抖音-->
+    <RelativeLayout
+        android:id="@+id/rlBg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/yellow_FF9B52"
+        android:layout_gravity="bottom">
+
+
+    </RelativeLayout>
 <LinearLayout
     android:id="@+id/ll_mddialog_bottom"
     android:layout_width="match_parent"
@@ -107,7 +121,7 @@
     app:behavior_hideable="false"
     app:behavior_peekHeight="50dp"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    android:background="@color/white">
+    >
 
     <TextView
         android:id="@+id/tv_mddialog_bottomDialog"
@@ -121,7 +135,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_mddialog_bottom"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:background="@color/white"/>
 
 </LinearLayout>
 

@@ -22,8 +22,8 @@ abstract class BaseVBFragment<VB : ViewBinding> : Fragment(), LoadingHelper.OnRe
     val binding: VB get() = _binding!!
 
     fun getLoadingHelper(): LoadingHelper? {
-        return if (activity is BaseActivity2<*>) null
-        else (activity as BaseActivity2<*>).mLoadingHelper
+        return if (activity !is BaseVBActivity<*>) null
+        else (activity as BaseVBActivity<*>).mLoadingHelper
     }
 
     override fun onReload() {
