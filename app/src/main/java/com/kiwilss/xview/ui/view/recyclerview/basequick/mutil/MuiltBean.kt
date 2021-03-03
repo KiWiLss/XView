@@ -9,7 +9,7 @@ import com.chad.library.adapter.base.entity.MultiItemEntity
  * @time   : 2020/9/9
  * @desc   : {DESCRIPTION}
  */
-data class MuiltBean(val first: String, val second: String, override val itemType: Int,var spanSize: Int): MultiItemEntity {
+data class MuiltBean(var first: String, val second: String, override val itemType: Int, var spanSize: Int): MultiItemEntity {
 
     companion object{
         //线性布局,文字

@@ -11,7 +11,7 @@ import com.kiwilss.xview.R
  * @time   : 2020/9/9
  * @desc   : {DESCRIPTION}
  */
-class MultiQuickAdapter: BaseMultiItemQuickAdapter<MuiltBean,BaseViewHolder>() {
+class MultiQuickAdapter: BaseMultiItemQuickAdapter<MuiltBean,BaseViewHolder>( ) {
 
     init {
         addItemType(MuiltBean.TEXT, R.layout.item_multi_quick_text)

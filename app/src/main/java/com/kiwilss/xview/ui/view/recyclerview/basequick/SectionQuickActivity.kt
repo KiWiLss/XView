@@ -29,7 +29,7 @@ class SectionQuickActivity : BaseActivity(R.layout.activity_section_quick) {
 
     override fun initInterface() {
         rv_section_quick_list?.run {
-           // layoutManager = LinearLayoutManager(this@SectionQuickActivity)
+//            layoutManager = LinearLayoutManager(this@SectionQuickActivity)
             layoutManager = GridLayoutManager(this@SectionQuickActivity,3)
             adapter = mAdapter
         }

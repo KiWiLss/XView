@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kiwilss.xview.R
 import com.kiwilss.xview.base.BaseActivity
+import com.kiwilss.xview.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_muilt_quick.*
 
 /**
@@ -31,7 +32,8 @@ class MuiltQuickActivity : BaseActivity(R.layout.activity_muilt_quick) {
     override fun initInterface() {
 
         rv_muilt_quick_list?.run {
-            layoutManager = GridLayoutManager(this@MuiltQuickActivity,2)
+            //layoutManager = GridLayoutManager(this@MuiltQuickActivity,2)
+            layoutManager = LinearLayoutManager(this@MuiltQuickActivity)
             adapter = mAdapter
         }
 
@@ -61,7 +63,7 @@ class MuiltQuickActivity : BaseActivity(R.layout.activity_muilt_quick) {
 
         var bean : MuiltBean
         for (i in 0..5){
-            bean = MuiltBean("first $i","second $i",MuiltBean.TEXT,2)
+            bean = MuiltBean("test - first $i","second $i",MuiltBean.TEXT,2)
             datas.add(bean)
         }
         for (i in 0..5){
@@ -77,5 +79,17 @@ class MuiltQuickActivity : BaseActivity(R.layout.activity_muilt_quick) {
             datas.add(bean)
         }
         mAdapter.setList(datas)
+        LogUtils.e(datas)
+        LogUtils.e("-----------")
+        val count = ArrayList<Int>()
+        var first = ""
+        for (i in 0 until datas.size){
+            if (datas[i].itemType == 1) {
+               first = datas[i].first
+            }else if (datas[i].itemType == 2){
+                datas[i].first = first
+            }
+        }
+        LogUtils.e(datas)
     }
 }
