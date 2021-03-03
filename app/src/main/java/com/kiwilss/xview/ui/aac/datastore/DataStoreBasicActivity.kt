@@ -54,6 +54,7 @@ class DataStoreBasicActivity : BaseVBActivity<ActivityDatastoreBasicBinding>() {
             }
         }
 
+
         binding.btnQuery.setOnClickListener {
             val flow = dataStore.data.map {
                 it[mKey]

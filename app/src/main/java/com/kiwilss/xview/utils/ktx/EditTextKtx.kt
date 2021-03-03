@@ -12,9 +12,9 @@ import android.widget.EditText
  * @desc   : {EditText监听优化}
  */
 
-fun EditText?.text(value: CharSequence?){
+fun EditText?.text(value: CharSequence?) {
     this?.run {
-        if (!value.isNullOrEmpty()){
+        if (!value.isNullOrEmpty()) {
             setText(value)
             setSelection(text.length)
         }
@@ -22,25 +22,26 @@ fun EditText?.text(value: CharSequence?){
 }
 
 //EditText输入监听
-fun EditText.textWatch(textWatcher: SimpleTextWatcher.() -> Unit){
-    val simpleTextWatcher = SimpleTextWatcher(this)
-    textWatcher.invoke(simpleTextWatcher)
+fun EditText.textWatch(textWatcher: SimpleTextWatcher.() -> Unit) {
+//    val simpleTextWatcher = SimpleTextWatcher(this)
+//    textWatcher.invoke(simpleTextWatcher)
+    SimpleTextWatcher(this).also(textWatcher)
 }
 
-class SimpleTextWatcher(private var editText: EditText){
+class SimpleTextWatcher(private var editText: EditText) {
 
-    private var afterText : (Editable?.() -> Unit)? = null
-    fun afterTextChanged(afterText : (Editable?.() -> Unit)?){
+    private var afterText: (Editable?.() -> Unit)? = null
+    fun afterTextChanged(afterText: (Editable?.() -> Unit)?) {
         this.afterText = afterText
     }
 
     private var beforeText: ((s: CharSequence?, start: Int, count: Int, after: Int) -> Unit)? = null
-    fun beforeTextChanged(beforeText: ((s: CharSequence?, start: Int, count: Int, after: Int) -> Unit)?){
+    fun beforeTextChanged(beforeText: ((s: CharSequence?, start: Int, count: Int, after: Int) -> Unit)?) {
         this.beforeText = beforeText
     }
 
     private var onTextChange: ((p0: CharSequence?, p1: Int, p2: Int, p3: Int) -> Unit)? = null
-    fun onTextChanged(onTextChange: ((p0: CharSequence?, p1: Int, p2: Int, p3: Int) -> Unit)?){
+    fun onTextChanged(onTextChange: ((p0: CharSequence?, p1: Int, p2: Int, p3: Int) -> Unit)?) {
         this.onTextChange = onTextChange
     }
 
@@ -51,11 +52,11 @@ class SimpleTextWatcher(private var editText: EditText){
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                beforeText?.invoke(p0,p1,p2,p3)
+                beforeText?.invoke(p0, p1, p2, p3)
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                onTextChange?.invoke(p0,p1,p2,p3)
+                onTextChange?.invoke(p0, p1, p2, p3)
             }
 
         })
