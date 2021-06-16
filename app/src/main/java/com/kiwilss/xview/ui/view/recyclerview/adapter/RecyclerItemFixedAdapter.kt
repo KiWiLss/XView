@@ -26,5 +26,6 @@ class RecyclerItemFixedAdapter(resId: Int = R.layout.item_recycelr_fixed)
     : BaseQuickAdapter<String,BaseViewHolder>(resId){
     override fun convert(holder: BaseViewHolder, item: String) {
         holder.setText(R.id.tv_item_recycler_fixed_title,item)
+
     }
 }

@@ -34,7 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:navigationIcon="@mipmap/ic_navigation_back_white"
                 app:titleTextColor="@color/white"
                 />
 

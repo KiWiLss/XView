@@ -66,6 +66,7 @@ class MdDialogActivity: AppCompatActivity() {
         btn_mddialog_listFull.setOnClickListener {
             val dialog = FullListDialog(this)
             dialog.show()
+//            dialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
         }
 
         //把这个底部菜单和一个BottomSheetBehavior关联起来

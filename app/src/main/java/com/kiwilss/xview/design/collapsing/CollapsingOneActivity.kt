@@ -51,13 +51,14 @@ class CollapsingOneActivity: AppCompatActivity() {
                 .show()
         }
 
-        tb_collaspingone_tb.setNavigationOnClickListener {
-            finish()
-        }
+//        tb_collaspingone_tb.setNavigationOnClickListener {
+//            finish()
+//        }
+
         //setSupportActionBar(tb_collaspingone_tb)
         //折叠标题设置
         ctl_collaspone_collapsing.title = "测试标题"
-        ctl_collaspone_collapsing.collapsedTitleGravity = Gravity.START
+        ctl_collaspone_collapsing.collapsedTitleGravity = Gravity.CENTER
         ctl_collaspone_collapsing.expandedTitleGravity = Gravity.BOTTOM
         ctl_collaspone_collapsing.setCollapsedTitleTextColor(ContextCompat.getColor(this,R.color.red))
         ctl_collaspone_collapsing.setExpandedTitleColor(ContextCompat.getColor(this,R.color.blue_74D3FF))

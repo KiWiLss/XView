@@ -39,5 +39,6 @@ class RecyclerItemFixedActivity: AppCompatActivity() {
             it.addItemDecoration(DividerItemDecoration(this,LinearLayoutManager.VERTICAL))
         }
         adapter.setList(list)
+
     }
 }

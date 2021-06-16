@@ -13,7 +13,9 @@ package com.kiwilss.xview.ui.view.mddialog.dialog
 
 import android.content.Context
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kiwilss.xview.R
 import com.kiwilss.xview.ui.view.mddialog.adapter.ListDialogAdapter
@@ -27,10 +29,20 @@ import kotlinx.android.synthetic.main.dialog_bottom.*
  * @desc   : {DESCRIPTION}
  */
 class ListDialog(context: Context): BottomSheetDialog(context) {
+    fun getScreenHeight(context: Context): Int {
+        val wm =
+            context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        return wm.defaultDisplay.height
+    }
+
     init {
         setContentView(R.layout.dialog_bottom)
-        setCancelable(false)//是否可以滑动关闭
+        setCancelable(true)//是否可以滑动关闭
         setCanceledOnTouchOutside(true)//是否可以点击外部关闭
+//        //设置全屏
+//        behavior.state = BottomSheetBehavior.STATE_EXPANDED
+//        //设置下滑跳过折叠态
+//        behavior.skipCollapsed = true
     }
     val list = arrayListOf<String>("测试数据一","测试数据二","测试数据三","测试数据四"
     ,"测试数据一","测试数据二","测试数据三","测试数据四")
