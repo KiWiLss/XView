@@ -57,8 +57,8 @@ abstract class BaseVBActivity<VB : ViewBinding> : AppCompatActivity(),
     open fun setStatusBar() {
         immersionBar {
             fitsSystemWindows(true)
-            statusBarColor(R.color.white)
-            statusBarDarkFont(true,0f)
+            statusBarColor(R.color.colorPrimary)
+            statusBarDarkFont(false,0f)
             init()
         }
     }

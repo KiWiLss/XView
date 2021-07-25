@@ -228,6 +228,8 @@
         <activity android:name=".ui.aac.viewbinding.upgrade.VbLoadingTitleActivity" android:label="VB测试标题Loading"/>
         <activity android:name=".ui.aac.datastore.DataStoreBasicActivity" android:label="DataStore"/>
 
+        <activity android:name=".ui.view.textview.CheckTextViewActivity"
+            android:label="CheckedTextView" android:configChanges="orientation|screenSize"/>
 
 
     </application>

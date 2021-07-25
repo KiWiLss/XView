@@ -4,8 +4,11 @@ apply from: "config.gradle"
 buildscript {
     ext.kotlin_version = "1.4.21"
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         google()
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         jcenter()
         maven { url 'https://jitpack.io' }
     }
@@ -24,9 +27,12 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         mavenLocal()
         google()
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         jcenter()
         maven { url "http://jcenter.bintray.com"}
         mavenCentral()

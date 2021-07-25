@@ -41,6 +41,7 @@ import com.kiwilss.xview.ui.view.recyclerview.RecyclerViewActivity
 import com.kiwilss.xview.ui.view.scrollview.ScrollViewActivity
 import com.kiwilss.xview.ui.view.shaw.ShawActivity
 import com.kiwilss.xview.ui.view.shawshape.ShawShapeActivity
+import com.kiwilss.xview.ui.view.textview.CheckTextViewActivity
 import com.kiwilss.xview.ui.view.textview.TextViewActivity
 import com.kiwilss.xview.ui.view.viewpager.vp.VpTestActivity
 import com.kiwilss.xview.ui.view.viewpager.vp2.ViewPageActivity
@@ -88,7 +89,8 @@ object MainUtils {
             MainBean("行为式验证", CaptchaActivity::class.java),
             MainBean("点击限制", ClickAllActivity::class.java),
             MainBean("选择器", PickerAllActivity::class.java),
-            MainBean("AAC", AACTestActivity::class.java)
+            MainBean("AAC", AACTestActivity::class.java),
+            MainBean("CheckedTextView", CheckTextViewActivity::class.java)
 
         )
 
