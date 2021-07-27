@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 //apply plugin: 'com.xuexiang.xaop' //引用xaop插件
 //
 //apply plugin: 'android-aspectjx'
@@ -214,6 +216,12 @@ dependencies {
     implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
 // Proto DataStore
     implementation  "androidx.datastore:datastore-core:$dataStoreVersion"
+    //hilt
+    implementation "com.google.dagger:hilt-android:2.37"
+    kapt "com.google.dagger:hilt-android-compiler:2.37"
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    
 
 
 }

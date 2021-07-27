@@ -33,6 +33,7 @@ import com.kiwilss.xview.ui.loading.adapter.EmptyAdapter
 import com.kiwilss.xview.ui.loading.adapter.LoadingAdapter
 import com.kiwilss.xview.utils.LogUtils
 import com.lqr.emoji.LQREmotionKit
+import dagger.hilt.android.HiltAndroidApp
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import top.wefor.circularanim.CircularAnim
 import top.wefor.circularanim.CircularAnim.OnAnimatorDeployListener
@@ -44,6 +45,7 @@ import top.wefor.circularanim.CircularAnim.OnAnimatorDeployListener
  * @time   : 2020/7/8
  * @desc   : {DESCRIPTION}
  */
+@HiltAndroidApp
 class App : Application(){
 
     var keyboardHeight = 0

@@ -15,10 +15,13 @@ import com.kiwilss.App
 import com.kiwilss.xview.base.viewbinding.BaseVBActivity
 import com.kiwilss.xview.config.Constant
 import com.kiwilss.xview.databinding.ActivityDatastoreBasicBinding
+import com.kiwilss.xview.ui.aac.hilt.SingleTest
 import com.kiwilss.xview.utils.LogUtils
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.io.IOException
+import javax.inject.Inject
 
 
 /**
@@ -27,11 +30,13 @@ import java.io.IOException
  * time   : 2021/01/27
  *  desc   :
  */
+@AndroidEntryPoint
 class DataStoreBasicActivity : BaseVBActivity<ActivityDatastoreBasicBinding>() {
-
+    @Inject
+    lateinit var single : SingleTest
 
     override fun initData() {
-
+        LogUtils.e(single.name)
     }
 
     override fun initEvent() {

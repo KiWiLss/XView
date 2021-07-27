@@ -230,7 +230,7 @@
 
         <activity android:name=".ui.view.textview.CheckTextViewActivity"
             android:label="CheckedTextView" android:configChanges="orientation|screenSize"/>
-
+        <activity android:name=".ui.aac.hilt.HiltActivity" android:label="Hilt Test"/>
 
     </application>
 
